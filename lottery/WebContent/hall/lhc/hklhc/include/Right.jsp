@@ -42,39 +42,39 @@
                 <td>尾小</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="10,22,34,46"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="鼠" data-nums="10,22,34,46"></td>
                 <td>鼠</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="9,21,33,45"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="牛" data-nums="9,21,33,45"></td>
                 <td>牛</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="8,20,32,44"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="虎" data-nums="8,20,32,44"></td>
                 <td>虎</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="7,19,31,43"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="兔" data-nums="7,19,31,43"></td>
                 <td>兔</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="6,18,30,42"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="龙" data-nums="6,18,30,42"></td>
                 <td>龙</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,17,29,41"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="蛇" data-nums="5,17,29,41"></td>
                 <td>蛇</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="4,16,28,40"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="马" data-nums="4,16,28,40"></td>
                 <td>马</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="3,15,27,39"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="羊" data-nums="3,15,27,39"></td>
                 <td>羊</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,14,26,38"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="猴" data-nums="2,14,26,38"></td>
                 <td>猴</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,13,25,37,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="鸡" data-nums="1,13,25,37,49"></td>
                 <td>鸡</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="12,24,36,48"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac=""狗 data-nums="12,24,36,48"></td>
                 <td>狗</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="11,23,35,47"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="猪" data-nums="11,23,35,47"></td>
                 <td>猪</td>
             </tr>
             <tr>

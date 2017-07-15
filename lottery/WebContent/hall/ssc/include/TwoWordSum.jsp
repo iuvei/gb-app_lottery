@@ -197,4 +197,3 @@
 
 <input type="hidden" id="playId" value="338" />
 <script src="${resRoot}/js/hall/ssc/cqssc/PlayWay.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/ssc/RenderRanking.js?v=${rcVersion}"/>

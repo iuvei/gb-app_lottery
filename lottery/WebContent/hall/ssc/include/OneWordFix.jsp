@@ -213,4 +213,3 @@
 
 <script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"></script>
 <script src="${resRoot}/js/hall/ssc/OneWordFix.js?v=${rcVersion}"/>
-<script src="${resRoot}/js/hall/ssc/RenderRanking.js?v=${rcVersion}"/>

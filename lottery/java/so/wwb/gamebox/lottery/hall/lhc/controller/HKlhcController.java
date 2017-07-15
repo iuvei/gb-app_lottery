@@ -54,10 +54,10 @@ public class HKlhcController extends BaseLhcController {
     @RequestMapping("/normalCode")
     public String normalCode(Model model) {
         //正码赔率
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds();
-        model.addAttribute("odds", getOdds(CODE, LotteryBettingEnum.POSITIVE.getCode(),siteLotteryOdds));
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
+        model.addAttribute("odds", getOdds(LotteryBettingEnum.POSITIVE.getCode(),siteLotteryOdds));
         //总和赔率
-        model.addAttribute("sumOdds", getOdds(CODE, LotteryBettingEnum.SEVEN_SUM.getCode(),siteLotteryOdds));
+        model.addAttribute("sumOdds", getOdds(LotteryBettingEnum.SEVEN_SUM.getCode(),siteLotteryOdds));
         model.addAttribute("digitalPlay", LotteryPlayEnum.POSITIVE_DIGITAL.getCode());
         model.addAttribute("sumSingleDoublePlay", LotteryPlayEnum.SEVEN_SUM_SINGLE_DOUBLE.getCode());
         model.addAttribute("sumBigSmallPlay", LotteryPlayEnum.SEVEN_SUM_BIG_SMALL.getCode());
@@ -79,8 +79,8 @@ public class HKlhcController extends BaseLhcController {
        @RequestMapping("/getLhcBet")
     @ResponseBody
     public String getLhcBet(String subCode) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds();
-        Map<String, SiteLotteryOdd> odds = getOdds(CODE, subCode,siteLotteryOdds);
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
+        Map<String, SiteLotteryOdd> odds = getOdds(subCode,siteLotteryOdds);
         return JsonTool.toJson(odds);
     }
 
@@ -89,13 +89,13 @@ public class HKlhcController extends BaseLhcController {
     public String normal1To6(Model model) {
         //正码一至六赔率
         List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds();
-        oddList.add(getOdds(CODE, LotteryBettingEnum.POSITIVE_FIRST.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(CODE, LotteryBettingEnum.POSITIVE_SECOND.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(CODE, LotteryBettingEnum.POSITIVE_THIRD.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(CODE, LotteryBettingEnum.POSITIVE_FOURTH.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(CODE, LotteryBettingEnum.POSITIVE_FIFTH.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(CODE, LotteryBettingEnum.POSITIVE_SIXTH.getCode(),siteLotteryOdds));
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FIRST.getCode(),siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_SECOND.getCode(),siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_THIRD.getCode(),siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FOURTH.getCode(),siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FIFTH.getCode(),siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_SIXTH.getCode(),siteLotteryOdds));
         model.addAttribute("oddList", oddList);
         //玩法
         model.addAttribute("bigSmallPlay", LotteryPlayEnum.POSITIVE_BIG_SMALL.getCode());

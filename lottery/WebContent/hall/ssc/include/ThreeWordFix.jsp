@@ -86,5 +86,4 @@
 </div>
 
 <script src="${resRoot}/js/hall/ssc/ThreeWordFix.js?v=${rcVersion}"/>
-<script src="${resRoot}/js/hall/ssc/RenderRanking.js?v=${rcVersion}"/>
 <script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"></script>

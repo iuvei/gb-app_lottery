@@ -1,5 +1,6 @@
 package so.wwb.gamebox.lottery.hall.pk10.controller;
 
+import org.soul.commons.collections.MapTool;
 import org.soul.commons.data.json.JsonTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -96,15 +97,16 @@ public class BasePk10Controller extends BaseLotteryController {
     }
 
     private void initOdd(Model model, String code) {
-        Map<String, SiteLotteryOdd> oddMap = Cache.getSiteLotteryOdds(SessionManager.getSiteId());
+        Map<String, SiteLotteryOdd> oddMap = Cache.getSiteLotteryOdds(SessionManager.getSiteId(), code);
+        if (MapTool.isEmpty(oddMap)) {
+            return;
+        }
         Map<String, Map<String, SiteLotteryOdd>> map = new HashMap<>();
         for (SiteLotteryOdd odd : oddMap.values()) {
-            if (odd.getCode().equals(code)) {
-                if (map.get(odd.getBetCode()) == null) {
-                    map.put(odd.getBetCode(), new HashMap<String, SiteLotteryOdd>());
-                }
-                map.get(odd.getBetCode()).put(odd.getBetNum(), odd);
+            if (map.get(odd.getBetCode()) == null) {
+                map.put(odd.getBetCode(), new HashMap<String, SiteLotteryOdd>());
             }
+            map.get(odd.getBetCode()).put(odd.getBetNum(), odd);
         }
         model.addAttribute("oddMap", map);
     }
