@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
 import so.wwb.gamebox.model.company.lottery.po.LotteryHandicap;
+import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
@@ -127,7 +128,7 @@ public class BaseSscController extends BaseLotteryController {
     @ResponseBody
     public Map<String, Object> getExpect(String code) {
         Map<String, Object> map = new HashMap<>(4);
-        LotteryHandicap handicap = getHandicap(code);
+        LotteryResult handicap = getHandicap(code);
         setHandicap(map, handicap);
         return map;
     }
