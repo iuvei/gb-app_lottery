@@ -12,6 +12,7 @@ import so.wwb.gamebox.lottery.session.SessionManager;
 import so.wwb.gamebox.model.company.lottery.bean.ErrorCode;
 import so.wwb.gamebox.model.company.lottery.bean.OrderBean;
 import so.wwb.gamebox.model.company.lottery.po.LotteryHandicapLhc;
+import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 import so.wwb.gamebox.model.master.lottery.po.LotteryBetOrder;
 
@@ -63,8 +64,7 @@ public class BaseLhcController extends BaseLotteryController {
     @ResponseBody
     public Map<String, Object> getExpect(String code) {
         Map<String, Object> map = new HashMap<>(4);
-        LotteryHandicapLhc handicap = getHandicapLhc(code);
-        map.put("opening", handicap != null);
+        LotteryResult handicap = getHandicap(code);
         setHandicap(map, handicap);
         return map;
     }

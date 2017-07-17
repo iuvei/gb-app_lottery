@@ -67,4 +67,8 @@ public class ServiceTool {
     public static so.wwb.gamebox.iservice.company.lottery.ILotteryFrequencyService lotteryFrequencyService() {
         return getService(so.wwb.gamebox.iservice.company.lottery.ILotteryFrequencyService.class);
     }
+
+    public static ILotteryResultService lotteryResultService() {
+        return getService(ILotteryResultService.class);
+    }
 }
