@@ -16,11 +16,8 @@ import so.wwb.gamebox.model.TerminalEnum;
 import so.wwb.gamebox.model.company.enums.GameStatusEnum;
 import so.wwb.gamebox.model.company.lottery.po.Lottery;
 import so.wwb.gamebox.model.company.lottery.po.LotteryFrequency;
-import so.wwb.gamebox.model.company.lottery.po.LotteryHandicapBase;
 import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryFrequencyListVo;
-import so.wwb.gamebox.model.company.lottery.vo.LotteryHandicapLhcVo;
-import so.wwb.gamebox.model.company.lottery.vo.LotteryHandicapVo;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryResultVo;
 import so.wwb.gamebox.model.enums.lottery.LotteryFrequencyEnum;
 import so.wwb.gamebox.model.master.player.po.VPlayerApi;
@@ -124,33 +121,28 @@ public class HallController extends BaseLotteryController {
      */
     private void getHandicap(Model model) {
         Map<String, Lottery> lottery = Cache.getLotteryByTerminal(TerminalEnum.PC.getCode());
-        List<LotteryHandicapBase> lotteryHandicapList = ServiceTool.lotteryHandicapService().queryCurHandicap(new LotteryHandicapVo());
-        List<LotteryHandicapBase> lotteryHandicapLhcList = ServiceTool.lotteryHandicapLhcService().queryCurHandicap(new LotteryHandicapLhcVo());
-        List<LotteryHandicapBase> handicapList = new ArrayList<>();
-        if (CollectionTool.isNotEmpty(lotteryHandicapList)) {
-            handleHandicap(handicapList, lotteryHandicapList, lottery);
-        }
-        if (CollectionTool.isNotEmpty(lotteryHandicapLhcList)) {
-            handleHandicap(handicapList, lotteryHandicapLhcList, lottery);
-        }
-        handicapList = CollectionQueryTool.sort(handicapList, Order.desc(LotteryHandicapBase.PROP_ORDER_NUM));
-        model.addAttribute("handicapList", handicapList);
+        List<LotteryResult> lotteryHandicapList = ServiceTool.lotteryResultService().queryCurHandicap(new LotteryResultVo());
+        model.addAttribute("handicapList", handleHandicap(lotteryHandicapList, lottery));
     }
 
     /**
      * 处理盘口数据
      */
-    private void handleHandicap(List<LotteryHandicapBase> handicapList, List<LotteryHandicapBase> lotteryHandicapList, Map<String, Lottery> lottery) {
-        for (LotteryHandicapBase handicap : lotteryHandicapList) {
+    private List<LotteryResult> handleHandicap(List<LotteryResult> lotteryHandicapList, Map<String, Lottery> lottery) {
+        if (CollectionTool.isEmpty(lotteryHandicapList)) {
+            return null;
+        }
+        List<LotteryResult> lotteryResultList = new ArrayList<>();
+        String normal = GameStatusEnum.NORMAL.getCode();
+        for (LotteryResult handicap : lotteryHandicapList) {
             Lottery lot = lottery.get(handicap.getCode());
-            if (lot != null) {
-                if (StringTool.equals(GameStatusEnum.NORMAL.getCode(), lot.getStatus())) {
-                    handicap.setOrderNum(lot.getOrderNum());
-                    handicap.setType(lot.getType());
-                    handicapList.add(handicap);
-                }
+            if (lot != null && StringTool.equals(normal, lot.getStatus())) {
+                handicap.setOrderNum(lot.getOrderNum());
+                handicap.setType(lot.getType());
+                lotteryResultList.add(handicap);
             }
         }
+        return CollectionQueryTool.sort(lotteryResultList, Order.desc(LotteryResult.PROP_ORDER_NUM));
     }
 
     /**

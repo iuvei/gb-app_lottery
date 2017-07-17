@@ -1,8 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
-<%--@elvariable id="handicapMap" type="java.util.Map<java.lang.String,so.wwb.gamebox.model.company.lottery.po.LotteryHandicap>"--%>
-<%--@elvariable id="handicapLhcMap" type="java.util.Map<java.lang.String,so.wwb.gamebox.model.company.lottery.po.LotteryHandicapLhc>"--%>
-<%--@elvariable id="handicap" type="so.wwb.gamebox.model.company.lottery.po.LotteryHandicap"--%>
+<%--@elvariable id="handicapList" type="java.util.List<so.wwb.gamebox.model.company.lottery.po.LotteryResult>"--%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +17,7 @@
 <body style="overflow: auto">
 <div class="list_ject" id="ssc_list">
     <ul>
+        <c:set var="lotteryDicts" value="${dicts.lottery.lottery}"/>
         <c:forEach items="${handicapList}" varStatus="status" var="handicap">
             <li id="ssc_1">
                 <div class="pro_name">
@@ -26,13 +25,13 @@
                         <img src="${resRoot}/themes/default/img/${handicap.code}.png" alt="">
                     </div>
                     <div class="text">
-                        <b>${dicts.lottery.lottery[handicap.code]}</b>
+                        <b>${lotteryDicts[handicap.code]}</b>
                         <p>第<i data-name="number" id="expect${handicap.code}">${handicap.expect}</i>期销售中</p>
                     </div>
                 </div>
                 <div class="Time at">
                     <p data-name="tip">已开盘，欢迎投注。距下期还有:</p>
-                    <div class="timer_wrap" data-code="${handicap.code}" lottery-time="${handicap.lotteryTime}"  data-name="time" data-time="${handicap.leftTime}">
+                    <div class="timer_wrap" data-code="${handicap.code}" data-name="time" data-time="${handicap.leftTime}">
                         <ol class="s">
                             <span class="sp1">0</span>
                             <span class="sp2">0</span>
@@ -77,7 +76,7 @@
                        </c:choose>
                     </c:if>
                     <c:if test="${empty resultMap[handicap.code].openCode}">
-                        <p class="p1" id="lastOpenData${handicap.code}" data-name="lastOpenData">${resultMap[handicap.code].expect}期正在开奖中...</p>
+                        <p class="p1 lastOpenData" id="lastOpenData${handicap.code}" data-code="${handicap.code}" isOpening="true" data-name="lastOpenData">${resultMap[handicap.code].expect}期正在开奖中...</p>
                     </c:if>
                 </div>
                 <div class="Result">
