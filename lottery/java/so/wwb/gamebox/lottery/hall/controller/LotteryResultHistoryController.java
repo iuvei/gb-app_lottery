@@ -87,6 +87,7 @@ public class LotteryResultHistoryController {
         }
         listVo.getQuery().addOrder(LotteryResult.PROP_OPEN_TIME, Direction.DESC);
         listVo.getQuery().addOrder(LotteryResult.PROP_EXPECT, Direction.DESC);
+        listVo.getSearch().setOpenCodeFlag(true);
         listVo = ServiceTool.lotterResultService().search(listVo);
         model.addAttribute("command", listVo);
         model.addAttribute("code", listVo.getSearch().getCode());
