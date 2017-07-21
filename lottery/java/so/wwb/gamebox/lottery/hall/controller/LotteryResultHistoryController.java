@@ -39,8 +39,6 @@ public class LotteryResultHistoryController {
         model.addAttribute("lotteryFrequencyType", lotteryFrequencyType);
         Map<String, Lottery> lottery = Cache.getLottery();
         buildResultData(listVo, lottery, model);
-        Map<Object, LotteryHandicap> expectMaps = ServiceTool.lotteryHandicapService().queryLotteryExpectCount(new LotteryHandicapVo());
-        model.addAttribute("expectMaps",expectMaps);
         return "/hall/LotteryHistory";
     }
 
@@ -74,6 +72,8 @@ public class LotteryResultHistoryController {
         model.addAttribute("code", code);
         model.addAttribute("type", type);
         model.addAttribute("command", listVo);
+        Map<Object, LotteryHandicap> expectMaps = ServiceTool.lotteryHandicapService().queryLotteryExpectCount(new LotteryHandicapVo());
+        model.addAttribute("expectMaps",expectMaps);
     }
 
     @RequestMapping(value = "/queryLotteryResultByCode")
