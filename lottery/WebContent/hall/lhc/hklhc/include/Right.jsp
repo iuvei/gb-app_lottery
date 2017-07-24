@@ -24,7 +24,7 @@
                 <td>合双</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="25,27,29,31,33,35,37,39,41,43,45,47,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="25,27,29,31,33,35,37,39,41,43,45,47"></td>
                 <td>大单</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,3,5,7,9,11,13,15,17,19,21,23"></td>
                 <td>小单</td>
