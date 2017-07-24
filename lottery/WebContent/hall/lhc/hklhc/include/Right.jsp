@@ -6,15 +6,15 @@
         <table width="100%" border="1">
             <tbody>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48"></td>
                 <td>大</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24"></td>
                 <td>小</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47"></td>
                 <td>单</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48  "></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48"></td>
                 <td>双</td>
             </tr>
             <tr>
@@ -24,7 +24,7 @@
                 <td>合双</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="25,27,29,31,33,35,37,39,41,43,45,47,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="25,27,29,31,33,35,37,39,41,43,45,47"></td>
                 <td>大单</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,3,5,7,9,11,13,15,17,19,21,23"></td>
                 <td>小单</td>
@@ -36,7 +36,7 @@
                 <td>小双</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,6,7,8,9,15,16,17,18,19,25,26,27,28,29,35,36,37,38,39,45,46,47,48,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,6,7,8,9,15,16,17,18,19,25,26,27,28,29,35,36,37,38,39,45,46,47,48"></td>
                 <td>尾大</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,2,3,4,10,11,12,13,14,20,21,22,23,24,30,31,32,33,34,40,41,42,43,44"></td>
                 <td>尾小</td>
@@ -72,7 +72,7 @@
                 <td>鸡</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac=""狗 data-nums="12,24,36,48"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="狗" data-nums="12,24,36,48"></td>
                 <td>狗</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" zodiac="猪" data-nums="11,23,35,47"></td>
                 <td>猪</td>
@@ -102,13 +102,13 @@
                 <td><span class="color-blue">蓝</span>双</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="27,28,32,33,39,43,44,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="27,28,32,33,39,43,44"></td>
                 <td><span class="color-green">绿</span>大</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,6,11,16,17,21,22"></td>
                 <td><span class="color-green">绿</span>小</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,11,17,21,27,33,39,43,49"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,11,17,21,27,33,39,43"></td>
                 <td><span class="color-green">绿</span>单</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="6,16,22,28,32,38,44"></td>
                 <td><span class="color-green">绿</span>双</td>
