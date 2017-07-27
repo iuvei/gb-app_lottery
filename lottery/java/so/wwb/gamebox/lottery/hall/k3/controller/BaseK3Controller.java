@@ -50,7 +50,7 @@ public class BaseK3Controller extends BaseLotteryController {
     @RequestMapping("/getExpect")
     @ResponseBody
     public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4);
+        Map<String, Object> map = new HashMap<>(4,1f);
         LotteryResult handicap = getHandicap(code);
         setHandicap(map, handicap);
         return map;
@@ -75,7 +75,7 @@ public class BaseK3Controller extends BaseLotteryController {
         //玩法
         model.addAttribute("pointsBigSmall", LotteryPlayEnum.POINTS_BIG_SMALL.getCode());
         model.addAttribute("pointsSingleDouble", LotteryPlayEnum.POINTS_SINGLE_DOUBLE.getCode());
-        Map<String, String> pointsPlay = new HashMap<>(14);
+        Map<String, String> pointsPlay = new HashMap<>(14,1f);
         pointsPlay.put("4", LotteryPlayEnum.POINTS_417.getCode());
         pointsPlay.put("17", LotteryPlayEnum.POINTS_417.getCode());
         pointsPlay.put("5", LotteryPlayEnum.POINTS_516.getCode());

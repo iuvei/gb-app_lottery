@@ -127,7 +127,7 @@ public class BaseSscController extends BaseLotteryController {
     @RequestMapping("/getExpect")
     @ResponseBody
     public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4);
+        Map<String, Object> map = new HashMap<>(4,1f);
         LotteryResult handicap = getHandicap(code);
         setHandicap(map, handicap);
         return map;

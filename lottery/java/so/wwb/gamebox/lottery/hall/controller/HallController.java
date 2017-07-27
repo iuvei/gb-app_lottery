@@ -75,7 +75,7 @@ public class HallController extends BaseLotteryController {
             Lottery lot = lottery.get(type.getLotteryCode());
             if (lot != null) {
                 if (StringTool.equals(GameStatusEnum.NORMAL.getCode(), lot.getStatus())) {
-                    Map<String, String> map = new HashMap<>(2);
+                    Map<String, String> map = new HashMap<>(2,1f);
                     map.put("code", lot.getCode());
                     map.put("type", lot.getType());
                     lm.add(map);
@@ -108,7 +108,7 @@ public class HallController extends BaseLotteryController {
     @RequestMapping("/lotteryResult")
     @ResponseBody
     public String lotteryResult(String code) {
-        Map<String, Object> map = new HashMap<>(1);
+        Map<String, Object> map = new HashMap<>(1,1f);
         List<LotteryResult> result = getOpenHistory(code, 1, false);
         map.put("lottery", result);
         return JsonTool.toJson(map);
