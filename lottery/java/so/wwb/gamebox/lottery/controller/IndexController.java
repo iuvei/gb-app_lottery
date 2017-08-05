@@ -1,20 +1,26 @@
 package so.wwb.gamebox.lottery.controller;
 
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.json.JSONObject;
 import org.soul.commons.bean.Pair;
 import org.soul.commons.dubbo.DubboTool;
 import org.soul.commons.init.context.CommonContext;
+import org.soul.commons.init.context.ContextParam;
 import org.soul.commons.lang.DateTool;
 import org.soul.commons.lang.string.I18nTool;
 import org.soul.commons.net.IpTool;
+import org.soul.commons.spring.utils.SpringTool;
 import org.soul.iservice.passport.IPassportService;
+import org.soul.model.log.audit.enums.OpMode;
 import org.soul.model.passport.vo.PassportVo;
 import org.soul.model.security.privilege.po.SysUser;
 import org.soul.model.security.privilege.vo.SysUserVo;
 import org.soul.model.session.SessionKey;
 import org.soul.web.controller.BaseIndexController;
+import org.soul.web.log.audit.AuditLogTool;
+import org.soul.web.session.RedisSessionDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,8 +41,7 @@ import so.wwb.gamebox.web.shiro.local.authc.LocalToken;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 彩票首页
@@ -58,47 +63,87 @@ public class IndexController extends BaseIndexController {
      */
     @RequestMapping(value = "/demo/index")
     protected String demoIndex(Model model, HttpServletRequest request, HttpServletResponse response) {
-        if(SessionManager.getAttribute("Is_Demo")==null) {
-
-            String defaultCurrency=Cache.getSysSite().get(CommonContext.get().getSiteId().toString()).getMainCurrency();
-            String defaultLocale=Cache.getSysSite().get(CommonContext.get().getSiteId().toString()).getMainLanguage();
-
-            String userName = CommonContext.get().getSiteCode()+ DateTool.formatDate(new Date(), "YYMMDDHHmmss");
+        if(SessionManager.getUser()==null) {
+            SessionManager.setAttribute(SessionManager.SESSION_IS_LOTTERY_DEMO, "true");
+            String userName="";
             SysUserVo sysUserVo=new SysUserVo();
-            sysUserVo.setResult(new SysUser());
-            sysUserVo.getResult().setUsername(userName);
-            sysUserVo.getResult().setNickname(userName);
-            sysUserVo.getResult().setPassword(userName);
-            sysUserVo.getResult().setSubsysCode(ConfigManager.getConfigration().getSubsysCode());
-            sysUserVo.getResult().setUserType(UserTypeEnum.PLAYER.getCode());
-            sysUserVo.getResult().setDefaultCurrency(defaultCurrency);
-            sysUserVo.getResult().setDefaultLocale(defaultLocale);
-            sysUserVo=  ServiceTool.sysUserService().insert(sysUserVo);
-
+            //根据IP获取龙头彩票Api试玩账号
             PlayerApiAccountVo playerApiAccountVo=new PlayerApiAccountVo();
             playerApiAccountVo.setResult(new PlayerApiAccount());
-            playerApiAccountVo.getResult().setAccount(userName);
-            playerApiAccountVo.getResult().setPassword( userName);
-            playerApiAccountVo.getResult().setCurrency(defaultCurrency);
-            playerApiAccountVo.getResult().setLocale(defaultLocale);
-            playerApiAccountVo.getResult().setApiId(Integer.valueOf(ApiProviderEnum.PL.getCode()));
-            playerApiAccountVo.getResult().setUserId(sysUserVo.getResult().getId());
-            playerApiAccountVo.getResult().setUserName(userName);
-            playerApiAccountVo.getResult().setCreateTime(new Date());
-            playerApiAccountVo.getResult().setLastLoginTime(new Date());
-            playerApiAccountVo.getResult().setLastLoginIp(IpTool.ipv4StringToLong(CommonContext.get().getUserIp()));
-            playerApiAccountVo=  DubboTool.getService(IPlayerApiAccountService.class).insert(playerApiAccountVo);
+            playerApiAccountVo.getSearch().setApiId(Integer.valueOf(ApiProviderEnum.PL.getCode()));
+            playerApiAccountVo.getSearch().setLastLoginIp(IpTool.ipv4StringToLong(CommonContext.get().getUserIp()));
+            List<PlayerApiAccount> usersAccount=DubboTool.getService(IPlayerApiAccountService.class).searchPlayerApiAccountByRegisterIp(playerApiAccountVo);
+            //存在账号时,重复使用,每一个IP一个账号
+            if(usersAccount!=null && usersAccount.size()>0){
+                //清理Session
+                RedisSessionDao redisSessionDao= (RedisSessionDao) SpringTool.getBean("redisSessionDao");
+                Set<String> keys=   redisSessionDao.getUserActiveSessions(UserTypeEnum.PLAYER.getCode(),usersAccount.get(0).getUserId());
+                for (String key : keys) {
+                    redisSessionDao.kickOutSession(key, OpMode.AUTO,"重复登录踢出");
+                }
+                //获取用户信息
+                sysUserVo.getSearch().setId(usersAccount.get(0).getUserId());
+                sysUserVo=  ServiceTool.sysUserService().get(sysUserVo);
+                userName=sysUserVo.getResult().getUsername();
+            }else{//不存在试玩账号时新建
 
-            PlayerApiVo playerApiVo=new PlayerApiVo();
-            playerApiVo.setResult(new PlayerApi());
-            playerApiVo.getResult().setMoney(200d);
-            playerApiVo.getResult().setApiId(Integer.valueOf(ApiProviderEnum.PL.getCode()));
-            playerApiVo.getResult().setPlayerId(sysUserVo.getResult().getId());
-            ServiceTool.playerApiService().insert(playerApiVo);
+                String defaultCurrency=Cache.getSysSite().get(CommonContext.get().getSiteId().toString()).getMainCurrency();
+                String defaultLocale=Cache.getSysSite().get(CommonContext.get().getSiteId().toString()).getMainLanguage();
+                //新增玩家账号
+                userName = CommonContext.get().getSiteCode()+ DateTool.formatDate(new Date(), "YYMMDDHHmmss");
+                sysUserVo.setResult(new SysUser());
+                sysUserVo.getResult().setUsername(userName);
+                sysUserVo.getResult().setNickname(userName);
+                sysUserVo.getResult().setPassword(userName);
+                sysUserVo.getResult().setSubsysCode(ConfigManager.getConfigration().getSubsysCode());
+                sysUserVo.getResult().setUserType(UserTypeEnum.PLAYER.getCode());
+                sysUserVo.getResult().setRegisterIp(IpTool.ipv4StringToLong(CommonContext.get().getUserIp()));
+                sysUserVo.getResult().setDefaultCurrency(defaultCurrency);
+                sysUserVo.getResult().setDefaultLocale(defaultLocale);
+                sysUserVo=  ServiceTool.sysUserService().insert(sysUserVo);
 
+                //新增Api账号
+                playerApiAccountVo.setResult(new PlayerApiAccount());
+                playerApiAccountVo.getResult().setAccount(userName);
+                playerApiAccountVo.getResult().setPassword( userName);
+                playerApiAccountVo.getResult().setCurrency(defaultCurrency);
+                playerApiAccountVo.getResult().setLocale(defaultLocale);
+                playerApiAccountVo.getResult().setApiId(Integer.valueOf(ApiProviderEnum.PL.getCode()));
+                playerApiAccountVo.getResult().setUserId(sysUserVo.getResult().getId());
+                playerApiAccountVo.getResult().setUserName(userName);
+                playerApiAccountVo.getResult().setCreateTime(new Date());
+                playerApiAccountVo.getResult().setLastLoginTime(new Date());
+                playerApiAccountVo.getResult().setLastLoginIp(IpTool.ipv4StringToLong(CommonContext.get().getUserIp()));
+                playerApiAccountVo=  DubboTool.getService(IPlayerApiAccountService.class).insert(playerApiAccountVo);
+                //初始化Api余额
+                PlayerApiVo playerApiVo=new PlayerApiVo();
+                playerApiVo.setResult(new PlayerApi());
+                playerApiVo.getResult().setMoney(2000d);
+                playerApiVo.getResult().setApiId(Integer.valueOf(ApiProviderEnum.PL.getCode()));
+                playerApiVo.getResult().setPlayerId(sysUserVo.getResult().getId());
+                ServiceTool.playerApiService().insert(playerApiVo);
+            }
+            //初始化权限
             Map<String, Pair<String, Boolean>> urlPermission = fetchUrlPermission(sysUserVo.getResult());
             SessionManager.setAttribute(SessionKey.S_USER_PERMISSIONS, urlPermission);
+            //初始化上下文
+            ContextParam contextParam = CommonContext.get();
+            contextParam.setOperator(AuditLogTool.getOperator(request,sysUserVo.getResult()));
+            contextParam.setUserId(sysUserVo.getResult().getId());
+            contextParam.setUserType(sysUserVo.getResult().getUserType());
 
+            Subject subject = SecurityUtils.getSubject();
+            Session session =newSession(subject);
+            //初始化会话
+            session.setAttribute(SessionKey.S_USER,sysUserVo.getResult());
+            session.setAttribute(SessionKey.S_USER_ID,sysUserVo.getResult().getId());
+            session.setAttribute(SessionKey.S_LOGIN_TIME, new Date());
+            session.setAttribute(SessionKey.S_ENTRANCE, String.valueOf(PassportVo.PLAYER));
+            session.setAttribute(SessionKey.S_SITE_ID, CommonContext.get().getSiteId());
+            session.setAttribute(SessionKey.S_SITE_USER_ID, CommonContext.get().getSiteUserId());
+            session.setAttribute(SessionKey.S_SITE_PARENT_ID, CommonContext.get().getSiteParentId());
+
+            //登录用户
             LocalToken token = new LocalToken();
             token.setUsername(userName);
             token.setUserType(UserTypeEnum.PLAYER.getCode());
@@ -107,19 +152,25 @@ public class IndexController extends BaseIndexController {
             token.setHost(request.getRemoteHost());
             token._setEntrance(PassportVo.PLAYER);
             token.setSiteId(CommonContext.get().getSiteId());
-            Subject subject = SecurityUtils.getSubject();
             subject.login(token);
 
-            SessionManager.setUser(sysUserVo.getResult());
-            SessionManager.setAttribute(SessionKey.S_USER_ID,sysUserVo.getResult().getId());
-            SessionManager.setAttribute(SessionKey.S_LOGIN_TIME, new Date());
-            SessionManager.setAttribute(SessionKey.S_ENTRANCE, String.valueOf(token._getEntrance()));
-            SessionManager.setAttribute(SessionKey.S_SITE_ID, CommonContext.get().getSiteId());
-            SessionManager.setAttribute(SessionKey.S_SITE_USER_ID, CommonContext.get().getSiteUserId());
-            SessionManager.setAttribute(SessionKey.S_SITE_PARENT_ID, CommonContext.get().getSiteParentId());
-            SessionManager.setAttribute(SessionManager.SESSION_IS_LOTTERY_DEMO, "true");
         }
         return INDEX_URI;
+    }
+    private Session newSession(Subject subject) {
+        Session session = subject.getSession(false);
+        Map<Object,Object> attributes = new HashMap<>();
+        if(session!=null) {
+            for (Object key : session.getAttributeKeys()) {
+                attributes.put(key, session.getAttribute(key));
+            }
+            session.stop();
+        }
+        session = subject.getSession(true);
+        for (Object key : attributes.keySet()) {
+            session.setAttribute(key,attributes.get(key));
+        }
+        return session;
     }
     private Map<String, Pair<String, Boolean>> fetchUrlPermission(SysUser sysUser) {
         PassportVo vo = new PassportVo();
