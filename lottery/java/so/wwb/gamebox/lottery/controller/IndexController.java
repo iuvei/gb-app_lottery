@@ -42,4 +42,8 @@ public class IndexController  extends LotteryDemoController {
         return jb.toString();
     }
 
+    @Override
+    protected String getDemoIndex() {
+        return INDEX_URI;
+    }
 }
