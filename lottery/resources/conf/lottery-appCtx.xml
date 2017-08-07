@@ -9,8 +9,8 @@
 
 	<import resource="classpath*:/conf/web-common.xml"/>
 	<import resource="classpath*:/conf/web-cache.xml"/>
-	<import resource="classpath:/conf/shiro-app-main.xml"/>
-	<import resource="classpath*:/conf/web-dubbo-consumer.xml"/>
+	<import resource="classpath*:/conf/shiro-app-main.xml"/>
+	<import resource="classpath*:/conf/lottery-web-dubbo-consumer.xml"/>
 
 	<context:property-placeholder location="classpath*:conf/*-conf.properties" ignore-unresolvable="true"/>
 
