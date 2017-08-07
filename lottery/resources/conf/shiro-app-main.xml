@@ -57,7 +57,6 @@
 				/login/commonLogin.html = anon
 				/errors/** = anon
 				/commom/*.html = anon
-				/demo/*.html = anon
 				/captcha/*.html = captcha
 				/passport/login* = subsys, login
 				/** = subsys,kickout,authc,access,autho
