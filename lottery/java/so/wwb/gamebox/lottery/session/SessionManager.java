@@ -12,7 +12,7 @@ import java.util.List;
 public class SessionManager extends SessionManagerCommon {
 
     public static final String SESSION_MASTER_INFO = "SESSION_MASTER_INFO";
-    public static final String SESSION_IS_LOTTERY_DEMO = "SESSION_IS_LOTTERY_DEMO";
+
     //玩家中心-上一次提交存款订单时间
     public static final String SESSION_RECHARGE_LAST_TIME = "SESSION_RECHARGE_LAST_TIME";
     //玩家中心-提交存款订单次数
