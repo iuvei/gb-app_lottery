@@ -60,7 +60,9 @@
 				/demo/*.html = anon
 				/captcha/*.html = captcha
 				/passport/login* = subsys, login
-				/** = anon
+				/hall/*.html= anon
+				/lotteryResultHistory/toLotteryResultHistory.html= anon
+				/** = subsys,kickout,authc,access,autho
 			</value>
 		</property>
 	</bean>
