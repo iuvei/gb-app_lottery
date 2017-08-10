@@ -121,8 +121,7 @@
         <c:choose>
             <c:when test="${empty player.account}">
                 <p>
-                    <i class="i0">游客登录</i>
-                </span>
+                    欢迎，<i >  <a class="i0" href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">登录</a></i></span>
                 </p>
             </c:when>
             <c:otherwise>
