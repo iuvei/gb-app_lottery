@@ -61,7 +61,7 @@
 				/captcha/*.html = captcha
 				/passport/login* = subsys, login
 				/hall/*.html= anon
-				/lotteryResultHistory/toLotteryResultHistory.html= anon
+				/lotteryResultHistory/*.html= anon
 				/** = subsys,kickout,authc,access,autho
 			</value>
 		</property>
