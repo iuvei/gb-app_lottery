@@ -3,12 +3,12 @@ package so.wwb.gamebox.lottery.controller;
 import org.json.JSONObject;
 import org.soul.commons.init.context.CommonContext;
 import org.soul.commons.lang.string.I18nTool;
-import org.soul.web.controller.BaseIndexController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.web.cache.Cache;
+import so.wwb.gamebox.web.lottery.controller.LotteryDemoController;
 
 import java.util.Map;
 
@@ -17,7 +17,7 @@ import java.util.Map;
  * Created by tony on 15-4-29.
  */
 @Controller
-public class IndexController extends BaseIndexController {
+public class IndexController  extends LotteryDemoController {
     private static final String INDEX_URI = "index";
 
     @RequestMapping(value = "index")
@@ -42,4 +42,8 @@ public class IndexController extends BaseIndexController {
         return jb.toString();
     }
 
+    @Override
+    protected String getDemoIndex() {
+        return INDEX_URI;
+    }
 }

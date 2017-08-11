@@ -118,15 +118,25 @@
 <!--menu_left-->
 <div class="con_right">
     <div class="Account">
-        <p>
-            欢迎，<i class="i0">${player.account}</i>
-            <span>余额：<i class="i1 balance">${siteCurrencySign}<font id="money">${soulFn:formatCurrency(player.money)}</font></i><a href="#" id="refreshMoney"><span></span>刷新余额</a></span>
-            <span>
-               <%-- <a href="/pcenter/#/fund/playerTransfer/transfers.html" target="_blank">额度转换</a>  |--%>
-                <a href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">投注记录</a>  |
-                <a href="javascript:void(0)" onclick="getPage('/lotteryTransaction/list.html')">资金记录</a>
-            </span>
-        </p>
+        <c:choose>
+            <c:when test="${empty player.account}">
+                <p>
+                    欢迎，<i >  <a class="i0" href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">登录</a></i></span>
+                </p>
+            </c:when>
+            <c:otherwise>
+                <p>
+                    欢迎，<i class="i0">${player.account}</i>
+                    <span>余额：<i class="i1 balance">${siteCurrencySign}<font id="money">${soulFn:formatCurrency(player.money)}</font></i><a href="#" id="refreshMoney"><span></span>刷新余额</a></span>
+                    <span>
+                   <%-- <a href="/pcenter/#/fund/playerTransfer/transfers.html" target="_blank">额度转换</a>  |--%>
+                    <a href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">投注记录</a>  |
+                    <a href="javascript:void(0)" onclick="getPage('/lotteryTransaction/list.html')">资金记录</a>
+                </span>
+                </p>
+            </c:otherwise>
+        </c:choose>
+
     </div>
     <iframe id="rightContent" src="" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"
             name="ifm" width="100%" style="overflow-x:hidden;"></iframe>

@@ -57,8 +57,11 @@
 				/login/commonLogin.html = anon
 				/errors/** = anon
 				/commom/*.html = anon
+				/demo/*.html = anon
 				/captcha/*.html = captcha
 				/passport/login* = subsys, login
+				/hall/*.html= anon
+				/lotteryResultHistory/*.html= anon
 				/** = subsys,kickout,authc,access,autho
 			</value>
 		</property>
