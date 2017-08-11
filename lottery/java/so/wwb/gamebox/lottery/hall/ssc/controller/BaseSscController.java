@@ -119,9 +119,7 @@ public class BaseSscController extends BaseLotteryController {
 
     // 龙虎
     public String dragontiger(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        initDragontiger(model, code, siteLotteryOdds);
-        //todo 要增加一个新的jsp来实现龙虎的页面展示,下面的url指定的jsp是旧的
+        initDragontiger(model, code);
         return DRAGONTIGER_URL;
     }
 
@@ -300,20 +298,9 @@ public class BaseSscController extends BaseLotteryController {
      * @param model
      * @param code
      */
-    public void initDragontiger(Model model, String code,Map<String, SiteLotteryOdd> siteLotteryOdds) {
+    public void initDragontiger(Model model, String code) {
         //赔率
-        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_12.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_13.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_14.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_15.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_23.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_24.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_25.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_34.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_35.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.TEN_ONE.getCode(), siteLotteryOdds));
-        model.addAttribute("oddList", oddList);
+        model.addAttribute("odds", getOdds(code, LotteryBettingEnum.DRAGON_TIGER.getCode()));
         model.addAttribute("code", code);
         //玩法
         initPlayCode(model);
