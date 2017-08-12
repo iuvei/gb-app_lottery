@@ -95,6 +95,7 @@ public class BasePk10Controller extends BaseLotteryController {
         model.addAttribute("championUpAlone910", LotteryPlayEnum.CHAMPION_UP_ALONE_910.getCode());
         model.addAttribute("championUpBigSmall", LotteryPlayEnum.CHAMPION_UP_BIG_SMALL.getCode());
         model.addAttribute("championUpSingleDouble", LotteryPlayEnum.CHAMPION_UP_SINGLE_DOUBLE.getCode());
+        model.addAttribute("championUpHalf", LotteryPlayEnum.CHAMPION_UP_HALF.getCode());
     }
 
     private void initOdd(Model model, String code) {
