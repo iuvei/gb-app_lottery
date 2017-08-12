@@ -65,6 +65,14 @@ public class BaseSscController extends BaseLotteryController {
      * 龙虎
      */
     static final String DRAGONTIGER_URL = "/hall/ssc/include/DragonTiger";
+    /**
+     * 组选三
+     */
+    static final String GROUPTHREE_URL = "/hall/ssc/include/GroupThree";
+    /**
+     * 组选六
+     */
+    static final String GROUPSIX_URL = "/hall/ssc/include/GroupSix";
 
     // 双面玩法
     public String twoSide(Model model, String code) {
@@ -123,6 +131,16 @@ public class BaseSscController extends BaseLotteryController {
         initDragontiger(model, code, siteLotteryOdds);
         //todo 要增加一个新的jsp来实现龙虎的页面展示,下面的url指定的jsp是旧的
         return DRAGONTIGER_URL;
+    }
+    // 组选三
+    public String groupThreeInit(Model model, String code) {
+        initGroupThree(model, code);
+        return GROUPTHREE_URL;
+    }
+    // 组选六
+    public String groupSixInit(Model model, String code) {
+        initGroupSix(model, code);
+        return GROUPSIX_URL;
     }
 
     // 获取期数
@@ -340,6 +358,34 @@ public class BaseSscController extends BaseLotteryController {
         oddList.add(getOdds(LotteryBettingEnum.HUNDRED_ONE.getCode(), siteLotteryOdds));
         oddList.add(getOdds(LotteryBettingEnum.TEN_ONE.getCode(), siteLotteryOdds));
         model.addAttribute("oddList", oddList);
+        //玩法
+        initPlayCode(model);
+    }
+    /**
+     * 初始化组选三
+     *
+     * @param model
+     * @param code
+     */
+    public void initGroupThree(Model model, String code) {
+        //赔率
+        model.addAttribute("odds", getOdds(code, LotteryBettingEnum.GROUP3_FIRST_THREE.getCode()));
+        model.addAttribute("code", code);
+        model.addAttribute("lotteryPlay",LotteryPlayEnum.GROUP_THREE.getCode());
+        //玩法
+        initPlayCode(model);
+    }
+    /**
+     * 初始化组选三
+     *
+     * @param model
+     * @param code
+     */
+    public void initGroupSix(Model model, String code) {
+        //赔率
+        model.addAttribute("odds", getOdds(code, LotteryBettingEnum.GROUP6_FIRST_THREE.getCode()));
+        model.addAttribute("code", code);
+        model.addAttribute("lotteryPlay",LotteryPlayEnum.GROUP_SIX.getCode());
         //玩法
         initPlayCode(model);
     }
