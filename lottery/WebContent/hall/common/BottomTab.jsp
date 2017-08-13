@@ -1,4 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script type="text/css">
+    .list_wrap ul li.watch_more{
+        width:100%;
+        text-align:center;
+    }
+</script>
 <div class="Betting wid1" id="bottomInfo">
     <div class="tabs">
         <ul>
@@ -46,7 +52,7 @@
                 {{/if}}
             </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.getPage('/lotteryBetOrder/list.html')">查看更多</a></li>
+        <li class="watch_more"><a href="javascript:void(0)" data-page="/lotteryBetOrder/list.html">查看更多</a></li>
     </ul>
 </script>
 
@@ -86,7 +92,7 @@
             {{/if}}
         </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.getPage('/lotteryBetOrder/list.html')">查看更多</a></li>
+        <li class="watch_more"><a href="javascript:void(0)" data-page="/lotteryBetOrder/list.html">查看更多</a></li>
     </ul>
 </script>
 <%--今日号码--%>
@@ -113,6 +119,6 @@
             <span class="pid" style="visibility: hidden">{{value.code}}</span>
         </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.getPage('/lotteryResultHistory/toLotteryResultHistory.html?search.code=${code}')">查看更多</a></li>
+        <li class="watch_more"><a href="javascript:void(0)" data-page="/lotteryResultHistory/toLotteryResultHistory.html?search.code=${code}">查看更多</a></li>
     </ul>
 </script>

@@ -8,6 +8,7 @@
     <style>
         body {overflow: hidden;}
     </style>
+    <%@ include file="/include/include.js.jsp" %>
 </head>
 
 <body>
@@ -81,16 +82,16 @@
                 <h2>
                     <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico13.png"></var></div></span><b>玩法介绍</b><i></i>
                 </h2>
-                <div class="down">
-                    <a href="javascript:void(0)" onclick="getPlay('cqssc')"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('tjssc')"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('xjssc')"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('jsk3')"><img src="${resRoot}/themes/default/img/jsk3.png"><var>江苏快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('hbk3')"><img src="${resRoot}/themes/default/img/hbk3.png"><var>湖北快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('ahk3')"><img src="${resRoot}/themes/default/img/ahk3.png"><var>安徽快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('gxk3')"><img src="${resRoot}/themes/default/img/gxk3.png"><var>广西快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('hklhc')"><img src="${resRoot}/themes/default/img/hklhc.png"><var>香港六合彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('bjpk10')"><img src="${resRoot}/themes/default/img/bjpk10.png"><var>北京PK10</var></a>
+                <div class="down playWay">
+                    <a href="javascript:void(0)" data-playway="cqssc"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="tjssc"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="xjssc"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="jsk3"><img src="${resRoot}/themes/default/img/jsk3.png"><var>江苏快3</var></a>
+                    <a href="javascript:void(0)" data-playway="hbk3"><img src="${resRoot}/themes/default/img/hbk3.png"><var>湖北快3</var></a>
+                    <a href="javascript:void(0)" data-playway="ahk3"><img src="${resRoot}/themes/default/img/ahk3.png"><var>安徽快3</var></a>
+                    <a href="javascript:void(0)" data-playway="gxk3"><img src="${resRoot}/themes/default/img/gxk3.png"><var>广西快3</var></a>
+                    <a href="javascript:void(0)" data-playway="hklhc"><img src="${resRoot}/themes/default/img/hklhc.png"><var>香港六合彩</var></a>
+                    <a href="javascript:void(0)" data-playway="bjpk10"><img src="${resRoot}/themes/default/img/bjpk10.png"><var>北京PK10</var></a>
                 </div>
             </li>
           <%--  <li>
@@ -142,7 +143,6 @@
             name="ifm" width="100%" style="overflow-x:hidden;"></iframe>
 </div>
 
-<%@ include file="/include/include.js.jsp" %>
 <%--<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>--%>
 <script type="text/javascript">
     curl(['site/hall/Index'], function(Index) {
