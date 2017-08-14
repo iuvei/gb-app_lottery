@@ -5,7 +5,6 @@
 <head>
     <%@ include file="/include/include.head.jsp" %>
     <title>购彩大厅</title>
-    <%@ include file="/include/include.js.jsp" %>
 </head>
 
 <body style="background-color: white">
@@ -46,6 +45,7 @@
             开奖时间：早上9点至晚上12点。如开奖时间异动以中国福利彩票管理中心公告为准。</p>
     </div>
 </div>
+<%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
     curl(['site/hall/play/Index'], function(IntroducePlay) {
         introducePlay = new IntroducePlay();

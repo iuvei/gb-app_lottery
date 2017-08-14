@@ -11,6 +11,7 @@
             RESURL: '${resRoot}/themes/default/'
         };
     </script>
+    <%@ include file="/include/include.js.jsp" %>
 </head>
 
 <body>
@@ -89,10 +90,17 @@
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
-<%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/BottomTab.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/common.js?v=${rcVersion}"></script>
+<%--<%@ include file="/include/include.js.jsp" %>--%>
+<%--<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>--%>
+<%--<script src="${resRoot}/js/hall/common/BottomTab.js?v=${rcVersion}"></script>--%>
+<%--<script src="${resRoot}/js/hall/common/common.js?v=${rcVersion}"></script>--%>
+
+<script type="text/javascript">
+    curl(['site/hall/Index','site/hall/common/Common'], function(Index,Common) {
+        index = new Index();
+        index.common = new Common();
+    });
+</script>
 
 </body>
 </html>
