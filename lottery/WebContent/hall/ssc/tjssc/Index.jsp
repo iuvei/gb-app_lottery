@@ -79,9 +79,8 @@
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 <script type="text/javascript">
-    curl(['site/hall/Index','site/hall/common/BottomTab','site/hall/common/common'], function(Index,BottomTab,Common) {
+    curl(['site/hall/Index','site/hall/common/Common'], function(Index,Common) {
         index = new Index();
-        index.bottomTab = new BottomTab();
         index.common = new Common();
     });
 </script>
