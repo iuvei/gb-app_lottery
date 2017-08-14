@@ -79,8 +79,10 @@
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/BottomTab.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/common.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/ssc/Ssc'], function(Page) {
+        page = new Page();
+    });
+</script>
 </body>
 </html>
