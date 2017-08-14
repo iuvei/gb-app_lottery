@@ -17,11 +17,11 @@
             <div class="tabs_ce at">
                 <ul>
                     <li class="lot-fre-type acti nob" data-subnav="0" name="top" id="lot_type_">
-                        <a href="javascript:void(0)" onclick="queryLotteryByFrequency('')">全部彩种</a>
+                        <a href="javascript:void(0)">全部彩种</a>
                     </li>
                     <c:forEach var="type" items="${lotteryFrequencyType}" varStatus="vs">
                         <li class="lot-fre-type " data-subnav="${type.key}" id="lot_type_${type.key}">
-                            <a href="javascript:void(0)" onclick="queryLotteryByFrequency('${type.key}')">${type.value.frequencyName}</a>
+                            <a href="javascript:void(0)" data-type="${type.key}">${type.value.frequencyName}</a>
                         </li>
                     </c:forEach>
 
@@ -39,54 +39,10 @@
 </div>
 </form>
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/themes/default/member/js/global.js?v=${rcVersion}"></script>
-<script>
-    $(function () {
-        parent.closeAll();
-        $('div.loader', parent.document).remove();
-        // 闪烁
-        var blinkColorArr = "#fa6200|#0f3f94".split("|");
-        $(".blink").each(function() {
-            var obj = $(this);
-            setInterval(function() {
-                var tmpColor = blinkColorArr[parseInt(Math.random() * blinkColorArr.length)];
-                $(obj).css("color", tmpColor);
-            },200);
-        });
+<script type="text/javascript">
+    curl(['site/hall/LotteryHistory'], function(Page) {
+        page = new Page();
     });
-
-    function getPage(url) {
-        parent.getPage(url);
-    }
-    function getZstPage(url) {
-        getPage("./zst/" + url + ".html");
-    }
-    function getSscPage(url) {
-        parent.getSscPage(url);
-    }
-    function queryLotteryByFrequency(fid) {
-        if(fid!="search"){
-            $.ajax({
-                type: "post",
-                url: root + '/lotteryResultHistory/queryLotteryByFrequency.html?search.lotteryFrequencyId='+fid,
-                timeout: 60000,
-                success: function (data) {
-                    $("#sscContent").html(data);
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                },
-                beforeSend: function () {
-                    parent.showLoading();
-                },
-                complete: function () {
-                    parent.hideLoading();
-                    $(".lot-fre-type").removeClass("acti");
-                    $("#lot_type_"+fid).addClass("acti");
-                }
-            });
-        }
-
-    }
 </script>
 
 </body>

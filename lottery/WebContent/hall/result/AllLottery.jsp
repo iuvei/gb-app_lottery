@@ -12,7 +12,7 @@
                 <c:forEach var="lot" items="${lotterys}" varStatus="vs">
                     <c:if test="${lot.value.status=='normal'}">
                         <span class="lottery-code-span ${lot.value.code==code?'acti':''}"  id="lottery_code_${lot.value.code}">
-                            <a href="javascript:void(0)" onclick="loadLotteryResult('${lot.value.type}','${lot.value.code}')">${dicts.lottery.lottery[lot.value.code]}</a>
+                            <a href="javascript:void(0)" data-type="${lot.value.type}" data-code="${lot.value.code}">${dicts.lottery.lottery[lot.value.code]}</a>
                         </span>
                     </c:if>
                 </c:forEach>
@@ -37,28 +37,3 @@
         <%@include file="LotteryResult_lhc.jsp"%>
     </c:if>
 </div>
-<script type="text/javascript">
-    function loadLotteryResult(type,code) {
-        $.ajax({
-            type: "post",
-            url: root + '/lotteryResultHistory/queryLotteryResultByCode.html?search.code='+code+"&search.type="+type,
-            timeout: 60000,
-            success: function (data) {
-                $("#search-list-container").html(data);
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-            },
-            beforeSend: function () {
-                parent.showLoading();
-
-            },
-            complete: function () {
-                parent.hideLoading();
-                $("[name='search.code']").val(code);
-                $("[name='search.type']").val(type);
-                $(".lottery-code-span").removeClass("acti");
-                $("#lottery_code_"+code).addClass("acti");
-            }
-        });
-    }
-</script>
