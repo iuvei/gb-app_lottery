@@ -14,14 +14,14 @@
 <body>
 <div class="menu_left">
     <div class="logo">
-        <img src="${resRoot}/themes/default/img/logo.png" alt="" onclick="" style="cursor:pointer">
+        <img src="${resRoot}/themes/default/img/logo.png" alt="" style="cursor:pointer">
         <a href="javascript:void(0)"></a>
     </div>
     <div class="list_menu">
         <ul>
             <li class="show">
                 <h2>
-                    <a href="javascript:void(0)" onclick="getPage('/hall/lottery.html')">
+                    <a href="javascript:void(0)" data-url='/hall/lottery.html'>
                         <span>
                             <div class="pict"><var><img src="${resRoot}/themes/default/img/ico3.png"></var></div>
                         </span>
@@ -41,7 +41,7 @@
                 <div class="down" style="display: block;">
                        <c:forEach items="${hot}" var="hot" varStatus="status">
                            <c:if test="${hot.status=='normal'}">
-                             <a href="javascript:void(0)" onclick="getPage('/${hot.type}/${hot.code}/index.html')"><img src="${resRoot}/themes/default/img/${hot.code}.png"><var>${dicts.lottery.lottery[hot.code]}</var></a>
+                             <a href="javascript:void(0)" data-url='/${hot.type}/${hot.code}/index.html'><img src="${resRoot}/themes/default/img/${hot.code}.png"><var>${dicts.lottery.lottery[hot.code]}</var></a>
                            </c:if>
                        </c:forEach>
                 </div>
@@ -54,7 +54,7 @@
                 </h2>
                 <div class="down">
                     <c:forEach items="${high}" var="h" varStatus="status">
-                        <a href="javascript:void(0)" onclick="getPage('/${h.type}/${h.code}/index.html')"><img src="${resRoot}/themes/default/img/${h.code}.png"><var>${dicts.lottery.lottery[h.code]}</var></a>
+                        <a href="javascript:void(0)" data-url='/${h.type}/${h.code}/index.html'><img src="${resRoot}/themes/default/img/${h.code}.png"><var>${dicts.lottery.lottery[h.code]}</var></a>
                     </c:forEach>
                 </div>
             </li>
@@ -64,13 +64,13 @@
                 </h2>
                 <div class="down">
                     <c:forEach items="${low}" var="l" varStatus="status">
-                        <a href="javascript:void(0)" onclick="getPage('/${l.type}/${l.code}/index.html')"><img src="${resRoot}/themes/default/img/${l.code}.png"><var>${dicts.lottery.lottery[l.code]}</var></a>
+                        <a href="javascript:void(0)" data-url='/${l.type}/${l.code}/index.html'><img src="${resRoot}/themes/default/img/${l.code}.png"><var>${dicts.lottery.lottery[l.code]}</var></a>
                     </c:forEach>
                 </div>
             </li>
             <li>
                 <h2>
-                    <a href="javascript:void(0)" onclick="getPage('/lotteryResultHistory/toLotteryResultHistory.html')">
+                    <a href="javascript:void(0)" data-url='/lotteryResultHistory/toLotteryResultHistory.html'>
                         <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico10.png"></var></div></span>
                         <b>开奖结果</b>
                         <i></i>
@@ -122,7 +122,7 @@
         <c:choose>
             <c:when test="${empty player.account}">
                 <p>
-                    欢迎，<i >  <a class="i0" href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">登录</a></i></span>
+                    欢迎，<i >  <a class="i0" href="javascript:void(0)" data-url='/lotteryBetOrder/list.html'>登录</a></i></span>
                 </p>
             </c:when>
             <c:otherwise>
@@ -131,8 +131,8 @@
                     <span>余额：<i class="i1 balance">${siteCurrencySign}<font id="money">${soulFn:formatCurrency(player.money)}</font></i><a href="#" id="refreshMoney"><span></span>刷新余额</a></span>
                     <span>
                    <%-- <a href="/pcenter/#/fund/playerTransfer/transfers.html" target="_blank">额度转换</a>  |--%>
-                    <a href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">投注记录</a>  |
-                    <a href="javascript:void(0)" onclick="getPage('/lotteryTransaction/list.html')">资金记录</a>
+                    <a href="javascript:void(0)" data-url='/lotteryBetOrder/list.html'>投注记录</a>  |
+                    <a href="javascript:void(0)" data-url='/lotteryTransaction/list.html'>资金记录</a>
                 </span>
                 </p>
             </c:otherwise>

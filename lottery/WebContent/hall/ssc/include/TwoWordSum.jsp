@@ -195,5 +195,8 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 
-<input type="hidden" id="playId" value="338" />
-<script src="${resRoot}/js/hall/ssc/cqssc/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/ssc/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

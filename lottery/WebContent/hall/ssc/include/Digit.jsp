@@ -43,5 +43,8 @@
     <%-- 两面长龙排行 --%>
     <%@ include file="../include/include.rank.jsp" %>
 </div>
-
-<script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"/>
+<script type="text/javascript">
+    curl(['site/hall/ssc/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

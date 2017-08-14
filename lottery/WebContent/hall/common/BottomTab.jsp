@@ -8,15 +8,15 @@
 <div class="Betting wid1" id="bottomInfo">
     <div class="tabs">
         <ul>
-            <li data-tab="myBet">我的投注</li>
+            <li data-tab="myBet" class="acti">我的投注</li>
             <li data-tab="myPrize">我的中奖</li>
             <li data-tab="todayOpen">今日开奖号码</li>
             <%--<li data-tab="prizeMemo">奖金计算说明</li>--%>
         </ul>
     </div>
     <div class="list_wrap myBet"  style="height: 325px"></div>
-    <div class="list_wrap myPrize"  style="height: 325px"></div>
-    <div class="list_wrap todayOpen"  style="height: 325px"></div>
+    <div class="list_wrap myPrize"  style="height: 325px;display: none"></div>
+    <div class="list_wrap todayOpen"  style="height: 325px;display: none"></div>
     <%--<div class="list_wrap prizeMemo"></div>--%>
 </div>
 
@@ -52,7 +52,7 @@
                 {{/if}}
             </li>
         {{/each}}
-        <li class="watch_more"><a href="javascript:void(0)" data-page="/lotteryBetOrder/list.html">查看更多</a></li>
+        <li class="watch_more" style="text-align: center;"><a href="javascript:void(0)" data-url="/lotteryBetOrder/list.html">查看更多</a></li>
     </ul>
 </script>
 
@@ -92,7 +92,7 @@
             {{/if}}
         </li>
         {{/each}}
-        <li class="watch_more"><a href="javascript:void(0)" data-page="/lotteryBetOrder/list.html">查看更多</a></li>
+        <li class="watch_more" style="text-align: center;"><a href="javascript:void(0)" data-url="/lotteryBetOrder/list.html">查看更多</a></li>
     </ul>
 </script>
 <%--今日号码--%>
@@ -119,6 +119,6 @@
             <span class="pid" style="visibility: hidden">{{value.code}}</span>
         </li>
         {{/each}}
-        <li class="watch_more"><a href="javascript:void(0)" data-page="/lotteryResultHistory/toLotteryResultHistory.html?search.code=${code}">查看更多</a></li>
+        <li class="watch_more" style="text-align: center;"><a href="javascript:void(0)" data-url="/lotteryResultHistory/toLotteryResultHistory.html?search.code=${code}">查看更多</a></li>
     </ul>
 </script>
