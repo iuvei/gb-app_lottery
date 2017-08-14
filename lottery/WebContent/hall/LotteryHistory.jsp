@@ -42,7 +42,7 @@
 <script src="${resRoot}/themes/default/member/js/global.js?v=${rcVersion}"></script>
 <script>
     $(function () {
-        parent.layer.closeAll();
+        parent.closeAll();
         $('div.loader', parent.document).remove();
         // 闪烁
         var blinkColorArr = "#fa6200|#0f3f94".split("|");

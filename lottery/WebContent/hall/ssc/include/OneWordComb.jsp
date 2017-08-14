@@ -67,6 +67,9 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 
-<script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/ssc/OneWordComb.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/ssc/OneWordComb'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>
 

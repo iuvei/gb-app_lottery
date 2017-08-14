@@ -68,9 +68,9 @@
                     <c:set var="number" value="0${i}"/>
                     <c:set var="lottery" value="${odds[number.toString()]}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
-                    <td class="pointer"><img src="${resRoot}/themes/default/images/${i}.png"></td>
-                    <td class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}"  data-name="${rankName}-${lottery.betNum}"/></td>
+                    <td data-num="${lottery.betNum}" class="pointer"><img src="${resRoot}/themes/default/images/${i}.png"></td>
+                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}"  data-name="${rankName}-${lottery.betNum}"/></td>
                 </c:forEach>
                 </tr>
 
@@ -82,9 +82,9 @@
                     </c:if>
                     <c:set var="lottery" value="${odds[number.toString()]}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
-                    <td class="pointer"><img src="${resRoot}/themes/default/images/${i}.png"></td>
-                    <td class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}"  data-name="${rankName}-${lottery.betNum}"/></td>
+                    <td data-num="${lottery.betNum}" class="pointer"><img src="${resRoot}/themes/default/images/${i}.png"></td>
+                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}"  data-name="${rankName}-${lottery.betNum}"/></td>
                 </c:forEach>
                 </tr>
                 </tbody>
@@ -99,6 +99,8 @@
 
     <%@ include file="../include/include.rank.jsp" %>
 </div>
-
-<input type="hidden" id="playId" value="258" />
-<script src="${resRoot}/js/hall/pk10/bjpk10/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/pk10/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

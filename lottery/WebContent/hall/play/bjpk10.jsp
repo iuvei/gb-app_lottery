@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>购彩大厅</title>
     <%@ include file="/include/include.head.jsp" %>
+    <title>购彩大厅</title>
 </head>
 
 <body style="background-color: white">
@@ -46,7 +46,10 @@
     </div>
 </div>
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/play/Index.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/hall/play/Index'], function(IntroducePlay) {
+        introducePlay = new IntroducePlay();
+    });
+</script>
 </body>
 </html>

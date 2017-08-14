@@ -1,14 +1,16 @@
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
-<%-- 双面 --%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+            <div class="fl">
+                快捷金额：
+                <input type="text" class="txt">
+            </div>
         </div>
 
         <div class="table-common">
-            <table width="100%" border="1">
+            <table class="xyft-table" style="width:100%!important;">
                 <thead>
                 <tr>
                     <th>&nbsp;</th>
@@ -71,10 +73,48 @@
         </div>
     </div>
 
-    <%@ include file="../include/include.rank.jsp" %>
+    <div class="fr main-right cl-10 p-r-0">
+
+    </div>
 </div>
-<script type="text/javascript">
-    curl(['site/hall/pk10/PlayWay'], function(PlayWay) {
-        page.playWay = new PlayWay();
-    });
+<script src="${resRoot}/js/hall/pk10/xyft/PlayWay.js?v=${rcVersion}"></script>
+
+<script>
+
+</script>
+<script>
+    var playGroupId = 14;
+    var playId = 318;
+    var playGroupName = '双面';
+    function getZhudan() {
+        var betForm = {
+            totalMoney: 0,
+            sscBetList: [],
+            totalZhushu: 0
+        };
+
+        $(".main-left .table-common input").each(function () {
+            var inputMoney = $(this).val();
+            if (typeof inputMoney != 'undefined' && inputMoney != '') {
+                betForm.sscBetList.push({
+                    playGroupName: playGroupName,
+                    playGroupId: playGroupId,
+                    number: $("#number").data("number"),
+                    playId: playId,
+                    zhushu: 1,
+                    perMoney: inputMoney,
+                    content: $(this).data("name"),
+                    playPlId: $(this).data("plid"),
+                    playPl: $(this).data("pl")
+                });
+                betForm.totalMoney = add(betForm.totalMoney, inputMoney);
+                betForm.totalZhushu = add(betForm.totalZhushu, 1);
+            }
+        });
+        return betForm;
+    }
+
+    function checkZhudan() {
+        return true;
+    }
 </script>

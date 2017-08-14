@@ -13,13 +13,14 @@
             width: 50%;
         }
     </style>
+    <%@ include file="/include/include.js.jsp" %>
 </head>
 <body style="overflow: auto">
 <div class="list_ject" id="ssc_list">
     <ul>
         <c:set var="lotteryDicts" value="${dicts.lottery.lottery}"/>
         <c:forEach items="${handicapList}" varStatus="status" var="handicap">
-            <li id="ssc_1">
+            <li class="ssc_1">
                 <div class="pro_name">
                     <div class="pict">
                         <img src="${resRoot}/themes/default/img/${handicap.code}.png" alt="">
@@ -81,9 +82,9 @@
                 </div>
                 <div class="Result">
                     <p>
-                        <a href="javascript:void(0)" onclick="getPage('/lotteryResultHistory/toLotteryResultHistory.html?search.code=${handicap.code}')">历史开奖</a>
+                        <a href="javascript:void(0)" data-page="/lotteryResultHistory/toLotteryResultHistory.html?search.code=${handicap.code}">历史开奖</a>
                             <%-- <a onclick="getZstPage('cqssc')" href="javascript:void(0)">开奖走势</a>--%>
-                        <a href="javascript:void(0)" class="acti" onclick="getPage('/${handicap.type}/${handicap.code}/index.html')">立即投注</a>
+                        <a href="javascript:void(0)" class="acti" data-page="/${handicap.type}/${handicap.code}/index.html">立即投注</a>
                     </p>
                 </div>
             </li>
@@ -110,7 +111,11 @@
         <i>{{num}}</i>
     {{/each}}
 </script>
-<%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Lottery.js?v=${rcVersion}"></script>
+<%--<script src="${resRoot}/js/hall/Lottery.js?v=${rcVersion}"></script>--%>
+<script type="text/javascript">
+    curl(['site/hall/Lottery'], function(Lottery) {
+        lottery = new Lottery();
+    });
+</script>
 </body>
 </html>
