@@ -28,33 +28,33 @@
         <tr>
             <c:set var="lottery" value="${champion[number.toString()]}"/>
             <c:set var="odd" value="${lottery.odd}"/>
-            <td width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
-            <td class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="冠军-${lottery.betNum}"/></td>
+            <td data-num="冠军-${lottery.betNum}" width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
+            <td data-num="冠军-${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
+            <td data-num="冠军-${lottery.betNum}"><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="冠军-${lottery.betNum}"/></td>
 
             <c:set var="lottery" value="${runnerUp[number.toString()]}"/>
             <c:set var="odd" value="${lottery.odd}"/>
-            <td width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
-            <td class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="亚军-${lottery.betNum}"/></td>
+            <td data-num="亚军-${lottery.betNum}" width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
+            <td data-num="亚军-${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
+            <td data-num="亚军-${lottery.betNum}"><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="亚军-${lottery.betNum}"/></td>
 
             <c:set var="lottery" value="${thirdRunner[number.toString()]}"/>
             <c:set var="odd" value="${lottery.odd}"/>
-            <td width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
-            <td class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="季军-${lottery.betNum}"/></td>
+            <td data-num="季军-${lottery.betNum}" width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
+            <td data-num="季军-${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
+            <td data-num="季军-${lottery.betNum}"><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="季军-${lottery.betNum}"/></td>
 
             <c:set var="lottery" value="${fourthPlace[number.toString()]}"/>
             <c:set var="odd" value="${lottery.odd}"/>
-            <td width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
-            <td class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="第四名-${lottery.betNum}"/></td>
+            <td data-num="第四名-${lottery.betNum}" width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
+            <td data-num="第四名-${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
+            <td data-num="第四名-${lottery.betNum}"><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="第四名-${lottery.betNum}"/></td>
 
             <c:set var="lottery" value="${fifthPlace[number.toString()]}"/>
             <c:set var="odd" value="${lottery.odd}"/>
-            <td width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
-            <td class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="第五名-${lottery.betNum}"/></td>
+            <td data-num="第五名-${lottery.betNum}" width="30" class="pointer"><strong>${lottery.betNum}</strong></td>
+            <td data-num="第五名-${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
+            <td data-num="第五名-${lottery.betNum}"><input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10Digital}" data-bet-num="${lottery.betNum}" data-name="第五名-${lottery.betNum}"/></td>
         </tr>
         </c:forEach>
         </tbody>

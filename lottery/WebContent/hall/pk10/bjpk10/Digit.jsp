@@ -21,5 +21,8 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 
-<input type="hidden" id="playId" value="259" />
-<script src="${resRoot}/js/hall/pk10/bjpk10/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/pk10/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>
