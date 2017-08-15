@@ -207,62 +207,13 @@
     </div>
     <div class="fr main-right cl-10 p-r-0">
         <div class="table-common table-border-color">
-            <table width="100%" border="1">
-                <tbody>
-                <tr>
-                    <td colspan="2">长龙排行</td>
-                </tr>
-                <tr>
-                    <td colspan="2">统计至第839122期</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-大</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-双</td>
-                    <td>17</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-红波</td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-单</td>
-                    <td>13</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-大双</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-小双</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-绿波</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-大单</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-小单</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-蓝波</td>
-                    <td>6</td>
-                </tr>
-                </tbody>
-            </table>
+
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
-    curl(['site/hall/pk10/PlayWay'], function(PlayWay) {
+    curl(['site/hall/qt/xy28/PlayWay'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>
