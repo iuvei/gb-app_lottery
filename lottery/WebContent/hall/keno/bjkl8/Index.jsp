@@ -16,7 +16,11 @@
 <body>
 <style>
     .game_name .box2_stage .number span {width:25px; height:25px; line-height:25px; font-size:16px;}
+    #lastOpenCodeList ul li{
+        width: 325px!important;
+    }
 </style>
+
 
 <div id="gameContent">
     <div class="game_name">
@@ -76,11 +80,28 @@
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
-    <%@ include file="/hall/common/HistoryColor.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
 <%@ include file="/include/include.js.jsp" %>
+<!-- 开奖历史模板 -->
+<script type="text/html" id="template_openDataHistory">
+    <li>
+        <p style="height:28px">第{{number}}期</p>
+        {{if list.length == 0}}
+        <p style="margin-left:5px">开奖中</p>
+        {{else}}
+        {{each list as value}}
+        <i >{{value.num}}</i>
+        {{/each}}
+        {{/if}}
+    </li>
+</script>
+<script type="text/html" id="template_recent1History">
+    {{each list as value}}
+    <span  >{{value.num}}</span>
+    {{/each}}
+</script>
 <script type="text/javascript">
     curl(['site/hall/pk10/Pk10'], function(Page) {
         page = new Page();

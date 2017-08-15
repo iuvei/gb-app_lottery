@@ -126,7 +126,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    curl(['site/hall/qt/xy28/PlayWay'], function(PlayWay) {
+    curl(['site/hall/keno/xy28/PlayWay'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>

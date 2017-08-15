@@ -16,6 +16,49 @@
         a:active {
             color: deepskyblue;
         }
+        .plus {
+            line-height: 28px!important;
+            font-size: 28px!important;
+            font-family: Microsoft Yahei;
+            color: #666!important;
+            margin: 5px!important;
+            background: none!important;
+            width: 20px!important;
+            margin-left: -8px!important;
+        }
+        .bluexy28{
+            background: blue!important;
+        }
+        .greenxy28{
+            background: green!important;
+        }
+        .grayxy28{
+            background: gray!important;
+        }
+        .redxy28{
+            background: red;
+        }
+
+        .ball-28xyicon{
+            display: block;
+            width: 23px;
+            height: 23px;
+            background: red;
+            border-radius: 50%;
+            margin: 0 auto;
+            line-height: 23px;
+            color: white;
+        }
+        .plusmin {
+            font-family: Microsoft Yahei;
+            color: #666!important;
+            background: none!important;
+            width: 8px!important;
+            margin-left: 2px!important;
+        }
+        .number ul li i.grayxy28,.number ul li i.greenxy28,.number ul li i.grayxy28,.number ul li i.bluexy28{
+            border-radius: 50%;
+        }
     </style>
     <script>
         var CONFIG = {
@@ -25,12 +68,6 @@
     </script>
 </head>
 <body>
-<style>.game_name .box2_stage .number span {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 16px;
-}</style>
 <div id="gameContent">
     <div class="game_name">
         <div class="wid1">
@@ -99,6 +136,7 @@
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
+
     <!-- 开奖历史模板 -->
     <script type="text/html" id="template_openDataHistory">
         <li>
@@ -106,8 +144,13 @@
             {{if list.length == 0}}
             <p style="margin-left:5px">开奖中</p>
             {{else}}
-            {{each list as value}}
-            <i class="round {{value.colour}}">{{value.num}}</i>
+            {{each list as value index}}
+            {{if index < 2}}
+            <i>{{value.num}}</i><i class="plusmin">+</i>
+            {{else}}
+            <i>{{value.num}}</i><i class="plusmin">=</i><i class="{{colorBg}}">{{sum}}</i>
+            {{/if}}
+
             {{/each}}
             {{/if}}
         </li>
@@ -121,9 +164,10 @@
 <div type="text/html" id="soundContainer" style="pe:none;"></div>
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/pk10/Pk10'], function(Page) {
+    curl(['site/hall/keno/xy28/Xy28'], function(Page) {
         page = new Page();
     });
+
 </script>
 
 </body>
