@@ -1,12 +1,10 @@
-package so.wwb.gamebox.lottery.hall.qt.controller;
+package so.wwb.gamebox.lottery.hall.keno.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
-import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
  * Created by fei on 17-4-5.
  */
 @Controller
-@RequestMapping("/qt/xy28")
-public class XY28Controller extends BaseQtController {
+@RequestMapping("/keno/xy28")
+public class XY28Controller extends BaseKenoController {
 
     private static final String CODE = LotteryEnum.XY28.getCode();
 
@@ -30,21 +28,21 @@ public class XY28Controller extends BaseQtController {
     @RequestMapping("/hh")
     public String twoSide(Model model) {
         initData(model, CODE);
-        return "/hall/qt/xy28/Hh";
+        return "/hall/keno/xy28/Hh";
     }
 
     // 数字盘
     @RequestMapping("/hz")
     public String digit(Model model) {
         initData(model, CODE);
-        return "/hall/qt/xy28/Hz";
+        return "/hall/keno/xy28/Hz";
     }
 
     // 排名（冠军 -> 第十名）
     @RequestMapping("/tmb3")
     public String ranking(  Model model) {
         initData(model, CODE);
-        return "/hall/qt/xy28/Tmb3";
+        return "/hall/keno/xy28/Tmb3";
     }
 
 

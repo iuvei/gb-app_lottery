@@ -89,6 +89,15 @@ public class BaseKenoController extends BaseLotteryController {
         model.addAttribute("kenoSum20FiveElements", LotteryPlayEnum.KENO_SUM20_FIVE_ELEMENTS.getCode());
         model.addAttribute("kenoUpDown", LotteryPlayEnum.KENO_UP_DOWN.getCode());
         model.addAttribute("kenoOddEven", LotteryPlayEnum.KENO_ODD_EVEN.getCode());
+
+        model.addAttribute("xy28Sum3BigSmall", LotteryPlayEnum.XY28_SUM3_BIG_SMALL.getCode());
+        model.addAttribute("xy28Sum3Colour", LotteryPlayEnum.XY28_SUM3_COLOUR.getCode());
+        model.addAttribute("xy28Sum3SingleDouble", LotteryPlayEnum.XY28_SUM3_SINGLE_DOUBLE.getCode());
+        model.addAttribute("xy28Sum3Half", LotteryPlayEnum.XY28_SUM3_HALF.getCode());
+        model.addAttribute("xy28ThreeSame", LotteryPlayEnum.XY28_THREE_SAME.getCode());
+        model.addAttribute("xy28Sum3Extreme", LotteryPlayEnum.XY28_SUM3_EXTREME.getCode());
+        model.addAttribute("xy28Sum3Digital", LotteryPlayEnum.XY28_SUM3_DIGITAL.getCode());
+        model.addAttribute("xy28Sum3DigitalThree", LotteryPlayEnum.XY28_SUM3_DIGITAL_THREE.getCode());
     }
 
     private void initOdd(Model model, String code) {

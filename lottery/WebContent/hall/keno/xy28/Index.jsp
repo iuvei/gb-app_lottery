@@ -19,7 +19,7 @@
     </style>
     <script>
         var CONFIG = {
-            BASEURL: '${root}/qt/',
+            BASEURL: '${root}/keno/',
             RESURL: '${resRoot}/themes/default/'
         };
     </script>
