@@ -89,7 +89,11 @@
 
     </div>
 </div>
-<script src="${resRoot}/js/hall/pk10/xyft/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/pk10/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>
 <script>
     var playGroupId = 14;
     var playId = 330;

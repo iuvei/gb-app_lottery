@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>幸运飞艇</title>
+    <title>幸运28</title>
     <%@ include file="/include/include.head.jsp" %>
     <style>
         a:hover {
@@ -19,7 +19,7 @@
     </style>
     <script>
         var CONFIG = {
-            BASEURL: '${root}/pk10/',
+            BASEURL: '${root}/qt/',
             RESURL: '${resRoot}/themes/default/'
         };
     </script>
@@ -35,7 +35,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>幸运飞艇</h2>
+                <h2>幸运28</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="expect" class="expect"></i>期</p>
                 <div class="select">
@@ -84,10 +84,11 @@
                             <style>.Single .layout .Playmethod ul li p.kuaiqian .cmc {
                                 width: 122px;
                             }</style>
-                            <span class="acti"><a href="javascript:void(0)" data-url="xyft-twoSide">两面盘</a></span>
-                            <span class="pm"><a href="javascript:void(0)" data-url="xyft-ranking">排名1~10</a></span>
-                            <span class="gyzh"><a href="javascript:void(0)"
-                                                  data-url="xyft-sum">冠、亚军 组合</a></span>
+
+
+                            <span><a href="javascript:void(0)" data-url="xy28-hh">混合</a></span>
+                            <span><a href="javascript:void(0)" data-url="xy28-hz">和值特码</a></span>
+                            <span><a href="javascript:void(0)" data-url="xy28-tmb3">特码包三</a></span>
                         </p>
                     </li>
                 </ul>
@@ -98,7 +99,24 @@
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
-    <%@ include file="/hall/common/HistoryColor.jsp" %>
+    <!-- 开奖历史模板 -->
+    <script type="text/html" id="template_openDataHistory">
+        <li>
+            <p>第{{number}}期</p>
+            {{if list.length == 0}}
+            <p style="margin-left:5px">开奖中</p>
+            {{else}}
+            {{each list as value}}
+            <i class="round {{value.colour}}">{{value.num}}</i>
+            {{/each}}
+            {{/if}}
+        </li>
+    </script>
+    <script type="text/html" id="template_recent1History">
+        {{each list as value}}
+        <span class="{{value.colour}}">{{value.num}}</span>
+        {{/each}}
+    </script>
 </div>
 <div type="text/html" id="soundContainer" style="pe:none;"></div>
 <%@ include file="/include/include.js.jsp" %>
