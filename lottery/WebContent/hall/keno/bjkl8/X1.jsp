@@ -10,7 +10,7 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="16"><strong id="numsLength"  numsLength="１"  >选1</strong>(
+                    <th colspan="16"><strong id="numsLength"  numsLength="1"  >选1</strong>(
                         <c:set var="lottery" value="${odds['选一']}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
                         中1@<span class="red pl" data-plid="8572">${odd}</span>)
@@ -58,9 +58,9 @@
 
 </div>
 
-<input type="hidden" data-plid="8572" id="pl5"></input>
-<input type="hidden" data-plid="8573" id="pl4"></input>
-<input type="hidden" data-plid="8574" id="pl3"></input>
+<input type="hidden" data-plid="8572" id="pl5"/>
+<input type="hidden" data-plid="8573" id="pl4"/>
+<input type="hidden" data-plid="8574" id="pl3"/>
 
 <script type="text/javascript">
     curl(['site/hall/keno/bjkl8/PlayWay'], function (PlayWay) {

@@ -20,6 +20,7 @@ import java.util.Map;
 /**
  * 其他系列基础controller
  * Created by tom on 17-8-11.
+ * Modified by marz on 17-8-16
  */
 @Controller
 @RequestMapping("/qt")

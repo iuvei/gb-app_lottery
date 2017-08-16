@@ -65,9 +65,9 @@
 
 </div>
 
-<input type="hidden" data-plid="8572" id="pl5"></input>
-<input type="hidden" data-plid="8573" id="pl4"></input>
-<input type="hidden" data-plid="8574" id="pl3"></input>
+<input type="hidden" data-plid="8572" id="pl5"/>
+<input type="hidden" data-plid="8573" id="pl4"/>
+<input type="hidden" data-plid="8574" id="pl3"/>
 
 <script type="text/javascript">
     curl(['site/hall/keno/bjkl8/PlayWay'], function (PlayWay) {
