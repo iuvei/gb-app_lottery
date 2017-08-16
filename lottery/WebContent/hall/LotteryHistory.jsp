@@ -30,7 +30,7 @@
                     </li>--%>
                 </ul>
             </div>
-            <div id="sscContent" class="kjjg">
+            <div id="subContent" class="kjjg">
                 <%@include file="result/AllLottery.jsp" %>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 url: root + '/lotteryResultHistory/queryLotteryByFrequency.html?search.lotteryFrequencyId='+fid,
                 timeout: 60000,
                 success: function (data) {
-                    $("#sscContent").html(data);
+                    $("#subContent").html(data);
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                 },

@@ -82,7 +82,7 @@
                 </ul>
             </div>
 
-            <div id="sscContent"></div>
+            <div id="subContent"></div>
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>

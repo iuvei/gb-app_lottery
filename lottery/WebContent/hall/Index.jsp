@@ -8,7 +8,6 @@
     <style>
         body {overflow: hidden;}
     </style>
-    <%@ include file="/include/include.js.jsp" %>
 </head>
 
 <body>
@@ -83,6 +82,10 @@
                     <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico13.png"></var></div></span><b>玩法介绍</b><i></i>
                 </h2>
                 <div class="down playWay">
+                    $("a").on("click",function(){
+                        var playway = $(this).data("playway");
+                        this.getPage("playway")
+                    })
                     <a href="javascript:void(0)" data-playway="cqssc"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
                     <a href="javascript:void(0)" data-playway="tjssc"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
                     <a href="javascript:void(0)" data-playway="xjssc"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
@@ -143,7 +146,7 @@
             name="ifm" width="100%" style="overflow-x:hidden;"></iframe>
 </div>
 
-<%--<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>--%>
+<%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
     curl(['site/hall/Index'], function(Index) {
         index = new Index();
