@@ -11,7 +11,6 @@
             RESURL: '${resRoot}/themes/default/'
         };
     </script>
-    <%@ include file="/include/include.js.jsp" %>
 </head>
 
 <body>
@@ -95,6 +94,5 @@
         page = new Page();
     });
 </script>
-
 </body>
 </html>

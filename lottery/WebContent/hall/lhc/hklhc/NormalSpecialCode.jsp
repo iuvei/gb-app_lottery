@@ -165,10 +165,8 @@
         </div>
     </div>
 </div>
-<script src="${resRoot}/js/hall/lhc/hklhc/NormalSpecialCode.js?v=${rcVersion}"></script>
-<script>
-    $(function () {
-        $(".main-left .fr .T-tab a.active").click();
+<script type="text/javascript">
+    curl(['site/hall/lhc/hklhc/NormalSpecialCode'], function(PlayWay) {
+        page.playWay = new PlayWay();
     });
 </script>
-<script src="${resRoot}/js/hall/lhc/hklhc/PlayWay.js?v=${rcVersion}"></script>

@@ -156,8 +156,8 @@
     <%--快选投注--%>
     <%@include file="include/Right.jsp"%>
 </div>
-<!--彩种ｉd-->
-<input type="hidden" id="playGroupId" value="6" />
-<input type="hidden" id="playId" value="204" />
-<input type="hidden" id="playGroupName" value="特码" />
-<script src="${resRoot}/js/hall/lhc/hklhc/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/lhc/hklhc/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

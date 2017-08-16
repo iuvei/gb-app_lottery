@@ -61,4 +61,8 @@
     </div>
 </div>
 <!--彩种ｉd-->
-<script src="${resRoot}/js/hall/common/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/common/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

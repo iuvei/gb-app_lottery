@@ -185,5 +185,8 @@
         </div>
     </div>
 </div>
-<!--彩种ｉd-->
-<script src="${resRoot}/js/hall/lhc/hklhc/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/lhc/hklhc/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>
