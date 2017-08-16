@@ -4,41 +4,41 @@
 <%-- 一字组合 --%>
 <div class="lot-content clearfix">
     <input type="hidden" value="${code}" id="lotteryCode">
+    <input type="hidden" value="${lotteryBetCode}" id="lotteryBetCode">
+    <input type="hidden" value="${lotteryPlay}" id="lotteryPlay">
     <div class="fl main-left">
         <div class="hd clearfix">
             <div class="fl">快捷金额：<input type="text" class="txt"></div>
             <div class="fr">
-                <div class="T-tab comb-type clearfix" style="margin-top: 5px; ">
-                    <a href="javascript:void(0)" data-code="group3_first_three" class="active">前三组选三</a>
-                    <a href="javascript:void(0)" data-code="group3_in_three">中三组选三</a>
-                    <a href="javascript:void(0)" data-code="group3_after_three">后三组选三</a>
-                </div>
             </div>
         </div>
         <div class="table-common">
             <table width="100%" border="1" class="num">
                 <thead>
                 <tr>
-                    <th colspan="10"><strong>前三组选三@<span id="pl" class="pl red"></span></strong> (请选择5个及以上号码)</th>
-                </tr>
-                <tr>
-                    <th>号码</th>
-                    <th>选择</th>
-                    <th>号码</th>
-                    <th>选择</th>
-                    <th>号码</th>
-                    <th>选择</th>
-                    <th>号码</th>
-                    <th>选择</th>
-                    <th>号码</th>
-                    <th>选择</th>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
+                    <th width="47">号码</th>
+                    <th width="56">赔率</th>
+                    <th>金额</th>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="i" begin="0" end="9" varStatus="o">
+                <c:forEach var="i" begin="0" end="19" varStatus="o">
                     <c:if test="${o.index%5 == 0}"><tr></c:if>
-                    <td><strong class="pl">${i}</strong></td>
-                    <td><input type="checkbox" data-num="${i}" data-play="${lotteryPlay}"></td>
+                    <td style="cursor: pointer;" class="betname"><strong></strong></td>
+                    <td style="cursor: pointer;" class="peilv" id="peilv${i+1}"><strong class="color-red pl" data-plid="9049"></strong></td>
+                    <td><input type="text" class="table-txt" ></input></td>
                     <c:if test="${o.index % 5 == 4}"></tr></c:if>
                 </c:forEach>
                 </tbody>
@@ -54,11 +54,9 @@
     <%-- 两面长龙排行 --%>
     <%@ include file="../include/include.rank.jsp" %>
 </div>
-<script>
-    var lotteryPlay = "${lotteryPlay}";
-</script>
+
 <script type="text/javascript">
-    curl(['site/hall/ssc/GroupThree'], function (PlayWay) {
+    curl(['site/hall/sfc/RankBall'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>

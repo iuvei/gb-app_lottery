@@ -1,34 +1,83 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
 
-<%-- 双面 --%>
+<%-- 龙虎--%>
 <div class="lot-content clearfix">
+    <input type="hidden" value="${code}" id="lotteryCode">
     <div class="fl main-left">
         <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt" /></div>
+            <div class="fl">快捷金额：<input type="text" class="txt"/></div>
         </div>
 
         <div class="table-common">
-            <div class="table-common clearfix">
-                <table width="180" border="1" class="item">
-                    <tbody>
-                    <tr>
-                        <td data-num="龙1" class="pointer"><strong>龙1</strong></td>
-                        <td data-num="和局" class="pointer"><strong>和局</strong></td>
-                        <td data-num="虎2" class="pointer"><strong>虎2</strong></td>
-                    </tr>
+            <c:forEach var="i" begin="0" end="2" varStatus="o">
+                <div class="table-common clearfix">
+                    <table width="100%" border="1">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <c:if test="${i==0}">
+                            <th colspan="2" data-code="dragon_tiger_12">万仟</th>
+                            <th colspan="2" data-code="dragon_tiger_13">万佰</th>
+                            <th colspan="2" data-code="dragon_tiger_14">万拾</th>
+                            </c:if>
+                            <c:if test="${i==1}">
+                                <th colspan="2" data-code="dragon_tiger_23">仟佰</th>
+                                <th colspan="2" data-code="dragon_tiger_24">仟拾</th>
+                                <th colspan="2" data-code="dragon_tiger_25">仟个</th>
+                            </c:if>
+                            <c:if test="${i==2}">
+                                <th colspan="2" data-code="dragon_tiger_34">佰拾</th>
+                                <th colspan="2" data-code="dragon_tiger_35">佰个</th>
+                                <th colspan="2" data-code="dragon_tiger_45">拾个</th>
+                            </c:if>
+                        </tr>
+                        <tr>
+                            <th>组合</th>
+                            <th>赔率</th>
+                            <th>金额</th>
+                            <th>赔率</th>
+                            <th>金额</th>
+                            <th>赔率</th>
+                            <th>金额</th>
+                        </tr>
+                        </thead>
 
-                    <tr>
-                        <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${dragonTiger}" data-bet-num="${lottery.betNum}"></td>
-
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+                        <tbody>
+                        <c:forEach var="j" begin="0" end="2" varStatus="p">
+                            <tr>
+                                <c:if test="${j==0}"> <th><strong>龙</strong></th></c:if>
+                                <c:if test="${j==1}"> <th><strong>vs</strong></th></c:if>
+                                <c:if test="${j==2}"> <th><strong>虎</strong></th></c:if>
+                                <c:if test="${i==0}">
+                                <td style="cursor: pointer;" class="peilv dragon_tiger_12"><strong class="color-red pl"></strong></td>
+                                <td class="jine dragon_tiger_12"><input type="text" class="table-txt"></td>
+                                <td class="peilv dragon_tiger_13" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
+                                <td class="jine dragon_tiger_13"><input type="text" class="table-txt"></td>
+                                <td class="peilv dragon_tiger_14" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
+                                <td  class="jine dragon_tiger_14"><input type="text" class="table-txt"></td>
+                                </c:if>
+                                <c:if test="${i==1}">
+                                    <td style="cursor: pointer;"  class="peilv dragon_tiger_23"><strong class="color-red pl"></strong></td>
+                                    <td  class="jine dragon_tiger_23"><input type="text" class="table-txt"></td>
+                                    <td class="peilv dragon_tiger_24" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
+                                    <td  class="jine dragon_tiger_24"><input type="text" class="table-txt"></td>
+                                    <td class="peilv dragon_tiger_25" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
+                                    <td class="jine dragon_tiger_25"><input type="text" class="table-txt"></td>
+                                </c:if>
+                                <c:if test="${i==2}">
+                                    <td style="cursor: pointer;"  class="peilv dragon_tiger_34"><strong class="color-red pl"></strong></td>
+                                    <td  class="jine dragon_tiger_34"><input type="text" class="table-txt"></td>
+                                    <td class="peilv dragon_tiger_35" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
+                                    <td class="jine dragon_tiger_35"><input type="text" class="table-txt"></td>
+                                    <td class="peilv dragon_tiger_45" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
+                                    <td class="jine dragon_tiger_45"><input type="text" class="table-txt"></td>
+                                </c:if>
+                            </tr>
+                        </c:forEach>
+                        </tbody></table>
+                </div>
+            </c:forEach>
         </div>
 
         <div class="btns">
@@ -43,9 +92,11 @@
     <%-- 两面长龙排行 --%>
     <%@ include file="../include/include.rank.jsp" %>
 </div>
-
+<script>
+    var lotteryPlay = "${lotteryPlay}";
+</script>
 <script type="text/javascript">
-    curl(['site/hall/ssc/PlayWay'], function(PlayWay) {
+    curl(['site/hall/ssc/DragonTiger.js'], function (PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>

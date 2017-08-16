@@ -331,6 +331,7 @@ public class BaseSscController extends BaseLotteryController {
         oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_34.getCode(), siteLotteryOdds));
         oddList.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_35.getCode(), siteLotteryOdds));
         oddList.add(getOdds(LotteryBettingEnum.TEN_ONE.getCode(), siteLotteryOdds));
+        model.addAttribute("lotteryPlay",LotteryPlayEnum.DRAGON_TIGER.getCode());
         model.addAttribute("oddList", oddList);
         model.addAttribute("code", code);
         //玩法
@@ -388,6 +389,29 @@ public class BaseSscController extends BaseLotteryController {
         model.addAttribute("lotteryPlay",LotteryPlayEnum.GROUP_SIX.getCode());
         //玩法
         initPlayCode(model);
+    }
+    /**
+     * 获取龙虎相关赔率信息
+     *
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getDragonTigerOdds")
+    @ResponseBody
+    public ArrayList<Map<String, SiteLotteryOdd>> getDragonTigerOdds(String code) {
+        //赔率
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(9);
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_12.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_13.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_14.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_23.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_24.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_25.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_34.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_35.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.DRAGON_TIGER_45.getCode(), siteLotteryOdds));
+        return listmap;
     }
 
     public String getBetInfo(String code, String betCode) {

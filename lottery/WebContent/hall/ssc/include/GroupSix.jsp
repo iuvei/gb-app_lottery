@@ -55,8 +55,10 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 <script>
-    var lotteryPlay ="${lotteryPlay}";
+    var lotteryPlay = "${lotteryPlay}";
 </script>
-<script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/ssc/GroupSix.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/hall/ssc/GroupSix'], function (PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>
