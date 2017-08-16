@@ -110,19 +110,8 @@
                         <b>快钱玩法</b>
                         <p class="kuaiqian">
                             <style>.Single .layout .Playmethod ul li p.kuaiqian span {
-                                width: 55px;
+                                width: 80px;
                             }</style>
-                            <style>.Single .layout .Playmethod ul li p.kuaiqian .pm {
-                                width: 77px;
-                            }</style>
-                            <style>.Single .layout .Playmethod ul li p.kuaiqian .gyzh {
-                                width: 103px;
-                            }</style>
-                            <style>.Single .layout .Playmethod ul li p.kuaiqian .cmc {
-                                width: 122px;
-                            }</style>
-
-
                             <span><a href="javascript:void(0)" data-url="xy28-hh">混合</a></span>
                             <span><a href="javascript:void(0)" data-url="xy28-hz">和值特码</a></span>
                             <span><a href="javascript:void(0)" data-url="xy28-tmb3">特码包三</a></span>

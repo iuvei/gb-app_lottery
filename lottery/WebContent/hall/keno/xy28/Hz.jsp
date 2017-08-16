@@ -46,13 +46,13 @@
                         <c:set var="lottery" value="${odds[number.toString()]}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
 
-                        <td style="cursor: pointer;" ><span class="ball-28xyicon xy28-list">${i}</span></td>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;" ><span class="ball-28xyicon xy28-list">${i}</span></td>
                         <td style="cursor: pointer;" data-num="${lottery.betNum}"><strong class="color-red pl" data-plid="9350">${odd}</strong></td>
                         <td data-num="${lottery.betNum}">
                             <input type="text" class="table-txt"
                                    data-plid="9821"
                                    data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${xy28Sum3Digital}"
-                                   data-bet-num="${lottery.betNum}" data-name="${playGroupName}-${lottery.betNum}"
+                                   data-bet-num="${lottery.betNum}" data-name="和值-${lottery.betNum}"
                             ></td>
                     </c:forEach>
                 </tr>

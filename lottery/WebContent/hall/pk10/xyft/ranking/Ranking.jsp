@@ -14,14 +14,11 @@
     </thead>
 <tbody>
 <c:forEach var="i" begin="1" end="10">
-    <c:set var="number" value="0${i}"/>
-    <c:if test="${i==10}">
-        <c:set var="number" value="${i}"/>
-    </c:if>
+    <c:set var="number" value="${i}"/>
     <c:set var="lottery" value="${odds[number.toString()]}"/>
     <c:set var="odd" value="${lottery.odd}"/>
     <tr>
-        <td style="cursor: pointer;"><span class="number num${i}"></span></td>
+        <td data-num="${playGroupName}-${lottery.betNum}" style="cursor: pointer;"><span class="number num${i}"></span></td>
         <td data-num="${playGroupName}-${lottery.betNum}" class="pl pl-color" data-plid="982${i}" style="cursor: pointer;">${odd}</td>
         <td data-num="${playGroupName}-${lottery.betNum}">
             <input class="amount-input"   data-plid="9821"
@@ -34,7 +31,7 @@
 <c:set var="lottery" value="${odds['大']}"/>
 <c:set var="odd" value="${lottery.odd}"/>
 <tr>
-    <td style="cursor: pointer;"><span class="">大</span></td>
+    <td data-num="${playGroupName}-${lottery.betNum}" style="cursor: pointer;"><span class="">大</span></td>
     <td data-num="${playGroupName}-${lottery.betNum}" class="pl pl-color" data-plid="10164" style="cursor: pointer;">${odd}</td>
     <td data-num="${playGroupName}-${lottery.betNum}"><input class="amount-input"
                data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10BigSmall}" data-bet-num="大"
@@ -44,7 +41,7 @@
 <c:set var="lottery" value="${odds['小']}"/>
 <c:set var="odd" value="${lottery.odd}"/>
 <tr>
-    <td style="cursor: pointer;"><span class="">小</span></td>
+    <td data-num="${playGroupName}-${lottery.betNum}" style="cursor: pointer;"><span class="">小</span></td>
     <td data-num="${playGroupName}-${lottery.betNum}" class="pl pl-color" data-plid="10165" style="cursor: pointer;">${odd}</td>
     <td data-num="${playGroupName}-${lottery.betNum}"><input class="amount-input"
                data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10BigSmall}" data-bet-num="小"
@@ -54,7 +51,7 @@
 <c:set var="lottery" value="${odds['单']}"/>
 <c:set var="odd" value="${lottery.odd}"/>
 <tr>
-    <td style="cursor: pointer;"><span class="">单</span></td>
+    <td data-num="${playGroupName}-${lottery.betNum}" style="cursor: pointer;"><span class="">单</span></td>
     <td data-num="${playGroupName}-${lottery.betNum}" class="pl pl-color" data-plid="10166" style="cursor: pointer;">${odd}</td>
     <td data-num="${playGroupName}-${lottery.betNum}"><input class="amount-input"
                data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10SingleDouble}" data-bet-num="单"
@@ -64,7 +61,7 @@
 <c:set var="lottery" value="${odds['双']}"/>
 <c:set var="odd" value="${lottery.odd}"/>
 <tr>
-    <td style="cursor: pointer;"><span class="">双</span></td>
+    <td data-num="${playGroupName}-${lottery.betNum}" style="cursor: pointer;"><span class="">双</span></td>
     <td data-num="${playGroupName}-${lottery.betNum}" class="pl pl-color" data-plid="10167" style="cursor: pointer;">${odd}</td>
     <td data-num="${playGroupName}-${lottery.betNum}"><input class="amount-input"
                data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pk10SingleDouble}" data-bet-num="双"

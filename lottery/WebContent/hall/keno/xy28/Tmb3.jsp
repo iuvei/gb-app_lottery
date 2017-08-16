@@ -3,10 +3,6 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd clearfix rehd tzgz" id="toptouzhu">
-            <div class="fl refl">
-                快捷金额：
-                <input type="text" class="txt">
-            </div>
             <div class="kjanniu">
                 <a href="javascript:void(0)" class="img-50" data-num="50"></a>
                 <a href="javascript:void(0)" class="img-100" data-num="100"></a>
@@ -44,20 +40,27 @@
                     <tr>
                         <c:forEach var="i" begin="${j*4}" end="${j*4+3}">
 
-                            <td style="cursor: pointer;"><span class="ball-28xyicon xy28-list">${i}</span></td>
+                            <td data-num="${i}"  style="cursor: pointer;"><span class="ball-28xyicon xy28-list">${i}</span></td>
                             <td style="cursor: pointer;" data-num="${i}"><strong class="color-red pl" data-plid="9350">${odd}</strong>
                             </td>
                             <td data-num="${i}">
-                                <input type="text" class="table-txt"
+                                <input type="checkbox" class="table-txt"
                                        data-plid="9821"
                                        data-odds="${odd}" data-bet-code="${lottery.betCode}"
                                        data-play="${xy28Sum3DigitalThree}"
-                                       data-bet-num="特码包三" data-name="特码包三-${i}"
+                                       data-bet-num="${i}" data-name="特码包三-${i}"
                                 ></td>
                         </c:forEach>
                     </tr>
                 </c:forEach>
                 </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="18">
+                        下注金额：<input type="text" class="txt" id="inputMoney">
+                    </td>
+                </tr>
+                </tfoot>
             </table>
         </div>
 
@@ -71,7 +74,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    curl(['site/hall/keno/xy28/PlayWay'], function(PlayWay) {
+    curl(['site/hall/keno/xy28/tmb3/PlayWay'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>
