@@ -46,7 +46,7 @@
                         <c:set var="lottery" value="${odds[number.toString()]}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
 
-                        <td style="cursor: pointer;" ><span class="ball-28xyicon grayxy28">${i}</span></td>
+                        <td style="cursor: pointer;" ><span class="ball-28xyicon xy28-list">${i}</span></td>
                         <td style="cursor: pointer;" data-num="${lottery.betNum}"><strong class="color-red pl" data-plid="9350">${odd}</strong></td>
                         <td data-num="${lottery.betNum}">
                             <input type="text" class="table-txt"
@@ -57,8 +57,6 @@
                     </c:forEach>
                 </tr>
                 </c:forEach>
-
-
                 </tbody>
             </table>
         </div>
@@ -72,61 +70,49 @@
     </div>
     <div class="fr main-right cl-10 p-r-0">
         <div class="table-common table-border-color">
-            <table width="100%" border="1">
-                <tbody>
-                <tr>
-                    <td colspan="2">长龙排行</td>
-                </tr>
-                <tr>
-                    <td colspan="2">统计至第839127期</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-大</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-双</td>
-                    <td>16</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-红波</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-单</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-大双</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-大单</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-小双</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-蓝波</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-小单</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td width="142">和值-绿波</td>
-                    <td>6</td>
-                </tr>
-                </tbody>
-            </table>
+
         </div>
     </div>
 </div>
 <script type="text/javascript">
     curl(['site/hall/keno/xy28/PlayWay'], function(PlayWay) {
         page.playWay = new PlayWay();
+    });
+</script>
+<script>
+    $(".xy28-list").each(function () {
+        var val = $(this).text();
+        console.log(val)
+        var map={
+            0:"grayxy28",
+            1:"greenxy28",
+            2:"bluexy28",
+            3:"ball-28xy3",
+            4:"greenxy28",
+            5:"bluexy28",
+            6:"ball-28xy3",
+            7:"greenxy28",
+            8:"bluexy28",
+            9:"ball-28xy3",
+            10:"greenxy28",
+            11:"bluexy28",
+            12:"ball-28xy3",
+            13:"grayxy28",
+            14:"grayxy28",
+            15:"ball-28xy3",
+            16:"greenxy28",
+            17:"bluexy28",
+            18:"ball-28xy3",
+            19:"greenxy28",
+            20:"bluexy28",
+            21:"ball-28xy3",
+            22:"greenxy28",
+            23:"bluexy28",
+            24:"ball-28xy3",
+            25:"greenxy28",
+            26:"bluexy28",
+            27:"grayxy28"
+        };
+        $(this).addClass(map[val]);
     });
 </script>
