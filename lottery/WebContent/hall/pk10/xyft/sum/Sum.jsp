@@ -23,7 +23,7 @@
             <td class="td_style">
                 <table class="touzhuArea touzhuArea_gyjh_content">
                     <tbody>
-                    <c:set var="lottery" value="${odds['03']}"/>
+                    <c:set var="lottery" value="${odds['3']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">3</td>
@@ -35,7 +35,7 @@
                                    data-name="冠亚和-${lottery.betNum}" data-plid="10002" type="text"></input>
                         </td>
                     </tr>
-                    <c:set var="lottery" value="${odds['07']}"/>
+                    <c:set var="lottery" value="${odds['7']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">7</td>
@@ -83,7 +83,7 @@
                                    data-name="冠亚和-${lottery.betNum}" data-plid="10002" type="text"></input>
                         </td>
                     </tr>
-                    <c:set var="lottery" value="${odds['大']}"/>
+                    <c:set var="lottery" value="${odds['和大']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">冠亚大</td>
@@ -114,7 +114,7 @@
             <td class="td_style">
                 <table class="touzhuArea touzhuArea_gyjh_content">
                     <tbody>
-                    <c:set var="lottery" value="${odds['04']}"/>
+                    <c:set var="lottery" value="${odds['4']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">4</td>
@@ -126,7 +126,7 @@
                                    data-name="冠亚和-${lottery.betNum}" data-plid="10002" type="text"></input>
                         </td>
                     </tr>
-                    <c:set var="lottery" value="${odds['08']}"/>
+                    <c:set var="lottery" value="${odds['8']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">8</td>
@@ -167,7 +167,7 @@
                         <td style="cursor: pointer;"></td>
                         <td style="cursor: pointer;"></td>
                     </tr>
-                    <c:set var="lottery" value="${odds['小']}"/>
+                    <c:set var="lottery" value="${odds['和小']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">冠亚小</td>
@@ -198,7 +198,7 @@
             <td class="td_style">
                 <table class="touzhuArea touzhuArea_gyjh_content">
                     <tbody>
-                    <c:set var="lottery" value="${odds['05']}"/>
+                    <c:set var="lottery" value="${odds['5']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">5</td>
@@ -210,7 +210,7 @@
                                    data-name="冠亚和-${lottery.betNum}" data-plid="10002" type="text"></input>
                         </td>
                     </tr>
-                    <c:set var="lottery" value="${odds['09']}"/>
+                    <c:set var="lottery" value="${odds['9']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">9</td>
@@ -251,7 +251,7 @@
                         <td style="cursor: pointer;"></td>
                         <td style="cursor: pointer;"></td>
                     </tr>
-                    <c:set var="lottery" value="${odds['单']}"/>
+                    <c:set var="lottery" value="${odds['和单']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">冠亚单</td>
@@ -282,7 +282,7 @@
             <td class="td_style">
                 <table class="touzhuArea touzhuArea_gyjh_content">
                     <tbody>
-                    <c:set var="lottery" value="${odds['06']}"/>
+                    <c:set var="lottery" value="${odds['6']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">6</td>
@@ -335,7 +335,7 @@
                         <td style="cursor: pointer;"></td>
                         <td style="cursor: pointer;"></td>
                     </tr>
-                    <c:set var="lottery" value="${odds['双']}"/>
+                    <c:set var="lottery" value="${odds['和双']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td style="cursor: pointer;">冠亚双</td>
