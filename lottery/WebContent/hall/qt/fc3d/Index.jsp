@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>时时彩 | 天津时时彩</title>
+    <title></title>
     <%@ include file="/include/include.head.jsp" %>
     <script>
         var CONFIG = {
@@ -11,7 +11,6 @@
             RESURL: '${resRoot}/themes/default/'
         };
     </script>
-    <%@ include file="/include/include.js.jsp" %>
 </head>
 
 <body>
@@ -19,7 +18,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>天津时时彩</h2>
+                <h2>福彩3D</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="expect" class="expect"></i>期</p>
                 <div class="select">
@@ -37,7 +36,7 @@
             <div class="box2_stage rebox2_stage">
                 <p>
                     <span><i class="acti">近一期</i><i>近五期</i></span>
-                    <font id="lastNumber">天津时时彩第<var></var>期</font>
+                    <font id="lastNumber">福彩3D第<var></var>期</font>
                 </p>
                 <div class="number pt10" id="lastOpenCode" style="display: block;">
                 </div>
@@ -59,14 +58,15 @@
                             <style type="text/css">
                                 .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
                             </style>
-                            <span class="acti"><a href="javascript:void(0)" data-url="tjssc-twoSide">双面</a></span>
-                            <span><a href="javascript:void(0)" data-url="tjssc-digit">数字盘</a></span>
-                            <span><a href="javascript:void(0)" data-url="tjssc-oneWordFix">一字定位</a></span>
-                            <span><a href="javascript:void(0)" data-url="tjssc-twoWordFix">二字定位</a></span>
-                            <span><a href="javascript:void(0)" data-url="tjssc-threeWordFix">三字定位</a></span>
-                            <span><a href="javascript:void(0)" data-url="tjssc-oneWordComb">一字组合</a></span>
-                           <%-- <span><a href="javascript:void(0)" data-url="tjssc-span">跨度</a></span>
-                            <span><a href="javascript:void(0)" data-url="tjssc-dragonTiger">龙虎</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="${code}-fix">定位</a></span>
+                            <%--<span class="acti"><a href="javascript:void(0)" data-url="xjssc-twoSide">双面</a></span>--%>
+                            <%--<span><a href="javascript:void(0)" data-url="xjssc-digit">数字盘</a></span>--%>
+                            <%--<span><a href="javascript:void(0)" data-url="xjssc-oneWordFix">一字定位</a></span>--%>
+                            <%--<span><a href="javascript:void(0)" data-url="xjssc-twoWordFix">二字定位</a></span>--%>
+                            <%--<span><a href="javascript:void(0)" data-url="xjssc-threeWordFix">三字定位</a></span>--%>
+                            <%--<span><a href="javascript:void(0)" data-url="xjssc-oneWordComb">一字组合</a></span>--%>
+                            <%-- <span><a href="javascript:void(0)" data-url="xjssc-span">跨度</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-dragonTiger">龙虎</a></span>--%>
                         </p>
                     </li>
                 </ul>
@@ -78,8 +78,10 @@
     <%@ include file="/hall/common/History.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
+
+<%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/ssc/Ssc'], function(Page) {
+    curl(['site/hall/qt/Qt'], function(Page) {
         page = new Page();
     });
 </script>

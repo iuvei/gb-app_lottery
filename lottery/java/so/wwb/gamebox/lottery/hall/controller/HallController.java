@@ -46,7 +46,6 @@ public class HallController extends BaseLotteryController {
 
     @RequestMapping("/index")
     public String index(Model model) {
-        Cache.refreshLottery();
         Map<String, Lottery> lottery = Cache.getLotteryByTerminal(TerminalEnum.PC.getCode());
         //高频彩票
         LotteryFrequencyListVo gfrequencyL = new LotteryFrequencyListVo();

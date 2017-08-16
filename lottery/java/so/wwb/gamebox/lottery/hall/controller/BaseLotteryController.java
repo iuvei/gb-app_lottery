@@ -35,6 +35,24 @@ public abstract class BaseLotteryController extends so.wwb.gamebox.web.lottery.c
     }
 
     /**
+     * 最近5条开彩记录
+     *
+     * @param code 彩种
+     * @return 记录
+     */
+    protected List<LotteryResult> getOpenHistory(String code) {
+        List<LotteryResult> lotteryResults = getOpenHistory(code, 5, false);
+        Map<String, String> dicts = I18nTool.getDictsMap(SessionManager.getLocale().toString()).get(Module.LOTTERY.getCode()).get(DictEnum.LOTTERY.getType());
+        for (LotteryResult result : lotteryResults) {
+            result.setFmOpenTime(LocaleDateTool.formatDate(result.getOpenTime(),
+                    CommonContext.getDateFormat().getDAY_SECOND(), SessionManager.getTimeZone()));
+            result.setCodeMemo(dicts.get(result.getCode()));
+        }
+        return lotteryResults;
+    }
+
+
+    /**
      * 购彩大厅默认页面显示
      *
      * @param model
