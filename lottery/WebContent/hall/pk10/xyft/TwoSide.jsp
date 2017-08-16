@@ -26,43 +26,43 @@
                 <%-- 冠军 --%>
                 <c:set var="odds" value="${oddMap['champion']}"/>
                 <c:set var="playGroupName" value="冠军"/>
-                <%@ include file="twoSide/DragonTiger.jsp" %>
+                <%@ include file="../bjpk10/twoSide/DragonTiger.jsp" %>
                 <%-- 亚军 --%>
                 <c:set var="playGroupName" value="亚军"/>
                 <c:set var="odds" value="${oddMap['runner_up']}"/>
-                <%@ include file="twoSide/DragonTiger.jsp" %>
+                <%@ include file="../bjpk10/twoSide/DragonTiger.jsp" %>
                 <%-- 季军 --%>
                 <c:set var="playGroupName" value="季军"/>
                 <c:set var="odds" value="${oddMap['third_runner']}"/>
-                <%@ include file="twoSide/DragonTiger.jsp" %>
+                <%@ include file="../bjpk10/twoSide/DragonTiger.jsp" %>
                 <%-- 第四名 --%>
                 <c:set var="playGroupName" value="第四名"/>
                 <c:set var="odds" value="${oddMap['fourth_place']}"/>
-                <%@ include file="twoSide/DragonTiger.jsp" %>
+                <%@ include file="../bjpk10/twoSide/DragonTiger.jsp" %>
                 <%-- 第五名 --%>
                 <c:set var="playGroupName" value="第五名"/>
                 <c:set var="odds" value="${oddMap['fifth_place']}"/>
-                <%@ include file="twoSide/DragonTiger.jsp" %>
+                <%@ include file="../bjpk10/twoSide/DragonTiger.jsp" %>
                 <%-- 第六名 --%>
                 <c:set var="playGroupName" value="第六名"/>
                 <c:set var="odds" value="${oddMap['sixth_place']}"/>
-                <%@ include file="twoSide/TwoSide.jsp" %>
+                <%@ include file="../bjpk10/twoSide/TwoSide.jsp" %>
                 <%-- 第七名 --%>
                 <c:set var="playGroupName" value="第七名"/>
                 <c:set var="odds" value="${oddMap['seventh_place']}"/>
-                <%@ include file="twoSide/TwoSide.jsp" %>
+                <%@ include file="../bjpk10/twoSide/TwoSide.jsp" %>
                 <%-- 第八名 --%>
                 <c:set var="playGroupName" value="第八名"/>
                 <c:set var="odds" value="${oddMap['eighth_place']}"/>
-                <%@ include file="twoSide/TwoSide.jsp" %>
+                <%@ include file="../bjpk10/twoSide/TwoSide.jsp" %>
                 <%-- 第九名 --%>
                 <c:set var="playGroupName" value="第九名"/>
                 <c:set var="odds" value="${oddMap['ninth_place']}"/>
-                <%@ include file="twoSide/TwoSide.jsp" %>
+                <%@ include file="../bjpk10/twoSide/TwoSide.jsp" %>
                 <%-- 第十名 --%>
                 <c:set var="playGroupName" value="第十名"/>
                 <c:set var="odds" value="${oddMap['tenth_place']}"/>
-                <%@ include file="twoSide/TwoSide.jsp" %>
+                <%@ include file="../bjpk10/twoSide/TwoSide.jsp" %>
                 </tbody>
             </table>
         </div>

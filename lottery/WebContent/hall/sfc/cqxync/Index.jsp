@@ -29,8 +29,8 @@
                         </c:forEach>
                     </select>
                 </div>
-                <input type="hidden" name="type" value="${type}" />
-                <input type="hidden" name="code" value="${code}" />
+                <input type="hidden" name="type" value="${type}"/>
+                <input type="hidden" name="code" value="${code}"/>
             </div>
 
             <div class="box2_stage rebox2_stage">
@@ -56,9 +56,11 @@
                         <b>快钱玩法</b>
                         <p class="kuaiqian">
                             <style type="text/css">
-                                .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
+                                .Single .layout .Playmethod ul li p.kuaiqian span {
+                                    width: 61px;
+                                }
                             </style>
-                            <span><a href="javascript:void(0)" data-url="cqxync-dragonTiger">龙虎</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqxync-twoSide">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="cqxync-ranking-sfc_first">第一球</a></span>
                             <span><a href="javascript:void(0)" data-url="cqxync-ranking-sfc_second">第二球</a></span>
                             <span><a href="javascript:void(0)" data-url="cqxync-ranking-sfc_third">第三球</a></span>
@@ -67,7 +69,7 @@
                             <span><a href="javascript:void(0)" data-url="cqxync-ranking-sfc_sixth">第六球</a></span>
                             <span><a href="javascript:void(0)" data-url="cqxync-ranking-sfc_seventh">第七球</a></span>
                             <span><a href="javascript:void(0)" data-url="cqxync-ranking-sfc_eighth">第八球</a></span>
-                            <span ><a href="javascript:void(0)" data-url="cqxync-twoSide">双面</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqxync-dragonTiger">龙虎</a></span>
                         </p>
                     </li>
                 </ul>
@@ -82,7 +84,7 @@
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/sfc/Sfc'], function(Page) {
+    curl(['site/hall/sfc/Sfc'], function (Page) {
         page = new Page();
     });
 </script>
