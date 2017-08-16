@@ -70,7 +70,7 @@
             <div class="Playmethod">
                 <ul>
                     <li>
-                        <b>快钱玩法</b>
+                        <b >快钱玩法</b>
                         <p class="kuaiqian">
                             <style>.Single .layout .Playmethod ul li p.kuaiqian span {
                                 width: 55px;
@@ -93,7 +93,7 @@
                 </ul>
             </div>
 
-            <div id="sscContent"></div>
+            <div id="subContent"></div>
 
         </div>
     </div><!--Single-->
@@ -102,10 +102,11 @@
 </div>
 <div type="text/html" id="soundContainer" style="pe:none;"></div>
 <%@ include file="/include/include.js.jsp" %>
-
-<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/BottomTab.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/common.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/pk10/Pk10'], function(Page) {
+        page = new Page();
+    });
+</script>
 
 </body>
 </html>

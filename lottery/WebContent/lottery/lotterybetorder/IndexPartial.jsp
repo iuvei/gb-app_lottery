@@ -80,34 +80,4 @@
     </tr>--%>
     </tbody>
 </table>
-<script src="${resRoot}/themes/default/js/jquery.min.js?v=${rcVersion}"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        fetchProfit();
-
-    });
-    function fetchProfit() {
-        var data = $("#lottery-bet-order-form").serialize();
-        $.ajax({
-            type: "post",
-            url: root + '/lotteryBetOrder/fetchProfit.html',
-            data:data,
-            dataType:'json',
-            success: function (data) {
-                $("#totalMoney").text(data.betamount);
-                $("#totalWinOrLoseMoney").text(data.profitloss);
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-            },
-            beforeSend: function () {
-                //parent.showLoading();
-            },
-            complete: function () {
-                //parent.hideLoading();
-
-            }
-        });
-    }
-</script>
-
 <%@include file="../../include/include.pagination.jsp"%>

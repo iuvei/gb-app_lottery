@@ -43,10 +43,10 @@
                        value="${soulFn:formatDateTz(command.search.queryEndDate, DateFormat.DAY_SECOND,timeZone)}"
                        class="suminp"
                        onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
-                <a href="javascript:void(0)" class="button_small button_1" onclick="query(this)">筛选</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                <a href="javascript:void(0)" class="button_small button_1" id="queryBetOrder">筛选</a>
+                <a href="javascript:void(0)" class="button_small button_4" data-searchid="1">今日</a>
+                <a href="javascript:void(0)" class="button_small button_4" data-searchid="3">3天</a>
+                <a href="javascript:void(0)" class="button_small button_4" data-searchid="7">本周</a>
             </div>
         </h2>
         <div id="search-list-container">
@@ -59,16 +59,13 @@
 <%--<soul:pagination cssClass="bdtop3"/>--%>
 </form>
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/themes/default/member/framework/jquery.validate.min.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/laydate/laydate.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/validate.js?v=${rcVersion}"></script>
+<script src="${resRoot}/js/plugin/laydate/laydate.js?v=${rcVersion}"></script>
 <script src="${resRoot}/themes/default/member/js/global.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/jquery.form.min.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/jquery.md5.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/clipboard.min.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/clipboard.min.js?v=${rcVersion}"></script>
-
-<script src="${resRoot}/js/bet/Index.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/bet/Index'], function(Page) {
+        page = new Page();
+    });
+</script>
 
 </body>
 </html>

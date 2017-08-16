@@ -24,7 +24,7 @@
         <div class="paging-left">
             <div class="paging-form-inline">
                 <span class="paging-tit">每页显示</span>
-                <select class="paging-select" name="paging.pageSize" onchange="gotoPage(1,this)">
+                <select class="paging-select" name="paging.pageSize">
                     <option value="20" ${command.paging.pageSize==20?'selected':''}>20条</option>
                     <option value="30" ${command.paging.pageSize==30?'selected':''}>30条</option>
                     <option value="50" ${command.paging.pageSize==50?'selected':''}>50条</option>
@@ -37,8 +37,8 @@
         <div class="paging-right">
             <ul class="paging-btn-list">
             <c:if test="${command.paging.pageNumber>1}">
-                <li class=""><a href="javascript:void(0)" onclick="gotoPage(1,this)"><i class="paging-ico first-ico"></i></a></li>
-                <li class=""><a href="javascript:void(0)" onclick="gotoPage(${command.paging.prePage},this)"><i class="paging-ico go-ico"></i></a></li>
+                <li class=""><a href="javascript:void(0)" data-pageNum="1"><i class="paging-ico first-ico"></i></a></li>
+                <li class=""><a href="javascript:void(0)" data-pageNum="${command.paging.prePage}"><i class="paging-ico go-ico"></i></a></li>
             </c:if>
             <c:if test="${command.paging.pageNumber==1}">
                 <li class=""><a href="javascript:void(0)" disabled="true"><i class="paging-ico first-ico"></i></a></li>
@@ -52,7 +52,7 @@
                 </c:if>
                 <c:set var="index"/>
                 <c:forEach var="i" begin="${firstPageNumber}" end="${end-1}" step="1">
-                    <li aria-controls="editable" class=""><a name="paging.Page" href="javascript:void(0)" onclick="gotoPage(${i+1-firstPageNumber},this)" data-page="${i}">${i+1-firstPageNumber}</a></li>
+                    <li aria-controls="editable" class=""><a name="paging.Page" href="javascript:void(0)" data-pageNum="${i+1-firstPageNumber}" data-page="${i}">${i+1-firstPageNumber}</a></li>
                     <c:set var="index" value="${i}"/>
                 </c:forEach>
                 <c:if test="${index < midBeginPage && index + 1 != midBeginPage}">
@@ -68,7 +68,7 @@
                 </c:if>
                 <c:if test="${i != pageNumber && totalCount > 0}">
                     <li aria-controls="editable" class="">
-                        <a name="paging.Page" href="javascript:void(0)" onclick="gotoPage(${i+1-firstPageNumber},this)" data-page="${i}">${i+1-firstPageNumber}</a>
+                        <a name="paging.Page" href="javascript:void(0)" data-pageNum="${i+1-firstPageNumber}" data-page="${i}">${i+1-firstPageNumber}</a>
                     </li>
                 </c:if>
             </c:forEach>
@@ -80,15 +80,12 @@
             </c:if>
 
             <c:forEach var="i" begin="${endPageIndex+1}" end="${lastPageNumber}" step="1">
-                <li aria-controls="editable" class=""><a name="paging.Page" href="javascript:void(0)" onclick="gotoPage(${i+1-firstPageNumber},this)" data-page="${i}">${i+1-firstPageNumber}</a></li>
+                <li aria-controls="editable" class=""><a name="paging.Page" href="javascript:void(0)" data-pageNum="${i+1-firstPageNumber}" data-page="${i}">${i+1-firstPageNumber}</a></li>
             </c:forEach>
 
-
-
-
             <c:if test="${command.paging.pageNumber<command.paging.lastPageNumber}">
-                <li class=""><a href="javascript:void(0)" onclick="gotoPage(${command.paging.nextPage},this)"><i class="paging-ico retreat-ico"></i></a></li>
-                <li class=""><a href="javascript:void(0)" onclick="gotoPage(${command.paging.lastPageNumber},this)"><i class="paging-ico last-ico"></i></a></li>
+                <li class=""><a href="javascript:void(0)" data-pageNum="${command.paging.nextPage}"><i class="paging-ico retreat-ico"></i></a></li>
+                <li class=""><a href="javascript:void(0)" data-pageNum="${command.paging.lastPageNumber}"><i class="paging-ico last-ico"></i></a></li>
             </c:if>
             <c:if test="${command.paging.pageNumber==command.paging.lastPageNumber}">
                 <li class=""><a href="javascript:void(0)"><i class="paging-ico retreat-ico"></i></a></li>
@@ -98,7 +95,7 @@
             <div class="paging-form-inline">
                 <label class="m-l-sm">共${command.paging.lastPageNumber}页<%--，每页${command.paging.pageSize}条，共${command.paging.totalCount}条。--%></label>
                 <label class="m-l">第<input type="number" min="1" id="input-number" value="${command.paging.pageNumber}" class="input-sm" style="border: 1px solid #dddddd;height: 27px">页</label>
-                <button class="paging-btn" onclick="gotoPage(null,this)">跳转</button>
+                <button class="paging-btn">跳转</button>
             </div>
         </div>
     </div>

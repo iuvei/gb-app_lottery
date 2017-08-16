@@ -74,6 +74,18 @@ public class BasePk10Controller extends BaseLotteryController {
     public String getRecent30Records(String code) {
         return JsonTool.toJson(getOpenHistory(code, 30, true));
     }
+    /**
+     * pk10最近100条开彩记录
+     *
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getRecent100Records")
+    @ResponseBody
+    public String getRecent100Records(String code) {
+        return JsonTool.toJson(getOpenHistory(code, 100, true));
+    }
+
 
 
     /**

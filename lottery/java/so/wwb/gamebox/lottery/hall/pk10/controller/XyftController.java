@@ -2,12 +2,9 @@ package so.wwb.gamebox.lottery.hall.pk10.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import so.wwb.gamebox.lottery.hall.pk10.controller.BasePk10Controller;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
-import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 
 import javax.servlet.http.HttpServletRequest;
 

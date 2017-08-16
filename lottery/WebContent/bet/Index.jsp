@@ -41,18 +41,16 @@
                 　起止时间：
                 <input name="starttime" id="starttime"
                        value="2017-03-29 00:00"
-                       type="text" size="11" class="suminp"
-                       onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})"> -
+                       type="text" size="11" class="suminp"> -
                 <input name="endtime"
                        id="endtime" type="text"
                        size="11"
                        value="2017-03-30 00:00"
-                       class="suminp"
-                       onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})">
-                <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
-                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                       class="suminp">
+                <a href="javascript:void(0)" class="button_small button_1" id="shaixuan">筛选</a>
+                <a href="javascript:void(0)" class="button_small button_4" data-searchid="1">今日</a>
+                <a href="javascript:void(0)" class="button_small button_4" data-searchid="3">3天</a>
+                <a href="javascript:void(0)" class="button_small button_4" data-searchid="7">本周</a>
             </div>
         </h2>
         <table class="eveb_box eveb_table" id="dataTable">
@@ -117,16 +115,12 @@
 </div>
 
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/themes/default/member/framework/jquery.validate.min.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/laydate/laydate.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/validate.js?v=${rcVersion}"></script>
+<script src="${resRoot}/js/plugin/laydate/laydate.js?v=${rcVersion}"></script>
 <script src="${resRoot}/themes/default/member/js/global.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/jquery.form.min.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/jquery.md5.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/clipboard.min.js?v=${rcVersion}"></script>
-<script src="${resRoot}/themes/default/member/js/clipboard.min.js?v=${rcVersion}"></script>
-
-<script src="${resRoot}/js/bet/Index.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/bet/Index'], function(Page) {
+        page = new Page();
+    });
+</script>
 </body>
 </html>
