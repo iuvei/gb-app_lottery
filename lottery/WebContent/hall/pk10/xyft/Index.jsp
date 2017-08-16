@@ -70,7 +70,7 @@
             <div class="Playmethod">
                 <ul>
                     <li>
-                        <b>快钱玩法</b>
+                        <b >快钱玩法</b>
                         <p class="kuaiqian">
                             <style>.Single .layout .Playmethod ul li p.kuaiqian span {
                                 width: 55px;
