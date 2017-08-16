@@ -19,9 +19,7 @@
         <div class="table-common">
             <table width="100%" border="1">
                 <thead>
-                <tr>
-                    <th colspan="12">和值</th>
-                </tr>
+
                 <tr>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
@@ -46,7 +44,7 @@
                     <tr>
                         <c:forEach var="i" begin="${j*4}" end="${j*4+3}">
 
-                            <td style="cursor: pointer;"><span class="ball-28xyicon grayxy28">${i}</span></td>
+                            <td style="cursor: pointer;"><span class="ball-28xyicon xy28-list">${i}</span></td>
                             <td style="cursor: pointer;" data-num="${i}"><strong class="color-red pl" data-plid="9350">${odd}</strong>
                             </td>
                             <td data-num="${i}">
@@ -75,5 +73,42 @@
 <script type="text/javascript">
     curl(['site/hall/keno/xy28/PlayWay'], function(PlayWay) {
         page.playWay = new PlayWay();
+    });
+</script>
+<script>
+    $(".xy28-list").each(function () {
+        var val = $(this).text();
+        console.log(val)
+        var map={
+            0:"grayxy28",
+            1:"greenxy28",
+            2:"bluexy28",
+            3:"ball-28xy3",
+            4:"greenxy28",
+            5:"bluexy28",
+            6:"ball-28xy3",
+            7:"greenxy28",
+            8:"bluexy28",
+            9:"ball-28xy3",
+            10:"greenxy28",
+            11:"bluexy28",
+            12:"ball-28xy3",
+            13:"grayxy28",
+            14:"grayxy28",
+            15:"ball-28xy3",
+            16:"greenxy28",
+            17:"bluexy28",
+            18:"ball-28xy3",
+            19:"greenxy28",
+            20:"bluexy28",
+            21:"ball-28xy3",
+            22:"greenxy28",
+            23:"bluexy28",
+            24:"ball-28xy3",
+            25:"greenxy28",
+            26:"bluexy28",
+            27:"grayxy28"
+        };
+        $(this).addClass(map[val]);
     });
 </script>
