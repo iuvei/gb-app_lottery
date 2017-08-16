@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
-
+<c:if test="${fn:length(odds) == 0}">
+    <li class="init-tip">暂无数据</li>
+</c:if>
+<c:if test="${fn:length(odds) > 0}">
 <table width="100%" border="1" class="num">
     <thead>
     <tr>
@@ -131,3 +134,4 @@
     </tr>
     </tbody>
 </table>
+</c:if>

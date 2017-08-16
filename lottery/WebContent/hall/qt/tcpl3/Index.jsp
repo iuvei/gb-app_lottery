@@ -59,7 +59,7 @@
                                 .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
                             </style>
                             <span><a href="javascript:void(0)" data-url="${code}-fix">定位</a></span>
-                            <%--<span class="acti"><a href="javascript:void(0)" data-url="xjssc-twoSide">双面</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="${code}-comb">组合</a></span>
                             <%--<span><a href="javascript:void(0)" data-url="xjssc-digit">数字盘</a></span>--%>
                             <%--<span><a href="javascript:void(0)" data-url="xjssc-oneWordFix">一字定位</a></span>--%>
                             <%--<span><a href="javascript:void(0)" data-url="xjssc-twoWordFix">二字定位</a></span>--%>

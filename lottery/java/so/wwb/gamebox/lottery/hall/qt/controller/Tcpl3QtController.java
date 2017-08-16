@@ -29,6 +29,12 @@ public class Tcpl3QtController extends BaseQtController {
         return super.fix(model, CODE);
     }
 
+    // 组合
+    @RequestMapping("/comb")
+    public String comb(Model model) {
+        return super.comb(model, CODE);
+    }
+
     /**
      * 获取赔率
      *
@@ -38,19 +44,6 @@ public class Tcpl3QtController extends BaseQtController {
     public String getOdds(Model model,String betCode) {
         return super.getOddsByBetCode(model,CODE,betCode);
     }
-
-
-//    // 一字组合
-//    @RequestMapping("/oneWordComb")
-//    public String oneWordComb(Model model) {
-//        return oneWordComb(model, CODE);
-//    }
-//
-//    // 二字和数
-//    @RequestMapping("/twoWordSum")
-//    public String twoWordSum(Model model) {
-//        return twoWordSum(model, CODE);
-//    }
 
     /**
      * 下注
@@ -64,5 +57,4 @@ public class Tcpl3QtController extends BaseQtController {
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
     }
-
 }

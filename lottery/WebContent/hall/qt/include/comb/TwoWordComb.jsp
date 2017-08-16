@@ -1,0 +1,78 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="/include/include.inc.jsp" %>
+<c:if test="${fn:length(odds) == 0}">
+    <li class="init-tip">暂无数据</li>
+</c:if>
+<c:if test="${fn:length(odds) > 0}">
+<c:set var="twoSame" value="${odds['二同']}"/>
+<c:set var="twoDiff" value="${odds['二不同']}"/>
+<c:set var="twoSameOdd" value="${twoSame.odd}"/>
+<c:set var="twoDiffOdd" value="${twoDiff.odd}"/>
+<input type="hidden" class="twoSame" data-name="二字组合之二字相同" data-odd="${twoSameOdd}" data-bet-code="${twoSame.betCode}" data-play="${pl3TwoCombination}"/>
+<input type="hidden" class="twoDiff" data-name="二字组合之二字不同" data-odd="${twoDiffOdd}" data-bet-code="${twoDiff.betCode}" data-play="${pl3TwoCombination}"/>
+<table width="100%" border="1" class="num">
+    <thead>
+    <tr>
+        <th colspan="20">二字组合（二字相同@<span class="pl red">${twoSameOdd}</span>二字不同@<span class="pl red">${twoDiffOdd}</span>)</th>
+    </tr>
+    <tr>
+        <th colspan="20">第一个投注码</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="pointer"><strong>0</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="0"/></td>
+            <td class="pointer"><strong>1</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="1"/></td>
+            <td class="pointer"><strong>2</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="2"/></td>
+            <td class="pointer"><strong>3</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="3"/></td>
+            <td class="pointer"><strong>4</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="4"/></td>
+            <td class="pointer"><strong>5</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="5"/></td>
+            <td class="pointer"><strong>6</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="6"/></td>
+            <td class="pointer"><strong>7</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="7"/></td>
+            <td class="pointer"><strong>8</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="8"/></td>
+            <td class="pointer"><strong>9</strong></td>
+            <td><input type="checkbox" class="table-checkbox" data-num="9"/></td>
+        </tr>
+    </tbody>
+</table>
+<table width="100%" border="1" class="num">
+    <thead>
+    <tr>
+        <th colspan="20">第二个投注码</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="pointer"><strong>0</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="0"/></td>
+        <td class="pointer"><strong>1</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="1"/></td>
+        <td class="pointer"><strong>2</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="2"/></td>
+        <td class="pointer"><strong>3</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="3"/></td>
+        <td class="pointer"><strong>4</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="4"/></td>
+        <td class="pointer"><strong>5</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="5"/></td>
+        <td class="pointer"><strong>6</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="6"/></td>
+        <td class="pointer"><strong>7</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="7"/></td>
+        <td class="pointer"><strong>8</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="8"/></td>
+        <td class="pointer"><strong>9</strong></td>
+        <td><input type="checkbox" class="table-checkbox" data-num="9"/></td>
+    </tr>
+    </tbody>
+</table>
+</c:if>

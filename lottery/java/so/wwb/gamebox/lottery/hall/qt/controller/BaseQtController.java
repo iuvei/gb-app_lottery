@@ -38,32 +38,31 @@ public class BaseQtController extends BaseLotteryController {
     /**
      * 一字定位列表
      */
-    static final String ONE_WORD_FIX = "/hall/qt/include/OneWordFix";
+    static final String ONE_WORD_FIX = "/hall/qt/include/fix/OneWordFix";
 
     /**
      * 二字定位列表
      */
-    static final String TWO_WORD_FIX = "/hall/qt/include/TwoWordFix";
-
+    static final String TWO_WORD_FIX = "/hall/qt/include/fix/TwoWordFix";
 
     /**
      * 三字定位列表
      */
-    static final String THREE_WORD_FIX = "/hall/qt/include/ThreeWordFix";
+    static final String THREE_WORD_FIX = "/hall/qt/include/fix/ThreeWordFix";
 
     // 定位
     public String fix(Model model, String code) {
-        initFix(model, code);
+        initPage(model, code);
         return FIX_URL;
     }
 
     /**
-     * 定位
+     * 页面实例化
      *
      * @param model
      * @param code
      */
-    public void initFix(Model model, String code) {
+    public void initPage(Model model, String code) {
         //彩种
         model.addAttribute("code",code);
         //玩法
@@ -71,7 +70,7 @@ public class BaseQtController extends BaseLotteryController {
     }
 
     /**
-     * 根据betCode获取赔率列表
+     * 根据betCode获取定位赔率列表
      * @param model
      * @param code
      * @param betCode
@@ -84,18 +83,18 @@ public class BaseQtController extends BaseLotteryController {
         switch (betCode){
             //百定位
             case "pl3_hundred":
-                //十定位
+            //十定位
             case "pl3_ten":
-                //个定位
+            //个定位
             case "pl3_one":{
                 url = ONE_WORD_FIX;
                 initOneWordFix(model,code,betCode);
                 break;
             }//百十定位
             case "pl3_hundred_ten":
-                //百个定位
+            //百个定位
             case "pl3_hundred_one":
-                //十个定位
+            //十个定位
             case "pl3_ten_one":{
                 url = TWO_WORD_FIX;
                 initTwoWordFix(model,code,betCode);
@@ -105,9 +104,65 @@ public class BaseQtController extends BaseLotteryController {
                 url = THREE_WORD_FIX;
                 initThreeWordFix(model,code,betCode);
                 break;
+            }//一字组合
+            case "comb_one":{
+                url = ONE_WORD_COMB;
+                initOneWordComb(model,code);
+                break;
+            }//二字组合
+            case "comb_two":{
+                url = TWO_WORD_COMB;
+                initTwoWordComb(model,code);
+                break;
+            }//三字组合
+            case "comb_three":{
+                url = THREE_WORD_COMB;
+                initThreeWordComb(model,code);
+                break;
             }
         }
         return url;
+    }
+
+    /**
+     * 初始化一字组合数据
+     *
+     * @param model
+     * @param code
+     */
+    public void initOneWordComb(Model model, String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        //赔率
+        model.addAttribute("odds", getOdds(LotteryBettingEnum.PL3_ONE_ALL_THREE.getCode(), siteLotteryOdds));
+    }
+
+    /**
+     * 初始化二字组合数据
+     *
+     * @param model
+     * @param code
+     */
+    public void initTwoWordComb(Model model, String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        //赔率
+        Map<String, SiteLotteryOdd> odds = getOdds(LotteryBettingEnum.PL3_TWO_SAME.getCode(), siteLotteryOdds);
+        odds.putAll(getOdds(LotteryBettingEnum.PL3_TWO_DIFFERENT.getCode(), siteLotteryOdds));
+        model.addAttribute("odds", odds);
+    }
+
+    /**
+     * 初始化三字组合数据
+     *
+     * @param model
+     * @param code
+     */
+    public void initThreeWordComb(Model model, String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        //赔率
+        Map<String, SiteLotteryOdd> odds = getOdds(LotteryBettingEnum.PL3_THREE_SAME.getCode(), siteLotteryOdds);
+        odds.putAll(getOdds(LotteryBettingEnum.PL3_THREE_GROUP3.getCode(), siteLotteryOdds));
+        odds.putAll(getOdds(LotteryBettingEnum.PL3_THREE_GROUP6.getCode(), siteLotteryOdds));
+        model.addAttribute("odds", odds);
     }
 
     /**
@@ -165,6 +220,33 @@ public class BaseQtController extends BaseLotteryController {
         model.addAttribute("places", places);
         model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode).replace("定位",""));
     }
+
+    /**
+     * 组合
+     */
+    static final String COMB_URL = "/hall/qt/include/Comb";
+
+    /**
+     * 一字组合列表
+     */
+    static final String ONE_WORD_COMB = "/hall/qt/include/comb/OneWordComb";
+
+    /**
+     * 二字组合列表
+     */
+    static final String TWO_WORD_COMB = "/hall/qt/include/comb/TwoWordComb";
+
+    /**
+     * 三字组合列表
+     */
+    static final String THREE_WORD_COMB = "/hall/qt/include/comb/ThreeWordComb";
+
+    // 组合
+    public String comb(Model model, String code) {
+        initPage(model, code);
+        return COMB_URL;
+    }
+
 
     // 获取期数
     @RequestMapping("/getExpect")
