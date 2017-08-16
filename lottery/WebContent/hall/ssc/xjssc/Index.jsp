@@ -64,8 +64,11 @@
                             <span><a href="javascript:void(0)" data-url="xjssc-twoWordFix">二字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="xjssc-threeWordFix">三字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="xjssc-oneWordComb">一字组合</a></span>
-                           <%-- <span><a href="javascript:void(0)" data-url="xjssc-span">跨度</a></span>
-                            <span><a href="javascript:void(0)" data-url="xjssc-dragonTiger">龙虎</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="xjssc-groupThree">组选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-groupSix">组选六</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-span">跨度</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-dragonTiger">龙虎</a></span>
+
                         </p>
                     </li>
                 </ul>

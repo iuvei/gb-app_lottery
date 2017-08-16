@@ -65,8 +65,10 @@
                             <span><a href="javascript:void(0)" data-url="tjssc-twoWordFix">二字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="tjssc-threeWordFix">三字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="tjssc-oneWordComb">一字组合</a></span>
-                           <%-- <span><a href="javascript:void(0)" data-url="tjssc-span">跨度</a></span>
-                            <span><a href="javascript:void(0)" data-url="tjssc-dragonTiger">龙虎</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="tjssc-groupThree">组选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="tjssc-groupSix">组选六</a></span>
+                            <span><a href="javascript:void(0)" data-url="tjssc-span">跨度</a></span>
+                            <span><a href="javascript:void(0)" data-url="tjssc-dragonTiger">龙虎</a></span>
                         </p>
                     </li>
                 </ul>
