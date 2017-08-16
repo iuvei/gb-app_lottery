@@ -1,19 +1,16 @@
 package so.wwb.gamebox.lottery.hall.qt.controller;
 
-import org.soul.commons.collections.MapTool;
 import org.soul.commons.data.json.JsonTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
-import so.wwb.gamebox.lottery.session.SessionManager;
 import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
-import so.wwb.gamebox.web.cache.Cache;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * qt
+ * 其他系列基础controller
  * Created by tom on 17-8-11.
  */
 @Controller
@@ -31,25 +28,6 @@ public class BaseQtController extends BaseLotteryController {
     static final String TYPE = LotteryTypeEnum.QT.getCode();
 
     static final String INDEX_URL = "/hall/qt/%s/Index";
-    /**
-     * 双面
-     */
-    static final String TWO_SIDE_URL = "/hall/qt/%s/TwoSide";
-    /**
-     * 数字盘
-     */
-    static final String DIGIT_URL = "/hall/qt/%s/Digit";
-    /**
-     * 名次（冠军 -> 第十名）
-     */
-    static final String RANKING_URL = "/hall/qt/%s/Ranking";
-    /**
-     * 冠亚和
-     */
-    static final String SUM_URL = "/hall/qt/%s/Sum";
-
-
-
 
     /**
      * 定位
@@ -187,9 +165,6 @@ public class BaseQtController extends BaseLotteryController {
         model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode).replace("定位",""));
     }
 
-
-
-
     // 获取期数
     @RequestMapping("/getExpect")
     @ResponseBody
@@ -224,15 +199,6 @@ public class BaseQtController extends BaseLotteryController {
      * 初始化彩种玩法
      */
     private void initPlayCode(Model model) {
-        model.addAttribute("xy28Sum3BigSmall", LotteryPlayEnum.XY28_SUM3_BIG_SMALL.getCode());
-        model.addAttribute("xy28Sum3Colour", LotteryPlayEnum.XY28_SUM3_COLOUR.getCode());
-        model.addAttribute("xy28Sum3SingleDouble", LotteryPlayEnum.XY28_SUM3_SINGLE_DOUBLE.getCode());
-        model.addAttribute("xy28Sum3Half", LotteryPlayEnum.XY28_SUM3_HALF.getCode());
-        model.addAttribute("xy28ThreeSame", LotteryPlayEnum.XY28_THREE_SAME.getCode());
-        model.addAttribute("xy28Sum3Extreme", LotteryPlayEnum.XY28_SUM3_EXTREME.getCode());
-        model.addAttribute("xy28Sum3Digital", LotteryPlayEnum.XY28_SUM3_DIGITAL.getCode());
-        model.addAttribute("xy28Sum3DigitalThree", LotteryPlayEnum.XY28_SUM3_DIGITAL_THREE.getCode());
-
         model.addAttribute("pl3OneDigital", LotteryPlayEnum.PL3_ONE_DIGITAL.getCode());
         model.addAttribute("pl3OneBigSmall", LotteryPlayEnum.PL3_ONE_BIG_SMALL.getCode());
         model.addAttribute("pl3OneSingleDouble", LotteryPlayEnum.PL3_ONE_SINGLE_DOUBLE.getCode());
@@ -255,39 +221,5 @@ public class BaseQtController extends BaseLotteryController {
         model.addAttribute("pl3GroupThree", LotteryPlayEnum.PL3_GROUP_THREE.getCode());
         model.addAttribute("pl3GroupSix", LotteryPlayEnum.PL3_GROUP_SIX.getCode());
         model.addAttribute("pl3Span", LotteryPlayEnum.PL3_SPAN.getCode());
-    }
-
-    private void initOdd(Model model, String code) {
-        Map<String, SiteLotteryOdd> oddMap = Cache.getSiteLotteryOdds(SessionManager.getSiteId(), code);
-        if (MapTool.isEmpty(oddMap)) {
-            return;
-        }
-        Map<String, Map<String, SiteLotteryOdd>> map = new HashMap<>();
-        for (SiteLotteryOdd odd : oddMap.values()) {
-            if (map.get(odd.getBetCode()) == null) {
-                map.put(odd.getBetCode(), new HashMap<String, SiteLotteryOdd>());
-            }
-            map.get(odd.getBetCode()).put(odd.getBetNum(), odd);
-        }
-        model.addAttribute("oddMap", map);
-    }
-
-    public void initData(Model model, String code) {
-        initPlayCode(model);
-        initOdd(model, code);
-    }
-
-    /**
-     * 获取相关赔率信息
-     *
-     * @param code
-     * @param betCode
-     * @return
-     */
-    @RequestMapping("/getBetOdds")
-    @ResponseBody
-    public Map<String, SiteLotteryOdd> getBetOdds(String code, String betCode) {
-        //赔率
-        return getOdds(code, betCode);
     }
 }
