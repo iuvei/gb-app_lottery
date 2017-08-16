@@ -47,7 +47,7 @@
                        size="11"
                        value="2017-03-30 00:00"
                        class="suminp">
-                <a href="javascript:void(0)" class="button_small button_1" id="shaixuan">筛选</a>
+                <a href="javascript:void(0)" class="button_small button_1" id="queryBetOrder">筛选</a>
                 <a href="javascript:void(0)" class="button_small button_4" data-searchid="1">今日</a>
                 <a href="javascript:void(0)" class="button_small button_4" data-searchid="3">3天</a>
                 <a href="javascript:void(0)" class="button_small button_4" data-searchid="7">本周</a>

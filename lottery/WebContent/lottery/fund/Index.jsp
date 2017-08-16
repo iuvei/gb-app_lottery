@@ -19,7 +19,7 @@
         <h2>
             <div class="eveb_search eveb_search_h2">
                 类型：
-                <select name="search.transactionType" onchange="gotoPage(1,this)">
+                <select name="search.transactionType">
                     <option value="">所有</option>
                     <c:forEach var="lot" items="${transactionTypes}">
                         <option value="${lot.key}" ${command.search.transactionType==lot.key?'selected':''}>
@@ -49,6 +49,8 @@
 </form>
 <%@ include file="/include/include.js.jsp" %>
 <script src="${resRoot}/js/plugin/laydate/laydate.js?v=${rcVersion}"></script>
+<script src="${resRoot}/themes/default/member/js/global.js?v=${rcVersion}"></script>
+
 <script type="text/javascript">
     curl(['site/bet/Index'], function(Page) {
         page = new Page();
