@@ -14,7 +14,10 @@
     </thead>
 <tbody>
 <c:forEach var="i" begin="1" end="10">
-    <c:set var="number" value="${i}"/>
+    <c:set var="number" value="0${i}"/>
+    <c:if test="${i==10}">
+        <c:set var="number" value="${i}"/>
+    </c:if>
     <c:set var="lottery" value="${odds[number.toString()]}"/>
     <c:set var="odd" value="${lottery.odd}"/>
     <tr>
