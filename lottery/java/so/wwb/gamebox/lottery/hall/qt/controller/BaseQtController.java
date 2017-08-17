@@ -383,7 +383,7 @@ public class BaseQtController extends BaseLotteryController {
         return map;
     }
 
-    // pk10最近5条开彩记录
+    // 根据code获取最近5条开彩记录
     @RequestMapping("/getRecent5Records")
     @ResponseBody
     public String getRecent5Records(String code) {
@@ -391,7 +391,7 @@ public class BaseQtController extends BaseLotteryController {
     }
 
     /**
-     * pk10最近20条开彩记录
+     * 根据code获取最近20条开彩记录
      *
      * @param code
      * @return
