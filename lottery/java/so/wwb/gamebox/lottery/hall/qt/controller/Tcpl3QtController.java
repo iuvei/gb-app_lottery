@@ -35,6 +35,24 @@ public class Tcpl3QtController extends BaseQtController {
         return super.comb(model, CODE);
     }
 
+    // 组三
+    @RequestMapping("/group3")
+    public String group3(Model model) {
+        return super.group3(model, CODE);
+    }
+
+    // 组六
+    @RequestMapping("/group6")
+    public String group6(Model model) {
+        return super.group6(model, CODE);
+    }
+
+    // 跨度
+    @RequestMapping("/span")
+    public String span(Model model) {
+        return super.span(model, CODE);
+    }
+
     /**
      * 获取赔率
      *

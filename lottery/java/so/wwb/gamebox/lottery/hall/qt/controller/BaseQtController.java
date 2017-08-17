@@ -50,10 +50,79 @@ public class BaseQtController extends BaseLotteryController {
      */
     static final String THREE_WORD_FIX = "/hall/qt/include/fix/ThreeWordFix";
 
+
+    /**
+     * 组合
+     */
+    static final String COMB_URL = "/hall/qt/include/Comb";
+
+    /**
+     * 一字组合列表
+     */
+    static final String ONE_WORD_COMB = "/hall/qt/include/comb/OneWordComb";
+
+    /**
+     * 二字组合列表
+     */
+    static final String TWO_WORD_COMB = "/hall/qt/include/comb/TwoWordComb";
+
+    /**
+     * 三字组合列表
+     */
+    static final String THREE_WORD_COMB = "/hall/qt/include/comb/ThreeWordComb";
+
+    /**
+     * 组三
+     */
+    static final String GROUP3_URL = "/hall/qt/include/Group3";
+
+    /**
+     * 组三列表
+     */
+    static final String GROUP3_LIST_URL = "/hall/qt/include/group/Group3List";
+
+    /**
+     * 组六
+     */
+    static final String GROUP6_URL = "/hall/qt/include/Group6";
+
+    /**
+     * 组六列表
+     */
+    static final String GROUP6_LIST_URL = "/hall/qt/include/group/Group6List";
+
+    /**
+     * 跨度列表
+     */
+    static final String SPAN_URL = "/hall/qt/include/Span";
+
+    /**
+     * 跨度列表
+     */
+    static final String SPAN_LIST_URL = "/hall/qt/include/span/SpanList";
+
     // 定位
     public String fix(Model model, String code) {
         initPage(model, code);
         return FIX_URL;
+    }
+
+    // 组三
+    public String group3(Model model, String code) {
+        initPage(model, code);
+        return GROUP3_URL;
+    }
+
+    // 组六
+    public String group6(Model model, String code) {
+        initPage(model, code);
+        return GROUP6_URL;
+    }
+
+    // 跨度
+    public String span(Model model, String code) {
+        initPage(model, code);
+        return SPAN_URL;
     }
 
     /**
@@ -119,9 +188,38 @@ public class BaseQtController extends BaseLotteryController {
                 url = THREE_WORD_COMB;
                 initThreeWordComb(model,code);
                 break;
+            }//组三
+            case "pl3_group3":{
+                url = GROUP3_LIST_URL;
+                initBetData(model,code,betCode);
+                break;
+            }//组六
+            case "pl3_group6":{
+                url = GROUP6_LIST_URL;
+                initBetData(model,code,betCode);
+                break;
+            }//跨度
+            case "pl3_span":{
+                url = SPAN_LIST_URL;
+                initBetData(model,code,betCode);
+                break;
             }
         }
         return url;
+    }
+
+
+    /**
+     * 根据betCode初始化赔率数据
+     *
+     * @param model
+     * @param code
+     */
+    public void initBetData(Model model, String code, String betCode) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        //赔率
+        Map<String, SiteLotteryOdd> odds = getOdds(betCode, siteLotteryOdds);
+        model.addAttribute("odds", odds);
     }
 
     /**
@@ -220,26 +318,6 @@ public class BaseQtController extends BaseLotteryController {
         model.addAttribute("places", places);
         model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode).replace("定位",""));
     }
-
-    /**
-     * 组合
-     */
-    static final String COMB_URL = "/hall/qt/include/Comb";
-
-    /**
-     * 一字组合列表
-     */
-    static final String ONE_WORD_COMB = "/hall/qt/include/comb/OneWordComb";
-
-    /**
-     * 二字组合列表
-     */
-    static final String TWO_WORD_COMB = "/hall/qt/include/comb/TwoWordComb";
-
-    /**
-     * 三字组合列表
-     */
-    static final String THREE_WORD_COMB = "/hall/qt/include/comb/ThreeWordComb";
 
     // 组合
     public String comb(Model model, String code) {
