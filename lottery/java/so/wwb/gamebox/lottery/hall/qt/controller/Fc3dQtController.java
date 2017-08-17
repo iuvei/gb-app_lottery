@@ -53,6 +53,12 @@ public class Fc3dQtController extends BaseQtController {
         return super.span(model, CODE);
     }
 
+    // 和数
+    @RequestMapping("/sum")
+    public String sum(Model model) {
+        return super.sum(model, CODE);
+    }
+
     /**
      * 获取赔率
      *

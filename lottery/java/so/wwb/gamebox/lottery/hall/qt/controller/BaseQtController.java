@@ -92,7 +92,7 @@ public class BaseQtController extends BaseLotteryController {
     static final String GROUP6_LIST_URL = "/hall/qt/include/group/Group6List";
 
     /**
-     * 跨度列表
+     * 跨度
      */
     static final String SPAN_URL = "/hall/qt/include/Span";
 
@@ -100,6 +100,21 @@ public class BaseQtController extends BaseLotteryController {
      * 跨度列表
      */
     static final String SPAN_LIST_URL = "/hall/qt/include/span/SpanList";
+
+    /**
+     * 和数
+     */
+    static final String SUM_URL = "/hall/qt/include/Sum";
+
+    /**
+     * 二数和数列表
+     */
+    static final String TWO_WORD_SUM = "/hall/qt/include/sum/TwoWordSum";
+
+    /**
+     * 三数和数列表
+     */
+    static final String THREE_WORD_SUM = "/hall/qt/include/sum/ThreeWordSum";
 
     // 定位
     public String fix(Model model, String code) {
@@ -123,6 +138,12 @@ public class BaseQtController extends BaseLotteryController {
     public String span(Model model, String code) {
         initPage(model, code);
         return SPAN_URL;
+    }
+
+    // 和数
+    public String sum(Model model, String code) {
+        initPage(model, code);
+        return SUM_URL;
     }
 
     /**
@@ -161,9 +182,9 @@ public class BaseQtController extends BaseLotteryController {
                 break;
             }//百十定位
             case "pl3_hundred_ten":
-            //百个定位
+                //百个定位
             case "pl3_hundred_one":
-            //十个定位
+                //十个定位
             case "pl3_ten_one":{
                 url = TWO_WORD_FIX;
                 initTwoWordFix(model,code,betCode);
@@ -172,6 +193,20 @@ public class BaseQtController extends BaseLotteryController {
             case "pl3_hundred_ten_one":{
                 url = THREE_WORD_FIX;
                 initThreeWordFix(model,code,betCode);
+                break;
+            }//百十和数
+            case "pl3_hundred_ten_sum":
+                //百个和数
+            case "pl3_hundred_one_sum":
+                //十个和数
+            case "pl3_ten_one_sum":{
+                url = TWO_WORD_SUM;
+                initSumData(model,code,betCode);
+                break;
+            }//百十个和数
+            case "pl3_hundred_ten_one_sum":{
+                url = THREE_WORD_SUM;
+                initSumData(model,code,betCode);
                 break;
             }//一字组合
             case "comb_one":{
@@ -325,6 +360,18 @@ public class BaseQtController extends BaseLotteryController {
         return COMB_URL;
     }
 
+    /**
+     * 根据betCode初始化和数数据
+     *
+     * @param model
+     * @param code
+     */
+    public void initSumData(Model model, String code, String betCode) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        //赔率
+        model.addAttribute("odds", getOdds(betCode, siteLotteryOdds));
+        model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode));
+    }
 
     // 获取期数
     @RequestMapping("/getExpect")
@@ -371,6 +418,8 @@ public class BaseQtController extends BaseLotteryController {
         model.addAttribute("pl3ThreeCombination", LotteryPlayEnum.PL3_TWO_COMBINATION.getCode());
         model.addAttribute("pl3ThreeCombination", LotteryPlayEnum.PL3_THREE_COMBINATION.getCode());
         model.addAttribute("pl3Sum2Digital", LotteryPlayEnum.PL3_SUM2_DIGITAL.getCode());
+        model.addAttribute("pl3Sum2SingleDouble", LotteryPlayEnum.PL3_SUM2_SINGLE_DOUBLE.getCode());
+        model.addAttribute("pl3Sum2Mantissa", LotteryPlayEnum.PL3_SUM2_MANTISSA.getCode());
         model.addAttribute("pl3Sum2MantissaBigSmall", LotteryPlayEnum.PL3_SUM2_MANTISSA_BIG_SMALL.getCode());
         model.addAttribute("pl3Sum2MantissaPrimeCombined", LotteryPlayEnum.PL3_SUM2_MANTISSA_PRIME_COMBINED.getCode());
         model.addAttribute("pl3Sum3Digital", LotteryPlayEnum.PL3_SUM3_DIGITAL.getCode());

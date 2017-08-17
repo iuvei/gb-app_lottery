@@ -60,6 +60,7 @@
                             </style>
                             <span><a href="javascript:void(0)" data-url="${code}-fix">定位</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-comb">组合</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-sum">和数</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-group3">组三</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-group6">组六</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-span">跨度</a></span>
