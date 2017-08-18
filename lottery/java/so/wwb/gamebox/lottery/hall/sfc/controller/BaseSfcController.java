@@ -142,7 +142,7 @@ public class BaseSfcController extends BaseLotteryController {
     public ArrayList<Map<String, SiteLotteryOdd>> getDragonTigerOdds(String code) {
         //赔率
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(9);
+        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(28);
         listmap.add(getOdds(LotteryBettingEnum.SFC_DRAGON_TIGER_12.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SFC_DRAGON_TIGER_13.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SFC_DRAGON_TIGER_14.getCode(), siteLotteryOdds));
