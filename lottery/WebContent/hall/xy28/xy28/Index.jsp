@@ -62,7 +62,7 @@
     </style>
     <script>
         var CONFIG = {
-            BASEURL: '${root}/keno/',
+            BASEURL: '${root}/xy28/',
             RESURL: '${resRoot}/themes/default/'
         };
     </script>

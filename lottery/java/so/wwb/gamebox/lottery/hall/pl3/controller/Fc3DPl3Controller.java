@@ -1,4 +1,4 @@
-package so.wwb.gamebox.lottery.hall.qt.controller;
+package so.wwb.gamebox.lottery.hall.pl3.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,13 +9,13 @@ import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * 体彩排列3
- * Created by marz on 17-8-16.
+ * 福彩3D
+ * Created by marz on 17-8-14.
  */
 @Controller
-@RequestMapping("/qt/tcpl3")
-public class Tcpl3QtController extends BaseQtController {
-    private static final String CODE = LotteryEnum.TCPL3.getCode();
+@RequestMapping("/pl3/fc3d")
+public class Fc3DPl3Controller extends BasePl3Controller {
+    private static final String CODE = LotteryEnum.FC3D.getCode();
 
     @RequestMapping("/index")
     public String index(Model model) {
@@ -81,4 +81,5 @@ public class Tcpl3QtController extends BaseQtController {
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
     }
+
 }

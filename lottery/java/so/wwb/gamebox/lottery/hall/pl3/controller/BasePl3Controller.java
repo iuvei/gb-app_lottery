@@ -1,4 +1,4 @@
-package so.wwb.gamebox.lottery.hall.qt.controller;
+package so.wwb.gamebox.lottery.hall.pl3.controller;
 
 import org.soul.commons.data.json.JsonTool;
 import org.springframework.stereotype.Controller;
@@ -18,103 +18,103 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 其他系列基础controller
+ * Pl3基础controller
  * Created by tom on 17-8-11.
  * Modified by marz on 17-8-16
  */
 @Controller
-@RequestMapping("/qt")
-public class BaseQtController extends BaseLotteryController {
+@RequestMapping("/pl3")
+public class BasePl3Controller extends BaseLotteryController {
     /*大彩种*/
-    static final String TYPE = LotteryTypeEnum.QT.getCode();
+    static final String TYPE = LotteryTypeEnum.PL3.getCode();
 
-    static final String INDEX_URL = "/hall/qt/%s/Index";
+    static final String INDEX_URL = "/hall/pl3/%s/Index";
 
     /**
      * 定位
      */
-    static final String FIX_URL = "/hall/qt/include/Fix";
+    static final String FIX_URL = "/hall/pl3/include/Fix";
 
     /**
      * 一字定位列表
      */
-    static final String ONE_WORD_FIX = "/hall/qt/include/fix/OneWordFix";
+    static final String ONE_WORD_FIX = "/hall/pl3/include/fix/OneWordFix";
 
     /**
      * 二字定位列表
      */
-    static final String TWO_WORD_FIX = "/hall/qt/include/fix/TwoWordFix";
+    static final String TWO_WORD_FIX = "/hall/pl3/include/fix/TwoWordFix";
 
     /**
      * 三字定位列表
      */
-    static final String THREE_WORD_FIX = "/hall/qt/include/fix/ThreeWordFix";
+    static final String THREE_WORD_FIX = "/hall/pl3/include/fix/ThreeWordFix";
 
 
     /**
      * 组合
      */
-    static final String COMB_URL = "/hall/qt/include/Comb";
+    static final String COMB_URL = "/hall/pl3/include/Comb";
 
     /**
      * 一字组合列表
      */
-    static final String ONE_WORD_COMB = "/hall/qt/include/comb/OneWordComb";
+    static final String ONE_WORD_COMB = "/hall/pl3/include/comb/OneWordComb";
 
     /**
      * 二字组合列表
      */
-    static final String TWO_WORD_COMB = "/hall/qt/include/comb/TwoWordComb";
+    static final String TWO_WORD_COMB = "/hall/pl3/include/comb/TwoWordComb";
 
     /**
      * 三字组合列表
      */
-    static final String THREE_WORD_COMB = "/hall/qt/include/comb/ThreeWordComb";
+    static final String THREE_WORD_COMB = "/hall/pl3/include/comb/ThreeWordComb";
 
     /**
      * 组三
      */
-    static final String GROUP3_URL = "/hall/qt/include/Group3";
+    static final String GROUP3_URL = "/hall/pl3/include/Group3";
 
     /**
      * 组三列表
      */
-    static final String GROUP3_LIST_URL = "/hall/qt/include/group/Group3List";
+    static final String GROUP3_LIST_URL = "/hall/pl3/include/group/Group3List";
 
     /**
      * 组六
      */
-    static final String GROUP6_URL = "/hall/qt/include/Group6";
+    static final String GROUP6_URL = "/hall/pl3/include/Group6";
 
     /**
      * 组六列表
      */
-    static final String GROUP6_LIST_URL = "/hall/qt/include/group/Group6List";
+    static final String GROUP6_LIST_URL = "/hall/pl3/include/group/Group6List";
 
     /**
      * 跨度
      */
-    static final String SPAN_URL = "/hall/qt/include/Span";
+    static final String SPAN_URL = "/hall/pl3/include/Span";
 
     /**
      * 跨度列表
      */
-    static final String SPAN_LIST_URL = "/hall/qt/include/span/SpanList";
+    static final String SPAN_LIST_URL = "/hall/pl3/include/span/SpanList";
 
     /**
      * 和数
      */
-    static final String SUM_URL = "/hall/qt/include/Sum";
+    static final String SUM_URL = "/hall/pl3/include/Sum";
 
     /**
      * 二数和数列表
      */
-    static final String TWO_WORD_SUM = "/hall/qt/include/sum/TwoWordSum";
+    static final String TWO_WORD_SUM = "/hall/pl3/include/sum/TwoWordSum";
 
     /**
      * 三数和数列表
      */
-    static final String THREE_WORD_SUM = "/hall/qt/include/sum/ThreeWordSum";
+    static final String THREE_WORD_SUM = "/hall/pl3/include/sum/ThreeWordSum";
 
     // 定位
     public String fix(Model model, String code) {

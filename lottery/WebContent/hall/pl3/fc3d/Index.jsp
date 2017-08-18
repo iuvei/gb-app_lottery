@@ -78,7 +78,7 @@
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/qt/Qt'], function(Page) {
+    curl(['site/hall/pl3/Qt'], function(Page) {
         page = new Page();
     });
 </script>

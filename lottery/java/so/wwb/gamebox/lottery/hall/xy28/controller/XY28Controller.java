@@ -1,4 +1,4 @@
-package so.wwb.gamebox.lottery.hall.keno.controller;
+package so.wwb.gamebox.lottery.hall.xy28.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
  * Created by fei on 17-4-5.
  */
 @Controller
-@RequestMapping("/keno/xy28")
-public class XY28Controller extends BaseKenoController {
+@RequestMapping("/xy28/xy28")
+public class XY28Controller extends BaseXy28Controller {
 
     private static final String CODE = LotteryEnum.XY28.getCode();
 
@@ -28,21 +28,21 @@ public class XY28Controller extends BaseKenoController {
     @RequestMapping("/hh")
     public String twoSide(Model model) {
         initData(model, CODE);
-        return "/hall/keno/xy28/Hh";
+        return "/hall/xy28/xy28/Hh";
     }
 
     // 数字盘
     @RequestMapping("/hz")
     public String digit(Model model) {
         initData(model, CODE);
-        return "/hall/keno/xy28/Hz";
+        return "/hall/xy28/xy28/Hz";
     }
 
     // 排名（冠军 -> 第十名）
     @RequestMapping("/tmb3")
     public String ranking(  Model model) {
         initData(model, CODE);
-        return "/hall/keno/xy28/Tmb3";
+        return "/hall/xy28/xy28/Tmb3";
     }
 
 

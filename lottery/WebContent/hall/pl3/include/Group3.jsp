@@ -25,7 +25,7 @@
 </div>
 
 <script type="text/javascript">
-    curl(['site/hall/qt/Group3'], function(PlayWay) {
+    curl(['site/hall/pl3/Group3'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>

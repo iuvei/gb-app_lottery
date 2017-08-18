@@ -31,7 +31,7 @@
 </div>
 
 <script type="text/javascript">
-    curl(['site/hall/qt/Comb'], function(PlayWay) {
+    curl(['site/hall/pl3/Comb'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>
