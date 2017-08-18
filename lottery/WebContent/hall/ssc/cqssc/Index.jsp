@@ -66,10 +66,10 @@
                             <span><a href="javascript:void(0)" data-url="cqssc-oneWordComb">一字组合</a></span>
                             <%--<span><a href="javascript:void(0)" data-url="cqssc-twoWordComb">二字组合</a></span>--%>
                            <%-- <span><a href="javascript:void(0)" data-url="cqssc-twoWordSum">二字和数</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="cqssc-combSelThree">组选三</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="cqssc-combSelSix">组选六</a></span>--%>
-                            <%--<span><a href="javascript:void(0)" data-url="cqssc-span">跨度</a></span>
-                                <span><a href="javascript:void(0)" data-url="cqssc-dragonTiger">龙虎</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="cqssc-groupThree">组选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-groupSix">组选六</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-span">跨度</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-dragonTiger">龙虎</a></span>
                         </p>
                     </li>
                 </ul>
