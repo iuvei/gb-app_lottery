@@ -1,11 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
-<%-- 组选六 --%>
+<%-- 跨度 --%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd clearfix">
             <div class="fl">快捷金额：<input type="text" class="txt"></div>
-            <input type="hidden" class="hiddenCode" data-code="pl3_group6"/>
+            <input type="hidden" class="hiddenCode" data-code="pl3_span"/>
         </div>
 
         <div class="table-common">
@@ -25,7 +25,7 @@
 </div>
 
 <script type="text/javascript">
-    curl(['site/hall/qt/Group6'], function(PlayWay) {
+    curl(['site/hall/pl3/Span'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>
