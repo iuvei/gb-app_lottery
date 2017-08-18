@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by fei on 17-4-5.
  */
 @Controller
-@RequestMapping("/keno/xy28")
+@RequestMapping("/xy28/xy28")
 public class XY28Controller extends BaseKenoController {
 
     private static final String CODE = LotteryEnum.XY28.getCode();
