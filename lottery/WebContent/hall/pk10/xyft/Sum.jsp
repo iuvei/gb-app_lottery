@@ -8,6 +8,7 @@
                 快捷金额：
                 <input type="text" class="txt">
             </div>
+            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
         </div>
         <%@ include file="sum/Sum.jsp" %>
         <div class="table-common">
