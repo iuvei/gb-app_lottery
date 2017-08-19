@@ -54,6 +54,8 @@ public class BeijingPk10Controller extends BasePk10Controller {
     // 冠亚和
     @RequestMapping("/sum")
     public String sum(Model model) {
+        initData(model, CODE);
+
         return String.format(SUM_URL, CODE);
     }
 

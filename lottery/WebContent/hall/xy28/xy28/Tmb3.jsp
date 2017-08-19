@@ -2,16 +2,7 @@
 <%@ include file="/include/include.inc.jsp" %>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix rehd tzgz" id="toptouzhu">
-            <div class="kjanniu">
-                <a href="javascript:void(0)" class="img-50" data-num="50"></a>
-                <a href="javascript:void(0)" class="img-100" data-num="100"></a>
-                <a href="javascript:void(0)" class="img-500" data-num="500"></a>
-                <a href="javascript:void(0)" class="img-1000" data-num="1000"></a>
-                <a href="javascript:void(0)" class="img-5000" data-num="5000"></a>
-                <a href="javascript:void(0)" class="img-10000" data-num="10000"></a>
-            </div>
-        </div>
+
         <div class="table-common">
             <table width="100%" border="1">
                 <thead>
@@ -57,7 +48,14 @@
                 <tfoot>
                 <tr>
                     <td colspan="18">
-                        下注金额：<input type="text" class="txt" id="inputMoney">
+                        <div class="hd clearfix rehd tzgz" id="toptouzhu">
+                            <div class="fl refl xzje">
+                                下注金额：<input type="text" class="txt" id="inputMoney">
+                            </div>
+                            <div class="kjanniu">
+                                <%@ include file="../../common/ShortcutkeyButton.jsp" %>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 </tfoot>

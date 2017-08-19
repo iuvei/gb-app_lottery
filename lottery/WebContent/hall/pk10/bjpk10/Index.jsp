@@ -74,7 +74,7 @@
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-eighth_place">第八名</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-ninth_place">第九名</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-tenth_place">第十名</a></span>
-                            <%--<span><a href="javascript:void(0)" data-url="bjpk10-sum">冠亚和</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="bjpk10-sum">冠亚和</a></span>
                         </p>
                     </li>
                 </ul>
