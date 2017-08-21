@@ -191,7 +191,7 @@ public class BaseSscController extends BaseLotteryController {
         model.addAttribute("groupThree", LotteryPlayEnum.GROUP_THREE.getCode());
         model.addAttribute("groupSix", LotteryPlayEnum.GROUP_SIX.getCode());
         model.addAttribute("span", LotteryPlayEnum.SPAN.getCode());
-        model.addAttribute("dragonTiger", LotteryPlayEnum.DRAGON_TIGER.getCode());
+        model.addAttribute("dragonTiger", LotteryPlayEnum.DRAGON_TIGER_TIE.getCode());
     }
 
     /**
@@ -330,7 +330,7 @@ public class BaseSscController extends BaseLotteryController {
         oddList.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_TEN.getCode(), siteLotteryOdds));
         oddList.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_ONE.getCode(), siteLotteryOdds));
         oddList.add(getOdds(LotteryBettingEnum.SSC_TEN_ONE.getCode(), siteLotteryOdds));
-        model.addAttribute("lotteryPlay",LotteryPlayEnum.DRAGON_TIGER.getCode());
+        model.addAttribute("lotteryPlay",LotteryPlayEnum.DRAGON_TIGER_TIE.getCode());
         model.addAttribute("oddList", oddList);
         model.addAttribute("code", code);
         //玩法
