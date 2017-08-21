@@ -3,8 +3,9 @@
 <%-- 组选三 --%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
+        <div class="hd rehd clearfix">
             <div class="fl">快捷金额：<input type="text" class="txt"></div>
+            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
             <input type="hidden" class="hiddenCode" data-code="pl3_group3"/>
         </div>
 

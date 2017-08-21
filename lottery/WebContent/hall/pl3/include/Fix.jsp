@@ -4,7 +4,6 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
             <div class="fr">
                 <div class="T-tab fix-type clearfix" style="margin-top: 5px;">
                     <a href="javascript:void(0)" data-code="pl3_hundred">百定位</a>
@@ -19,6 +18,10 @@
         </div>
 
         <div class="table-common">
+        </div>
+        <div class="hd rehd clearfix">
+            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
         </div>
 
         <div class="btns">
