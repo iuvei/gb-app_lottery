@@ -18,8 +18,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ｋｅｎo
- * Created by fei on 17-8-14.
+ * 幸运２８
+ * Created by tom on 17-8-14.
  */
 @Controller
 @RequestMapping("/xy28")
@@ -28,22 +28,7 @@ public class BaseXy28Controller extends BaseLotteryController {
     static final String TYPE = LotteryTypeEnum.XY28.getCode();
 
     static final String INDEX_URL = "/hall/xy28/%s/Index";
-    /**
-     * 双面
-     */
-    static final String TWO_SIDE_URL = "/hall/xy28/%s/TwoSide";
-    /**
-     * 数字盘
-     */
-    static final String DIGIT_URL = "/hall/xy28/%s/Digit";
-    /**
-     * 名次（冠军 -> 第十名）
-     */
-    static final String RANKING_URL = "/hall/xy28/%s/Ranking";
-    /**
-     * 冠亚和
-     */
-    static final String SUM_URL = "/hall/xy28/%s/Sum";
+
 
     // 获取期数
     @RequestMapping("/getExpect")

@@ -19,7 +19,7 @@ import java.util.Map;
 
 /**
  * ｋｅｎo
- * Created by fei on 17-8-14.
+ * Created by tom on 17-8-14.
  */
 @Controller
 @RequestMapping("/keno")
