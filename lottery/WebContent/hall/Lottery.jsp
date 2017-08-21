@@ -66,6 +66,14 @@
                                    </c:forEach>
                                </p>
                            </c:when>
+                           <c:when test="${handicap.code=='bjkl8'}">
+                               <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+
+                                   <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
+                                       <i>${i}</i>
+                                   </c:forEach>
+                               </p>
+                           </c:when>
                            <c:otherwise>
                             <p class="p1" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                 上期开奖
@@ -104,6 +112,11 @@
 <script type="text/html" id="template_pk10">
     {{each numArr as num index}}
         <i class="fang bg-{{num}}">{{num}}</i>
+    {{/each}}
+</script>
+<script type="text/html" id="template_bjkl8">
+    {{each numArr as num index}}
+    <i>{{num}}</i>
     {{/each}}
 </script>
 <script type="text/html" id="template_result">
