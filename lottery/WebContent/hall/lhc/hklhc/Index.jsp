@@ -76,6 +76,9 @@
                             <span><a href="javascript:void(0)" data-url="hklhc-normalCode">正码</a></span>
                             <span><a href="javascript:void(0)" data-url="hklhc-normalSpecialCode">正码特</a></span>
                             <span><a href="javascript:void(0)" data-url="hklhc-normal1To6">正码1-6</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-halfWave">半波</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-oneZodiac">一肖</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-specialZodiac">特肖</a></span>
                         </p>
                     </li>
                 </ul>
