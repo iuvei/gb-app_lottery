@@ -12,7 +12,7 @@ import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import javax.servlet.http.HttpServletRequest;
 
 /**重庆幸运农场
- * Created by fei on 17-4-4.
+ * Created by devin on 17-8-15
  */
 @Controller
 @RequestMapping("/sfc/cqxync")

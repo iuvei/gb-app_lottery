@@ -6,7 +6,7 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+            <%--<div class="fl">快捷金额：<input type="text" class="txt"></div>--%>
             <div class="fr">
                 <div class="T-tab fix-type clearfix" style="margin-top: 5px; ">
                     <c:set var="bettingDicts" value="${dicts.lottery.lottery_betting}"/>
@@ -24,51 +24,54 @@
         </div>
 
         <div class="table-common">
-
-            <table width="100%" border="1" class="num">
+            <table width="100%" border="1" id="betTalble">
                 <thead>
                 <tr>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
-                    <th width="47">号码</th>
-                    <th width="56">赔率</th>
-                    <th>金额</th>
+                    <th colspan="21"></th>
                 </tr>
                 </thead>
                 <tbody>
-
-                        <c:forEach varStatus="status" var="i" begin="0" end="999">
-                            <c:choose>
-                                <c:when test="${i<10}">
-                                    <c:set var="betNum" value="00${i}"></c:set>
-                                </c:when>
-                                <c:when test="${10<=i && i<100}">
-                                    <c:set var="betNum" value="0${i}"></c:set>
-                                </c:when>
-                                <c:otherwise>
-                                    <c:set var="betNum" value="${i}"></c:set>
-                                </c:otherwise>
-                            </c:choose>
-                            <c:if test="${status.index % 5 == 0}"><tr></c:if>
-                            <td data-num="${betNum}" class="pointer"><strong>${betNum}</strong></td>
-                            <td data-num="${betNum}" class="pointer"><strong class="color-red pl num${betNum}"></strong></td>
-                            <td data-num="${betNum}">
-                                <input type="text" class="table-txt num${betNum}" data-name="" data-odds="" data-bet-code="" data-play="${threeDigital}" data-bet-num="${betNum}"/>
-                            </td>
-                            <c:if test="${status.index % 5 == 4}"></tr></c:if>
-                        </c:forEach>
-
+                <tr class="headtr">
+                    <td style="cursor: pointer;"><strong>头</strong></td>
+                    <c:forEach var="i" begin="0" end="9" varStatus="o">
+                        <td style="cursor: pointer;"><strong class="pl">${i}</strong></td>
+                        <td><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="three_digital"></td>
+                    </c:forEach>
+                </tr>
+                <tr class="zhongtr">
+                    <td style="cursor: pointer;"><strong>中</strong></td>
+                    <c:forEach var="i" begin="0" end="9" varStatus="o">
+                        <td style="cursor: pointer;"><strong class="pl">${i}</strong></td>
+                        <td><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="three_digital"></td>
+                    </c:forEach>
+                </tr>
+                <tr class="weitr">
+                    <td style="cursor: pointer;"><strong>尾</strong></td>
+                    <c:forEach var="i" begin="0" end="9" varStatus="o">
+                        <td style="cursor: pointer;"><strong class="pl">${i}</strong></td>
+                        <td><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="three_digital"></td>
+                    </c:forEach>
+                </tr>
                 </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="21">
+                        <div class="hd clearfix rehd tzgz" id="toptouzhu">
+                            <div class="fl refl xzje">
+                                下注金额：<input type="text" class="txt" id="inputMoney">
+                            </div>
+                            <div class="kjanniu">
+                                <a href="javascript:void(0)" class="img-50" data-num="50"></a>
+                                <a href="javascript:void(0)" class="img-100" data-num="100"></a>
+                                <a href="javascript:void(0)" class="img-500" data-num="500"></a>
+                                <a href="javascript:void(0)" class="img-1000" data-num="1000"></a>
+                                <a href="javascript:void(0)" class="img-5000" data-num="5000"></a>
+                                <a href="javascript:void(0)" class="img-10000" data-num="10000"></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tfoot>
             </table>
         </div>
 

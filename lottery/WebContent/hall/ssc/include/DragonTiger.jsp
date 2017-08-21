@@ -6,7 +6,9 @@
     <input type="hidden" value="${code}" id="lotteryCode">
     <div class="fl main-left">
         <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"/></div>
+            <div class="fl">快捷金额：<input type="text" class="txt"/>
+            </div>
+            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
         </div>
 
         <div class="table-common">
@@ -47,7 +49,7 @@
                         <c:forEach var="j" begin="0" end="2" varStatus="p">
                             <tr>
                                 <c:if test="${j==0}"> <th><strong>龙</strong></th></c:if>
-                                <c:if test="${j==1}"> <th><strong>vs</strong></th></c:if>
+                                <c:if test="${j==1}"> <th><strong>和</strong></th></c:if>
                                 <c:if test="${j==2}"> <th><strong>虎</strong></th></c:if>
                                 <c:if test="${i==0}">
                                 <td style="cursor: pointer;" class="peilv dragon_tiger_12"><strong class="color-red pl"></strong></td>
