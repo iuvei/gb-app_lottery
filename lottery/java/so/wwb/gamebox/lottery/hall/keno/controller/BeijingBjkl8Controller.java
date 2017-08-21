@@ -11,7 +11,7 @@ import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- *
+ *北京快乐８
  * Created by tom on 17-8-14.
  */
 @Controller

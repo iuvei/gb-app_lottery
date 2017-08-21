@@ -9,8 +9,8 @@ import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * 北京PK10
- * Created by fei on 17-4-5.
+ * 幸运２８
+ * Created by tom on 17-8-14.
  */
 @Controller
 @RequestMapping("/xy28/xy28")

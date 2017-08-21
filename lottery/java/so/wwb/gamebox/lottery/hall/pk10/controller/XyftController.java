@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  *  幸运飞艇
- * Created by fei on 17-8-9.
+ * Created by tom on 17-8-9.
  */
 @Controller
 @RequestMapping("/pk10/xyft")
