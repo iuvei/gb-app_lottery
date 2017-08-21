@@ -238,7 +238,7 @@ public class BaseSscController extends BaseLotteryController {
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
         initDigit(model, code, siteLotteryOdds);
         model.addAttribute("fiveSumOdd", getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
-        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.DRAGON_TIGER_TIE.getCode(), siteLotteryOdds));
+        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
     }
 
     /**
@@ -252,7 +252,7 @@ public class BaseSscController extends BaseLotteryController {
         //赔率
         model.addAttribute("odds", getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
         model.addAttribute("fiveSumOdd", getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
-        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.DRAGON_TIGER_TIE.getCode(), siteLotteryOdds));
+        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
         //玩法
         initPlayCode(model);
     }
