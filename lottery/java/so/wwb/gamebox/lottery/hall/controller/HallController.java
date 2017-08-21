@@ -2,6 +2,7 @@ package so.wwb.gamebox.lottery.hall.controller;
 
 import org.soul.commons.collections.CollectionQueryTool;
 import org.soul.commons.collections.CollectionTool;
+import org.soul.commons.collections.MapTool;
 import org.soul.commons.currency.CurrencyTool;
 import org.soul.commons.data.json.JsonTool;
 import org.soul.commons.query.sort.Order;
@@ -129,7 +130,7 @@ public class HallController extends BaseLotteryController {
      * 处理盘口数据
      */
     private List<LotteryResult> handleHandicap(List<LotteryResult> lotteryHandicapList, Map<String, SiteLottery> siteLotteryMap) {
-        if (CollectionTool.isEmpty(lotteryHandicapList)) {
+        if (CollectionTool.isEmpty(lotteryHandicapList) || MapTool.isEmpty(siteLotteryMap)) {
             return null;
         }
         List<LotteryResult> lotteryResultList = new ArrayList<>();
