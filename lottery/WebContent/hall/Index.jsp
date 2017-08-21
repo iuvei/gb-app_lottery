@@ -82,10 +82,6 @@
                     <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico13.png"></var></div></span><b>玩法介绍</b><i></i>
                 </h2>
                 <div class="down playWay">
-                    $("a").on("click",function(){
-                        var playway = $(this).data("playway");
-                        this.getPage("playway")
-                    })
                     <a href="javascript:void(0)" data-playway="cqssc"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
                     <a href="javascript:void(0)" data-playway="tjssc"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
                     <a href="javascript:void(0)" data-playway="xjssc"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
@@ -95,6 +91,8 @@
                     <a href="javascript:void(0)" data-playway="gxk3"><img src="${resRoot}/themes/default/img/gxk3.png"><var>广西快3</var></a>
                     <a href="javascript:void(0)" data-playway="hklhc"><img src="${resRoot}/themes/default/img/hklhc.png"><var>香港六合彩</var></a>
                     <a href="javascript:void(0)" data-playway="bjpk10"><img src="${resRoot}/themes/default/img/bjpk10.png"><var>北京PK10</var></a>
+                    <a href="javascript:void(0)" data-playway="fc3d"><img src="${resRoot}/themes/default/img/fc3d.png"><var>福彩3D</var></a>
+                    <a href="javascript:void(0)" data-playway="tcpl3"><img src="${resRoot}/themes/default/img/tcpl3.png"><var>体彩排列3</var></a>
                 </div>
             </li>
           <%--  <li>
