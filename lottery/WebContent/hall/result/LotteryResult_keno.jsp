@@ -9,16 +9,16 @@
             <span class="sp9">购彩</span>
         </li>
         <c:forEach var="item" items="${command.result}" varStatus="vs">
-            <li>
+            <li style="margin-bottom: 10px;">
                 <span class="sp1">${dicts.lottery.lottery[item.code]}</span>
                 <span class="sp2">${item.expect}</span>
                 <span class="sp3">
                         ${soulFn:formatDateTz(item.openTime, DateFormat.DAY_SECOND,timeZone)}
                 </span>
-                <span class="sp4">
+                <span class="sp4 bjklb">
                     <c:if test="${!empty item.openCode}">
                         <c:forEach var="rs" items="${fn:split(item.openCode, ',')}" varStatus="vs">
-                            <i class="bg-${rs}">${rs}</i>
+                            <i class="">${rs}</i>
                         </c:forEach>
                     </c:if>
                 </span>
