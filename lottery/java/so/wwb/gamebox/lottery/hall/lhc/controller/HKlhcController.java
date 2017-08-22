@@ -125,15 +125,26 @@ public class HKlhcController extends BaseLhcController {
         return String.format(HALF_WAVE_URL, PATH);
     }
 
-    // 一肖/尾
+    // 一肖
     @RequestMapping("/oneZodiac")
     public String oneZodiac(Model model) {
+        //赔率
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
+        model.addAttribute("odds", getOdds(LotteryBettingEnum.LHC_ONE_ZODIAC.getCode(), siteLotteryOdds));
+        //玩法
+        model.addAttribute("lhcOneZodiac", LotteryPlayEnum.LHC_ONE_ZODIAC.getCode());
+
         return String.format(ONE_ZODIAC_URL, PATH);
     }
 
     // 特肖
     @RequestMapping("/specialZodiac")
     public String specialZodiac(Model model) {
+        //赔率
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
+        model.addAttribute("odds", getOdds(LotteryBettingEnum.SPECIAL.getCode(), siteLotteryOdds));
+        //玩法
+        model.addAttribute("lhcSpecialZodiac", LotteryPlayEnum.LHC_SPECIAL_ZODIAC.getCode());
         return String.format(SPECIAL_ZODIAC_URL, PATH);
     }
 

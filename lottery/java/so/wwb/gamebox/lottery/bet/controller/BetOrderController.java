@@ -66,9 +66,11 @@ public class BetOrderController {
         Map<String, Map<String, String>> dicts = I18nTool.getDictsMap(SessionManager.getLocale().toString()).get(Module.LOTTERY.getCode());
         Map<String, String> codeDicts = dicts.get(DictEnum.LOTTERY.getType());
         Map<String,String> betCodeDicts = dicts.get(DictEnum.LOTTERY_BETTING.getType());
+        Map<String,String> playCodeDicts = dicts.get(DictEnum.LOTTERY_PLAY.getType());
         for (LotteryBetOrder betOrder : betOrders) {
             betOrder.setCodeMemo(codeDicts.get(betOrder.getCode()));
             betOrder.setBetCodeMemo(betCodeDicts.get(betOrder.getBetCode()));
+            betOrder.setPlayCodeMemo(playCodeDicts.get(betOrder.getPlayCode()));
         }
         Cache.getSysSiteUser();
         return JsonTool.toJson(betOrders);
