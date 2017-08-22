@@ -7,6 +7,7 @@
     <div class="fl main-left">
         <div class="hd clearfix">
             <div class="fl">快捷金额：<input type="text" class="txt"/></div>
+            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
         </div>
 
         <div class="table-common">
@@ -20,7 +21,7 @@
                 <c:forEach var="i" begin="0" end="7" varStatus="o">
                     <c:if test="${o.index%4 == 0}"><tr></c:if>
                     <td style="cursor: pointer;" class="betname"><strong></strong></td>
-                    <td style="cursor: pointer;" class="peilv"><strong class="color-red pl" >1.985</strong></td>
+                    <td style="cursor: pointer;" class="peilv"><strong class="color-red pl" ></strong></td>
                     <td><input type="text" class="table-txt" /></td>
                     <c:if test="${o.index % 4 == 3}"></tr></c:if>
                 </c:forEach>
