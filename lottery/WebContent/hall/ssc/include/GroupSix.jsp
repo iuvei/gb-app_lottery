@@ -38,7 +38,7 @@
                 <tbody>
                 <c:forEach var="i" begin="0" end="9" varStatus="o">
                     <c:if test="${o.index%5 == 0}"><tr></c:if>
-                    <td><strong class="pl">${i}</strong></td>
+                    <td style="cursor: pointer;"><strong class="pl">${i}</strong></td>
                     <td><input type="checkbox" data-num="${i}" data-play="${lotteryPlay}"></td>
                     <c:if test="${o.index % 5 == 4}"></tr></c:if>
                 </c:forEach>
