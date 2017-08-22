@@ -14,7 +14,6 @@
 
 <body>
 <form action="${root}/lotteryBetOrder/list.html" id="lottery-bet-order-form">
-    <input type="hidden" name="search.userId" value="${command.search.userId}">
 <div class="help_r_main">
     <div class="eveb_content">
         <h2>
