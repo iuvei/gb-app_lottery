@@ -86,7 +86,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoUpDown}"
                         data-bet-num="${lottery.betNum}" data-name="上中下盘-${lottery.betNum}"
                     /></td>
 
@@ -97,7 +97,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoUpDown}"
                         data-bet-num="${lottery.betNum}"  data-name="上中下盘-${lottery.betNum}"
                     /></td>
 
@@ -108,7 +108,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoUpDown}"
                         data-bet-num="${lottery.betNum}" data-name="上中下盘-${lottery.betNum}"
                     /></td>
 
@@ -129,7 +129,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoOddEven}"
                         data-bet-num="${lottery.betNum}"  data-name="奇偶和盘-${lottery.betNum}"
                     /></td>
                     　
@@ -140,7 +140,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoOddEven}"
                         data-bet-num="${lottery.betNum}"  data-name="奇偶和盘-${lottery.betNum}"
                     /></td>
                     　
@@ -151,7 +151,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoOddEven}"
                         data-bet-num="${lottery.betNum}"  data-name="奇偶和盘-${lottery.betNum}"
                     /></td>
                     <td style="cursor: pointer;">&nbsp;</td>
@@ -172,7 +172,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20FiveElements}"
                         data-bet-num="${lottery.betNum}" data-name="五行-${lottery.betNum}"
                     /></td>
                     　
@@ -183,7 +183,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20FiveElements}"
                         data-bet-num="${lottery.betNum}"  data-name="五行-${lottery.betNum}"
                     /></td>
                     　
@@ -194,7 +194,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20FiveElements}"
                         data-bet-num="${lottery.betNum}" data-name="五行-${lottery.betNum}"
                     /></td>
                     　
@@ -205,7 +205,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${kenoSum20FiveElements}"
                         data-bet-num="${lottery.betNum}" data-name="五行-${lottery.betNum}"
                     /></td>
                     　
@@ -216,7 +216,7 @@
                                                                                       data-plid="8582">${odd}</strong>
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20BigSmall}"
+                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20FiveElements}"
                         data-bet-num="${lottery.betNum}" data-name="五行-${lottery.betNum}"
                     /></td>
                 </tr>
