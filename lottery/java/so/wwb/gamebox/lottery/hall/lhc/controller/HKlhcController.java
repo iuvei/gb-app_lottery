@@ -55,9 +55,9 @@ public class HKlhcController extends BaseLhcController {
     public String normalCode(Model model) {
         //正码赔率
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
-        model.addAttribute("odds", getOdds(LotteryBettingEnum.POSITIVE.getCode(),siteLotteryOdds));
+        model.addAttribute("odds", getOdds(LotteryBettingEnum.POSITIVE.getCode(), siteLotteryOdds));
         //总和赔率
-        model.addAttribute("sumOdds", getOdds(LotteryBettingEnum.SEVEN_SUM.getCode(),siteLotteryOdds));
+        model.addAttribute("sumOdds", getOdds(LotteryBettingEnum.SEVEN_SUM.getCode(), siteLotteryOdds));
         model.addAttribute("digitalPlay", LotteryPlayEnum.POSITIVE_DIGITAL.getCode());
         model.addAttribute("sumSingleDoublePlay", LotteryPlayEnum.SEVEN_SUM_SINGLE_DOUBLE.getCode());
         model.addAttribute("sumBigSmallPlay", LotteryPlayEnum.SEVEN_SUM_BIG_SMALL.getCode());
@@ -76,11 +76,11 @@ public class HKlhcController extends BaseLhcController {
         return String.format(NORMAL_SPECIAL_CODE_URL, PATH);
     }
 
-       @RequestMapping("/getLhcBet")
+    @RequestMapping("/getLhcBet")
     @ResponseBody
     public String getLhcBet(String subCode) {
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
-        Map<String, SiteLotteryOdd> odds = getOdds(subCode,siteLotteryOdds);
+        Map<String, SiteLotteryOdd> odds = getOdds(subCode, siteLotteryOdds);
         return JsonTool.toJson(odds);
     }
 
@@ -90,12 +90,12 @@ public class HKlhcController extends BaseLhcController {
         //正码一至六赔率
         List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
-        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FIRST.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_SECOND.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_THIRD.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FOURTH.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FIFTH.getCode(),siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_SIXTH.getCode(),siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FIRST.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_SECOND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_THIRD.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FOURTH.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_FIFTH.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.POSITIVE_SIXTH.getCode(), siteLotteryOdds));
         model.addAttribute("oddList", oddList);
         //玩法
         model.addAttribute("bigSmallPlay", LotteryPlayEnum.POSITIVE_BIG_SMALL.getCode());
@@ -116,6 +116,12 @@ public class HKlhcController extends BaseLhcController {
     // 半波
     @RequestMapping("/halfWave")
     public String halfWave(Model model) {
+        //正码赔率
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
+        model.addAttribute("odds", getOdds(LotteryBettingEnum.LHC_HALF_COLOUR.getCode(), siteLotteryOdds));
+        //玩法
+        model.addAttribute("lhcHalfColourBigSmall", LotteryPlayEnum.LHC_HALF_COLOUR_BIG_SMALL.getCode());
+        model.addAttribute("lhcHalfColourSingleDouble", LotteryPlayEnum.LHC_HALF_COLOUR_SINGLE_DOUBLE.getCode());
         return String.format(HALF_WAVE_URL, PATH);
     }
 
