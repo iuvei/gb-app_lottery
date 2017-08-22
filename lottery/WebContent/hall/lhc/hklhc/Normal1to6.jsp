@@ -67,22 +67,22 @@
                 <c:set var="odds" value="${oddList.get(i-1)}"/>
                 <c:choose>
                     <c:when test="${i==1}">
-                        <c:set var="playGroupName" value="正一码"/>
+                        <c:set var="playGroupName" value="正码一"/>
                     </c:when>
                     <c:when test="${i==2}">
-                        <c:set var="playGroupName" value="正二码"/>
+                        <c:set var="playGroupName" value="正码二"/>
                     </c:when>
                     <c:when test="${i==3}">
-                        <c:set var="playGroupName" value="正三码"/>
+                        <c:set var="playGroupName" value="正码三"/>
                     </c:when>
                     <c:when test="${i==4}">
-                        <c:set var="playGroupName" value="正四码"/>
+                        <c:set var="playGroupName" value="正码四"/>
                     </c:when>
                     <c:when test="${i==5}">
-                        <c:set var="playGroupName" value="正五码"/>
+                        <c:set var="playGroupName" value="正码五"/>
                     </c:when>
                     <c:otherwise>
-                        <c:set var="playGroupName" value="正六码"/>
+                        <c:set var="playGroupName" value="正码六"/>
                     </c:otherwise>
                 </c:choose>
                 <table border="1" class="item">
