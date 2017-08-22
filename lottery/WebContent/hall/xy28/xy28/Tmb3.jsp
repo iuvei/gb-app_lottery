@@ -10,16 +10,16 @@
                 <tr>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
-                    <th>金额</th>
+                    <th>勾选</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
-                    <th>金额</th>
+                    <th>勾选</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
-                    <th>金额</th>
+                    <th>勾选</th>
                     <th width="47">号码</th>
                     <th width="56">赔率</th>
-                    <th>金额</th>
+                    <th>勾选</th>
                 </tr>
                 </thead>
                 <c:set var="odds" value="${oddMap['xy28_sum3']}"/>
