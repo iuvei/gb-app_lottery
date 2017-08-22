@@ -7,6 +7,7 @@
     <div class="fl main-left">
         <div class="hd clearfix">
             <div class="fl">快捷金额：<input type="text" class="txt"></div>
+            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
             <div class="fr">
                 <div class="T-tab comb-type clearfix" style="margin-top: 5px; ">
                     <a href="javascript:void(0)" data-code="group3_first_three" class="active">前三组选三</a>
