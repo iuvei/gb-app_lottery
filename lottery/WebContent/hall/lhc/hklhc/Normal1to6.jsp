@@ -9,6 +9,14 @@
                 快捷金额：
                 <input type="text" class="txt">
             </div>
+            <div class="kjanniu">
+                <a href="javascript:void(0)" class="img-50" data-num="50"></a>
+                <a href="javascript:void(0)" class="img-100" data-num="100"></a>
+                <a href="javascript:void(0)" class="img-500" data-num="500"></a>
+                <a href="javascript:void(0)" class="img-1000" data-num="1000"></a>
+                <a href="javascript:void(0)" class="img-5000" data-num="5000"></a>
+                <a href="javascript:void(0)" class="img-10000" data-num="10000"></a>
+            </div>
         </div>
 
         <div class="table-common clearfix">
@@ -67,22 +75,22 @@
                 <c:set var="odds" value="${oddList.get(i-1)}"/>
                 <c:choose>
                     <c:when test="${i==1}">
-                        <c:set var="playGroupName" value="正一码"/>
+                        <c:set var="playGroupName" value="正码一"/>
                     </c:when>
                     <c:when test="${i==2}">
-                        <c:set var="playGroupName" value="正二码"/>
+                        <c:set var="playGroupName" value="正码二"/>
                     </c:when>
                     <c:when test="${i==3}">
-                        <c:set var="playGroupName" value="正三码"/>
+                        <c:set var="playGroupName" value="正码三"/>
                     </c:when>
                     <c:when test="${i==4}">
-                        <c:set var="playGroupName" value="正四码"/>
+                        <c:set var="playGroupName" value="正码四"/>
                     </c:when>
                     <c:when test="${i==5}">
-                        <c:set var="playGroupName" value="正五码"/>
+                        <c:set var="playGroupName" value="正码五"/>
                     </c:when>
                     <c:otherwise>
-                        <c:set var="playGroupName" value="正六码"/>
+                        <c:set var="playGroupName" value="正码六"/>
                     </c:otherwise>
                 </c:choose>
                 <table border="1" class="item">

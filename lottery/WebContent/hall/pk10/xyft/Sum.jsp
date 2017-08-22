@@ -11,7 +11,11 @@
             <%@ include file="../../common/ShortcutkeyButton.jsp" %>
         </div>
         <%@ include file="sum/Sum.jsp" %>
-        <div class="table-common">
+        <div class="btns">
+            <button type="submit" class="btn btn-1">提交</button>
+            <button class="btn btn-2">重设</button>
+        </div>
+        <div class="table-common game_tables" >
             <table class="head_table" id="rttt" style="width:100%">
                 <tbody>
                 <tr>
@@ -62,10 +66,7 @@
 
         </div>
 
-        <div class="btns">
-            <button type="submit" class="btn btn-1">提交</button>
-            <button class="btn btn-2">重设</button>
-        </div>
+
     </div>
     <div class="fr main-right main-right-xyft cl-10 lm_height">
 

@@ -10,14 +10,22 @@
                 快捷金额：
                 <input type="text" class="txt">
             </div>
+            <div class="kjanniu">
+                <a href="javascript:void(0)" class="img-50" data-num="50"></a>
+                <a href="javascript:void(0)" class="img-100" data-num="100"></a>
+                <a href="javascript:void(0)" class="img-500" data-num="500"></a>
+                <a href="javascript:void(0)" class="img-1000" data-num="1000"></a>
+                <a href="javascript:void(0)" class="img-5000" data-num="5000"></a>
+                <a href="javascript:void(0)" class="img-10000" data-num="10000"></a>
+            </div>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
-                    <a href="javascript:void(0)" subCode="positive_first" class="active">正一码</a>
-                    <a href="javascript:void(0)" subCode="positive_second">正二码</a>
-                    <a href="javascript:void(0)" subCode="positive_third">正三码</a>
-                    <a href="javascript:void(0)" subCode="positive_fourth">正四码</a>
-                    <a href="javascript:void(0)" subCode="positive_fifth">正五码</a>
-                    <a href="javascript:void(0)" subCode="positive_sixth">正六码</a>
+                    <a href="javascript:void(0)" subCode="positive_first" class="active">正码一</a>
+                    <a href="javascript:void(0)" subCode="positive_second">正码二</a>
+                    <a href="javascript:void(0)" subCode="positive_third">正码三</a>
+                    <a href="javascript:void(0)" subCode="positive_fourth">正码四</a>
+                    <a href="javascript:void(0)" subCode="positive_fifth">正码五</a>
+                    <a href="javascript:void(0)" subCode="positive_sixth">正码六</a>
                 </div>
             </div>
         </div>
