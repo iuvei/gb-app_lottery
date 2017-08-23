@@ -123,7 +123,7 @@
         <c:choose>
             <c:when test="${empty player.account}">
                 <p>
-                    欢迎，<i >  <a class="i0" href="javascript:void(0)" data-url='/lotteryBetOrder/list.html'>登录</a></i></span>
+                    欢迎，<i >  <a class="i0" href="${root}/login/commonLogin.html">登录</a></i></span>
                 </p>
             </c:when>
             <c:otherwise>
