@@ -35,15 +35,13 @@
                 <tr class="headtr">
                     <td style="cursor: pointer;"><strong>头</strong></td>
 <c:forEach var="i" begin="0" end="9" varStatus="o">
-                    <td style="cursor: pointer;"><strong class="pl">${i}</strong></td>
-                    <td><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="two_digital"></td>
+    <td style="cursor: pointer;" class="new-ball-st"><strong class="pl">${i}</strong><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="two_digital"></td>
 </c:forEach>
                 </tr>
                 <tr class="weitr">
                     <td style="cursor: pointer;"><strong>尾</strong></td>
                     <c:forEach var="i" begin="0" end="9" varStatus="o">
-                        <td style="cursor: pointer;"><strong class="pl">${i}</strong></td>
-                        <td><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="two_digital"></td>
+                        <td style="cursor: pointer;" class="new-ball-st"><strong class="pl">${i}</strong><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="two_digital"></td>
                     </c:forEach>
                 </tr>
                 </tbody>

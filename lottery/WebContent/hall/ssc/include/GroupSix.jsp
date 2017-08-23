@@ -24,22 +24,16 @@
                 </tr>
                 <tr>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="i" begin="0" end="9" varStatus="o">
                     <c:if test="${o.index%5 == 0}"><tr></c:if>
-                    <td style="cursor: pointer;"><strong class="pl">${i}</strong></td>
-                    <td><input type="checkbox" data-num="${i}" data-play="${lotteryPlay}"></td>
+                    <td style="cursor: pointer;" class="new-ball-st"><strong class="pl">${i}</strong><input type="checkbox" data-num="${i}" data-play="${lotteryPlay}"></td>
                     <c:if test="${o.index % 5 == 4}"></tr></c:if>
                 </c:forEach>
                 </tbody>
