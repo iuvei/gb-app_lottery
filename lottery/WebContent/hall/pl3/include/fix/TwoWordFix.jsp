@@ -17,26 +17,12 @@
     <c:forEach items="${places}" var="place">
         <tr data-name="${place}">
             <td class="pointer">${place}位</td>
-            <td class="pointer"><strong>0</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="0"/></td>
-            <td class="pointer"><strong>1</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="1"/></td>
-            <td class="pointer"><strong>2</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="2"/></td>
-            <td class="pointer"><strong>3</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="3"/></td>
-            <td class="pointer"><strong>4</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="4"/></td>
-            <td class="pointer"><strong>5</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="5"/></td>
-            <td class="pointer"><strong>6</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="6"/></td>
-            <td class="pointer"><strong>7</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="7"/></td>
-            <td class="pointer"><strong>8</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="8"/></td>
-            <td class="pointer"><strong>9</strong></td>
-            <td><input type="checkbox" class="table-checkbox" data-name="9"/></td>
+            <c:forEach var="i" begin="0" end="9" varStatus="o">
+                <td class="pointer new-ball-st">
+                    <strong class="pl">${i}</strong>
+                    <input type="checkbox" data-name="${i}">
+                </td>
+            </c:forEach>
         </tr>
     </c:forEach>
     </tbody>
