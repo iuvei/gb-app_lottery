@@ -16,14 +16,14 @@
                         ${soulFn:formatDateTz(item.openTime, DateFormat.DAY_SECOND,timeZone)}
                 </span>
                 <span class="sp4">
-                     <c:if test="${!empty item.openCode}">
-                         <c:forEach var="rs" items="${fn:split(item.openCode, ',')}" varStatus="vs">
-                             <i>${rs}</i>
-                         </c:forEach>
-                     </c:if>
+                    <c:if test="${!empty item.openCode}">
+                        <c:forEach var="rs" items="${fn:split(item.openCode, ',')}" varStatus="vs">
+                            <i>${rs}</i>
+                        </c:forEach>
+                    </c:if>
                 </span>
                 <span class="sp5">${expectMaps[item.code].expectCount}期</span>
-                <span class="sp6">5分钟-10分钟</span>
+                <span class="sp6">每天一期</span>
                 <%--<span class="sp8"><a href="javascript:void(0)"><img src="http://www.600wan0.net:80/static/theme/default/img/ico73.png" alt="" onclick="openGcdt('zst/cqssc')"></a></span>--%>
                 <span class="sp9"><a href="javascript:void(0)" class="a1" data-page="/${type}/${code}/index.html">立即购彩</a></span>
             </li>

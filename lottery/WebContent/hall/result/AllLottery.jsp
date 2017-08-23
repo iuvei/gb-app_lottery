@@ -36,4 +36,13 @@
     <c:if test="${type eq 'lhc'}">
         <%@include file="LotteryResult_lhc.jsp"%>
     </c:if>
+    <c:if test="${type eq 'pl3'}">
+        <%@include file="LotteryResult_pl3.jsp"%>
+    </c:if>
+    <c:if test="${type eq 'keno'}">
+        <%@include file="LotteryResult_keno.jsp"%>
+    </c:if>
+    <c:if test="${type eq 'xy28'}">
+        <%@include file="LotteryResult_xy28.jsp"%>
+    </c:if>
 </div>
