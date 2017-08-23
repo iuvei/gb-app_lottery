@@ -73,7 +73,7 @@
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">总双</td>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
-                    <td><input type="text" class="table-txt" data-name="正码-总双" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${sumSingleDoublePlay}" data-bet-num="${lottery.betNum}"/></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="正码-总双" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${sumSingleDoublePlay}" data-bet-num="${lottery.betNum}"/></td>
 
                     <td style="cursor: pointer;">&nbsp;</td>
                     <td style="cursor: pointer;">&nbsp;</td>

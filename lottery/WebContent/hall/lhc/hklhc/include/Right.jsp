@@ -102,7 +102,7 @@
                 <td><span class="color-blue">蓝</span>双</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="27,28,32,33,39,43,44"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="27,28,32,33,38,39,43,44"></td>
                 <td><span class="color-green">绿</span>大</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,6,11,16,17,21,22"></td>
                 <td><span class="color-green">绿</span>小</td>
