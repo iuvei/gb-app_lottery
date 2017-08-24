@@ -7,59 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>幸运28</title>
     <%@ include file="/include/include.head.jsp" %>
-    <style>
-        a:hover {
-            color: red;
 
-        }
-
-        a:active {
-            color: deepskyblue;
-        }
-        .plus {
-            line-height: 28px!important;
-            font-size: 28px!important;
-            font-family: Microsoft Yahei;
-            color: #666!important;
-            margin: 5px!important;
-            background: none!important;
-            width: 20px!important;
-            margin-left: -8px!important;
-        }
-        .bluexy28{
-            background: blue!important;
-        }
-        .greenxy28{
-            background: green!important;
-        }
-        .grayxy28{
-            background: gray!important;
-        }
-        .redxy28{
-            background: red;
-        }
-
-        .ball-28xyicon{
-            display: block;
-            width: 23px;
-            height: 23px;
-            background: red;
-            border-radius: 50%;
-            margin: 0 auto;
-            line-height: 23px;
-            color: white;
-        }
-        .plusmin {
-            font-family: Microsoft Yahei;
-            color: #666!important;
-            background: none!important;
-            width: 8px!important;
-            margin-left: 2px!important;
-        }
-        .number ul li i.grayxy28,.number ul li i.greenxy28,.number ul li i.grayxy28,.number ul li i.bluexy28{
-            border-radius: 50%;
-        }
-    </style>
     <script>
         var CONFIG = {
             BASEURL: '${root}/xy28/',
@@ -150,7 +98,7 @@
         {{/each}}
     </script>
 </div>
-<div type="text/html" id="soundContainer" style="pe:none;"></div>
+<div type="text/html" id="soundContainer" style="display:none;"></div>
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
     curl(['site/hall/keno/xy28/Xy28'], function(Page) {
