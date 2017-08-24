@@ -103,7 +103,7 @@
     {{/each}}
 </script>
 <script type="text/javascript">
-    curl(['site/hall/pk10/Pk10'], function(Page) {
+    curl(['site/hall/common/Common'], function(Page) {
         page = new Page();
     });
 </script>
