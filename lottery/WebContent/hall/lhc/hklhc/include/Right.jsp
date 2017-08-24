@@ -86,7 +86,7 @@
             <tr>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,7,13,19,23,29,35,45"></td>
                 <td><span class="color-red">红</span>单</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,8,12,18,24,30,34,35,40,46"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,8,12,18,24,30,34,40,46"></td>
                 <td><span class="color-red">红</span>双</td>
             </tr>
             <tr>

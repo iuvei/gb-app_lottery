@@ -10,17 +10,17 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="16"><strong id="numsLength"  numsLength="5"  >选5</strong>(
+                    <th colspan="16"><strong id="numsLength"  numsLength="5">选5</strong>(
                         <c:set var="lottery" value="${odds['选五-中5']}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
-                        中5@<span class="red pl" data-plid="8572">${odd}</span>
+                        中5@<span class="red pl">${odd}</span>
                         <c:set var="lottery" value="${odds['选五-中4']}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
                         中4@
-                        <span class="red pl" data-plid="8572">${odd}</span>
+                        <span class="red pl">${odd}</span>
                         <c:set var="lottery" value="${odds['选五-中3']}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
-                        中3@<span class="red pl" data-plid="8574">${odd}</span>)
+                        中3@<span class="red pl">${odd}</span>)
                     </th>
                 </tr>
                 <tr>
@@ -51,7 +51,7 @@
                     <td colspan="18">
                         <div class="hd clearfix rehd tzgz" id="toptouzhu">
                             <div class="fl refl xzje">
-                                下注金额：<input type="text" class="txt" id="inputMoney">
+                                下注金额：<input type="text" class="txt" id="inputMoney"/>
                             </div>
                             <div class="kjanniu">
                                 <%@ include file="../../common/ShortcutkeyButton.jsp" %>
@@ -68,14 +68,8 @@
             <button class="btn btn-2">重设</button>
         </div>
     </div>
-
-
 </div>
-
-<input type="hidden" data-plid="8572" id="pl5"/>
-<input type="hidden" data-plid="8573" id="pl4"/>
-<input type="hidden" data-plid="8574" id="pl3"/>
-
+　
 <script type="text/javascript">
     curl(['site/hall/keno/bjkl8/PlayWay'], function (PlayWay) {
         page.playWay = new PlayWay();
