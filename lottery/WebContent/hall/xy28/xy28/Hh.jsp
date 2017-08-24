@@ -3,11 +3,7 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd clearfix rehd tzgz" id="toptouzhu">
-            <div class="fl refl">
-                快捷金额：
-                <input type="text" class="txt">
-            </div>
-            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
+                <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
         <div class="table-common">
             <table width="100%" border="1">

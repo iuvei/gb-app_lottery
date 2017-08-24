@@ -5,9 +5,8 @@
 <%--@elvariable id="lottery" type="so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd"--%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
-            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
 
         <div class="table-common">

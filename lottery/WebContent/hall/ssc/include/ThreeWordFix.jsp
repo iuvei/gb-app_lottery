@@ -5,8 +5,8 @@
 <input type="hidden" value="${code}" id="lotteryCode">
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <%--<div class="fl">快捷金额：<input type="text" class="txt"></div>--%>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab fix-type clearfix" style="margin-top: 5px; ">
                     <c:set var="bettingDicts" value="${dicts.lottery.lottery_betting}"/>
@@ -54,10 +54,7 @@
                 <tr>
                     <td colspan="21">
                         <div class="hd clearfix rehd tzgz" id="toptouzhu">
-                            <div class="fl refl xzje">
-                                下注金额：<input type="text" class="txt" id="inputMoney">
-                            </div>
-                            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
+                                <%@ include file="../../common/ShortMoney.jsp" %>
                         </div>
                     </td>
                 </tr>

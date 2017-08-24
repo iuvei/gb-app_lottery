@@ -49,12 +49,7 @@
                 <tr>
                     <td colspan="18">
                         <div class="hd clearfix rehd tzgz" id="toptouzhu">
-                            <div class="fl refl xzje">
-                                下注金额：<input type="text" class="txt" id="inputMoney">
-                            </div>
-                            <div class="kjanniu">
-                                <%@ include file="../../common/ShortcutkeyButton.jsp" %>
-                            </div>
+                                <%@ include file="../../common/ShortMoney.jsp" %>
                         </div>
                     </td>
                 </tr>
@@ -79,7 +74,6 @@
 <script>
     $(".xy28-list").each(function () {
         var val = $(this).text();
-        console.log(val)
         var map={
             0:"grayxy28",
             1:"greenxy28",
