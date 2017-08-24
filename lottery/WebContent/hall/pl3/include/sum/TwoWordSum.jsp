@@ -178,66 +178,66 @@
         </thead>
         <tbody>
         <tr>
-            <c:set var="lottery" value="${odds['尾0']}"/>
+            <c:set var="lottery" value="${odds['0尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>0</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾0" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾0"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-0尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="0尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾1']}"/>
+            <c:set var="lottery" value="${odds['1尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>1</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾1" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾1"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-1尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="1尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾2']}"/>
+            <c:set var="lottery" value="${odds['2尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>2</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾2" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾2"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-2尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="2尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾3']}"/>
+            <c:set var="lottery" value="${odds['3尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>3</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾3" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾3"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-3尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="3尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾4']}"/>
+            <c:set var="lottery" value="${odds['4尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>4</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾4" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾4"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-4尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="4尾"/></td>
         </tr>
         <tr>
-            <c:set var="lottery" value="${odds['尾5']}"/>
+            <c:set var="lottery" value="${odds['5尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>5</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾5" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾5"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-5尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="5尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾6']}"/>
+            <c:set var="lottery" value="${odds['6尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>6</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾6" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾6"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-6尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="6尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾7']}"/>
+            <c:set var="lottery" value="${odds['7尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>7</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾7" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾7"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-7尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="7尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾8']}"/>
+            <c:set var="lottery" value="${odds['8尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>8</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾8" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾8"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-8尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="8尾"/></td>
 
-            <c:set var="lottery" value="${odds['尾9']}"/>
+            <c:set var="lottery" value="${odds['9尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>9</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-尾9" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="尾9"/></td>
+            <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${title}尾数-9尾" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3Sum2Mantissa}" data-bet-num="9尾"/></td>
 
         </tr>
         </tbody>
