@@ -64,16 +64,7 @@ public class BaseXy28Controller extends BaseLotteryController {
      * 初始化彩种玩法
      */
     private void initPlayCode(Model model) {
-        model.addAttribute("kenoSelectionOne", LotteryPlayEnum.KENO_SELECTION_ONE.getCode());
-        model.addAttribute("kenoSelectionTwo", LotteryPlayEnum.KENO_SELECTION_TWO.getCode());
-        model.addAttribute("kenoSelectionThree", LotteryPlayEnum.KENO_SELECTION_THREE.getCode());
-        model.addAttribute("kenoSelectionFour", LotteryPlayEnum.KENO_SELECTION_FOUR.getCode());
-        model.addAttribute("kenoSelectionFive", LotteryPlayEnum.KENO_SELECTION_FIVE.getCode());
-        model.addAttribute("kenoSum20BigSmall", LotteryPlayEnum.KENO_SUM20_BIG_SMALL.getCode());
-        model.addAttribute("kenoSum20SingleDouble", LotteryPlayEnum.KENO_SUM20_SINGLE_DOUBLE.getCode());
-        model.addAttribute("kenoSum20FiveElements", LotteryPlayEnum.KENO_SUM20_FIVE_ELEMENTS.getCode());
-        model.addAttribute("kenoUpDown", LotteryPlayEnum.KENO_UP_DOWN.getCode());
-        model.addAttribute("kenoOddEven", LotteryPlayEnum.KENO_ODD_EVEN.getCode());
+
 
         model.addAttribute("xy28Sum3BigSmall", LotteryPlayEnum.XY28_SUM3_BIG_SMALL.getCode());
         model.addAttribute("xy28Sum3Colour", LotteryPlayEnum.XY28_SUM3_COLOUR.getCode());
