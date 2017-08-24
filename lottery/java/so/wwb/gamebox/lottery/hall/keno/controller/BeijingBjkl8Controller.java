@@ -11,7 +11,7 @@ import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- *北京快乐８
+ * 北京快乐８
  * Created by tom on 17-8-14.
  */
 @Controller
@@ -26,8 +26,6 @@ public class BeijingBjkl8Controller extends BaseKenoController {
         return String.format(INDEX_URL, CODE);
     }
 
-
-
     // qt
     @RequestMapping("/qt")
     public String digit(Model model) {
@@ -39,9 +37,8 @@ public class BeijingBjkl8Controller extends BaseKenoController {
     @RequestMapping("/x{len}")
     public String ranking(@PathVariable String len, Model model) {
         initData(model, CODE);
-        return "/hall/keno/bjkl8/X"+len;
+        return "/hall/keno/bjkl8/X" + len;
     }
-
 
     /**
      * 下注

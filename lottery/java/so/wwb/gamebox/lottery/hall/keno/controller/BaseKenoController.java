@@ -28,52 +28,16 @@ public class BaseKenoController extends BaseLotteryController {
     static final String TYPE = LotteryTypeEnum.KENO.getCode();
 
     static final String INDEX_URL = "/hall/keno/%s/Index";
-    /**
-     * 双面
-     */
-    static final String TWO_SIDE_URL = "/hall/keno/%s/TwoSide";
-    /**
-     * 数字盘
-     */
-    static final String DIGIT_URL = "/hall/keno/%s/Digit";
-    /**
-     * 名次（冠军 -> 第十名）
-     */
-    static final String RANKING_URL = "/hall/keno/%s/Ranking";
-    /**
-     * 冠亚和
-     */
-    static final String SUM_URL = "/hall/keno/%s/Sum";
 
     // 获取期数
     @RequestMapping("/getExpect")
     @ResponseBody
     public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4,1f);
+        Map<String, Object> map = new HashMap<>(4, 1f);
         LotteryResult handicap = getHandicap(code);
         setHandicap(map, handicap);
         return map;
     }
-
-    // pk10最近5条开彩记录
-    @RequestMapping("/getRecent5Records")
-    @ResponseBody
-    public String getRecent5Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code));
-    }
-
-    /**
-     * pk10最近20条开彩记录
-     *
-     * @param code
-     * @return
-     */
-    @RequestMapping("/getRecent30Records")
-    @ResponseBody
-    public String getRecent30Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code, 30, true));
-    }
-
 
     /**
      * 初始化彩种玩法
@@ -89,15 +53,6 @@ public class BaseKenoController extends BaseLotteryController {
         model.addAttribute("kenoSum20FiveElements", LotteryPlayEnum.KENO_SUM20_FIVE_ELEMENTS.getCode());
         model.addAttribute("kenoUpDown", LotteryPlayEnum.KENO_UP_DOWN.getCode());
         model.addAttribute("kenoOddEven", LotteryPlayEnum.KENO_ODD_EVEN.getCode());
-
-        model.addAttribute("xy28Sum3BigSmall", LotteryPlayEnum.XY28_SUM3_BIG_SMALL.getCode());
-        model.addAttribute("xy28Sum3Colour", LotteryPlayEnum.XY28_SUM3_COLOUR.getCode());
-        model.addAttribute("xy28Sum3SingleDouble", LotteryPlayEnum.XY28_SUM3_SINGLE_DOUBLE.getCode());
-        model.addAttribute("xy28Sum3Half", LotteryPlayEnum.XY28_SUM3_HALF.getCode());
-        model.addAttribute("xy28ThreeSame", LotteryPlayEnum.XY28_THREE_SAME.getCode());
-        model.addAttribute("xy28Sum3Extreme", LotteryPlayEnum.XY28_SUM3_EXTREME.getCode());
-        model.addAttribute("xy28Sum3Digital", LotteryPlayEnum.XY28_SUM3_DIGITAL.getCode());
-        model.addAttribute("xy28Sum3DigitalThree", LotteryPlayEnum.XY28_SUM3_DIGITAL_THREE.getCode());
     }
 
     private void initOdd(Model model, String code) {
