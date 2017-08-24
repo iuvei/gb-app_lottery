@@ -10,9 +10,7 @@
     <style>
         a:hover {
             color: red;
-
         }
-
         a:active {
             color: deepskyblue;
         }

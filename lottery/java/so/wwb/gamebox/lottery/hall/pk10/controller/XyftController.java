@@ -28,7 +28,7 @@ public class XyftController extends BasePk10Controller {
     @RequestMapping("/twoSide")
     public String twoSide(Model model) {
         initData(model, CODE);
-        return String.format(TWO_SIDE_URL, CODE);
+        return TWO_SIDE_URL;
     }
 
 
@@ -44,7 +44,6 @@ public class XyftController extends BasePk10Controller {
     @RequestMapping("/sum")
     public String sum(Model model) {
         initData(model, CODE);
-
         return String.format(SUM_URL, CODE);
     }
 

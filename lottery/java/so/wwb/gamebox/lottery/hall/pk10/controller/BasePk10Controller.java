@@ -32,7 +32,7 @@ public class BasePk10Controller extends BaseLotteryController {
     /**
      * 双面
      */
-    static final String TWO_SIDE_URL = "/hall/pk10/%s/TwoSide";
+    static final String TWO_SIDE_URL = "/hall/pk10/include/TwoSide";
     /**
      * 数字盘
      */
@@ -54,13 +54,6 @@ public class BasePk10Controller extends BaseLotteryController {
         LotteryResult handicap = getHandicap(code);
         setHandicap(map, handicap);
         return map;
-    }
-
-    // pk10最近5条开彩记录
-    @RequestMapping("/getRecent5Records")
-    @ResponseBody
-    public String getRecent5Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code));
     }
 
     /**

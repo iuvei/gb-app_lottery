@@ -72,7 +72,7 @@
         </div>
     </div>
 
-    <%@ include file="../include/include.rank.jsp" %>
+    <%@ include file="include.rank.jsp" %>
 </div>
 <script type="text/javascript">
     curl(['site/hall/pk10/PlayWay'], function(PlayWay) {

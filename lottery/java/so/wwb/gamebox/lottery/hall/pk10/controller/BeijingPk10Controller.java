@@ -45,7 +45,6 @@ public class BeijingPk10Controller extends BasePk10Controller {
     @RequestMapping("/ranking/{ranking}")
     public String ranking(@PathVariable String ranking, Model model) {
         model.addAttribute("ranking", ranking);
-       // model.addAttribute("rankName", getRankName(ranking));
         model.addAttribute("odds", getOdds(CODE, ranking));
         model.addAttribute("pk10Digital", LotteryPlayEnum.PK10_DIGITAL.getCode());
         return String.format(RANKING_URL, CODE);

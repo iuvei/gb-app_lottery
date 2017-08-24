@@ -9,8 +9,8 @@
                 <table class="touzhuArea_gyjh" style="width: 100%;">
                     <tbody>
                     <tr>
-                        <th colspan="4" style="width: 100%;background: white;font-weight: bold;">冠、亚军和(冠军车号 +
-                            亚军车号 = 和)
+                        <th colspan="4" style="width: 100%;background: white;font-weight: bold;">
+                            冠、亚军和(冠军车号 + 亚军车号 = 和)
                         </th>
                     </tr>
                     </tbody>
@@ -27,8 +27,7 @@
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">3</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10002"
-                            style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
                         <td data-num="${lottery.betNum}"><input class="amount-input"
                                                                 data-odds="${odd}" data-bet-code="${lottery.betCode}"
                                                                 data-play="${championUpAlone34}"
