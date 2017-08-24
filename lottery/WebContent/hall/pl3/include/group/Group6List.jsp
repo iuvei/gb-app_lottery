@@ -9,7 +9,7 @@
     <tr>
         <c:forEach items="${odds}" var="entry">
             <c:set var="lottery" value="${entry.value}"/>
-            <input type="hidden" class="group6Odd_${entry.key}" data-name="组选六" data-odd="${lottery.odd}" data-num="${lottery.betNum}" data-bet-code="${lottery.betCode}" data-play="${pl3GroupThree}"/>
+            <input type="hidden" class="group6Odd_${entry.key}" data-name="组选六" data-odd="${lottery.odd}" data-num="${lottery.betNum}" data-bet-code="${lottery.betCode}" data-play="${pl3GroupSix}"/>
         </c:forEach>
         <th colspan="10">组选六@<span class="pl red group6Odd"></span>(请选择4~8个号码)</th>
     </tr>
