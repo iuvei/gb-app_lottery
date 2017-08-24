@@ -69,7 +69,6 @@
                             <span><a href="javascript:void(0)" data-url="gdkl10-ranking-sfc_sixth">第六球</a></span>
                             <span><a href="javascript:void(0)" data-url="gdkl10-ranking-sfc_seventh">第七球</a></span>
                             <span><a href="javascript:void(0)" data-url="gdkl10-ranking-sfc_eighth">第八球</a></span>
-                            <span><a href="javascript:void(0)" data-url="gdkl10-twoSide">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="gdkl10-dragonTiger">龙虎</a></span>
                         </p>
                     </li>
