@@ -22,9 +22,34 @@
         </tbody>
     </table>
     <div id="bottom_zs_table_content">
-    <table id="bottom_zs_table_0_dx" width="100%" border="0" class="resultLoad" style="">
+        <table id="bottom_zs_table_0_dx" width="100%" border="0" class="resultLoad" style="">
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/html"  id="template_result_list">
+    {{each headList as head index}}
+    <table id="bottom_zs_table_{{head}}_dx" width="100%" border="0" class="resultLoad" style="display:none">
         <tbody>
+            {{each maxMap[head+'_dx'].maxY}}
+                <tr class="resultLoad">
+                    {{each maxMap[head+'_dx'].maxX}}
+                        <td>&nbsp;</td>
+                    {{/each}}
+                </tr>
+            {{/each}}
         </tbody>
     </table>
-</div>
-</div>
+    <table id="bottom_zs_table_{{head}}_ds" width="100%" border="0" class="resultLoad" style="display:none">
+        {{each maxMap[head+'_ds'].maxY}}
+        <tr class="resultLoad">
+            {{each maxMap[head+'_ds'].maxX}}
+            <td>&nbsp;</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </table>
+    {{/each}}
+</script>
