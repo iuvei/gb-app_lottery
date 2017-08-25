@@ -1,5 +1,6 @@
 package so.wwb.gamebox.lottery.hall.pl3.controller;
 
+import org.soul.commons.collections.MapTool;
 import org.soul.commons.data.json.JsonTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -320,7 +321,11 @@ public class BasePl3Controller extends BaseLotteryController {
     public void initTwoWordFix(Model model, String code, String betCode) {
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
         //赔率
-        model.addAttribute("odds", getOdds(betCode, siteLotteryOdds));
+        Map<String, SiteLotteryOdd> oddMap = getOdds(betCode, siteLotteryOdds);
+        if(MapTool.isNotEmpty(oddMap)){
+            SiteLotteryOdd lottery = oddMap.values().iterator().next();
+            model.addAttribute("lottery", lottery);
+        }
         List<String> places = new ArrayList<>();
         if(LotteryBettingEnum.PL3_HUNDRED_TEN.getCode().equals(betCode)){
             places.add("百");
@@ -345,7 +350,11 @@ public class BasePl3Controller extends BaseLotteryController {
     public void initThreeWordFix(Model model, String code, String betCode) {
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
         //赔率
-        model.addAttribute("odds", getOdds(betCode, siteLotteryOdds));
+        Map<String, SiteLotteryOdd> oddMap = getOdds(betCode, siteLotteryOdds);
+        if(MapTool.isNotEmpty(oddMap)){
+            SiteLotteryOdd lottery = oddMap.values().iterator().next();
+            model.addAttribute("lottery", lottery);
+        }
         List<String> places = new ArrayList<>();
         places.add("百");
         places.add("十");
