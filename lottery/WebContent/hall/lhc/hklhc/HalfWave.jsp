@@ -74,7 +74,7 @@
                     </td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
                                                             data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcHalfColourSingleDouble}"
+                                                            data-play="${lhcHalfColourBigSmall}"
                                                             data-bet-num="${lottery.betNum}"
                                                             data-plid="6729"></input></td>
                     <td style="cursor: pointer;">
