@@ -415,7 +415,6 @@ public class BasePl3Controller extends BaseLotteryController {
         model.addAttribute("pl3ThreeDigital", LotteryPlayEnum.PL3_THREE_DIGITAL.getCode());
         model.addAttribute("pl3OneCombination", LotteryPlayEnum.PL3_ONE_COMBINATION.getCode());
         model.addAttribute("pl3TwoCombination", LotteryPlayEnum.PL3_TWO_COMBINATION.getCode());
-        model.addAttribute("pl3ThreeCombination", LotteryPlayEnum.PL3_TWO_COMBINATION.getCode());
         model.addAttribute("pl3ThreeCombination", LotteryPlayEnum.PL3_THREE_COMBINATION.getCode());
         model.addAttribute("pl3Sum2Digital", LotteryPlayEnum.PL3_SUM2_DIGITAL.getCode());
         model.addAttribute("pl3Sum2SingleDouble", LotteryPlayEnum.PL3_SUM2_SINGLE_DOUBLE.getCode());

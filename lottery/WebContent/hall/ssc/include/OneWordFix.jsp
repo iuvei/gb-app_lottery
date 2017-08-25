@@ -6,9 +6,8 @@
 <%-- 一字定位 --%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
-            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab fix-type clearfix" style="margin-top: 5px; ">
                     <a href="javascript:void(0)" data-code="ten_thousand" class="active">万位</a>

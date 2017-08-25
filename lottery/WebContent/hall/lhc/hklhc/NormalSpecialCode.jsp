@@ -5,19 +5,8 @@
 <%-- 正特码 --%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">
-                快捷金额：
-                <input type="text" class="txt">
-            </div>
-            <div class="kjanniu">
-                <a href="javascript:void(0)" class="img-50" data-num="50"></a>
-                <a href="javascript:void(0)" class="img-100" data-num="100"></a>
-                <a href="javascript:void(0)" class="img-500" data-num="500"></a>
-                <a href="javascript:void(0)" class="img-1000" data-num="1000"></a>
-                <a href="javascript:void(0)" class="img-5000" data-num="5000"></a>
-                <a href="javascript:void(0)" class="img-10000" data-num="10000"></a>
-            </div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
                     <a href="javascript:void(0)" subCode="positive_first" class="active">正码一</a>

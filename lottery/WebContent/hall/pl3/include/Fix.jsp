@@ -20,8 +20,7 @@
         <div class="table-common">
         </div>
         <div class="hd rehd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
-            <%@ include file="../../common/ShortcutkeyButton.jsp" %>
+            <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
 
         <div class="btns">
