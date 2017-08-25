@@ -32,13 +32,12 @@
                 <input type="hidden" name="type" value="${type}"/>
                 <input type="hidden" name="code" value="${code}"/>
             </div>
-
             <div class="box2_stage rebox2_stage">
                 <p>
                     <span><i class="acti">近一期</i><i>近五期</i></span>
                     <font id="lastNumber">快乐十分第<var></var>期</font>
                 </p>
-                <div class="number pt10" id="lastOpenCode" style="display: block;">
+                <div class="number pt10 pk10" id="lastOpenCode" style="display: block;">
                 </div>
                 <div class="number" id="lastOpenCodeList" style="display: none">
                     <ul></ul>

@@ -48,6 +48,13 @@
                     </div>
                     <c:if test="${!empty resultMap[handicap.code].openCode}">
                        <c:choose>
+                           <c:when test="${handicap.type=='sfc'}">
+                               <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                                   <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
+                                       <i>${i}</i>
+                                   </c:forEach>
+                               </p>
+                           </c:when>
                            <c:when test="${handicap.type=='pk10'}">
                                <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode,',')}">
@@ -68,7 +75,6 @@
                            </c:when>
                            <c:when test="${handicap.code=='bjkl8'}">
                                <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
-
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
                                        <i>${i}</i>
                                    </c:forEach>
