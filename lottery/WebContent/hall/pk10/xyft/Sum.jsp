@@ -4,7 +4,7 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd rehd clearfix">
-                <%@ include file="../../common/ShortMoney.jsp" %>
+            <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
         <%@ include file="sum/Sum.jsp" %>
         <div class="btns">
@@ -15,14 +15,14 @@
             <table class="head_table" id="rttt" style="width:100%">
                 <tbody>
                 <tr>
-                    <th class="tab_one th_bg">冠、亚军和 大小</th>
-                    <th class="tab_two">冠、亚军和</th>
-                    <th class="tab_three">冠亚军和单双</th>
+                    <th class="tab_one th_bg" data-position="tab_1">冠、亚军和 大小</th>
+                    <th class="tab_two" data-position="tab_2">冠、亚军和</th>
+                    <th class="tab_three" data-position="tab_3">冠亚军和单双</th>
                 </tr>
                 </tbody>
             </table>
             <table class="body_table" style="width: 100%;margin-top:0;">
-                <tbody class="gydx">
+                <tbody class="gydx" id="tab_1">
                     <c:forEach var="i" begin="0" end="5">
                         <tr class="ballqueue_result" id="rmTr${i}">
                             <c:forEach var="i" begin="1" end="35">
@@ -32,7 +32,7 @@
                     </c:forEach>
                 </tbody>
 
-                <tbody class="gyhz">
+                <tbody class="gyhz" id="tab_2">
                     <c:forEach var="i" begin="0" end="5">
                         <tr class="ballqueue_result" id="rm2Tr${i}">
                             <c:forEach var="i" begin="1" end="35">
@@ -42,7 +42,7 @@
                     </c:forEach>
                 </tbody>
 
-                <tbody class="gyds">
+                <tbody class="gyds" id="tab_3">
                     <c:forEach var="i" begin="0" end="5">
                         <tr class="ballqueue_result" id="rm3Tr${i}">
                             <c:forEach var="i" begin="1" end="35">
