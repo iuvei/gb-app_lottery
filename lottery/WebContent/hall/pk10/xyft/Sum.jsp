@@ -4,7 +4,7 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd rehd clearfix">
-                <%@ include file="../../common/ShortMoney.jsp" %>
+            <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
         <%@ include file="sum/Sum.jsp" %>
         <div class="btns">
@@ -15,90 +15,49 @@
             <table class="head_table" id="rttt" style="width:100%">
                 <tbody>
                 <tr>
-                    <th class="tab_one th_bg">冠、亚军和 大小</th>
-                    <th class="tab_two">冠、亚军和</th>
-                    <th class="tab_three">冠亚军和单双</th>
+                    <th class="tab_one th_bg" data-position="tab_1">冠、亚军和 大小</th>
+                    <th class="tab_two" data-position="tab_2">冠、亚军和</th>
+                    <th class="tab_three" data-position="tab_3">冠亚军和单双</th>
                 </tr>
                 </tbody>
             </table>
             <table class="body_table" style="width: 100%;margin-top:0;">
-                <tbody class="gydx">
-                <c:forEach var="i" begin="0" end="5">
-
-                    <tr class="ballqueue_result" id="rmTr${i}">
-                        <c:forEach var="i" begin="1" end="35">
-                            <td style="cursor: pointer;"></td>
-                        </c:forEach>
-                    </tr>
-                </c:forEach>
-
-
+                <tbody class="gydx" id="tab_1">
+                    <c:forEach var="i" begin="0" end="5">
+                        <tr class="ballqueue_result" id="rmTr${i}">
+                            <c:forEach var="i" begin="1" end="35">
+                                <td style="cursor: pointer;"></td>
+                            </c:forEach>
+                        </tr>
+                    </c:forEach>
                 </tbody>
 
-                <tbody class="gyhz">
-                <c:forEach var="i" begin="0" end="5">
-
-                    <tr class="ballqueue_result" id="rm2Tr${i}">
-                        <c:forEach var="i" begin="1" end="35">
-                            <td style="cursor: pointer;"></td>
-                        </c:forEach>
-                    </tr>
-                </c:forEach>
-
-
+                <tbody class="gyhz" id="tab_2">
+                    <c:forEach var="i" begin="0" end="5">
+                        <tr class="ballqueue_result" id="rm2Tr${i}">
+                            <c:forEach var="i" begin="1" end="35">
+                                <td style="cursor: pointer;"></td>
+                            </c:forEach>
+                        </tr>
+                    </c:forEach>
                 </tbody>
 
-                <tbody class="gyds">
-                <c:forEach var="i" begin="0" end="5">
-
-                    <tr class="ballqueue_result" id="rm3Tr${i}">
-                        <c:forEach var="i" begin="1" end="35">
-                            <td style="cursor: pointer;"></td>
-                        </c:forEach>
-                    </tr>
-                </c:forEach>
+                <tbody class="gyds" id="tab_3">
+                    <c:forEach var="i" begin="0" end="5">
+                        <tr class="ballqueue_result" id="rm3Tr${i}">
+                            <c:forEach var="i" begin="1" end="35">
+                                <td style="cursor: pointer;"></td>
+                            </c:forEach>
+                        </tr>
+                    </c:forEach>
                 </tbody>
             </table>
-
         </div>
-
-
     </div>
     <div class="fr main-right main-right-xyft cl-10 lm_height">
 
     </div>
 </div>
-<script>
-    $(function () {
-        //获取30期开奖数据
-
-
-        $(".head_table th").eq(0).addClass('th_bg');
-
-        $(".head_table th").bind('click', function () {
-            $(".head_table th").each(function (index, value) {
-                var obj = $(this);
-                if (obj.hasClass('th_bg')) {
-                    obj.removeClass('th_bg');
-                }
-            });
-            $(".body_table tbody").each(function (n, m) {
-                $(this).hide();
-            });
-            var calss_name = $(this).attr('class');
-            if (calss_name == 'tab_one') {
-                $(".gydx").show();
-            } else if (calss_name == 'tab_two') {
-                $(".gyhz").show();
-            } else if (calss_name == 'tab_three') {
-                $(".gyds").show();
-            }
-            $(this).addClass('th_bg');
-
-
-        });
-    });
-</script>
 <script type="text/javascript">
     curl(['site/hall/pk10/xyft/PlayWay'], function (PlayWay) {
         page.playWay = new PlayWay();

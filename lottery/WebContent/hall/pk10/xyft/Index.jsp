@@ -10,9 +10,7 @@
     <style>
         a:hover {
             color: red;
-
         }
-
         a:active {
             color: deepskyblue;
         }
@@ -72,22 +70,9 @@
                     <li>
                         <b >快钱玩法</b>
                         <p class="kuaiqian">
-                            <style>.Single .layout .Playmethod ul li p.kuaiqian span {
-                                width: 55px;
-                            }</style>
-                            <style>.Single .layout .Playmethod ul li p.kuaiqian .pm {
-                                width: 77px;
-                            }</style>
-                            <style>.Single .layout .Playmethod ul li p.kuaiqian .gyzh {
-                                width: 103px;
-                            }</style>
-                            <style>.Single .layout .Playmethod ul li p.kuaiqian .cmc {
-                                width: 122px;
-                            }</style>
                             <span class="acti"><a href="javascript:void(0)" data-url="xyft-twoSide">两面盘</a></span>
                             <span class="pm"><a href="javascript:void(0)" data-url="xyft-ranking">排名1~10</a></span>
-                            <span class="gyzh"><a href="javascript:void(0)"
-                                                  data-url="xyft-sum">冠、亚军 组合</a></span>
+                            <span class="gyzh"><a href="javascript:void(0)" data-url="xyft-sum">冠亚和</a></span>
                         </p>
                     </li>
                 </ul>

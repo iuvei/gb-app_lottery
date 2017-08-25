@@ -24,28 +24,41 @@ public class XY28Controller extends BaseXy28Controller {
         return String.format(INDEX_URL, CODE);
     }
 
-    // hh
+    /**
+     * 混合
+     *
+     * @param model
+     * @return
+     */
     @RequestMapping("/hh")
     public String twoSide(Model model) {
         initData(model, CODE);
         return "/hall/xy28/xy28/Hh";
     }
 
-    // 数字盘
+    /**
+     * 和值特码
+     *
+     * @param model
+     * @return
+     */
     @RequestMapping("/hz")
     public String digit(Model model) {
         initData(model, CODE);
         return "/hall/xy28/xy28/Hz";
     }
 
-    // 排名（冠军 -> 第十名）
+    /**
+     * 特码包3
+     *
+     * @param model
+     * @return
+     */
     @RequestMapping("/tmb3")
-    public String ranking(  Model model) {
+    public String ranking(Model model) {
         initData(model, CODE);
         return "/hall/xy28/xy28/Tmb3";
     }
-
-
 
     /**
      * 下注

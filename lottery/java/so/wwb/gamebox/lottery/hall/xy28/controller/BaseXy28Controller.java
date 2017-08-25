@@ -40,15 +40,8 @@ public class BaseXy28Controller extends BaseLotteryController {
         return map;
     }
 
-    // pk10最近5条开彩记录
-    @RequestMapping("/getRecent5Records")
-    @ResponseBody
-    public String getRecent5Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code));
-    }
-
     /**
-     * pk10最近20条开彩记录
+     * 最近30条开彩记录
      *
      * @param code
      * @return
