@@ -8,7 +8,7 @@
         <div class="hd rehd clearfix">
                 <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
-                <div class="T-tab comb-type clearfix" style="margin-top: 5px; ">
+                <div class="T-tab comb-type clearfix" style="margin-top: 5px; " id="betCodeDiv">
                     <a href="javascript:void(0)" data-code="group6_first_three" class="active">前三组选六</a>
                     <a href="javascript:void(0)" data-code="group6_in_three">中三组选六</a>
                     <a href="javascript:void(0)" data-code="group6_after_three">后三组选六</a>

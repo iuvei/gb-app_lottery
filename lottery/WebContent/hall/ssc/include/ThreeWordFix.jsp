@@ -6,9 +6,8 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd rehd clearfix">
-                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
-                <div class="T-tab fix-type clearfix" style="margin-top: 5px; ">
+                <div class="T-tab fix-type clearfix" style="margin-top: 5px; " id="betCodeDiv">
                     <c:set var="bettingDicts" value="${dicts.lottery.lottery_betting}"/>
                     <a href="javascript:void(0)" id="wanqianbai" data-code="ten_thousand_thousand_hundred" class="active">${bettingDicts['ten_thousand_thousand_hundred']}</a>
                     <a href="javascript:void(0)" data-code="ten_thousand_thousand_ten" >${bettingDicts['ten_thousand_thousand_ten']}</a>
