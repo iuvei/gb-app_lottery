@@ -38,9 +38,9 @@
                     <span><i class="acti">近一期</i><i>近五期</i></span>
                     <font id="lastNumber">重庆幸运农场第<var></var>期</font>
                 </p>
-                <div class="number pt10" id="lastOpenCode" style="display: block;">
+                <div class="number globule pt10" id="lastOpenCode" style="display: block;">
                 </div>
-                <div class="number" id="lastOpenCodeList" style="display: none">
+                <div class="number globule" id="lastOpenCodeList" style="display: none">
                     <ul></ul>
                 </div>
             </div>
