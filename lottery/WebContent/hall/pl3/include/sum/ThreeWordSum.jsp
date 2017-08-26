@@ -237,7 +237,7 @@
         </thead>
         <tbody>
         <tr>
-            <c:set var="lottery" value="${odds['0']}"/>
+            <c:set var="lottery" value="${odds['0尾']}"/>
             <c:set var="odd" value="${lottery.odd}"/>
             <td data-num="${lottery.betNum}" class="pointer"><strong>0</strong></td>
             <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
