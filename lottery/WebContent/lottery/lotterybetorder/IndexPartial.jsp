@@ -2,10 +2,19 @@
 <%--@elvariable id="command" type="so.wwb.gamebox.model.master.lottery.vo.LotteryBetOrderListVo"--%>
 <%@ include file="/include/include.inc.jsp" %>
 <div class="eveb_amount fl">
+    <c:set var="allBetAmount" value="${0}"></c:set>
+    <c:set var="allPayout" value="${0}"></c:set>
+    <c:if test="${not empty command.result}">
+        <c:forEach items="${command.result}" var="p" varStatus="status">
+            <c:set var="allBetAmount" value="${allBetAmount+p.betAmount}"></c:set>
+            <c:set var="allPayout" value="${allPayout+p.payout}"></c:set>
+        </c:forEach>
+    </c:if>
     当前投注额<span id="pageMoney">${soulFn:formatCurrency(allBetAmount)}</span>元，
     总投注额<span id="totalMoney">0</span>元，
     当前派彩<span id="pageWinOrLoseMoney">${soulFn:formatCurrency(allPayout)}</span>元，
-    总派彩<span id="totalWinOrLoseMoney">0</span>元
+    总派彩<span id="totalWinOrLoseMoney">0</span>元,
+    投注单量<span id="betCount">${command.paging.totalCount}</span>笔
 </div>
 <table class="eveb_box eveb_table" id="dataTable">
     <thead>
@@ -40,10 +49,9 @@
             <td>${dicts.lottery.lottery[p.code]}</td>
             <td>${p.id}</td>
             <td>${p.expect}</td>
-            <td>${dicts.lottery.lottery_betting[p.betCode]}</td>
-            <td>${dicts.lottery.lottery_play[p.playCode]}-${p.betNum}</td>
+            <td>${dicts.lottery.lottery_betting[p.betCode]}-${dicts.lottery.lottery_play[p.playCode]}</td>
+            <td>${p.betNum}</td>
             <td>${p.betAmount}</td>
-            <c:set var="allBetAmount" value="${allBetAmount+p.betAmount}"></c:set>
             <td>${p.odd}</td>
             <td>
                 <c:choose>
@@ -57,7 +65,6 @@
                     </c:otherwise>
                 </c:choose>
             </td>
-            <c:set var="allPayout" value="${allPayout+p.payout}"></c:set>
             <td>${soulFn:formatDateTz(p.betTime, DateFormat.DAY_SECOND,timeZone)}</td>
             <td>${p.username}</td>
             <td>
@@ -73,11 +80,6 @@
             </td>
         </tr>
     </c:forEach>
-   <%-- <tr>
-        <td colspan="12">
-
-        </td>
-    </tr>--%>
     </tbody>
 </table>
 <%@include file="../../include/include.pagination.jsp"%>
