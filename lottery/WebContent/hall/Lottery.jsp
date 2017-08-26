@@ -80,13 +80,6 @@
                                    </c:forEach>
                                </p>
                            </c:when>
-                           <c:when test="${handicap.code=='cqxync'}">
-                               <p class="p1 cqxync" id="lastOpenData${handicap.code}" data-name="lastOpenData">
-                                   <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
-                                       <i>${i}</i>
-                                   </c:forEach>
-                               </p>
-                           </c:when>
                            <c:otherwise>
                             <p class="p1" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                 上期开奖
