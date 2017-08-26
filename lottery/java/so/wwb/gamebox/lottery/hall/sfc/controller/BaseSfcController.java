@@ -184,9 +184,7 @@ public class BaseSfcController extends BaseLotteryController {
     public ArrayList<Map<String, SiteLotteryOdd>> getTwoSideOdds(String code) {
         //赔率
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(10);
-        listmap.add(getOdds(LotteryBettingEnum.SFC_SUM8.getCode(), siteLotteryOdds));
-        listmap.add(getOdds(LotteryBettingEnum.SFC_DRAGON_TIGER_18.getCode(), siteLotteryOdds));
+        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(9);
         listmap.add(getOdds(LotteryBettingEnum.SFC_FIRST.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SFC_SECOND.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SFC_THIRD.getCode(), siteLotteryOdds));
@@ -195,6 +193,7 @@ public class BaseSfcController extends BaseLotteryController {
         listmap.add(getOdds(LotteryBettingEnum.SFC_SIXTH.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SFC_SEVENTH.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SFC_EIGHTH.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SFC_SUM8.getCode(), siteLotteryOdds));
         return listmap;
     }
     public String getBetInfo(String code, String betCode) {
