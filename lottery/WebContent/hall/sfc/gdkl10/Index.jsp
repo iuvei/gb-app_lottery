@@ -18,7 +18,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>快乐十分</h2>
+                <h2>广东快乐十分</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="expect" class="expect"></i>期</p>
                 <div class="select">
@@ -35,7 +35,7 @@
             <div class="box2_stage rebox2_stage">
                 <p>
                     <span><i class="acti">近一期</i><i>近五期</i></span>
-                    <font id="lastNumber">快乐十分第<var></var>期</font>
+                    <font id="lastNumber">广东快乐十分第<var></var>期</font>
                 </p>
                 <div class="number globule pt10" id="lastOpenCode" style="display: block;">
                 </div>
