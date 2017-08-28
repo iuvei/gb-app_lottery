@@ -62,9 +62,8 @@
             <button class="btn btn-2">重设</button>
         </div>
     </div>
-    <div class="fr main-right cl-10 p-r-0">
-
-    </div>
+    <%-- 两面长龙排行 --%>
+    <%@ include file="include.rank.jsp" %>
 </div>
 <script type="text/javascript">
     curl(['site/hall/keno/xy28/tmb3/PlayWay'], function(PlayWay) {

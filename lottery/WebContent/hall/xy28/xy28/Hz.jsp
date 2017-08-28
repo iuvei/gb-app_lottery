@@ -57,11 +57,8 @@
 
 
     </div>
-    <div class="fr main-right cl-10 p-r-0">
-        <div class="table-common table-border-color">
-
-        </div>
-    </div>
+    <%-- 两面长龙排行 --%>
+    <%@ include file="include.rank.jsp" %>
 </div>
 <script type="text/javascript">
     curl(['site/hall/keno/xy28/PlayWay'], function(PlayWay) {
