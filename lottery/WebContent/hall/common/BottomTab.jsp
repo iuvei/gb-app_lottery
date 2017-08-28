@@ -39,8 +39,8 @@
             {{/if}}
                 <span>{{value.codeMemo}}</span>
                 <span>{{value.expect}}</span>
-                <span>{{value.betCodeMemo}}</span>
-                <span>{{value.playCodeMemo}}-{{value.betNum}}</span>
+                <span>{{value.betCodeMemo}}-{{value.playCodeMemo}}</span>
+                <span>{{value.betNum}}</span>
                 <span>{{value.betAmount}}</span>
                 <span>{{value.payout}}</span>
                 {{if value.status == 1}}
