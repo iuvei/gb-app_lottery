@@ -112,23 +112,21 @@ public class LotteryResultHistoryController {
 
     private Map<String, SiteLottery> removeNoExistLottery(LotteryFrequencyListVo listVo, Map<String, SiteLottery> siteLotteryMap) {
         Map<String, SiteLottery> lotteryMap = new LinkedHashMap<>();
-        for (Map.Entry<String, SiteLottery> entry : siteLotteryMap.entrySet()) {
-            String code = entry.getKey();
-            SiteLottery siteLottery = entry.getValue();
-            boolean exist = false;
-            for (LotteryFrequency frequency : listVo.getResult()) {
-                if (siteLottery.getId().equals(frequency.getLotteryId())) {
-                    exist = true;
+        if(MapTool.isNotEmpty(siteLotteryMap) && CollectionTool.isNotEmpty(listVo.getResult())){
+            for (Map.Entry<String, SiteLottery> entry : siteLotteryMap.entrySet()) {
+                String code = entry.getKey();
+                SiteLottery siteLottery = entry.getValue();
+                for (LotteryFrequency frequency : listVo.getResult()) {
+                    if (frequency != null && StringTool.isNotEmpty(frequency.getLotteryCode()) &&
+                            frequency.getLotteryCode().equals(siteLottery.getCode())) {
+                        lotteryMap.put(code, siteLottery);
+                        break;
+                    }
                 }
             }
-            if (exist) {
-                lotteryMap.put(code, siteLottery);
-            }
-
         }
         return lotteryMap;
     }
-
     //endregion your codes 3
 
 }
