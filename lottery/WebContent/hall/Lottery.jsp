@@ -49,21 +49,21 @@
                     <c:if test="${!empty resultMap[handicap.code].openCode}">
                        <c:choose>
                            <c:when test="${handicap.type=='sfc'}">
-                               <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                               <p class="p1 bj28 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
                                        <i>${i}</i>
                                    </c:forEach>
                                </p>
                            </c:when>
                            <c:when test="${handicap.type=='pk10'}">
-                               <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                               <p class="p1 bj28 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode,',')}">
                                        <i class="fang bg-${i}">${i}</i>
                                    </c:forEach>
                                </p>
                            </c:when>
                            <c:when test="${handicap.type=='lhc'}">
-                               <p class="p1" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                               <p class="p1 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}" varStatus="vs" begin="0" end="5">
                                        <span class="cpq-cqssc cpq-num" num="${i}">${i}</span>
                                    </c:forEach>
@@ -74,14 +74,12 @@
                                </p>
                            </c:when>
                            <c:when test="${handicap.code=='bjkl8'}">
-                               <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
-                                   <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
-                                       <i>${i}</i>
-                                   </c:forEach>
+                               <p class="p1 bj28 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                                   <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}"><i>${i}</i></c:forEach>
                                </p>
                            </c:when>
                            <c:otherwise>
-                            <p class="p1" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                            <p class="p1 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                 上期开奖
                                <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
                                    <i>${i}</i>
@@ -121,14 +119,10 @@
     {{/each}}
 </script>
 <script type="text/html" id="template_bjkl8">
-    {{each numArr as num index}}
-    <i>{{num}}</i>
-    {{/each}}
+    {{each numArr as num index}}<i>{{num}}</i>{{/each}}
 </script>
 <script type="text/html" id="template_result">
-    {{each numArr as num index}}
-        <i>{{num}}</i>
-    {{/each}}
+    {{each numArr as num index}}<i>{{num}}</i>{{/each}}
 </script>
 <%--<script src="${resRoot}/js/hall/Lottery.js?v=${rcVersion}"></script>--%>
 <script type="text/javascript">
