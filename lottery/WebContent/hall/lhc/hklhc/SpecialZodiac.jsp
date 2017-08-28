@@ -28,14 +28,10 @@
                     <c:set var="lottery" value="${odds['鼠']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-10"></span>
                         <span class="ball-icon ball-22"></span>
@@ -45,14 +41,10 @@
                     <c:set var="lottery" value="${odds['牛']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-09"></span>
                         <span class="ball-icon ball-21"></span>
@@ -64,14 +56,9 @@
                     <c:set var="lottery" value="${odds['虎']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
-                    </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/></td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-08"></span>
                         <span class="ball-icon ball-20"></span>
@@ -81,14 +68,11 @@
                     <c:set var="lottery" value="${odds['兔']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
+                    </td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-07"></span>
                         <span class="ball-icon ball-19"></span>
@@ -100,14 +84,11 @@
                     <c:set var="lottery" value="${odds['龙']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
+                    </td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-06"></span>
                         <span class="ball-icon ball-18"></span>
@@ -117,14 +98,12 @@
                     <c:set var="lottery" value="${odds['蛇']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;">
+                        <strong class="color-red pl">${odd}</strong>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
+                    </td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-05"></span>
                         <span class="ball-icon ball-17"></span>
@@ -136,14 +115,10 @@
                     <c:set var="lottery" value="${odds['马']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-04"></span>
                         <span class="ball-icon ball-16"></span>
@@ -153,14 +128,10 @@
                     <c:set var="lottery" value="${odds['羊']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}"data-play="${lhcSpecialZodiac}"data-bet-num="${lottery.betNum}"/>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-03"></span>
                         <span class="ball-icon ball-15"></span>
@@ -172,14 +143,11 @@
                     <c:set var="lottery" value="${odds['猴']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
+                    </td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-02"></span>
                         <span class="ball-icon ball-14"></span>
@@ -189,14 +157,11 @@
                     <c:set var="lottery" value="${odds['鸡']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
+                    </td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-01"></span>
                         <span class="ball-icon ball-13"></span>
@@ -209,14 +174,11 @@
                     <c:set var="lottery" value="${odds['狗']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
+                    </td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-12"></span>
                         <span class="ball-icon ball-24"></span>
@@ -226,14 +188,10 @@
                     <c:set var="lottery" value="${odds['猪']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">${lottery.betNum}</td>
-                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl"
-                                                                                      data-plid="6729">${odd}</strong>
+                    <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl" >${odd}</strong></td>
+                    <td data-num="${lottery.betNum}">
+                        <input type="text" class="table-txt" data-name="${lottery.betNum}" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${lhcSpecialZodiac}" data-bet-num="${lottery.betNum}"/>
                     </td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="${lottery.betNum}"
-                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${lhcSpecialZodiac}"
-                                                            data-bet-num="${lottery.betNum}"
-                                                            data-plid="6729"></input></td>
                     <td style="cursor: pointer;">
                         <span class="ball-icon ball-11"></span>
                         <span class="ball-icon ball-23"></span>
