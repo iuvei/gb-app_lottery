@@ -11,20 +11,7 @@
 
         <div class="table-common">
             <table width="100%" border="1" class="num">
-                <thead>
-                <tr>
-                    <th colspan="12">总和、龙虎</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="i" begin="0" end="7" varStatus="o">
-                    <c:if test="${o.index%4 == 0}"><tr></c:if>
-                    <td style="cursor: pointer;" class="betname"><strong></strong></td>
-                    <td style="cursor: pointer;" class="peilv"><strong class="color-red pl" ></strong></td>
-                    <td><input type="text" class="table-txt" /></td>
-                    <c:if test="${o.index % 4 == 3}"></tr></c:if>
-                </c:forEach>
-                </tbody>
+
                 <thead>
                 <tr>
                     <th colspan="3">第一球</th>
@@ -37,7 +24,7 @@
                 <c:forEach var="i" begin="0" end="31" varStatus="o">
                     <c:if test="${o.index%4 == 0}"><tr></c:if>
                     <td style="cursor: pointer;" class="betname"><strong></strong></td>
-                    <td style="cursor: pointer;" class="peilv tdnum${i%4+2}"><strong class="color-red pl" ></strong></td>
+                    <td style="cursor: pointer;" class="peilv tdnum${i%4}"><strong class="color-red pl" ></strong></td>
                     <td><input type="text" class="table-txt"  /></td>
                     <c:if test="${o.index % 4 == 3}"></tr></c:if>
                 </c:forEach>
@@ -55,8 +42,25 @@
                 <c:forEach var="i" begin="0" end="31" varStatus="o">
                     <c:if test="${o.index%4 == 0}"><tr></c:if>
                     <td style="cursor: pointer;"class="betname"><strong></strong></td>
-                    <td style="cursor: pointer;" class="peilv tdnum${i%4+6}"><strong class="color-red pl" ></strong></td>
+                    <td style="cursor: pointer;" class="peilv tdnum${i%4+4}"><strong class="color-red pl" ></strong></td>
                     <td><input type="text" class="table-txt" /></td>
+                    <c:if test="${o.index % 4 == 3}"></tr></c:if>
+                </c:forEach>
+                </tbody>
+                <thead>
+                <tr>
+                    <th colspan="12">总和、龙虎</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="i" begin="0" end="7" varStatus="o">
+                    <c:if test="${o.index%4 == 0}"><tr></c:if>
+                    <c:if test="${o.index%4 == 3}"><td></td><td class="peilv"></td><td></td></c:if>
+                    <c:if test="${o.index%4 != 3}">
+                    <td style="cursor: pointer;" class="betname"><strong></strong></td>
+                    <td style="cursor: pointer;" class="peilv"><strong class="color-red pl" ></strong></td>
+                    <td><input type="text" class="table-txt" /></td>
+                    </c:if>
                     <c:if test="${o.index % 4 == 3}"></tr></c:if>
                 </c:forEach>
                 </tbody>
