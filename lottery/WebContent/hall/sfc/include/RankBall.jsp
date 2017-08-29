@@ -47,7 +47,7 @@
             <button class="btn btn-2">重设</button>
         </div>
         <%-- 往期结果 --%>
-        <%@ include file="../include/include.result.jsp" %>
+        <%--<%@ include file="../include/include.result.jsp" %>--%>
     </div>
     <%-- 两面长龙排行 --%>
     <%@ include file="../include/include.rank.jsp" %>
