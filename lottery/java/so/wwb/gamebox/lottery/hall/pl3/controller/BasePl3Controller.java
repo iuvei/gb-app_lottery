@@ -382,23 +382,6 @@ public class BasePl3Controller extends BaseLotteryController {
         model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode));
     }
 
-    // 获取期数
-    @RequestMapping("/getExpect")
-    @ResponseBody
-    public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4,1f);
-        LotteryResult handicap = getHandicap(code);
-        setHandicap(map, handicap);
-        return map;
-    }
-
-    // 根据code获取最近5条开彩记录
-    @RequestMapping("/getRecent5Records")
-    @ResponseBody
-    public String getRecent5Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code));
-    }
-
     /**
      * 根据code获取最近20条开彩记录
      *
