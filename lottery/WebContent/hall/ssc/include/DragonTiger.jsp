@@ -20,6 +20,7 @@
                             <th colspan="2" data-code="dragon_tiger_12">万仟</th>
                             <th colspan="2" data-code="dragon_tiger_13">万佰</th>
                             <th colspan="2" data-code="dragon_tiger_14">万拾</th>
+                            <th colspan="2" data-code="dragon_tiger_15">万个</th>
                             </c:if>
                             <c:if test="${i==1}">
                                 <th colspan="2" data-code="dragon_tiger_23">仟佰</th>
@@ -40,6 +41,10 @@
                             <th>金额</th>
                             <th>赔率</th>
                             <th>金额</th>
+                            <c:if test="${i==0}">
+                            <th>赔率</th>
+                            <th>金额</th>
+                            </c:if>
                         </tr>
                         </thead>
 
@@ -56,6 +61,8 @@
                                 <td class="jine dragon_tiger_13"><input type="text" class="table-txt"></td>
                                 <td class="peilv dragon_tiger_14" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
                                 <td  class="jine dragon_tiger_14"><input type="text" class="table-txt"></td>
+                                <td class="peilv dragon_tiger_15" style="cursor: pointer;" ><strong class="color-red pl"></strong></td>
+                                <td  class="jine dragon_tiger_15"><input type="text" class="table-txt"></td>
                                 </c:if>
                                 <c:if test="${i==1}">
                                     <td style="cursor: pointer;"  class="peilv dragon_tiger_23"><strong class="color-red pl"></strong></td>

@@ -144,7 +144,7 @@
             <table width="100%" border="1" class="total-sum">
                 <thead>
                 <tr>
-                    <th colspan="15">总和、龙虎和</th>
+                    <th colspan="15">总和</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -153,46 +153,27 @@
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" class="pointer"><strong>总大</strong></td>
                     <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总大" data-bet-code="${lottery.betCode}" data-play="${fiveSumBigSmall}" data-bet-num="总大" data-odds="${odd}"/></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和-总大" data-bet-code="${lottery.betCode}" data-play="${fiveSumBigSmall}" data-bet-num="总大" data-odds="${odd}"/></td>
 
                     <c:set var="lottery" value="${fiveSumOdd['总单']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" class="pointer"><strong>总单</strong></td>
                     <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总单" data-bet-code="${lottery.betCode}" data-play="${fiveSumSingleDouble}" data-bet-num="总单" data-odds="${odd}"/></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和-总单" data-bet-code="${lottery.betCode}" data-play="${fiveSumSingleDouble}" data-bet-num="总单" data-odds="${odd}"/></td>
 
-                    <c:set var="lottery" value="${dragonTigerTieOdd['龙']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>龙</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-龙" data-bet-code="${lottery.betCode}" data-play="${dragonTigerTie}" data-bet-num="龙" data-odds="${odd}"/></td>
-
-                    <c:set var="lottery" value="${dragonTigerTieOdd['和']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>和</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-和" data-bet-code="${lottery.betCode}" data-play="${dragonTigerTie}" data-bet-num="和" data-odds="${odd}"/></td>
-                </tr>
-                <tr>
                     <c:set var="lottery" value="${fiveSumOdd['总小']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" class="pointer"><strong>总小</strong></td>
                     <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总小" data-bet-code="${lottery.betCode}" data-play="${fiveSumBigSmall}" data-bet-num="总小" data-odds="${odd}"/></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和-总小" data-bet-code="${lottery.betCode}" data-play="${fiveSumBigSmall}" data-bet-num="总小" data-odds="${odd}"/></td>
 
                     <c:set var="lottery" value="${fiveSumOdd['总双']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" class="pointer"><strong>总双</strong></td>
                     <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总双" data-bet-code="${lottery.betCode}" data-play="${fiveSumSingleDouble}" data-bet-num="总双" data-odds="${odd}"/></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和-总双" data-bet-code="${lottery.betCode}" data-play="${fiveSumSingleDouble}" data-bet-num="总双" data-odds="${odd}"/></td>
 
-                    <c:set var="lottery" value="${dragonTigerTieOdd['虎']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>虎</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-虎" data-bet-code="${lottery.betCode}" data-play="${dragonTigerTie}" data-bet-num="虎" data-odds="${odd}"/></td>
 
-                    <td class="pointer" colspan="3">&nbsp;</td>
                 </tr>
                 </tbody>
             </table>

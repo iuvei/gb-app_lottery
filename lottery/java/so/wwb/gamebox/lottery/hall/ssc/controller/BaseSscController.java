@@ -400,10 +400,11 @@ public class BaseSscController extends BaseLotteryController {
     public ArrayList<Map<String, SiteLotteryOdd>> getDragonTigerOdds(String code) {
         //赔率
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(9);
+        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(10);
         listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_THOUSAND.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_HUNDRED.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_TEN.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_HUNDRED.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_TEN.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_ONE.getCode(), siteLotteryOdds));
