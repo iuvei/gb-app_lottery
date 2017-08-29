@@ -49,13 +49,13 @@
                 </tbody>
                 <thead>
                 <tr>
-                    <th colspan="12">总和、龙虎</th>
+                    <th colspan="12">总和</th>
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="i" begin="0" end="7" varStatus="o">
                     <c:if test="${o.index%4 == 0}"><tr></c:if>
-                    <c:if test="${o.index%4 == 3}"><td></td><td class="peilv"></td><td></td></c:if>
+                    <c:if test="${o.index%4 == 3}"><td style="display: none"></td><td class="peilv" style="display: none"></td><td style="display: none"></td></c:if>
                     <c:if test="${o.index%4 != 3}">
                     <td style="cursor: pointer;" class="betname"><strong></strong></td>
                     <td style="cursor: pointer;" class="peilv"><strong class="color-red pl" ></strong></td>
