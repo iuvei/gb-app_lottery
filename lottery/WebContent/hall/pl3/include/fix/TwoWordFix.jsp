@@ -17,9 +17,8 @@
         <tr data-name="">
             <td class="pointer"></td>
             <c:forEach var="i" begin="0" end="9" varStatus="o">
-                <td class="pointer new-ball-st">
+                <td class="pointer new-ball-st" data-name="${i}">
                     <strong class="pl">${i}</strong>
-                    <input type="checkbox" data-name="${i}">
                 </td>
             </c:forEach>
         </tr>
