@@ -18,8 +18,8 @@
             <tr><td colspan="2">统计至第{{expect}}期</td></tr>
             {{each list as value index}}
                 <tr>
-                    <td width="142">{{value.name}}</td>
-                    <td>{{value.num}}</td>
+                    <td width="142">{{value.betCodeMemo}}-{{value.winningNum}}</td>
+                    <td>{{value.rankCount}}</td>
                 </tr>
             {{/each}}
             </tbody>
