@@ -8,14 +8,14 @@
     <thead>
     <tr>
         <c:set var="odd" value="${lottery.odd}"/>
-        <input type="hidden" class="lottery" data-name="${title}定位" data-odd="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3ThreeDigital}"/>
-        <th colspan="21">${title}定位（中3@<span class="pl red">${odd}</span>)</th>
+        <input type="hidden" class="lottery" data-name="${dicts.lottery.lottery_betting[lottery.betCode]}" data-odd="${odd}" data-bet-code="${lottery.betCode}" data-play="${pl3ThreeDigital}"/>
+        <th colspan="21">${dicts.lottery.lottery_betting[lottery.betCode]}（中3@<span class="pl red">${odd}</span>)</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${places}" var="place">
-        <tr data-name="${place}">
-            <td class="pointer">${place}位</td>
+    <c:forEach var="i" begin="0" end="2" varStatus="o">
+        <tr data-name="">
+            <td class="pointer"></td>
             <c:forEach var="i" begin="0" end="9" varStatus="o">
                 <td class="pointer new-ball-st">
                     <strong class="pl">${i}</strong>
