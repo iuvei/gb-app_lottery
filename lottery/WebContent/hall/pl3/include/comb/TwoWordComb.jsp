@@ -22,9 +22,8 @@
     <tbody>
         <tr>
             <c:forEach var="i" begin="0" end="9" varStatus="o">
-                <td class="pointer new-ball-st">
+                <td class="pointer new-ball-st" data-num="${i}">
                     <strong class="pl">${i}</strong>
-                    <input type="checkbox" data-num="${i}">
                 </td>
             </c:forEach>
         </tr>
@@ -39,9 +38,8 @@
     <tbody>
     <tr>
         <c:forEach var="i" begin="0" end="9" varStatus="o">
-            <td class="pointer new-ball-st">
+            <td class="pointer new-ball-st" data-num="${i}">
                 <strong class="pl">${i}</strong>
-                <input type="checkbox" data-num="${i}">
             </td>
         </c:forEach>
     </tr>
