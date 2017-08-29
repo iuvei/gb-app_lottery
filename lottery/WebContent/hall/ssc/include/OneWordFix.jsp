@@ -80,7 +80,7 @@
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" class="pointer"><strong>6</strong></td>
                     <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num6">${odd}</strong></td>
-                    <td><input type="text" class="table-txt num6" data-name="万位-6" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="6"/></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num6" data-name="万位-6" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="6"/></td>
 
                     <c:set var="lottery" value="${odds['7']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
