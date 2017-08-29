@@ -72,7 +72,7 @@
         </div>
 
         <%-- 往期结果 --%>
-        <%@ include file="../include/include.result.jsp" %>
+        <%--<%@ include file="../include/include.result.jsp" %>--%>
     </div>
 
     <%-- 两面长龙排行 --%>
@@ -82,7 +82,7 @@
     var lotteryPlay = "${lotteryPlay}";
 </script>
 <script type="text/javascript">
-    curl(['site/hall/sfc/TwoSide.js'], function (PlayWay) {
+    curl(['site/hall/sfc/TwoSide'], function (PlayWay) {
         page.playWay = new PlayWay();
     });
 </script>
