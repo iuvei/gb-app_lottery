@@ -40,7 +40,7 @@
     </div>
     <div class="help_col">
         <h5><strong>开奖说明</strong></h5>
-        <p>幸运飞艇（开奖网） 北京时间（GMT+8） 每天白天从中午13:04 开到凌晨04:04， 每5分钟开一次奖, 每天开奖180期</p>
+        <p>幸运飞艇 北京时间（GMT+8）,每5分钟开一次奖, 每天开奖180期</p>
     </div>
 </div>
 <%@ include file="/include/include.js.jsp" %>
