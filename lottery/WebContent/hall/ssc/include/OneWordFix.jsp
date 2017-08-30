@@ -64,10 +64,10 @@
                 <tbody>
                 <tr>
                     <c:forEach var="i" begin="0" end="3" varStatus="o">
-                        <c:if test="${i ==0}"><c:set var="betnumber" value="总大"></c:set><c:set var="playcode" value="five_sum_big_small"></c:set> </c:if>
-                        <c:if test="${i ==1}"><c:set var="betnumber" value="总小"></c:set><c:set var="playcode" value="five_sum_big_small"></c:set> </c:if>
-                        <c:if test="${i ==2}"><c:set var="betnumber" value="总单"></c:set><c:set var="playcode" value="five_sum_single_double"></c:set> </c:if>
-                        <c:if test="${i ==3}"><c:set var="betnumber" value="总双"></c:set><c:set var="playcode" value="five_sum_single_double"></c:set> </c:if>
+                        <c:if test="${i ==0}"><c:set var="betnumber" value="总大"></c:set><c:set var="playcode" value="${fiveSumBigSmall}"></c:set> </c:if>
+                        <c:if test="${i ==1}"><c:set var="betnumber" value="总小"></c:set><c:set var="playcode" value="${fiveSumBigSmall}"></c:set> </c:if>
+                        <c:if test="${i ==2}"><c:set var="betnumber" value="总单"></c:set><c:set var="playcode" value="${fiveSumSingleDouble}"></c:set> </c:if>
+                        <c:if test="${i ==3}"><c:set var="betnumber" value="总双"></c:set><c:set var="playcode" value="${fiveSumSingleDouble}"></c:set> </c:if>
                         <td  class="pointer"  data-num="${betnumber}"><strong></strong></td>
                         <td  class="pointer"  data-num="${betnumber}"><strong class="color-red pl"></strong></td>
                         <td  data-num="${betnumber}"><input type="text" class="table-txt" data-play="${playcode}"/></td>

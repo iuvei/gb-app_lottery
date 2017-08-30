@@ -48,7 +48,7 @@
                         <strong class="color-red pl odds num${i}">${odd}</strong>
                     </td>
                     <td data-num="${i}">
-                        <input type="text" class="table-txt num${i}" data-play="${oneCombination}" data-bet-num="${i}" />
+                        <input type="text" class="table-txt num${i}" data-play="one_combination" data-bet-num="${i}" />
                     </td>
                     <c:if test="${o.index % 5 == 4}"></tr></c:if>
                 </c:forEach>

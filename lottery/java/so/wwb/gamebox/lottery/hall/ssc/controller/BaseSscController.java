@@ -75,33 +75,32 @@ public class BaseSscController extends BaseLotteryController {
 
     // 双面玩法
     public String twoSide(Model model, String code) {
-        initTwoSide(model, code);
+        initPlayCode(model);
         return TWO_SIDE_URL;
     }
 
     // 数字盘
     public String digit(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        initDigit(model, code, siteLotteryOdds);
+        initPlayCode(model);
         return DIGIT_URL;
     }
 
     // 一字定位
     public String oneWordFix(Model model, String code) {
-        initOneWordFix(model, code);
+        initPlayCode(model);
         return ONE_WORD_FIX_URL;
     }
 
 
     // 二字定位
     public String twoWordFix(Model model, String code) {
-        initTwoWordFix(model, code);
+        initPlayCode(model);
         return TWO_WORD_FIX_URL;
     }
 
-    // 二字定位
+    // 三字定位
     public String threeWordFix(Model model, String code) {
-        initThreeWordFix(model, code);
+        initPlayCode(model);
         return THREE_WORD_FIX_URL;
     }
 
@@ -113,7 +112,7 @@ public class BaseSscController extends BaseLotteryController {
 
     // 一字组合
     public String oneWordComb(Model model, String code) {
-        initOneWordComb(model, code);
+        initPlayCode(model);
         return ONE_WORD_COMB_URL;
     }
 
@@ -228,18 +227,6 @@ public class BaseSscController extends BaseLotteryController {
         model.addAttribute("oddList", oddList);
     }
 
-    /**
-     * 初始化双面
-     *
-     * @param model
-     * @param code
-     */
-    public void initTwoSide(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        initDigit(model, code, siteLotteryOdds);
-        model.addAttribute("fiveSumOdd", getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
-        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
-    }
 
     /**
      * 初始化一字定位
@@ -413,6 +400,13 @@ public class BaseSscController extends BaseLotteryController {
         listmap.add(getOdds(LotteryBettingEnum.SSC_TEN_ONE.getCode(), siteLotteryOdds));
         return listmap;
     }
+
+    /**
+     * 获取一字定位赔率
+     * @param code
+     * @param betCode
+     * @return
+     */
     @RequestMapping("/getOneWordFixOdd")
     @ResponseBody
     public String getOneWordFixOdd(String code, String betCode) {
@@ -420,6 +414,41 @@ public class BaseSscController extends BaseLotteryController {
         Map<String, SiteLotteryOdd> fsumodd = getOdds(code, LotteryBettingEnum.FIVE_SUM.getCode());
         odds.putAll(fsumodd);
         return JsonTool.toJson(odds);
+    }
+    /**
+     * 获取数字盘赔率
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getDigitOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getDigitOdd(String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.ONE.getCode(), siteLotteryOdds));
+        return oddList;
+    }
+    /**
+     * 获取双面赔率
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getTwoSideOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getTwoSideOdd(String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
+        return oddList;
     }
 
     public String getBetInfo(String code, String betCode) {
