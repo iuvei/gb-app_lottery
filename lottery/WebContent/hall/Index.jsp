@@ -85,6 +85,10 @@
                     <a href="javascript:void(0)" data-playway="cqssc"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
                     <a href="javascript:void(0)" data-playway="tjssc"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
                     <a href="javascript:void(0)" data-playway="xjssc"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="ffssc"><img src="${resRoot}/themes/default/img/ffssc.png"><var>分分时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="efssc"><img src="${resRoot}/themes/default/img/efssc.png"><var>二分时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="sfssc"><img src="${resRoot}/themes/default/img/sfssc.png"><var>三分时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="wfssc"><img src="${resRoot}/themes/default/img/wfssc.png"><var>五分时时彩</var></a>
                     <a href="javascript:void(0)" data-playway="jsk3"><img src="${resRoot}/themes/default/img/jsk3.png"><var>江苏快3</var></a>
                     <a href="javascript:void(0)" data-playway="hbk3"><img src="${resRoot}/themes/default/img/hbk3.png"><var>湖北快3</var></a>
                     <a href="javascript:void(0)" data-playway="ahk3"><img src="${resRoot}/themes/default/img/ahk3.png"><var>安徽快3</var></a>
