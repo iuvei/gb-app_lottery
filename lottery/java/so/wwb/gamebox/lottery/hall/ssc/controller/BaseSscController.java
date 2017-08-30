@@ -75,18 +75,21 @@ public class BaseSscController extends BaseLotteryController {
 
     // 双面玩法
     public String twoSide(Model model, String code) {
+        model.addAttribute("code", code);
         initPlayCode(model);
         return TWO_SIDE_URL;
     }
 
     // 数字盘
     public String digit(Model model, String code) {
+        model.addAttribute("code", code);
         initPlayCode(model);
         return DIGIT_URL;
     }
 
     // 一字定位
     public String oneWordFix(Model model, String code) {
+        model.addAttribute("code", code);
         initPlayCode(model);
         return ONE_WORD_FIX_URL;
     }
@@ -94,12 +97,14 @@ public class BaseSscController extends BaseLotteryController {
 
     // 二字定位
     public String twoWordFix(Model model, String code) {
+        model.addAttribute("code", code);
         initPlayCode(model);
         return TWO_WORD_FIX_URL;
     }
 
     // 三字定位
     public String threeWordFix(Model model, String code) {
+        model.addAttribute("code", code);
         initPlayCode(model);
         return THREE_WORD_FIX_URL;
     }
@@ -112,12 +117,14 @@ public class BaseSscController extends BaseLotteryController {
 
     // 一字组合
     public String oneWordComb(Model model, String code) {
+        model.addAttribute("code", code);
         initPlayCode(model);
         return ONE_WORD_COMB_URL;
     }
 
     // 跨度
     public String span(Model model, String code) {
+        model.addAttribute("code", code);
         initSpan(model, code);
         return SPAN_URL;
     }
@@ -207,82 +214,6 @@ public class BaseSscController extends BaseLotteryController {
         return getOdds(code, betCode);
     }
 
-    /**
-     * 初始化数字盘
-     *
-     * @param model
-     * @param code
-     * @param siteLotteryOdds
-     */
-    public void initDigit(Model model, String code, Map<String, SiteLotteryOdd> siteLotteryOdds) {
-        //玩法
-        initPlayCode(model);
-        //赔率
-        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
-        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.THOUSAND.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.HUNDRED.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.TEN.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.ONE.getCode(), siteLotteryOdds));
-        model.addAttribute("oddList", oddList);
-    }
-
-
-    /**
-     * 初始化一字定位
-     *
-     * @param model
-     * @param code
-     */
-    public void initOneWordFix(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        //赔率
-        model.addAttribute("odds", getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
-        model.addAttribute("fiveSumOdd", getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
-        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
-        //玩法
-        initPlayCode(model);
-    }
-
-    /**
-     * 初始化二字定位
-     *
-     * @param model
-     * @param code
-     */
-    public void initTwoWordFix(Model model, String code) {
-        model.addAttribute("code", code);
-        //玩法
-        initPlayCode(model);
-    }
-
-    /**
-     * 初始化三字定位
-     *
-     * @param model
-     * @param code
-     */
-    public void initThreeWordFix(Model model, String code) {
-
-        model.addAttribute("code", code);
-        //玩法
-        initPlayCode(model);
-    }
-
-    /**
-     * 初始化一字组合
-     *
-     * @param model
-     * @param code
-     * @param
-     */
-    public void initOneWordComb(Model model, String code) {
-        //赔率
-        model.addAttribute("odds", getOdds(code, LotteryBettingEnum.ONE_ALL_FIVE.getCode()));
-        model.addAttribute("code", code);
-        //玩法
-        initPlayCode(model);
-    }
 
     /**
      * 初始化跨度

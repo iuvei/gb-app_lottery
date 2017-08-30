@@ -45,10 +45,10 @@
                         <strong>${i}</strong>
                     </td>
                     <td data-num="${i}" class="pointer">
-                        <strong class="color-red pl odds num${i}">${odd}</strong>
+                        <strong class="color-red pl odds num${i}"></strong>
                     </td>
                     <td data-num="${i}">
-                        <input type="text" class="table-txt num${i}" data-play="one_combination" data-bet-num="${i}" />
+                        <input type="text" class="table-txt num${i}" data-play="one_combination" data-bet-num="${i}" data-bet-code="one_all_five"/>
                     </td>
                     <c:if test="${o.index % 5 == 4}"></tr></c:if>
                 </c:forEach>

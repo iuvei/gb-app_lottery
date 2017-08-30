@@ -44,9 +44,9 @@
                         <c:if test="${i%5==0}">
                             <tr>
                         </c:if>
-                        <td  class="pointer num${i}" data-num="${i}"><strong></strong></td>
-                        <td  class="pointer num${i}" data-num="${i}"><strong class="color-red pl"></strong></td>
-                        <td  class="num${i}" data-num="${i}"><input type="text" class="table-txt"  data-play="${oneDigital}" /></td>
+                        <td  class="pointer num${i}" data-num="${j}-${i}"><strong></strong></td>
+                        <td  class="pointer num${i}" data-num="${j}-${i}"><strong class="color-red pl"></strong></td>
+                        <td  class="num${i}" data-num="${j}-${i}"><input type="text" class="table-txt"  data-play="${oneDigital}" /></td>
 
                         <c:if test="${(i%5 == 4)}">
                             </tr>
