@@ -38,161 +38,40 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <c:set var="lottery" value="${odds['0']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>0</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num0">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num0" data-name="万位-0" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="0"/></td>
-
-                    <c:set var="lottery" value="${odds['1']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>1</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num1">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num1" data-name="万位-1" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="1"/></td>
-
-                    <c:set var="lottery" value="${odds['2']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>2</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num2">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num2" data-name="万位-2" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="2"/></td>
-
-                    <c:set var="lottery" value="${odds['3']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>3</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num3">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num3" data-name="万位-3" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="3"/></td>
-                </tr>
-                <tr>
-                    <c:set var="lottery" value="${odds['4']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>4</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num4">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num4" data-name="万位-4" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="4"/></td>
-
-                    <c:set var="lottery" value="${odds['5']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>5</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num5">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num5" data-name="万位-5" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="5"/></td>
-
-                    <c:set var="lottery" value="${odds['6']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>6</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num6">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num6" data-name="万位-6" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="6"/></td>
-
-                    <c:set var="lottery" value="${odds['7']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>7</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num7">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num7" data-name="万位-7" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="7"/></td>
-                </tr>
-                <tr>
-                    <c:set var="lottery" value="${odds['8']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>8</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num8">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num8" data-name="万位-8" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="8"/></td>
-
-                    <c:set var="lottery" value="${odds['9']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>9</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl num9">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt num9" data-name="万位-9" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneDigital}" data-bet-num="9"/></td>
-
-                    <c:set var="lottery" value="${odds['大']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>大</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt large" data-name="万位-大" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneBigSmall}" data-bet-num="大"/></td>
-
-                    <c:set var="lottery" value="${odds['小']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>小</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt little" data-name="万位-小" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneBigSmall}" data-bet-num="小"/></td>
-                </tr>
-                <tr>
-                    <c:set var="lottery" value="${odds['单']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>单</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt single" data-name="万位-单" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneSingleDouble}" data-bet-num="单"/></td>
-
-                    <c:set var="lottery" value="${odds['双']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>双</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt twin" data-name="万位-双" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${oneSingleDouble}" data-bet-num="双"/></td>
-
-                    <c:set var="lottery" value="${odds['质']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>质</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt prime" data-name="万位-质" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${onePrimeCombined}" data-bet-num="质"/></td>
-
-                    <c:set var="lottery" value="${odds['合']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>合</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt composite" data-name="万位-合" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${onePrimeCombined}" data-bet-num="合"/></td>
-                </tr>
+<c:forEach var="i" begin="0" end="15" varStatus="o">
+     <c:if test="${i%4==0}" ><tr></c:if>
+    <c:if test="${i< 10}"><c:set var="betnumber" value="${i}"></c:set> </c:if>
+    <c:if test="${i ==10}"><c:set var="betnumber" value="大"></c:set> </c:if>
+    <c:if test="${i ==11}"><c:set var="betnumber" value="小"></c:set> </c:if>
+    <c:if test="${i ==12}"><c:set var="betnumber" value="单"></c:set> </c:if>
+    <c:if test="${i ==13}"><c:set var="betnumber" value="双"></c:set> </c:if>
+    <c:if test="${i ==14}"><c:set var="betnumber" value="质"></c:set> </c:if>
+    <c:if test="${i ==15}"><c:set var="betnumber" value="合"></c:set> </c:if>
+                    <td  class="pointer"  data-num="${betnumber}"><strong></strong></td>
+                    <td  class="pointer"  data-num="${betnumber}"><strong class="color-red pl"></strong></td>
+                    <td  data-num="${betnumber}"><input type="text" class="table-txt" data-play="${oneDigital}"/></td>
+<c:if test="${i%4==3}" ></tr></c:if>
+</c:forEach>
                 </tbody>
             </table>
 
             <table width="100%" border="1" class="total-sum">
                 <thead>
                 <tr>
-                    <th colspan="15">总和、龙虎和</th>
+                    <th colspan="15">总和</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <c:set var="lottery" value="${fiveSumOdd['总大']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>总大</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总大" data-bet-code="${lottery.betCode}" data-play="${fiveSumBigSmall}" data-bet-num="总大" data-odds="${odd}"/></td>
-
-                    <c:set var="lottery" value="${fiveSumOdd['总单']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>总单</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总单" data-bet-code="${lottery.betCode}" data-play="${fiveSumSingleDouble}" data-bet-num="总单" data-odds="${odd}"/></td>
-
-                    <c:set var="lottery" value="${dragonTigerTieOdd['龙']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>龙</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-龙" data-bet-code="${lottery.betCode}" data-play="${dragonTigerTie}" data-bet-num="龙" data-odds="${odd}"/></td>
-
-                    <c:set var="lottery" value="${dragonTigerTieOdd['和']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>和</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-和" data-bet-code="${lottery.betCode}" data-play="${dragonTigerTie}" data-bet-num="和" data-odds="${odd}"/></td>
-                </tr>
-                <tr>
-                    <c:set var="lottery" value="${fiveSumOdd['总小']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>总小</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总小" data-bet-code="${lottery.betCode}" data-play="${fiveSumBigSmall}" data-bet-num="总小" data-odds="${odd}"/></td>
-
-                    <c:set var="lottery" value="${fiveSumOdd['总双']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>总双</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-总双" data-bet-code="${lottery.betCode}" data-play="${fiveSumSingleDouble}" data-bet-num="总双" data-odds="${odd}"/></td>
-
-                    <c:set var="lottery" value="${dragonTigerTieOdd['虎']}"/>
-                    <c:set var="odd" value="${lottery.odd}"/>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong>虎</strong></td>
-                    <td data-num="${lottery.betNum}" class="pointer"><strong class="color-red pl">${odd}</strong></td>
-                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="总和、龙虎和-虎" data-bet-code="${lottery.betCode}" data-play="${dragonTigerTie}" data-bet-num="虎" data-odds="${odd}"/></td>
-
-                    <td class="pointer" colspan="3">&nbsp;</td>
+                    <c:forEach var="i" begin="0" end="3" varStatus="o">
+                        <c:if test="${i ==0}"><c:set var="betnumber" value="总大"></c:set><c:set var="playcode" value="five_sum_big_small"></c:set> </c:if>
+                        <c:if test="${i ==1}"><c:set var="betnumber" value="总小"></c:set><c:set var="playcode" value="five_sum_big_small"></c:set> </c:if>
+                        <c:if test="${i ==2}"><c:set var="betnumber" value="总单"></c:set><c:set var="playcode" value="five_sum_single_double"></c:set> </c:if>
+                        <c:if test="${i ==3}"><c:set var="betnumber" value="总双"></c:set><c:set var="playcode" value="five_sum_single_double"></c:set> </c:if>
+                        <td  class="pointer"  data-num="${betnumber}"><strong></strong></td>
+                        <td  class="pointer"  data-num="${betnumber}"><strong class="color-red pl"></strong></td>
+                        <td  data-num="${betnumber}"><input type="text" class="table-txt" data-play="${playcode}"/></td>
+                    </c:forEach>
                 </tr>
                 </tbody>
             </table>

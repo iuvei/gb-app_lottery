@@ -26,9 +26,8 @@
         <c:if test="${i%5 == 0}">
             <tr>
         </c:if>
-        <td class="pointer new-ball-st">
+        <td class="pointer new-ball-st" data-num="${i}">
             <strong class="pl">${i}</strong>
-            <input class="table-checkbox" type="checkbox" data-num="${i}">
         </td>
         <c:if test="${i%5 == 4}">
             </tr>

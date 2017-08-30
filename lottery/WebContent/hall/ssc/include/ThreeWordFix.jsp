@@ -33,19 +33,25 @@
                 <tr class="headtr">
                     <td style="cursor: pointer;"><strong>头</strong></td>
                     <c:forEach var="i" begin="0" end="9" varStatus="o">
-                        <td style="cursor: pointer;" class="new-ball-st"><strong class="pl">${i}</strong><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="three_digital"></td>
+                        <td style="cursor: pointer;" class="new-ball-st" data-code="${code}" data-bet-num="${i}" data-play="three_digital">
+                            <strong class="pl">${i}</strong>
+                        </td>
                     </c:forEach>
                 </tr>
                 <tr class="zhongtr">
                     <td style="cursor: pointer;"><strong>中</strong></td>
                     <c:forEach var="i" begin="0" end="9" varStatus="o">
-                        <td style="cursor: pointer;" class="new-ball-st"><strong class="pl">${i}</strong><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="three_digital"></td>
+                        <td style="cursor: pointer;" class="new-ball-st" data-code="${code}" data-bet-num="${i}" data-play="three_digital">
+                            <strong class="pl">${i}</strong>
+                        </td>
                     </c:forEach>
                 </tr>
                 <tr class="weitr">
                     <td style="cursor: pointer;"><strong>尾</strong></td>
                     <c:forEach var="i" begin="0" end="9" varStatus="o">
-                        <td style="cursor: pointer;" class="new-ball-st"><strong class="pl">${i}</strong><input type="checkbox" data-code="${code}" data-bet-num="${i}" data-play="three_digital"></td>
+                        <td style="cursor: pointer;" class="new-ball-st" data-code="${code}" data-bet-num="${i}" data-play="three_digital">
+                            <strong class="pl">${i}</strong>
+                        </td>
                     </c:forEach>
                 </tr>
                 </tbody>

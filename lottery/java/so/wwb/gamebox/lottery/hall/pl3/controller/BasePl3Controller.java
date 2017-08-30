@@ -326,19 +326,19 @@ public class BasePl3Controller extends BaseLotteryController {
             SiteLotteryOdd lottery = oddMap.values().iterator().next();
             model.addAttribute("lottery", lottery);
         }
-        List<String> places = new ArrayList<>();
-        if(LotteryBettingEnum.PL3_HUNDRED_TEN.getCode().equals(betCode)){
-            places.add("百");
-            places.add("十");
-        }else if(LotteryBettingEnum.PL3_HUNDRED_ONE.getCode().equals(betCode)){
-            places.add("百");
-            places.add("个");
-        }else if(LotteryBettingEnum.PL3_TEN_ONE.getCode().equals(betCode)){
-            places.add("十");
-            places.add("个");
-        }
-        model.addAttribute("places", places);
-        model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode).replace("定位",""));
+//        List<String> places = new ArrayList<>();
+//        if(LotteryBettingEnum.PL3_HUNDRED_TEN.getCode().equals(betCode)){
+//            places.add("百");
+//            places.add("十");
+//        }else if(LotteryBettingEnum.PL3_HUNDRED_ONE.getCode().equals(betCode)){
+//            places.add("百");
+//            places.add("个");
+//        }else if(LotteryBettingEnum.PL3_TEN_ONE.getCode().equals(betCode)){
+//            places.add("十");
+//            places.add("个");
+//        }
+//        model.addAttribute("places", places);
+//        model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode).replace("定位",""));
     }
 
     /**
@@ -355,12 +355,12 @@ public class BasePl3Controller extends BaseLotteryController {
             SiteLotteryOdd lottery = oddMap.values().iterator().next();
             model.addAttribute("lottery", lottery);
         }
-        List<String> places = new ArrayList<>();
-        places.add("百");
-        places.add("十");
-        places.add("个");
-        model.addAttribute("places", places);
-        model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode).replace("定位",""));
+//        List<String> places = new ArrayList<>();
+//        places.add("百");
+//        places.add("十");
+//        places.add("个");
+//        model.addAttribute("places", places);
+//        model.addAttribute("title",LotteryBettingEnum.getTransByCode(betCode).replace("定位",""));
     }
 
     // 组合
