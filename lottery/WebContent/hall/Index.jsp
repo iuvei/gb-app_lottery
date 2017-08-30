@@ -95,8 +95,13 @@
                     <a href="javascript:void(0)" data-playway="gxk3"><img src="${resRoot}/themes/default/img/gxk3.png"><var>广西快3</var></a>
                     <a href="javascript:void(0)" data-playway="hklhc"><img src="${resRoot}/themes/default/img/hklhc.png"><var>香港六合彩</var></a>
                     <a href="javascript:void(0)" data-playway="bjpk10"><img src="${resRoot}/themes/default/img/bjpk10.png"><var>北京PK10</var></a>
+                    <a href="javascript:void(0)" data-playway="xyft"><img src="${resRoot}/themes/default/img/xyft.png"><var>幸运飞艇</var></a>
                     <a href="javascript:void(0)" data-playway="fc3d"><img src="${resRoot}/themes/default/img/fc3d.png"><var>福彩3D</var></a>
                     <a href="javascript:void(0)" data-playway="tcpl3"><img src="${resRoot}/themes/default/img/tcpl3.png"><var>体彩排列3</var></a>
+                    <a href="javascript:void(0)" data-playway="xy28"><img src="${resRoot}/themes/default/img/xy28.png"><var>幸运28</var></a>
+                    <a href="javascript:void(0)" data-playway="cqxync"><img src="${resRoot}/themes/default/img/cqxync.png"><var>重庆幸运农场</var></a>
+                    <a href="javascript:void(0)" data-playway="gdkl10"><img src="${resRoot}/themes/default/img/gdkl10.png"><var>广东快乐十分</var></a>
+                    <a href="javascript:void(0)" data-playway="bjkl8"><img src="${resRoot}/themes/default/img/bjkl8.png"><var>北京快乐8</var></a>
                 </div>
             </li>
           <%--  <li>

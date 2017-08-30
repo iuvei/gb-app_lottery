@@ -71,7 +71,7 @@
                     <c:set var="lottery" value="${odds['和大']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚大</td>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">和大</td>
                         <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
                         <td data-num="${lottery.betNum}">
                             <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpBigSmall}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
@@ -80,7 +80,7 @@
                     <c:set var="lottery" value="${odds['大双']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚大双</td>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">大双</td>
                         <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
                         <td data-num="${lottery.betNum}">
                             <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpHalf}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
@@ -124,15 +124,9 @@
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">16</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
                         <td data-num="${lottery.betNum}">
-                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone56}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}"  data-play="${championUpAlone56}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <tr class="wu">
@@ -143,31 +137,19 @@
                     <c:set var="lottery" value="${odds['和小']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚小</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpBigSmall}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">和小</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpBigSmall}" data-bet-num="${lottery.betNum}"  data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['大单']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚大单</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpHalf}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">大单</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpHalf}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}"  type="text"/>
                         </td>
                     </tr>
                     </tbody>
@@ -183,58 +165,35 @@
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">5</td>
                         <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
                             style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone56}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone56}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['9']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">9</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone910}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone910}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['13']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">13</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone910}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone910}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['17']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">17</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone56}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone56}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <tr class="wu">
@@ -245,31 +204,19 @@
                     <c:set var="lottery" value="${odds['和单']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚单</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpSingleDouble}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">和单</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpSingleDouble}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['小双']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚小双</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpHalf}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">小双</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpHalf}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     </tbody>
@@ -283,60 +230,36 @@
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">6</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone56}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone56}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['10']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">10</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone910}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone910}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['14']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">14</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone78}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone78}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['18']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
                         <td data-num="${lottery.betNum}" style="cursor: pointer;">18</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpAlone34}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpAlone34}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <tr class="wu">
@@ -347,31 +270,19 @@
                     <c:set var="lottery" value="${odds['和双']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚双</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpSingleDouble}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">和双</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpSingleDouble}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     <c:set var="lottery" value="${odds['小单']}"/>
                     <c:set var="odd" value="${lottery.odd}"/>
                     <tr>
-                        <td data-num="${lottery.betNum}" style="cursor: pointer;">冠亚小单</td>
-                        <td data-num="${lottery.betNum}" class="pl pl-color" data-plid="10010"
-                            style="cursor: pointer;">${odd}</td>
-                        <td data-num="${lottery.betNum}"><input class="amount-input"
-                                                                data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                                data-play="${championUpHalf}"
-                                                                data-bet-num="${lottery.betNum}"
-
-                                                                data-name="冠亚和-${lottery.betNum}" data-plid="10002"
-                                                                type="text"></input>
+                        <td data-num="${lottery.betNum}" style="cursor: pointer;">小单</td>
+                        <td data-num="${lottery.betNum}" class="pl pl-color" style="cursor: pointer;">${odd}</td>
+                        <td data-num="${lottery.betNum}">
+                            <input class="amount-input" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${championUpHalf}" data-bet-num="${lottery.betNum}" data-name="冠亚和-${lottery.betNum}" type="text"/>
                         </td>
                     </tr>
                     </tbody>
