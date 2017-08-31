@@ -134,6 +134,8 @@ public class HKlhcController extends BaseLhcController {
         //玩法
         model.addAttribute("lhcOneZodiac", LotteryPlayEnum.LHC_ONE_ZODIAC.getCode());
 
+        //生肖对应号码列表
+        model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(ONE_ZODIAC_URL, PATH);
     }
 
@@ -145,6 +147,9 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("odds", getOdds(LotteryBettingEnum.SPECIAL.getCode(), siteLotteryOdds));
         //玩法
         model.addAttribute("lhcSpecialZodiac", LotteryPlayEnum.LHC_SPECIAL_ZODIAC.getCode());
+
+        //生肖对应号码列表
+        model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(SPECIAL_ZODIAC_URL, PATH);
     }
 
