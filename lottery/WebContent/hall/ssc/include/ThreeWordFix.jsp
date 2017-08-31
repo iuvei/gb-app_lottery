@@ -13,6 +13,7 @@
                     <a href="javascript:void(0)" data-code="ten_thousand_thousand_ten" >${bettingDicts['ten_thousand_thousand_ten']}</a>
                     <a href="javascript:void(0)" data-code="ten_thousand_thousand_one" >${bettingDicts['ten_thousand_thousand_one']}</a>
                     <a href="javascript:void(0)" data-code="ten_thousand_hundred_ten" >${bettingDicts['ten_thousand_hundred_ten']}</a>
+                    <a href="javascript:void(0)" data-code="ten_thousand_hundred_one" >${bettingDicts['ten_thousand_hundred_one']}</a>
                     <a href="javascript:void(0)" data-code="ten_thousand_ten_one" >${bettingDicts['ten_thousand_ten_one']}</a>
                     <a href="javascript:void(0)" data-code="thousand_hundred_ten" >${bettingDicts['thousand_hundred_ten']}</a>
                     <a href="javascript:void(0)" data-code="thousand_hundred_one" >${bettingDicts['thousand_hundred_one']}</a>
