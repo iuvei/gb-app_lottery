@@ -49,7 +49,7 @@
                     <c:if test="${!empty resultMap[handicap.code].openCode}">
                        <c:choose>
                            <c:when test="${handicap.type=='sfc'}">
-                               <p class="p1 bj28 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                               <p class="p1 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
                                        <i>${i}</i>
                                    </c:forEach>
