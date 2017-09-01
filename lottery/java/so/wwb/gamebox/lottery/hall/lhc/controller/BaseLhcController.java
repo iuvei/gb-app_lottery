@@ -59,8 +59,6 @@ public class BaseLhcController extends BaseLotteryController {
     /* 全不中 */
     static final String ALL_NOT_IN_URL = "/hall/lhc/%s/AllNotIn";
 
-    static final String[] ZODIACS = new String[]{"鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"};
-
     // 获取期数
     @RequestMapping("/getExpect")
     @ResponseBody
@@ -86,13 +84,9 @@ public class BaseLhcController extends BaseLotteryController {
         List<LotteryLhcZodiac> list = ServiceToolBase.lotteryLhcZodiacService().queryZodiacNumList();
         if(CollectionTool.isNotEmpty(list)){
             map = new HashMap<>(12,1f);
-            for(int i = 0; i < ZODIACS.length; i++){
-                String ZODIAC = ZODIACS[i];
-                for (LotteryLhcZodiac zodiac : list) {
-                    if(zodiac != null && ZODIAC.equals(zodiac.getZodiacName())){
-                        map.put(zodiac.getZodiacName(),zodiac.getNumList());
-                        break;
-                    }
+            for (LotteryLhcZodiac zodiac : list) {
+                if(zodiac != null){
+                    map.put(zodiac.getZodiacName(),zodiac.getNumList());
                 }
             }
         }
