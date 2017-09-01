@@ -52,6 +52,16 @@ public class XinjiangSscController extends BaseSscController {
     public String dragonTiger(Model model) {
         return dragontiger(model, CODE);
     }
+    //组选三
+    @RequestMapping("/groupThree")
+    public String groupThree(Model model) {
+        return groupThreeInit(model, CODE);
+    }
+    //组选六
+    @RequestMapping("/groupSix")
+    public String groupSix(Model model) {
+        return groupSixInit(model, CODE);
+    }
 
     /**
      * 获取一字定位更换玩法后更换相应赔率

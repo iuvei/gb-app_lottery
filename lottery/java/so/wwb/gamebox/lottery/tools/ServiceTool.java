@@ -4,7 +4,6 @@ import org.soul.iservice.security.privilege.ISysUserService;
 import so.wwb.gamebox.iservice.company.lottery.ILotteryHandicapLhcService;
 import so.wwb.gamebox.iservice.company.lottery.ILotteryHandicapService;
 import so.wwb.gamebox.iservice.company.lottery.ILotteryResultService;
-import so.wwb.gamebox.iservice.company.lottery.ILotteryResultSscService;
 import so.wwb.gamebox.iservice.company.setting.IGameService;
 import so.wwb.gamebox.iservice.master.lottery.ILotteryBetOrderService;
 import so.wwb.gamebox.iservice.master.player.IPlayerApiService;
@@ -22,9 +21,6 @@ public class ServiceTool {
 
     public static IVUserPlayerService vUserPlayerService() {return getService(IVUserPlayerService.class); }
 
-    public static ILotteryResultSscService lotterSscResultService() {
-        return getService(ILotteryResultSscService.class);
-    }
 
     public static ILotteryBetOrderService lotteryBetOrderService() {
         return getService(ILotteryBetOrderService.class);

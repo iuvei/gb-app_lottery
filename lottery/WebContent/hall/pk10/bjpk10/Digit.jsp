@@ -3,8 +3,8 @@
 <%-- 数字盘 --%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
 
         <%-- 1 至 5 名 --%>
@@ -21,5 +21,8 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 
-<input type="hidden" id="playId" value="259" />
-<script src="${resRoot}/js/hall/pk10/bjpk10/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/pk10/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

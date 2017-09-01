@@ -18,9 +18,9 @@
                 <td>双</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,7,12,18,23,29,30,34,45,5,16,21,27,32,38,43,49,3,9,10,14,25,36,41,47"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,7,12,18,23,29,30,34,45,5,16,21,27,32,38,43,3,9,10,14,25,36,41,47"></td>
                 <td>合单</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,8,13,19,24,35,40,46,6,11,17,22,28,33,44,4,15,20,26,37,42,48"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,8,13,19,24,35,40,46,6,11,17,22,28,33,44,4,15,20,26,37,42,48,31,39"></td>
                 <td>合双</td>
             </tr>
             <tr>
@@ -86,7 +86,7 @@
             <tr>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="1,7,13,19,23,29,35,45"></td>
                 <td><span class="color-red">红</span>单</td>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,8,12,18,24,30,34,35,40,46"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="2,8,12,18,24,30,34,40,46"></td>
                 <td><span class="color-red">红</span>双</td>
             </tr>
             <tr>
@@ -102,7 +102,7 @@
                 <td><span class="color-blue">蓝</span>双</td>
             </tr>
             <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="27,28,32,33,39,43,44"></td>
+                <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="27,28,32,33,38,39,43,44"></td>
                 <td><span class="color-green">绿</span>大</td>
                 <td><input type="checkbox" name="checkbox" value="checkbox" data-nums="5,6,11,16,17,21,22"></td>
                 <td><span class="color-green">绿</span>小</td>

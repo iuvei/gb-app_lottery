@@ -76,23 +76,26 @@
                             <span><a href="javascript:void(0)" data-url="hklhc-normalCode">正码</a></span>
                             <span><a href="javascript:void(0)" data-url="hklhc-normalSpecialCode">正码特</a></span>
                             <span><a href="javascript:void(0)" data-url="hklhc-normal1To6">正码1-6</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-halfWave">半波</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-oneZodiac">一肖</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-specialZodiac">特肖</a></span>
                         </p>
                     </li>
                 </ul>
             </div>
 
-            <div id="sscContent"></div>
+            <div id="subContent"></div>
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
     <%@ include file="/hall/common/HistoryColor.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
-
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/BottomTab.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/common.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/hall/common/Common'], function(Page) {
+        page = new Page();
+    });
+</script>
 </body>
 </html>

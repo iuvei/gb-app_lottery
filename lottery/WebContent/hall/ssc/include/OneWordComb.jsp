@@ -5,8 +5,8 @@
 <div class="lot-content clearfix">
     <input type="hidden" value="${code}" id="lotteryCode">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab comb-type clearfix" style="margin-top: 5px; ">
                     <c:set var="bettingDicts" value="${dicts.lottery.lottery_betting}"/>
@@ -39,17 +39,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="i" items="${odds.values()}" varStatus="o">
-                    <c:set var="odd" value="${i.odd}"></c:set>
+                <c:forEach var="i" begin="0" end="9" varStatus="o">
                     <c:if test="${o.index%5 == 0}"><tr></c:if>
-                    <td data-num="${i.betNum}" class="pointer">
-                        <strong>${i.betNum}</strong>
+                    <td data-num="${i}" class="pointer">
+                        <strong>${i}</strong>
                     </td>
-                    <td data-num="${i.betNum}" class="pointer">
-                        <strong class="color-red pl odds num${i.betNum}">${odd}</strong>
+                    <td data-num="${i}" class="pointer">
+                        <strong class="color-red pl odds num${i}"></strong>
                     </td>
-                    <td data-num="${i.betNum}">
-                        <input type="text" class="table-txt num${i.betNum}" data-name="${bettingDicts['one_all_five']}-${i.betNum}" data-odds="${odd}" data-bet-code="${i.betCode}" data-play="${oneCombination}" data-bet-num="${i.betNum}" />
+                    <td data-num="${i}">
+                        <input type="text" class="table-txt num${i}" data-play="one_combination" data-bet-num="${i}" data-bet-code="one_all_five"/>
                     </td>
                     <c:if test="${o.index % 5 == 4}"></tr></c:if>
                 </c:forEach>
@@ -67,6 +66,9 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 
-<script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/ssc/OneWordComb.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/ssc/OneWordComb'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>
 

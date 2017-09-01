@@ -74,12 +74,12 @@
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-eighth_place">第八名</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-ninth_place">第九名</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-tenth_place">第十名</a></span>
-                            <%--<span><a href="javascript:void(0)" data-url="bjpk10-sum">冠亚和</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="bjpk10-sum">冠亚和</a></span>
                         </p>
                     </li>
                 </ul>
             </div>
-            <div id="sscContent"></div>
+            <div id="subContent"></div>
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
@@ -88,9 +88,10 @@
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/BottomTab.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/common.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/hall/pk10/Pk10'], function(Page) {
+        page = new Page();
+    });
+</script>
 </body>
 </html>

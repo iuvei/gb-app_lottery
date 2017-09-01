@@ -32,7 +32,7 @@ public class BasePk10Controller extends BaseLotteryController {
     /**
      * 双面
      */
-    static final String TWO_SIDE_URL = "/hall/pk10/%s/TwoSide";
+    static final String TWO_SIDE_URL = "/hall/pk10/include/TwoSide";
     /**
      * 数字盘
      */
@@ -56,13 +56,6 @@ public class BasePk10Controller extends BaseLotteryController {
         return map;
     }
 
-    // pk10最近5条开彩记录
-    @RequestMapping("/getRecent5Records")
-    @ResponseBody
-    public String getRecent5Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code));
-    }
-
     /**
      * pk10最近20条开彩记录
      *
@@ -74,6 +67,18 @@ public class BasePk10Controller extends BaseLotteryController {
     public String getRecent30Records(String code) {
         return JsonTool.toJson(getOpenHistory(code, 30, true));
     }
+    /**
+     * pk10最近100条开彩记录
+     *
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getRecent100Records")
+    @ResponseBody
+    public String getRecent100Records(String code) {
+        return JsonTool.toJson(getOpenHistory(code, 100, true));
+    }
+
 
 
     /**
@@ -95,6 +100,7 @@ public class BasePk10Controller extends BaseLotteryController {
         model.addAttribute("championUpAlone910", LotteryPlayEnum.CHAMPION_UP_ALONE_910.getCode());
         model.addAttribute("championUpBigSmall", LotteryPlayEnum.CHAMPION_UP_BIG_SMALL.getCode());
         model.addAttribute("championUpSingleDouble", LotteryPlayEnum.CHAMPION_UP_SINGLE_DOUBLE.getCode());
+        model.addAttribute("championUpHalf", LotteryPlayEnum.CHAMPION_UP_HALF.getCode());
     }
 
     private void initOdd(Model model, String code) {

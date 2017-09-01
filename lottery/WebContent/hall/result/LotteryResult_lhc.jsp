@@ -25,7 +25,7 @@
                 <span class="sp5">两天一期</span>
                 <span class="sp6">两天一次</span>
                 <%--<span class="sp8"><a href="javascript:void(0)"><img src="http://www.600wan0.net:80/static/theme/default/img/ico73.png" alt="" onclick="openGcdt('zst/cqssc')"></a></span>--%>
-                <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="getPage('/${type}/${code}/index.html')">立即购彩</a></span>
+                <span class="sp9"><a href="javascript:void(0)" class="a1" data-page="/${type}/${code}/index.html">立即购彩</a></span>
             </li>
         </c:forEach>
     </ul>

@@ -5,19 +5,16 @@
 <%-- 正特码 --%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">
-                快捷金额：
-                <input type="text" class="txt">
-            </div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
-                    <a href="javascript:void(0)" subCode="positive_first" class="active">正一码</a>
-                    <a href="javascript:void(0)" subCode="positive_second">正二码</a>
-                    <a href="javascript:void(0)" subCode="positive_third">正三码</a>
-                    <a href="javascript:void(0)" subCode="positive_fourth">正四码</a>
-                    <a href="javascript:void(0)" subCode="positive_fifth">正五码</a>
-                    <a href="javascript:void(0)" subCode="positive_sixth">正六码</a>
+                    <a href="javascript:void(0)" subCode="positive_first" class="active">正码一</a>
+                    <a href="javascript:void(0)" subCode="positive_second">正码二</a>
+                    <a href="javascript:void(0)" subCode="positive_third">正码三</a>
+                    <a href="javascript:void(0)" subCode="positive_fourth">正码四</a>
+                    <a href="javascript:void(0)" subCode="positive_fifth">正码五</a>
+                    <a href="javascript:void(0)" subCode="positive_sixth">正码六</a>
                 </div>
             </div>
         </div>
@@ -165,10 +162,8 @@
         </div>
     </div>
 </div>
-<script src="${resRoot}/js/hall/lhc/hklhc/NormalSpecialCode.js?v=${rcVersion}"></script>
-<script>
-    $(function () {
-        $(".main-left .fr .T-tab a.active").click();
+<script type="text/javascript">
+    curl(['site/hall/lhc/hklhc/NormalSpecialCode'], function(PlayWay) {
+        page.playWay = new PlayWay();
     });
 </script>
-<script src="${resRoot}/js/hall/lhc/hklhc/PlayWay.js?v=${rcVersion}"></script>

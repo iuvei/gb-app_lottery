@@ -1,16 +1,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script type="text/css">
+    .list_wrap ul li.watch_more{
+        width:100%;
+        text-align:center;
+    }
+</script>
 <div class="Betting wid1" id="bottomInfo">
     <div class="tabs">
         <ul>
-            <li data-tab="myBet">我的投注</li>
+            <li data-tab="myBet" class="acti">我的投注</li>
             <li data-tab="myPrize">我的中奖</li>
             <li data-tab="todayOpen">今日开奖号码</li>
             <%--<li data-tab="prizeMemo">奖金计算说明</li>--%>
         </ul>
     </div>
     <div class="list_wrap myBet"  style="height: 325px"></div>
-    <div class="list_wrap myPrize"  style="height: 325px"></div>
-    <div class="list_wrap todayOpen"  style="height: 325px"></div>
+    <div class="list_wrap myPrize"  style="height: 325px;display: none"></div>
+    <div class="list_wrap todayOpen"  style="height: 325px;display: none"></div>
     <%--<div class="list_wrap prizeMemo"></div>--%>
 </div>
 
@@ -33,8 +39,8 @@
             {{/if}}
                 <span>{{value.codeMemo}}</span>
                 <span>{{value.expect}}</span>
-                <span>{{value.betCodeMemo}}</span>
-                <span>{{value.betCodeMemo}}-{{value.betNum}}</span>
+                <span>{{value.betCodeMemo}}-{{value.playCodeMemo}}</span>
+                <span>{{value.betNum}}</span>
                 <span>{{value.betAmount}}</span>
                 <span>{{value.payout}}</span>
                 {{if value.status == 1}}
@@ -46,7 +52,7 @@
                 {{/if}}
             </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.getPage('/lotteryBetOrder/list.html')">查看更多</a></li>
+        <li class="watch_more" style="text-align: center;"><a href="javascript:void(0)" data-url="/lotteryBetOrder/list.html">查看更多</a></li>
     </ul>
 </script>
 
@@ -70,7 +76,7 @@
             <span>{{value.codeMemo}}</span>
             <span>{{value.expect}}</span>
             <span>{{value.betCodeMemo}}</span>
-            <span>{{value.memo}}</span>
+            <span>{{value.betNum}}</span>
             <span>{{value.betAmount}}</span>
             <span>{{value.payout}}</span>
             {{if value.status == 1}}
@@ -86,7 +92,7 @@
             {{/if}}
         </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.getPage('/lotteryBetOrder/list.html')">查看更多</a></li>
+        <li class="watch_more" style="text-align: center;"><a href="javascript:void(0)" data-url="/lotteryBetOrder/list.html">查看更多</a></li>
     </ul>
 </script>
 <%--今日号码--%>
@@ -113,6 +119,6 @@
             <span class="pid" style="visibility: hidden">{{value.code}}</span>
         </li>
         {{/each}}
-        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.getPage('/lotteryResultHistory/toLotteryResultHistory.html?search.code=${code}')">查看更多</a></li>
+        <li class="watch_more" style="text-align: center;"><a href="javascript:void(0)" data-url="/lotteryResultHistory/toLotteryResultHistory.html?search.code=${code}">查看更多</a></li>
     </ul>
 </script>
