@@ -3,7 +3,6 @@ package so.wwb.gamebox.lottery.hall.lhc.controller;
 import org.soul.commons.data.json.JsonTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
@@ -13,7 +12,6 @@ import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -47,6 +45,7 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("colourPlay", LotteryPlayEnum.SPECIAL_COLOUR.getCode());
         model.addAttribute("specialHalfPlay", LotteryPlayEnum.SPECIAL_HALF.getCode());
         model.addAttribute("mantissaBigSmallPlay", LotteryPlayEnum.SPECIAL_MANTISSA_BIG_SMALL.getCode());
+        model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(SPECIAL_CODE_URL, PATH);
     }
 
@@ -61,6 +60,7 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("digitalPlay", LotteryPlayEnum.POSITIVE_DIGITAL.getCode());
         model.addAttribute("sumSingleDoublePlay", LotteryPlayEnum.SEVEN_SUM_SINGLE_DOUBLE.getCode());
         model.addAttribute("sumBigSmallPlay", LotteryPlayEnum.SEVEN_SUM_BIG_SMALL.getCode());
+        model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(NORMAL_CODE_URL, PATH);
     }
 

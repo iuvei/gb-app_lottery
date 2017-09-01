@@ -10,7 +10,6 @@ import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -71,7 +70,7 @@ public class BaseLhcController extends BaseLotteryController {
      * 获取生肖对应数字
      * @return
      */
-    protected Map<String,List<String>> getZodiacNumMap(){
+    protected Map<String,String[]> getZodiacNumMap(){
         return CacheBase.getLotteryLhcZodiacNumsMap();
     }
 }
