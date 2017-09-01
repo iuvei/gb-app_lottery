@@ -67,6 +67,29 @@
         <p><strong>◎正码1-6>>尾数大小</strong><br>
             以指定出现正码的位置与号码尾数大小下注，若0尾~4尾为小、5尾~9尾为大。如01、32、44为正尾小；如05、18、19为正尾大，开出49号为和。
         <p>
+        <h5><strong>【半波】</strong></h5>
+         <p>以特码色波和特单，特双，特大，特小为一个投注组合，当期特码开出符合投注组合，即视为中奖； 若当期特码开出49号，则视为和局；其馀情形视为不中奖。
+        <p>
+        <h5><strong>【特肖】</strong></h5>
+         <p>将生肖依序排列，例如今年是鸡年，就以鸡为开始，依顺序将49个号码分为12个生肖(如下)，再以生肖下注。
+        <p> 鸡 01 , 13 , 25 , 37 , 49
+        <p>  狗 12 , 24 , 36 , 48
+        <p> 猪 11 , 23 , 35 , 47
+        <p>   鼠 10 , 22 , 34 , 46
+        <p> 牛 09 , 21 , 33 , 45
+        <p> 虎 08 , 20 , 32 , 44
+        <p> 兔 07 , 19 , 31 , 43
+        <p> 龙 06 , 18 , 30 , 42
+        <p> 蛇 05 , 17 , 29 , 41
+        <p> 马 04 , 16 , 28 , 40
+        <p>  羊 03 , 15 , 27 , 39
+        <p>猴 02 , 14 , 26 , 38
+        <p>以当期开奖结果之特码判断输赢，当特码奖号落在下注生肖范围内，即为中奖，其余情形视为不中奖。
+        <p>
+        <h5><strong>【一肖】</strong></h5>
+         <p>只要当期号码(所有正码与最后开出的特码)，落在下注生肖范围内，则视为中奖。(请注意：49亦算输赢，不为和)。
+        <p>
+
     </div>
     <div class="help_col">
         <h5><strong>六合彩下注声明</strong></h5>
@@ -85,7 +108,11 @@
     </div>
 </div>
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/play/Index.js?v=${rcVersion}"></script>
-
+<%--<script src="${resRoot}/js/hall/play/Index.js?v=${rcVersion}"></script>--%>
+<script type="text/javascript">
+    curl(['site/hall/play/Index'], function(IntroducePlay) {
+        introducePlay = new IntroducePlay();
+    });
+</script>
 </body>
 </html>

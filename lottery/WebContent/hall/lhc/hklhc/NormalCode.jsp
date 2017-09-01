@@ -6,11 +6,8 @@
 <c:set var="playGroupName" value="正码"/>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">
-                快捷金额：
-                <input type="text" class="txt">
-            </div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
 
         <div class="table-common">
@@ -65,7 +62,7 @@
                     <c:set var="odd" value="${lottery.odd}"/>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;">总双</td>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
-                    <td><input type="text" class="table-txt" data-name="正码-总双" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${sumSingleDoublePlay}" data-bet-num="${lottery.betNum}"/></td>
+                    <td data-num="${lottery.betNum}"><input type="text" class="table-txt" data-name="正码-总双" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${sumSingleDoublePlay}" data-bet-num="${lottery.betNum}"/></td>
 
                     <td style="cursor: pointer;">&nbsp;</td>
                     <td style="cursor: pointer;">&nbsp;</td>
@@ -84,8 +81,8 @@
     <%--快选投注--%>
     <%@include file="include/Right.jsp"%>
 </div>
-<!--彩种ｉd-->
-<input type="hidden" id="playGroupId" value="6" />
-<input type="hidden" id="playId" value="204" />
-<input type="hidden" id="playGroupName" value="${playGroupName}" />
-<script src="${resRoot}/js/hall/lhc/hklhc/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/lhc/hklhc/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

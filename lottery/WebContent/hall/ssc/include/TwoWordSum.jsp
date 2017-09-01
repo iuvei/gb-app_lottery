@@ -5,8 +5,8 @@
 <%--@elvariable id="lottery" type="so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd"--%>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
 
         <div class="table-common">
@@ -195,5 +195,8 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 
-<input type="hidden" id="playId" value="338" />
-<script src="${resRoot}/js/hall/ssc/cqssc/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/ssc/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

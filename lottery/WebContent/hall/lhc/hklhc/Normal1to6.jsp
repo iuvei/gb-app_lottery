@@ -4,11 +4,8 @@
 <%@ include file="/include/include.inc.jsp" %>
 <div class="lot-content clearfix">
     <div class="fl main-left" style="width:auto; min-width: 760px; margin-left:75px;">
-        <div class="hd clearfix">
-            <div class="fl">
-                快捷金额：
-                <input type="text" class="txt">
-            </div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
 
         <div class="table-common clearfix">
@@ -67,22 +64,22 @@
                 <c:set var="odds" value="${oddList.get(i-1)}"/>
                 <c:choose>
                     <c:when test="${i==1}">
-                        <c:set var="playGroupName" value="正一码"/>
+                        <c:set var="playGroupName" value="正码一"/>
                     </c:when>
                     <c:when test="${i==2}">
-                        <c:set var="playGroupName" value="正二码"/>
+                        <c:set var="playGroupName" value="正码二"/>
                     </c:when>
                     <c:when test="${i==3}">
-                        <c:set var="playGroupName" value="正三码"/>
+                        <c:set var="playGroupName" value="正码三"/>
                     </c:when>
                     <c:when test="${i==4}">
-                        <c:set var="playGroupName" value="正四码"/>
+                        <c:set var="playGroupName" value="正码四"/>
                     </c:when>
                     <c:when test="${i==5}">
-                        <c:set var="playGroupName" value="正五码"/>
+                        <c:set var="playGroupName" value="正码五"/>
                     </c:when>
                     <c:otherwise>
-                        <c:set var="playGroupName" value="正六码"/>
+                        <c:set var="playGroupName" value="正码六"/>
                     </c:otherwise>
                 </c:choose>
                 <table border="1" class="item">
@@ -185,5 +182,8 @@
         </div>
     </div>
 </div>
-<!--彩种ｉd-->
-<script src="${resRoot}/js/hall/lhc/hklhc/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/lhc/hklhc/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

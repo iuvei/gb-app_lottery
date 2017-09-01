@@ -13,13 +13,14 @@
             width: 50%;
         }
     </style>
+    <%@ include file="/include/include.js.jsp" %>
 </head>
 <body style="overflow: auto">
 <div class="list_ject" id="ssc_list">
     <ul>
         <c:set var="lotteryDicts" value="${dicts.lottery.lottery}"/>
         <c:forEach items="${handicapList}" varStatus="status" var="handicap">
-            <li id="ssc_1">
+            <li class="ssc_1">
                 <div class="pro_name">
                     <div class="pict">
                         <img src="${resRoot}/themes/default/img/${handicap.code}.png" alt="">
@@ -47,15 +48,22 @@
                     </div>
                     <c:if test="${!empty resultMap[handicap.code].openCode}">
                        <c:choose>
+                           <c:when test="${handicap.type=='sfc'}">
+                               <p class="p1 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                                   <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
+                                       <i>${i}</i>
+                                   </c:forEach>
+                               </p>
+                           </c:when>
                            <c:when test="${handicap.type=='pk10'}">
-                               <p class="p1 bj28" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                               <p class="p1 bj28 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode,',')}">
                                        <i class="fang bg-${i}">${i}</i>
                                    </c:forEach>
                                </p>
                            </c:when>
                            <c:when test="${handicap.type=='lhc'}">
-                               <p class="p1" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                               <p class="p1 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                    <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}" varStatus="vs" begin="0" end="5">
                                        <span class="cpq-cqssc cpq-num" num="${i}">${i}</span>
                                    </c:forEach>
@@ -65,8 +73,13 @@
                                    </c:forEach>
                                </p>
                            </c:when>
+                           <c:when test="${handicap.code=='bjkl8'}">
+                               <p class="p1 bj28 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                                   <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}"><i>${i}</i></c:forEach>
+                               </p>
+                           </c:when>
                            <c:otherwise>
-                            <p class="p1" id="lastOpenData${handicap.code}" data-name="lastOpenData">
+                            <p class="p1 lastOpenData" id="lastOpenData${handicap.code}" data-name="lastOpenData">
                                 上期开奖
                                <c:forEach var="i" items="${fn:split(resultMap[handicap.code].openCode, ',')}">
                                    <i>${i}</i>
@@ -81,9 +94,9 @@
                 </div>
                 <div class="Result">
                     <p>
-                        <a href="javascript:void(0)" onclick="getPage('/lotteryResultHistory/toLotteryResultHistory.html?search.code=${handicap.code}')">历史开奖</a>
+                        <a href="javascript:void(0)" data-page="/lotteryResultHistory/toLotteryResultHistory.html?search.code=${handicap.code}">历史开奖</a>
                             <%-- <a onclick="getZstPage('cqssc')" href="javascript:void(0)">开奖走势</a>--%>
-                        <a href="javascript:void(0)" class="acti" onclick="getPage('/${handicap.type}/${handicap.code}/index.html')">立即投注</a>
+                        <a href="javascript:void(0)" class="acti" data-page="/${handicap.type}/${handicap.code}/index.html">立即投注</a>
                     </p>
                 </div>
             </li>
@@ -105,12 +118,17 @@
         <i class="fang bg-{{num}}">{{num}}</i>
     {{/each}}
 </script>
-<script type="text/html" id="template_result">
-    {{each numArr as num index}}
-        <i>{{num}}</i>
-    {{/each}}
+<script type="text/html" id="template_bjkl8">
+    {{each numArr as num index}}<i>{{num}}</i>{{/each}}
 </script>
-<%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Lottery.js?v=${rcVersion}"></script>
+<script type="text/html" id="template_result">
+    {{each numArr as num index}}<i>{{num}}</i>{{/each}}
+</script>
+<%--<script src="${resRoot}/js/hall/Lottery.js?v=${rcVersion}"></script>--%>
+<script type="text/javascript">
+    curl(['site/hall/Lottery'], function(Lottery) {
+        lottery = new Lottery();
+    });
+</script>
 </body>
 </html>

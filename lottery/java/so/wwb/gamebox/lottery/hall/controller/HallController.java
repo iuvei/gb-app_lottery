@@ -2,28 +2,31 @@ package so.wwb.gamebox.lottery.hall.controller;
 
 import org.soul.commons.collections.CollectionQueryTool;
 import org.soul.commons.collections.CollectionTool;
+import org.soul.commons.collections.MapTool;
 import org.soul.commons.currency.CurrencyTool;
 import org.soul.commons.data.json.JsonTool;
-import org.soul.commons.lang.string.StringTool;
 import org.soul.commons.query.sort.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import so.wwb.gamebox.lottery.session.SessionManager;
 import so.wwb.gamebox.lottery.tools.ServiceTool;
 import so.wwb.gamebox.model.TerminalEnum;
-import so.wwb.gamebox.model.company.enums.GameStatusEnum;
-import so.wwb.gamebox.model.company.lottery.po.Lottery;
 import so.wwb.gamebox.model.company.lottery.po.LotteryFrequency;
 import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
+import so.wwb.gamebox.model.company.lottery.po.SiteLottery;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryFrequencyListVo;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryResultVo;
 import so.wwb.gamebox.model.enums.lottery.LotteryFrequencyEnum;
 import so.wwb.gamebox.model.master.player.po.VPlayerApi;
 import so.wwb.gamebox.web.cache.Cache;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 购彩大厅
@@ -46,7 +49,8 @@ public class HallController extends BaseLotteryController {
 
     @RequestMapping("/index")
     public String index(Model model) {
-        Map<String, Lottery> lottery = Cache.getLotteryByTerminal(TerminalEnum.PC.getCode());
+        List<SiteLottery> normalLotteries = Cache.getNormalSiteLottery(TerminalEnum.PC.getCode(), SessionManager.getSiteId());
+        Map<String, SiteLottery> siteLotteryMap = CollectionTool.toEntityMap(normalLotteries, SiteLottery.PROP_CODE, String.class);
         //高频彩票
         LotteryFrequencyListVo gfrequencyL = new LotteryFrequencyListVo();
         gfrequencyL.getSearch().setLotteryFrequencyId(1);
@@ -54,12 +58,11 @@ public class HallController extends BaseLotteryController {
         gfrequencyL.getSearch().setLotteryFrequencyId(2);
         LotteryFrequencyListVo low = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
 
-        indexFrequencyType(model, high.getResult(), lottery, LotteryFrequencyEnum.HIGH.getType());
-        indexFrequencyType(model, low.getResult(), lottery, LotteryFrequencyEnum.LOW.getType());
+        indexFrequencyType(model, high.getResult(), LotteryFrequencyEnum.HIGH.getType(), siteLotteryMap);
+        indexFrequencyType(model, low.getResult(), LotteryFrequencyEnum.LOW.getType(), siteLotteryMap);
         model.addAttribute("player", getPlayerApi());
 
-        Collection<Lottery> lot = lottery.values();
-        model.addAttribute("hot", CollectionQueryTool.sort(new ArrayList<>(lot), Order.desc(Lottery.PROP_ORDER_NUM)));
+        model.addAttribute("hot", normalLotteries);
         return HALL_INDEX_URL;
     }
 
@@ -69,17 +72,16 @@ public class HallController extends BaseLotteryController {
         return HALL_PLAY_URL + type;
     }
 
-    public void indexFrequencyType(Model model, List<LotteryFrequency> list, Map<String, Lottery> lottery, String lotteryType) {
+    public void indexFrequencyType(Model model, List<LotteryFrequency> list, String lotteryType, Map<String, SiteLottery> siteLotteryMap) {
         List<Map<String, String>> lm = new ArrayList<>();
+        SiteLottery siteLottery;
         for (LotteryFrequency type : list) {
-            Lottery lot = lottery.get(type.getLotteryCode());
-            if (lot != null) {
-                if (StringTool.equals(GameStatusEnum.NORMAL.getCode(), lot.getStatus())) {
-                    Map<String, String> map = new HashMap<>(2,1f);
-                    map.put("code", lot.getCode());
-                    map.put("type", lot.getType());
-                    lm.add(map);
-                }
+            siteLottery = siteLotteryMap.get(type.getLotteryCode());
+            if (siteLottery != null) {
+                Map<String, String> map = new HashMap<>(2, 1f);
+                map.put("code", siteLottery.getCode());
+                map.put("type", siteLottery.getType());
+                lm.add(map);
             }
         }
         model.addAttribute(lotteryType, lm);
@@ -108,7 +110,7 @@ public class HallController extends BaseLotteryController {
     @RequestMapping("/lotteryResult")
     @ResponseBody
     public String lotteryResult(String code) {
-        Map<String, Object> map = new HashMap<>(1,1f);
+        Map<String, Object> map = new HashMap<>(1, 1f);
         List<LotteryResult> result = getOpenHistory(code, 1, false);
         map.put("lottery", result);
         return JsonTool.toJson(map);
@@ -120,25 +122,24 @@ public class HallController extends BaseLotteryController {
      * @param model
      */
     private void getHandicap(Model model) {
-        Map<String, Lottery> lottery = Cache.getLotteryByTerminal(TerminalEnum.PC.getCode());
         List<LotteryResult> lotteryHandicapList = ServiceTool.lotteryResultService().queryCurHandicap(new LotteryResultVo());
-        model.addAttribute("handicapList", handleHandicap(lotteryHandicapList, lottery));
+        model.addAttribute("handicapList", handleHandicap(lotteryHandicapList, Cache.getNormalSiteLotteryMap(TerminalEnum.PC.getCode(), SessionManager.getSiteId())));
     }
 
     /**
      * 处理盘口数据
      */
-    private List<LotteryResult> handleHandicap(List<LotteryResult> lotteryHandicapList, Map<String, Lottery> lottery) {
-        if (CollectionTool.isEmpty(lotteryHandicapList)) {
+    private List<LotteryResult> handleHandicap(List<LotteryResult> lotteryHandicapList, Map<String, SiteLottery> siteLotteryMap) {
+        if (CollectionTool.isEmpty(lotteryHandicapList) || MapTool.isEmpty(siteLotteryMap)) {
             return null;
         }
         List<LotteryResult> lotteryResultList = new ArrayList<>();
-        String normal = GameStatusEnum.NORMAL.getCode();
+        SiteLottery siteLottery;
         for (LotteryResult handicap : lotteryHandicapList) {
-            Lottery lot = lottery.get(handicap.getCode());
-            if (lot != null && StringTool.equals(normal, lot.getStatus())) {
-                handicap.setOrderNum(lot.getOrderNum());
-                handicap.setType(lot.getType());
+            siteLottery = siteLotteryMap.get(handicap.getCode());
+            if (siteLottery != null) {
+                handicap.setOrderNum(siteLottery.getOrderNum());
+                handicap.setType(siteLottery.getType());
                 lotteryResultList.add(handicap);
             }
         }

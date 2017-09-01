@@ -4,11 +4,8 @@
 <%@ include file="/include/include.inc.jsp" %>
 <div class="lot-content clearfix">
     <div class="fl main-left" style="width:auto; min-width: 760px; margin-left:75px;">
-        <div class="hd clearfix">
-            <div class="fl">
-                快捷金额：
-                <input type="text" class="txt">
-            </div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
 
         <div class="table-common clearfix">
@@ -53,4 +50,8 @@
     </div>
 </div>
 <!--彩种ｉd-->
-<script src="${resRoot}/js/hall/common/PlayWay.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/common/PlayWay'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>
