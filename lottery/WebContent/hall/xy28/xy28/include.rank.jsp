@@ -4,7 +4,7 @@
     <div class="table-common table-border-color">
         <table width="100%" border="1">
             <tbody>
-            <tr><td colspan="2">长龙排行</td></tr>
+            <tr><td colspan="2">两面长龙排行</td></tr>
             </tbody>
         </table>
     </div>
@@ -14,7 +14,7 @@
     <div class="table-common table-border-color">
         <table width="100%" border="1">
             <tbody>
-            <tr><td colspan="2">长龙排行</td></tr>
+            <tr><td colspan="2">两面长龙排行</td></tr>
             <tr><td colspan="2">统计至第{{expect}}期</td></tr>
             {{each list as value index}}
                 <tr>
