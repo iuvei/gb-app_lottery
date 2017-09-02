@@ -12,8 +12,8 @@
         <c:set var="betNum" value="${num*10 + count}"/>
         <c:set var="lottery" value="${odds[betNum.toString()]}"/>
         <c:if test="${betNum<10}">
-            <c:set var="betNum0" value="0${betNum}"/>
-            <c:set var="lottery" value="${odds[betNum0.toString()]}"/>
+            <c:set var="betNum" value="0${betNum}"/>
+            <c:set var="lottery" value="${odds[betNum.toString()]}"/>
         </c:if>
 
         <c:set var="odd" value="${lottery.odd}"/>
@@ -24,14 +24,7 @@
             <strong class="color-red pl odds1">${odd}</strong>
         </td>
         <td data-num="${betNum}">
-            <c:choose>
-                <c:when test="${betNum<10}">
-                    <input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${digitalPlay}" data-bet-num="0${betNum}" data-name="${playGroupName}-${betNum}"/>
-                </c:when>
-                <c:otherwise>
-                    <input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${digitalPlay}" data-bet-num="${betNum}" data-name="${playGroupName}-${betNum}"/>
-                </c:otherwise>
-            </c:choose>
+                <input type="text" class="table-txt" data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${digitalPlay}" data-bet-num="${betNum}" data-name="${playGroupName}-${betNum}"/>
         </td>
         <c:set var="num" value="${num+1}"/>
         <c:if test="${(i%5 == 0)}">
