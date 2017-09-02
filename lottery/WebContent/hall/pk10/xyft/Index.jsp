@@ -83,7 +83,7 @@
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
-    <%@ include file="/hall/common/HistoryColor.jsp" %>
+    <%@ include file="/hall/pk10/include/HistoryPk10Color.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="pe:none;"></div>
 <%@ include file="/include/include.js.jsp" %>
