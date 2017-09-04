@@ -52,7 +52,22 @@
             <td>${dicts.lottery.lottery_betting[p.betCode]}-${dicts.lottery.lottery_play[p.playCode]}</td>
             <td>${p.betNum}</td>
             <td>${p.betAmount}</td>
-            <td>${p.odd}</td>
+            <td>
+                <c:choose>
+                    <c:when test="${p.playCode eq 'keno_selection_five'}">
+                        中5@${p.odd} 中4@${p.odd2} 中3@${p.odd3}
+                    </c:when>
+                    <c:when test="${p.playCode eq 'keno_selection_four'}">
+                        中4@${p.odd} 中3@${p.odd2} 中2@${p.odd3}
+                    </c:when>
+                    <c:when test="${p.playCode eq 'keno_selection_three'}">
+                        中3@${p.odd} 中2@${p.odd2}
+                    </c:when>
+                    <c:otherwise>
+                        ${p.odd}
+                    </c:otherwise>
+                </c:choose>
+            </td>
             <td>
                 <c:choose>
                     <c:when test="${p.payout>0}">
