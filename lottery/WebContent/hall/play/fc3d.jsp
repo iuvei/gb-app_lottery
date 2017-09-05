@@ -8,7 +8,7 @@
 </head>
 
 <body style="background-color: white">
-<div class="help_list" style="width:99.9%">
+<div class="help_list">
     <div class="lis">
         <h5>福彩3D</h5>
         <ul>
