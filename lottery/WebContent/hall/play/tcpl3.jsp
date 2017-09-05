@@ -8,7 +8,7 @@
 </head>
 
 <body style="background-color: white">
-<div class="help_list" style="width:99.9%">
+<div class="help_list">
     <div class="lis">
         <h5>体彩排列3</h5>
         <ul>
@@ -17,8 +17,6 @@
         </ul>
     </div>
     <div class="help_col show">
-        <p>排列三是依照中国体彩管理中心发行的排列三的开奖结果为派彩依据，开奖时间是每天晚上八点，每天开奖一次。假设排列三开奖结果为 123，那么百位是 1，十位是 2，个位是 3。<br>
-            (每个位数在开奖时从 0 ~ 9 中摇出一个结果)；本公司排列三具体游戏规则请参考彩种介绍。</p>
         <h5><strong>【选号玩法】</strong></h5>
         <p><strong>◎一字定位</strong><br>
         <p>于百十个任选一位，自0~9任选1个号进行投注，当开奖结果与所选的定位与号码相同时，即为中奖。</p><br>
