@@ -40,16 +40,16 @@
                 <tbody>
 <c:forEach var="i" begin="0" end="15" varStatus="o">
      <c:if test="${i%4==0}" ><tr></c:if>
-    <c:if test="${i< 10}"><c:set var="betnumber" value="${i}"></c:set> </c:if>
-    <c:if test="${i ==10}"><c:set var="betnumber" value="大"></c:set> </c:if>
-    <c:if test="${i ==11}"><c:set var="betnumber" value="小"></c:set> </c:if>
-    <c:if test="${i ==12}"><c:set var="betnumber" value="单"></c:set> </c:if>
-    <c:if test="${i ==13}"><c:set var="betnumber" value="双"></c:set> </c:if>
-    <c:if test="${i ==14}"><c:set var="betnumber" value="质"></c:set> </c:if>
-    <c:if test="${i ==15}"><c:set var="betnumber" value="合"></c:set> </c:if>
+    <c:if test="${i< 10}"><c:set var="betnumber" value="${i}"></c:set> <c:set var="oneplaycode" value="one_digital"></c:set></c:if>
+    <c:if test="${i ==10}"><c:set var="betnumber" value="大"></c:set> <c:set var="oneplaycode" value="one_big_small"></c:set></c:if>
+    <c:if test="${i ==11}"><c:set var="betnumber" value="小"></c:set> <c:set var="oneplaycode" value="one_big_small"></c:set></c:if>
+    <c:if test="${i ==12}"><c:set var="betnumber" value="单"></c:set> <c:set var="oneplaycode" value="one_single_double"></c:set></c:if>
+    <c:if test="${i ==13}"><c:set var="betnumber" value="双"></c:set> <c:set var="oneplaycode" value="one_single_double"></c:set></c:if>
+    <c:if test="${i ==14}"><c:set var="betnumber" value="质"></c:set> <c:set var="oneplaycode" value="one_prime_combined"></c:set></c:if>
+    <c:if test="${i ==15}"><c:set var="betnumber" value="合"></c:set> <c:set var="oneplaycode" value="one_prime_combined"></c:set></c:if>
                     <td  class="pointer"  data-num="${betnumber}"><strong></strong></td>
                     <td  class="pointer"  data-num="${betnumber}"><strong class="color-red pl"></strong></td>
-                    <td  data-num="${betnumber}"><input type="text" class="table-txt" data-play="${oneDigital}"/></td>
+                    <td  data-num="${betnumber}"><input type="text" class="table-txt" data-play="${oneplaycode}"/></td>
 <c:if test="${i%4==3}" ></tr></c:if>
 </c:forEach>
                 </tbody>
