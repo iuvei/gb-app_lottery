@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>幸运飞艇</title>
+    <title>极速PK10</title>
     <%@ include file="/include/include.head.jsp" %>
     <style>
         a:hover {
@@ -33,7 +33,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>幸运飞艇</h2>
+                <h2>极速PK10</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="expect" class="expect"></i>期</p>
                 <div class="select">
@@ -70,9 +70,9 @@
                     <li>
                         <b >快钱玩法</b>
                         <p class="kuaiqian">
-                            <span class="acti"><a href="javascript:void(0)" data-url="xyft-twoSide">两面盘</a></span>
-                            <span class="pm"><a href="javascript:void(0)" data-url="xyft-ranking">排名1~10</a></span>
-                            <span class="gyzh"><a href="javascript:void(0)" data-url="xyft-sum">冠亚和</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="jspk10-twoSide">两面盘</a></span>
+                            <span class="pm"><a href="javascript:void(0)" data-url="jspk10-ranking">排名1~10</a></span>
+                            <span class="gyzh"><a href="javascript:void(0)" data-url="jspk10-sum">冠亚和</a></span>
                         </p>
                     </li>
                 </ul>

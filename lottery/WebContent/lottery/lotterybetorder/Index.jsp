@@ -22,7 +22,7 @@
                 <select name="search.code">
                     <option value="">所有</option>
                     <c:forEach var="lot" items="${lotterys}">
-                            <option value="${lot.key}" ${command.search.code==lot.key?'selected':''}>${dicts.lottery.lottery[lot.key]}</option>
+                            <option value="${lot.code}" ${command.search.code==lot.code?'selected':''}>${dicts.lottery.lottery[lot.code]}</option>
                     </c:forEach>
                 </select>
                 状态：
