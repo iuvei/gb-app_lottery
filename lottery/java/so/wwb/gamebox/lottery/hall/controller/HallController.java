@@ -143,7 +143,7 @@ public class HallController extends BaseLotteryController {
                 lotteryResultList.add(handicap);
             }
         }
-        return CollectionQueryTool.sort(lotteryResultList, Order.desc(LotteryResult.PROP_ORDER_NUM));
+        return CollectionQueryTool.sort(lotteryResultList, Order.asc(LotteryResult.PROP_ORDER_NUM));
     }
 
     /**
