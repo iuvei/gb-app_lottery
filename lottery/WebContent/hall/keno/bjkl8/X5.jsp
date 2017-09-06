@@ -10,7 +10,7 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="16"><strong id="numsLength"  numsLength="5">选5</strong>(
+                    <th colspan="8"><strong id="numsLength"  numsLength="5">选5</strong>(
                         <c:set var="lottery" value="${odds['选五-中5']}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
                         中5@<span class="red pl">${odd}</span>
@@ -23,24 +23,6 @@
                         中3@<span class="red pl">${odd}</span>)
                     </th>
                 </tr>
-                <tr>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                </tr>
                 </thead>
                 <c:set var="lottery" value="${odds['选五-中5']}"/>
                 <c:set var="odd" value="${lottery.odd}"/>
@@ -48,7 +30,7 @@
 
                 <tfoot>
                 <tr>
-                    <td colspan="18">
+                    <td colspan="8">
                         <div class="hd clearfix rehd tzgz" id="toptouzhu">
                                 <%@ include file="../../common/ShortMoney.jsp" %>
                         </div>
