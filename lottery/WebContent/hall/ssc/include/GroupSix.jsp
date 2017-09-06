@@ -5,10 +5,10 @@
 <div class="lot-content clearfix">
     <input type="hidden" value="${code}" id="lotteryCode">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
-                <div class="T-tab comb-type clearfix" style="margin-top: 5px; ">
+                <div class="T-tab comb-type clearfix" style="margin-top: 5px; " id="betCodeDiv">
                     <a href="javascript:void(0)" data-code="group6_first_three" class="active">前三组选六</a>
                     <a href="javascript:void(0)" data-code="group6_in_three">中三组选六</a>
                     <a href="javascript:void(0)" data-code="group6_after_three">后三组选六</a>
@@ -23,22 +23,18 @@
                 </tr>
                 <tr>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                     <th>号码</th>
-                    <th>选择</th>
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="i" begin="0" end="9" varStatus="o">
                     <c:if test="${o.index%5 == 0}"><tr></c:if>
-                    <td><strong class="pl">${i}</strong></td>
-                    <td><input type="checkbox" data-num="${i}" data-play="${lotteryPlay}"></td>
+                    <td style="cursor: pointer;" class="new-ball-st" data-num="${i}" data-play="${lotteryPlay}">
+                        <strong class="pl">${i}</strong>
+                    </td>
                     <c:if test="${o.index % 5 == 4}"></tr></c:if>
                 </c:forEach>
                 </tbody>
@@ -55,8 +51,10 @@
     <%@ include file="../include/include.rank.jsp" %>
 </div>
 <script>
-    var lotteryPlay ="${lotteryPlay}";
+    var lotteryPlay = "${lotteryPlay}";
 </script>
-<script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/ssc/GroupSix.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/hall/ssc/GroupSix'], function (PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

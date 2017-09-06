@@ -8,7 +8,7 @@
 </head>
 
 <body style="background-color: white" >
-<div class="help_list" style="width:99.9%">
+<div class="help_list">
     <div class="lis">
         <h5>广西快3</h5>
         <ul>
@@ -51,7 +51,11 @@
     </div>
 </div>
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/play/Index.js?v=${rcVersion}"></script>
-
+<%--<script src="${resRoot}/js/hall/play/Index.js?v=${rcVersion}"></script>--%>
+<script type="text/javascript">
+    curl(['site/hall/play/Index'], function(IntroducePlay) {
+        introducePlay = new IntroducePlay();
+    });
+</script>
 </body>
 </html>

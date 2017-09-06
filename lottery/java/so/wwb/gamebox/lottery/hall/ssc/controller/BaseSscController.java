@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
-import so.wwb.gamebox.model.company.lottery.po.LotteryHandicap;
 import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
@@ -76,33 +75,37 @@ public class BaseSscController extends BaseLotteryController {
 
     // 双面玩法
     public String twoSide(Model model, String code) {
-        initTwoSide(model, code);
+        model.addAttribute("code", code);
+        initPlayCode(model);
         return TWO_SIDE_URL;
     }
 
     // 数字盘
     public String digit(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        initDigit(model, code, siteLotteryOdds);
+        model.addAttribute("code", code);
+        initPlayCode(model);
         return DIGIT_URL;
     }
 
     // 一字定位
     public String oneWordFix(Model model, String code) {
-        initOneWordFix(model, code);
+        model.addAttribute("code", code);
+        initPlayCode(model);
         return ONE_WORD_FIX_URL;
     }
 
 
     // 二字定位
     public String twoWordFix(Model model, String code) {
-        initTwoWordFix(model, code);
+        model.addAttribute("code", code);
+        initPlayCode(model);
         return TWO_WORD_FIX_URL;
     }
 
-    // 二字定位
+    // 三字定位
     public String threeWordFix(Model model, String code) {
-        initThreeWordFix(model, code);
+        model.addAttribute("code", code);
+        initPlayCode(model);
         return THREE_WORD_FIX_URL;
     }
 
@@ -114,12 +117,14 @@ public class BaseSscController extends BaseLotteryController {
 
     // 一字组合
     public String oneWordComb(Model model, String code) {
-        initOneWordComb(model, code);
+        model.addAttribute("code", code);
+        initPlayCode(model);
         return ONE_WORD_COMB_URL;
     }
 
     // 跨度
     public String span(Model model, String code) {
+        model.addAttribute("code", code);
         initSpan(model, code);
         return SPAN_URL;
     }
@@ -127,7 +132,9 @@ public class BaseSscController extends BaseLotteryController {
 
     // 龙虎
     public String dragontiger(Model model, String code) {
-        initDragontiger(model, code);
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        initDragontiger(model, code, siteLotteryOdds);
+        //todo 要增加一个新的jsp来实现龙虎的页面展示,下面的url指定的jsp是旧的
         return DRAGONTIGER_URL;
     }
     // 组选三
@@ -190,7 +197,7 @@ public class BaseSscController extends BaseLotteryController {
         model.addAttribute("groupThree", LotteryPlayEnum.GROUP_THREE.getCode());
         model.addAttribute("groupSix", LotteryPlayEnum.GROUP_SIX.getCode());
         model.addAttribute("span", LotteryPlayEnum.SPAN.getCode());
-        model.addAttribute("dragonTiger", LotteryPlayEnum.DRAGON_TIGER.getCode());
+        model.addAttribute("dragonTiger", LotteryPlayEnum.DRAGON_TIGER_TIE.getCode());
     }
 
     /**
@@ -207,94 +214,6 @@ public class BaseSscController extends BaseLotteryController {
         return getOdds(code, betCode);
     }
 
-    /**
-     * 初始化数字盘
-     *
-     * @param model
-     * @param code
-     * @param siteLotteryOdds
-     */
-    public void initDigit(Model model, String code, Map<String, SiteLotteryOdd> siteLotteryOdds) {
-        //玩法
-        initPlayCode(model);
-        //赔率
-        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
-        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.THOUSAND.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.HUNDRED.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.TEN.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.ONE.getCode(), siteLotteryOdds));
-        model.addAttribute("oddList", oddList);
-    }
-
-    /**
-     * 初始化双面
-     *
-     * @param model
-     * @param code
-     */
-    public void initTwoSide(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        initDigit(model, code, siteLotteryOdds);
-        model.addAttribute("fiveSumOdd", getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
-        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.DRAGON_TIGER_TIE.getCode(), siteLotteryOdds));
-    }
-
-    /**
-     * 初始化一字定位
-     *
-     * @param model
-     * @param code
-     */
-    public void initOneWordFix(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        //赔率
-        model.addAttribute("odds", getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
-        model.addAttribute("fiveSumOdd", getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
-        model.addAttribute("dragonTigerTieOdd", getOdds(LotteryBettingEnum.DRAGON_TIGER_TIE.getCode(), siteLotteryOdds));
-        //玩法
-        initPlayCode(model);
-    }
-
-    /**
-     * 初始化二字定位
-     *
-     * @param model
-     * @param code
-     */
-    public void initTwoWordFix(Model model, String code) {
-        model.addAttribute("code", code);
-        //玩法
-        initPlayCode(model);
-    }
-
-    /**
-     * 初始化三字定位
-     *
-     * @param model
-     * @param code
-     */
-    public void initThreeWordFix(Model model, String code) {
-
-        model.addAttribute("code", code);
-        //玩法
-        initPlayCode(model);
-    }
-
-    /**
-     * 初始化一字组合
-     *
-     * @param model
-     * @param code
-     * @param
-     */
-    public void initOneWordComb(Model model, String code) {
-        //赔率
-        model.addAttribute("odds", getOdds(code, LotteryBettingEnum.ONE_ALL_FIVE.getCode()));
-        model.addAttribute("code", code);
-        //玩法
-        initPlayCode(model);
-    }
 
     /**
      * 初始化跨度
@@ -316,9 +235,21 @@ public class BaseSscController extends BaseLotteryController {
      * @param model
      * @param code
      */
-    public void initDragontiger(Model model, String code) {
+    public void initDragontiger(Model model, String code,Map<String, SiteLotteryOdd> siteLotteryOdds) {
         //赔率
-        model.addAttribute("odds", getOdds(code, LotteryBettingEnum.DRAGON_TIGER.getCode()));
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_TEN_ONE.getCode(), siteLotteryOdds));
+        model.addAttribute("lotteryPlay",LotteryPlayEnum.DRAGON_TIGER_TIE.getCode());
+        model.addAttribute("oddList", oddList);
         model.addAttribute("code", code);
         //玩法
         initPlayCode(model);
@@ -334,16 +265,16 @@ public class BaseSscController extends BaseLotteryController {
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
         //赔率
         List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
-        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND_THOUSAND.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND_HUNDRED.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND_TEN.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND_ONE.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.THOUSAND_HUNDRED.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.THOUSAND_TEN.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.THOUSAND_ONE.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.HUNDRED_TEN.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.HUNDRED_ONE.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.TEN_ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_TEN_ONE.getCode(), siteLotteryOdds));
         model.addAttribute("oddList", oddList);
         //玩法
         initPlayCode(model);
@@ -375,6 +306,80 @@ public class BaseSscController extends BaseLotteryController {
         model.addAttribute("lotteryPlay",LotteryPlayEnum.GROUP_SIX.getCode());
         //玩法
         initPlayCode(model);
+    }
+    /**
+     * 获取龙虎相关赔率信息
+     *
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getDragonTigerOdds")
+    @ResponseBody
+    public ArrayList<Map<String, SiteLotteryOdd>> getDragonTigerOdds(String code) {
+        //赔率
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        ArrayList<Map<String, SiteLotteryOdd>> listmap = new ArrayList<Map<String, SiteLotteryOdd>>(10);
+        listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_THOUSAND.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_HUNDRED.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_TEN.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_WAN_ONE.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_HUNDRED.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_TEN.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_THOUSAND_ONE.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_TEN.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_HUNDRED_ONE.getCode(), siteLotteryOdds));
+        listmap.add(getOdds(LotteryBettingEnum.SSC_TEN_ONE.getCode(), siteLotteryOdds));
+        return listmap;
+    }
+
+    /**
+     * 获取一字定位赔率
+     * @param code
+     * @param betCode
+     * @return
+     */
+    @RequestMapping("/getOneWordFixOdd")
+    @ResponseBody
+    public String getOneWordFixOdd(String code, String betCode) {
+        Map<String, SiteLotteryOdd> odds = getOdds(code, betCode);
+        Map<String, SiteLotteryOdd> fsumodd = getOdds(code, LotteryBettingEnum.FIVE_SUM.getCode());
+        odds.putAll(fsumodd);
+        return JsonTool.toJson(odds);
+    }
+    /**
+     * 获取数字盘赔率
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getDigitOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getDigitOdd(String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.ONE.getCode(), siteLotteryOdds));
+        return oddList;
+    }
+    /**
+     * 获取双面赔率
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getTwoSideOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getTwoSideOdd(String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.TEN_THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.THOUSAND.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.HUNDRED.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.TEN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.ONE.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
+        return oddList;
     }
 
     public String getBetInfo(String code, String betCode) {

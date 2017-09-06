@@ -5,8 +5,8 @@
 <div class="lot-content clearfix">
     <input type="hidden" value="${code}" id="lotteryCode">
     <div class="fl main-left">
-        <div class="hd clearfix">
-            <div class="fl">快捷金额：<input type="text" class="txt"></div>
+        <div class="hd rehd clearfix">
+                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab comb-type clearfix" style="margin-top: 5px; ">
                     <a href="javascript:void(0)" data-code="span_first_three" class="active">前三跨度</a>
@@ -63,7 +63,8 @@
     <%-- 两面长龙排行 --%>
     <%@ include file="../include/include.rank.jsp" %>
 </div>
-
-<script src="${resRoot}/js/hall/ssc/PlayWay.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/ssc/Span.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/hall/ssc/Span'], function(PlayWay) {
+        page.playWay = new PlayWay();
+    });
+</script>

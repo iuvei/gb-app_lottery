@@ -64,13 +64,16 @@
                             <span><a href="javascript:void(0)" data-url="xjssc-twoWordFix">二字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="xjssc-threeWordFix">三字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="xjssc-oneWordComb">一字组合</a></span>
-                           <%-- <span><a href="javascript:void(0)" data-url="xjssc-span">跨度</a></span>
-                            <span><a href="javascript:void(0)" data-url="xjssc-dragonTiger">龙虎</a></span>--%>
+                            <span><a href="javascript:void(0)" data-url="xjssc-groupThree">组选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-groupSix">组选六</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-span">跨度</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-dragonTiger">龙虎</a></span>
+
                         </p>
                     </li>
                 </ul>
             </div>
-            <div id="sscContent"></div>
+            <div id="subContent"></div>
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
@@ -79,8 +82,10 @@
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/BottomTab.js?v=${rcVersion}"></script>
-<script src="${resRoot}/js/hall/common/common.js?v=${rcVersion}"></script>
+<script type="text/javascript">
+    curl(['site/hall/ssc/Ssc'], function(Page) {
+        page = new Page();
+    });
+</script>
 </body>
 </html>

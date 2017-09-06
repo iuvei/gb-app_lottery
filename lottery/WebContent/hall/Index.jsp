@@ -13,14 +13,14 @@
 <body>
 <div class="menu_left">
     <div class="logo">
-        <img src="${resRoot}/themes/default/img/logo.png" alt="" onclick="" style="cursor:pointer">
+        <img src="${resRoot}/themes/default/img/logo.png" alt="" style="cursor:pointer">
         <a href="javascript:void(0)"></a>
     </div>
     <div class="list_menu">
         <ul>
             <li class="show">
                 <h2>
-                    <a href="javascript:void(0)" onclick="getPage('/hall/lottery.html')">
+                    <a href="javascript:void(0)" data-url='/hall/lottery.html'>
                         <span>
                             <div class="pict"><var><img src="${resRoot}/themes/default/img/ico3.png"></var></div>
                         </span>
@@ -40,7 +40,7 @@
                 <div class="down" style="display: block;">
                        <c:forEach items="${hot}" var="hot" varStatus="status">
                            <c:if test="${hot.status=='normal'}">
-                             <a href="javascript:void(0)" onclick="getPage('/${hot.type}/${hot.code}/index.html')"><img src="${resRoot}/themes/default/img/${hot.code}.png"><var>${dicts.lottery.lottery[hot.code]}</var></a>
+                             <a href="javascript:void(0)" data-url='/${hot.type}/${hot.code}/index.html'><img src="${resRoot}/themes/default/img/${hot.code}.png"><var>${dicts.lottery.lottery[hot.code]}</var></a>
                            </c:if>
                        </c:forEach>
                 </div>
@@ -53,7 +53,7 @@
                 </h2>
                 <div class="down">
                     <c:forEach items="${high}" var="h" varStatus="status">
-                        <a href="javascript:void(0)" onclick="getPage('/${h.type}/${h.code}/index.html')"><img src="${resRoot}/themes/default/img/${h.code}.png"><var>${dicts.lottery.lottery[h.code]}</var></a>
+                        <a href="javascript:void(0)" data-url='/${h.type}/${h.code}/index.html'><img src="${resRoot}/themes/default/img/${h.code}.png"><var>${dicts.lottery.lottery[h.code]}</var></a>
                     </c:forEach>
                 </div>
             </li>
@@ -63,13 +63,13 @@
                 </h2>
                 <div class="down">
                     <c:forEach items="${low}" var="l" varStatus="status">
-                        <a href="javascript:void(0)" onclick="getPage('/${l.type}/${l.code}/index.html')"><img src="${resRoot}/themes/default/img/${l.code}.png"><var>${dicts.lottery.lottery[l.code]}</var></a>
+                        <a href="javascript:void(0)" data-url='/${l.type}/${l.code}/index.html'><img src="${resRoot}/themes/default/img/${l.code}.png"><var>${dicts.lottery.lottery[l.code]}</var></a>
                     </c:forEach>
                 </div>
             </li>
             <li>
                 <h2>
-                    <a href="javascript:void(0)" onclick="getPage('/lotteryResultHistory/toLotteryResultHistory.html')">
+                    <a href="javascript:void(0)" data-url='/lotteryResultHistory/toLotteryResultHistory.html'>
                         <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico10.png"></var></div></span>
                         <b>开奖结果</b>
                         <i></i>
@@ -81,16 +81,28 @@
                 <h2>
                     <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico13.png"></var></div></span><b>玩法介绍</b><i></i>
                 </h2>
-                <div class="down">
-                    <a href="javascript:void(0)" onclick="getPlay('cqssc')"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('tjssc')"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('xjssc')"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('jsk3')"><img src="${resRoot}/themes/default/img/jsk3.png"><var>江苏快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('hbk3')"><img src="${resRoot}/themes/default/img/hbk3.png"><var>湖北快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('ahk3')"><img src="${resRoot}/themes/default/img/ahk3.png"><var>安徽快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('gxk3')"><img src="${resRoot}/themes/default/img/gxk3.png"><var>广西快3</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('hklhc')"><img src="${resRoot}/themes/default/img/hklhc.png"><var>香港六合彩</var></a>
-                    <a href="javascript:void(0)" onclick="getPlay('bjpk10')"><img src="${resRoot}/themes/default/img/bjpk10.png"><var>北京PK10</var></a>
+                <div class="down playWay">
+                    <a href="javascript:void(0)" data-playway="cqssc"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="tjssc"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="xjssc"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="ffssc"><img src="${resRoot}/themes/default/img/ffssc.png"><var>分分时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="efssc"><img src="${resRoot}/themes/default/img/efssc.png"><var>二分时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="sfssc"><img src="${resRoot}/themes/default/img/sfssc.png"><var>三分时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="wfssc"><img src="${resRoot}/themes/default/img/wfssc.png"><var>五分时时彩</var></a>
+                    <a href="javascript:void(0)" data-playway="jsk3"><img src="${resRoot}/themes/default/img/jsk3.png"><var>江苏快3</var></a>
+                    <a href="javascript:void(0)" data-playway="hbk3"><img src="${resRoot}/themes/default/img/hbk3.png"><var>湖北快3</var></a>
+                    <a href="javascript:void(0)" data-playway="ahk3"><img src="${resRoot}/themes/default/img/ahk3.png"><var>安徽快3</var></a>
+                    <a href="javascript:void(0)" data-playway="gxk3"><img src="${resRoot}/themes/default/img/gxk3.png"><var>广西快3</var></a>
+                    <a href="javascript:void(0)" data-playway="hklhc"><img src="${resRoot}/themes/default/img/hklhc.png"><var>香港六合彩</var></a>
+                    <a href="javascript:void(0)" data-playway="bjpk10"><img src="${resRoot}/themes/default/img/bjpk10.png"><var>北京PK10</var></a>
+                    <a href="javascript:void(0)" data-playway="xyft"><img src="${resRoot}/themes/default/img/xyft.png"><var>幸运飞艇</var></a>
+                    <a href="javascript:void(0)" data-playway="jspk10"><img src="${resRoot}/themes/default/img/jspk10.png"><var>极速PK10</var></a>
+                    <a href="javascript:void(0)" data-playway="fc3d"><img src="${resRoot}/themes/default/img/fc3d.png"><var>福彩3D</var></a>
+                    <a href="javascript:void(0)" data-playway="tcpl3"><img src="${resRoot}/themes/default/img/tcpl3.png"><var>体彩排列3</var></a>
+                    <a href="javascript:void(0)" data-playway="xy28"><img src="${resRoot}/themes/default/img/xy28.png"><var>幸运28</var></a>
+                    <a href="javascript:void(0)" data-playway="cqxync"><img src="${resRoot}/themes/default/img/cqxync.png"><var>重庆幸运农场</var></a>
+                    <a href="javascript:void(0)" data-playway="gdkl10"><img src="${resRoot}/themes/default/img/gdkl10.png"><var>广东快乐十分</var></a>
+                    <a href="javascript:void(0)" data-playway="bjkl8"><img src="${resRoot}/themes/default/img/bjkl8.png"><var>北京快乐8</var></a>
                 </div>
             </li>
           <%--  <li>
@@ -121,7 +133,7 @@
         <c:choose>
             <c:when test="${empty player.account}">
                 <p>
-                    欢迎，<i >  <a class="i0" href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">登录</a></i></span>
+                    欢迎，<i >  <a class="i0" href="${root}/login/commonLogin.html">登录</a></i></span>
                 </p>
             </c:when>
             <c:otherwise>
@@ -130,8 +142,8 @@
                     <span>余额：<i class="i1 balance">${siteCurrencySign}<font id="money">${soulFn:formatCurrency(player.money)}</font></i><a href="#" id="refreshMoney"><span></span>刷新余额</a></span>
                     <span>
                    <%-- <a href="/pcenter/#/fund/playerTransfer/transfers.html" target="_blank">额度转换</a>  |--%>
-                    <a href="javascript:void(0)" onclick="getPage('/lotteryBetOrder/list.html')">投注记录</a>  |
-                    <a href="javascript:void(0)" onclick="getPage('/lotteryTransaction/list.html')">资金记录</a>
+                    <a href="javascript:void(0)" data-url='/lotteryBetOrder/list.html'>投注记录</a>  |
+                    <a href="javascript:void(0)" data-url='/lotteryTransaction/list.html'>资金记录</a>
                 </span>
                 </p>
             </c:otherwise>
@@ -143,7 +155,10 @@
 </div>
 
 <%@ include file="/include/include.js.jsp" %>
-<script src="${resRoot}/js/hall/Index.js?v=${rcVersion}"></script>
-
+<script type="text/javascript">
+    curl(['site/hall/Index'], function(Index) {
+        index = new Index();
+    });
+</script>
 </body>
 </html>

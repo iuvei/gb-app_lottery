@@ -89,6 +89,16 @@ public class TianjingSscController extends BaseSscController {
         return dragontiger(model, CODE);
     }
 
+    //组选三
+    @RequestMapping("/groupThree")
+    public String groupThree(Model model) {
+        return groupThreeInit(model, CODE);
+    }
+    //组选六
+    @RequestMapping("/groupSix")
+    public String groupSix(Model model) {
+        return groupSixInit(model, CODE);
+    }
     /**
      * 下注
      *

@@ -23,9 +23,26 @@
                      </c:if>
                 </span>
                 <span class="sp5">${expectMaps[item.code].expectCount}期</span>
-                <span class="sp6">5分钟-10分钟</span>
+                <span class="sp6">
+                    <c:if test="${code=='cqssc'||code=='xjssc'||code=='tjssc'}">
+                    5分钟-10分钟
+                    </c:if>
+                     <c:if test="${code=='ffssc'}">
+                         1分钟
+                     </c:if>
+                     <c:if test="${code=='efssc'}">
+                         2分钟
+                     </c:if>
+                     <c:if test="${code=='sfssc'}">
+                         3分钟
+                     </c:if>
+                     <c:if test="${code=='wfssc'}">
+                         5分钟
+                     </c:if>
+
+                </span>
                 <%--<span class="sp8"><a href="javascript:void(0)"><img src="http://www.600wan0.net:80/static/theme/default/img/ico73.png" alt="" onclick="openGcdt('zst/cqssc')"></a></span>--%>
-                <span class="sp9"><a href="javascript:void(0)" class="a1" onclick="getPage('/${type}/${code}/index.html')">立即购彩</a></span>
+                <span class="sp9"><a href="javascript:void(0)" class="a1" data-page="/${type}/${code}/index.html">立即购彩</a></span>
             </li>
         </c:forEach>
     </ul>
