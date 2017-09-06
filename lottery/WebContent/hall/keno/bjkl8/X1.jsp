@@ -10,29 +10,11 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="16"><strong id="numsLength"  numsLength="1"  >选1</strong>(
+                    <th colspan="8"><strong id="numsLength"  numsLength="1"  >选1</strong>(
                         <c:set var="lottery" value="${odds['选一']}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
                         中1@<span class="red pl" data-plid="8572">${odd}</span>)
                     </th>
-                </tr>
-                <tr>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
                 </tr>
                 </thead>
                 <c:set var="lottery" value="${odds['选一']}"/>
@@ -41,7 +23,7 @@
 
                 <tfoot>
                 <tr>
-                    <td colspan="18">
+                    <td colspan="8">
                         <div class="hd clearfix rehd tzgz" id="toptouzhu">
                                 <%@ include file="../../common/ShortMoney.jsp" %>
                         </div>
