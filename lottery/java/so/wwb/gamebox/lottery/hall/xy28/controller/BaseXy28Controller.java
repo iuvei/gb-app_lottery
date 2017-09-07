@@ -30,16 +30,6 @@ public class BaseXy28Controller extends BaseLotteryController {
     static final String INDEX_URL = "/hall/xy28/%s/Index";
 
 
-    // 获取期数
-    @RequestMapping("/getExpect")
-    @ResponseBody
-    public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4,1f);
-        LotteryResult handicap = getHandicap(code);
-        setHandicap(map, handicap);
-        return map;
-    }
-
     /**
      * 最近30条开彩记录
      *

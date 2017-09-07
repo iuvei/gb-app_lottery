@@ -6,14 +6,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
-import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -43,14 +41,9 @@ public class BaseSfcController extends BaseLotteryController {
     static final String RANKBALLURL = "/hall/sfc/include/RankBall";
 
 
-
-
-
     // 龙虎
     public String dragontiger(Model model, String code) {
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        initDragontiger(model, code, siteLotteryOdds);
-//        //todo 要增加一个新的jsp来实现龙虎的页面展示,下面的url指定的jsp是旧的
+        initDragontiger(model, code);
         return DRAGONTIGER_URL;
     }
     // 第一球
@@ -58,24 +51,6 @@ public class BaseSfcController extends BaseLotteryController {
         model.addAttribute("code", code);
         model.addAttribute("lotteryPlay",LotteryPlayEnum.SFC_DIGITAL.getCode());
         return RANKBALLURL;
-    }
-
-    // 获取期数
-    @RequestMapping("/getExpect")
-    @ResponseBody
-    public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4,1f);
-        LotteryResult handicap = getHandicap(code);
-        setHandicap(map, handicap);
-        return map;
-    }
-
-
-    // 时时彩最近5条开彩记录
-    @RequestMapping("/getRecent5Records")
-    @ResponseBody
-    public String getRecent5Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code));
     }
 
     /**
@@ -90,12 +65,6 @@ public class BaseSfcController extends BaseLotteryController {
         return JsonTool.toJson(getOpenHistory(code, 30, true));
     }
 
-    /**
-     * 初始化彩种玩法
-     */
-    private void initPlayCode(Model model) {
-
-    }
 
     /**
      * 获取相关赔率信息
@@ -120,14 +89,12 @@ public class BaseSfcController extends BaseLotteryController {
      * @param model
      * @param code
      */
-    public void initDragontiger(Model model, String code,Map<String, SiteLotteryOdd> siteLotteryOdds) {
+    public void initDragontiger(Model model, String code) {
         //赔率
         List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
         model.addAttribute("lotteryPlay",LotteryPlayEnum.SFC_DRAGON_TIGER.getCode());
         model.addAttribute("oddList", oddList);
         model.addAttribute("code", code);
-        //玩法
-        initPlayCode(model);
     }
 
 
@@ -195,8 +162,5 @@ public class BaseSfcController extends BaseLotteryController {
         listmap.add(getOdds(LotteryBettingEnum.SFC_EIGHTH.getCode(), siteLotteryOdds));
         listmap.add(getOdds(LotteryBettingEnum.SFC_SUM8.getCode(), siteLotteryOdds));
         return listmap;
-    }
-    public String getBetInfo(String code, String betCode) {
-        return JsonTool.toJson(getOdds(code, betCode));
     }
 }
