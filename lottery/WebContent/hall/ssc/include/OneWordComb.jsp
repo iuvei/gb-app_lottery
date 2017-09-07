@@ -6,7 +6,6 @@
     <input type="hidden" value="${code}" id="lotteryCode">
     <div class="fl main-left">
         <div class="hd rehd clearfix">
-                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab comb-type clearfix" style="margin-top: 5px; ">
                     <c:set var="bettingDicts" value="${dicts.lottery.lottery_betting}"/>
@@ -54,6 +53,9 @@
                 </c:forEach>
                 </tbody>
             </table>
+        </div>
+        <div class="hd rehd clearfix">
+            <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
         <div class="btns">
             <button type="submit" class="btn btn-1">提交</button>
