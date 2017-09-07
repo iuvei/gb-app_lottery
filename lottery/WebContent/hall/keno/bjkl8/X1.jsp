@@ -1,7 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
 <div class="lot-content clearfix">
-    <div class="fl main-left">
+    <div class="fl main-left" style="width:auto; min-width: 760px; margin-left:75px;">
+        <div class="hd clearfix rehd tzgz" id="toptouzhu">
+            <%@ include file="../../common/ShortMoney.jsp" %>
+        </div>
         <div class="table-common">
             <c:set var="odds" value="${oddMap['keno_selection']}"/>
             <c:set var="playGroupName" value="选一"/>
@@ -20,17 +23,6 @@
                 <c:set var="lottery" value="${odds['选一']}"/>
                 <c:set var="odd" value="${lottery.odd}"/>
                 <%@ include file="xx/XTable.jsp" %>
-
-                <tfoot>
-                <tr>
-                    <td colspan="8">
-                        <div class="hd clearfix rehd tzgz" id="toptouzhu">
-                                <%@ include file="../../common/ShortMoney.jsp" %>
-                        </div>
-                    </td>
-
-                </tr>
-                </tfoot>
             </table>
         </div>
 

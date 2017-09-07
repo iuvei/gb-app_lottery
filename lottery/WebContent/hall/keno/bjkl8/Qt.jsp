@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
 <div class="lot-content clearfix">
-    <div class="fl main-left">
+    <div class="fl main-left"  style="width:auto; min-width: 760px; margin-left:75px;">
         <div class="hd rehd clearfix">
             <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
