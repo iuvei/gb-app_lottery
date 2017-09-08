@@ -21,7 +21,7 @@ public class IndexController  extends LotteryDemoController {
     private static final String INDEX_URI = "index";
 
     @RequestMapping(value = "index")
-    protected String index(Model model) {
+    protected String index() {
         return INDEX_URI;
     }
 
