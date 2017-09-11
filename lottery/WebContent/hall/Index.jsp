@@ -82,27 +82,9 @@
                     <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico13.png"></var></div></span><b>玩法介绍</b><i></i>
                 </h2>
                 <div class="down playWay">
-                    <a href="javascript:void(0)" data-playway="cqssc"><img src="${resRoot}/themes/default/img/cqssc.png"><var>重庆时时彩</var></a>
-                    <a href="javascript:void(0)" data-playway="tjssc"><img src="${resRoot}/themes/default/img/tjssc.png"><var>天津时时彩</var></a>
-                    <a href="javascript:void(0)" data-playway="xjssc"><img src="${resRoot}/themes/default/img/xjssc.png"><var>新疆时时彩</var></a>
-                    <a href="javascript:void(0)" data-playway="ffssc"><img src="${resRoot}/themes/default/img/ffssc.png"><var>分分时时彩</var></a>
-                    <a href="javascript:void(0)" data-playway="efssc"><img src="${resRoot}/themes/default/img/efssc.png"><var>二分时时彩</var></a>
-                    <a href="javascript:void(0)" data-playway="sfssc"><img src="${resRoot}/themes/default/img/sfssc.png"><var>三分时时彩</var></a>
-                    <a href="javascript:void(0)" data-playway="wfssc"><img src="${resRoot}/themes/default/img/wfssc.png"><var>五分时时彩</var></a>
-                    <a href="javascript:void(0)" data-playway="jsk3"><img src="${resRoot}/themes/default/img/jsk3.png"><var>江苏快3</var></a>
-                    <a href="javascript:void(0)" data-playway="hbk3"><img src="${resRoot}/themes/default/img/hbk3.png"><var>湖北快3</var></a>
-                    <a href="javascript:void(0)" data-playway="ahk3"><img src="${resRoot}/themes/default/img/ahk3.png"><var>安徽快3</var></a>
-                    <a href="javascript:void(0)" data-playway="gxk3"><img src="${resRoot}/themes/default/img/gxk3.png"><var>广西快3</var></a>
-                    <a href="javascript:void(0)" data-playway="hklhc"><img src="${resRoot}/themes/default/img/hklhc.png"><var>香港六合彩</var></a>
-                    <a href="javascript:void(0)" data-playway="bjpk10"><img src="${resRoot}/themes/default/img/bjpk10.png"><var>北京PK10</var></a>
-                    <a href="javascript:void(0)" data-playway="xyft"><img src="${resRoot}/themes/default/img/xyft.png"><var>幸运飞艇</var></a>
-                    <a href="javascript:void(0)" data-playway="jspk10"><img src="${resRoot}/themes/default/img/jspk10.png"><var>极速PK10</var></a>
-                    <a href="javascript:void(0)" data-playway="fc3d"><img src="${resRoot}/themes/default/img/fc3d.png"><var>福彩3D</var></a>
-                    <a href="javascript:void(0)" data-playway="tcpl3"><img src="${resRoot}/themes/default/img/tcpl3.png"><var>体彩排列3</var></a>
-                    <a href="javascript:void(0)" data-playway="xy28"><img src="${resRoot}/themes/default/img/xy28.png"><var>幸运28</var></a>
-                    <a href="javascript:void(0)" data-playway="cqxync"><img src="${resRoot}/themes/default/img/cqxync.png"><var>重庆幸运农场</var></a>
-                    <a href="javascript:void(0)" data-playway="gdkl10"><img src="${resRoot}/themes/default/img/gdkl10.png"><var>广东快乐十分</var></a>
-                    <a href="javascript:void(0)" data-playway="bjkl8"><img src="${resRoot}/themes/default/img/bjkl8.png"><var>北京快乐8</var></a>
+                    <c:forEach items="${lotteryCodes}" var="lotteryCode" varStatus="status">
+                        <a href="javascript:void(0)" data-playway="${lotteryCode}"><img src="${resRoot}/themes/default/img/${lotteryCode}.png"><var>${dicts.lottery.lottery[lotteryCode]}</var></a>
+                    </c:forEach>
                 </div>
             </li>
           <%--  <li>
