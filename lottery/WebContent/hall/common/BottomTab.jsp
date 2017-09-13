@@ -14,9 +14,9 @@
             <%--<li data-tab="prizeMemo">奖金计算说明</li>--%>
         </ul>
     </div>
-    <div class="list_wrap myBet"  style="height: 325px"></div>
-    <div class="list_wrap myPrize"  style="height: 325px;display: none"></div>
-    <div class="list_wrap todayOpen"  style="height: 325px;display: none"></div>
+    <div class="list_wrap myBet"  style="min-height:60px; max-height: 325px"></div>
+    <div class="list_wrap myPrize"  style="min-height:60px;max-height: 325px;display: none"></div>
+    <div class="list_wrap todayOpen"  style="min-height:60px;max-height: 325px;display: none"></div>
     <%--<div class="list_wrap prizeMemo"></div>--%>
 </div>
 
