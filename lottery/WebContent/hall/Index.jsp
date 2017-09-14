@@ -12,10 +12,6 @@
 
 <body>
 <div class="menu_left">
-    <div class="logo">
-        <img src="${resRoot}/themes/default/img/logo.png" alt="" style="cursor:pointer">
-        <a href="javascript:void(0)"></a>
-    </div>
     <div class="list_menu">
         <ul>
             <li class="show">
@@ -112,6 +108,9 @@
 <!--menu_left-->
 <div class="con_right">
     <div class="Account">
+        <div class="arrows-btn">
+            <a href="javascript:void(0)" opent="0"></a>
+        </div>
         <c:choose>
             <c:when test="${empty player.account}">
                 <p>
