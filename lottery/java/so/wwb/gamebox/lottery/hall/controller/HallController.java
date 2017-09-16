@@ -50,19 +50,22 @@ public class HallController extends BaseLotteryController {
     @RequestMapping("/index")
     public String index(Model model) {
         List<SiteLottery> normalLotteries = Cache.getNormalSiteLottery(TerminalEnum.PC.getCode(), SessionManager.getSiteId());
-        Map<String, SiteLottery> siteLotteryMap = CollectionTool.toEntityMap(normalLotteries, SiteLottery.PROP_CODE, String.class);
-        //高频彩票
-        LotteryFrequencyListVo gfrequencyL = new LotteryFrequencyListVo();
-        gfrequencyL.getSearch().setLotteryFrequencyId(1);
-        LotteryFrequencyListVo high = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
-        gfrequencyL.getSearch().setLotteryFrequencyId(2);
-        LotteryFrequencyListVo low = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
+        if(CollectionTool.isNotEmpty(normalLotteries)){
+            Map<String, SiteLottery> siteLotteryMap = CollectionTool.toEntityMap(normalLotteries, SiteLottery.PROP_CODE, String.class);
+            //高频彩票
+            LotteryFrequencyListVo gfrequencyL = new LotteryFrequencyListVo();
+            gfrequencyL.getSearch().setLotteryFrequencyId(1);
+            LotteryFrequencyListVo high = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
+            gfrequencyL.getSearch().setLotteryFrequencyId(2);
+            LotteryFrequencyListVo low = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
 
-        indexFrequencyType(model, high.getResult(), LotteryFrequencyEnum.HIGH.getType(), siteLotteryMap);
-        indexFrequencyType(model, low.getResult(), LotteryFrequencyEnum.LOW.getType(), siteLotteryMap);
-        model.addAttribute("player", getPlayerApi());
+            indexFrequencyType(model, high.getResult(), LotteryFrequencyEnum.HIGH.getType(), siteLotteryMap);
+            indexFrequencyType(model, low.getResult(), LotteryFrequencyEnum.LOW.getType(), siteLotteryMap);
+            model.addAttribute("player", getPlayerApi());
 
-        model.addAttribute("hot", normalLotteries);
+            model.addAttribute("hot", normalLotteries);
+            model.addAttribute("lotteryCodes",siteLotteryMap.keySet());
+        }
         return HALL_INDEX_URL;
     }
 

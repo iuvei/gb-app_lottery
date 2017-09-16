@@ -59,8 +59,8 @@
                     <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong>810</strong></td>
                     <td data-num="${lottery.betNum}" style="cursor: pointer;"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="${lottery.betNum}"><input type="text" class="table-txt"
-                        data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20BigSmall}"
-                        data-bet-num="${lottery.betNum}" data-name="和值-${lottery.betNum}"
+                                                            data-odds="${odd}" data-bet-code="${lottery.betCode}" data-play="${kenoSum20BigSmall}"
+                                                            data-bet-num="${lottery.betNum}" data-name="和值-${lottery.betNum}"
                     /></td>
                 </tr>
                 <c:set var="odds" value="${oddMap['keno_number']}"/>
