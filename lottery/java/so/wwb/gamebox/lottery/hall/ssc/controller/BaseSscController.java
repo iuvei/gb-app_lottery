@@ -6,14 +6,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
-import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -146,24 +144,6 @@ public class BaseSscController extends BaseLotteryController {
     public String groupSixInit(Model model, String code) {
         initGroupSix(model, code);
         return GROUPSIX_URL;
-    }
-
-    // 获取期数
-    @RequestMapping("/getExpect")
-    @ResponseBody
-    public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4,1f);
-        LotteryResult handicap = getHandicap(code);
-        setHandicap(map, handicap);
-        return map;
-    }
-
-
-    // 时时彩最近5条开彩记录
-    @RequestMapping("/getRecent5Records")
-    @ResponseBody
-    public String getRecent5Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code));
     }
 
     /**

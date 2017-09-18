@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.model.company.lottery.po.LotteryHandicap;
-import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
@@ -45,16 +43,6 @@ public class BasePk10Controller extends BaseLotteryController {
      * 冠亚和
      */
     static final String SUM_URL = "/hall/pk10/%s/Sum";
-
-    // 获取期数
-    @RequestMapping("/getExpect")
-    @ResponseBody
-    public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4,1f);
-        LotteryResult handicap = getHandicap(code);
-        setHandicap(map, handicap);
-        return map;
-    }
 
     /**
      * pk10最近20条开彩记录

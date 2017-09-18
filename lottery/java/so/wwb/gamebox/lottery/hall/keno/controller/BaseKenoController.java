@@ -1,14 +1,11 @@
 package so.wwb.gamebox.lottery.hall.keno.controller;
 
 import org.soul.commons.collections.MapTool;
-import org.soul.commons.data.json.JsonTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
@@ -28,16 +25,6 @@ public class BaseKenoController extends BaseLotteryController {
     static final String TYPE = LotteryTypeEnum.KENO.getCode();
 
     static final String INDEX_URL = "/hall/keno/%s/Index";
-
-    // 获取期数
-    @RequestMapping("/getExpect")
-    @ResponseBody
-    public Map<String, Object> getExpect(String code) {
-        Map<String, Object> map = new HashMap<>(4, 1f);
-        LotteryResult handicap = getHandicap(code);
-        setHandicap(map, handicap);
-        return map;
-    }
 
     /**
      * 初始化彩种玩法

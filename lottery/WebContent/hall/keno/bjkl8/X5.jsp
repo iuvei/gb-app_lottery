@@ -1,7 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/include/include.inc.jsp" %>
 <div class="lot-content clearfix">
-    <div class="fl main-left">
+    <div class="fl main-left" style="width:auto; min-width: 760px; margin-left:75px;">
+        <div class="hd clearfix rehd tzgz" id="toptouzhu">
+            <%@ include file="../../common/ShortMoney.jsp" %>
+        </div>
         <div class="table-common">
             <c:set var="odds" value="${oddMap['keno_selection']}"/>
             <c:set var="playGroupName" value="选五"/>
@@ -10,7 +13,7 @@
             <table width="100%" border="1">
                 <thead>
                 <tr>
-                    <th colspan="16"><strong id="numsLength"  numsLength="5">选5</strong>(
+                    <th colspan="8"><strong id="numsLength"  numsLength="5">选5</strong>(
                         <c:set var="lottery" value="${odds['选五-中5']}"/>
                         <c:set var="odd" value="${lottery.odd}"/>
                         中5@<span class="red pl">${odd}</span>
@@ -23,38 +26,11 @@
                         中3@<span class="red pl">${odd}</span>)
                     </th>
                 </tr>
-                <tr>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                    <th width="36">号码</th>
-                    <th>勾选</th>
-                </tr>
                 </thead>
                 <c:set var="lottery" value="${odds['选五-中5']}"/>
                 <c:set var="odd" value="${lottery.odd}"/>
                 <%@ include file="xx/XTable.jsp" %>
 
-                <tfoot>
-                <tr>
-                    <td colspan="18">
-                        <div class="hd clearfix rehd tzgz" id="toptouzhu">
-                                <%@ include file="../../common/ShortMoney.jsp" %>
-                        </div>
-                    </td>
-                </tr>
-                </tfoot>
             </table>
         </div>
 
