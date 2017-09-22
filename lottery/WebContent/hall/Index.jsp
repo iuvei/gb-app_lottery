@@ -136,6 +136,10 @@
 </div>
 
 <%@ include file="/include/include.js.jsp" %>
+<script>
+    //用于定义js版本号
+    window.top.rcVersion = rcVersion;
+</script>
 <script type="text/javascript">
     curl(['site/hall/Index'], function(Index) {
         index = new Index();
