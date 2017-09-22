@@ -119,7 +119,7 @@
             </c:when>
             <c:otherwise>
                 <p>
-                    欢迎，<i class="i0">${player.account}</i>
+                    欢迎，<i class="i0" id="playAccount">${player.account}</i>
                     <span>余额：<i class="i1 balance">${siteCurrencySign}<font id="money">${soulFn:formatCurrency(player.money)}</font></i><a href="#" id="refreshMoney"><span></span>刷新余额</a></span>
                     <span>
                    <%-- <a href="/pcenter/#/fund/playerTransfer/transfers.html" target="_blank">额度转换</a>  |--%>
