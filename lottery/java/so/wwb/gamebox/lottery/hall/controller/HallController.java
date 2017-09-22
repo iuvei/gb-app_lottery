@@ -5,6 +5,7 @@ import org.soul.commons.collections.CollectionTool;
 import org.soul.commons.collections.MapTool;
 import org.soul.commons.currency.CurrencyTool;
 import org.soul.commons.data.json.JsonTool;
+import org.soul.commons.lang.string.StringTool;
 import org.soul.commons.query.sort.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -159,15 +160,17 @@ public class HallController extends BaseLotteryController {
         model.addAttribute("resultMap", CollectionTool.toEntityMap(results, LotteryResult.PROP_CODE));
     }
 
-    @RequestMapping("/getBalance")
+    @RequestMapping("/getAccountAndBalance")
     @ResponseBody
-    public String getBalance() {
+    public Map getAccountAndBalance() {
         VPlayerApi playerApi = getPlayerApi();
-        String balance = "0.00";
-        if (playerApi != null && playerApi.getMoney() != null) {
-            balance = CurrencyTool.formatCurrency(playerApi.getMoney());
+        Map<String,String> result = null;
+        if (playerApi != null && playerApi.getMoney() != null && StringTool.isNotEmpty(playerApi.getAccount())) {
+            result = new HashMap<>(2,1f);
+            result.put("account",playerApi.getAccount());
+            result.put("balance",CurrencyTool.formatCurrency(playerApi.getMoney()));
         }
-        return JsonTool.toJson(balance);
+        return result;
     }
 
 }
