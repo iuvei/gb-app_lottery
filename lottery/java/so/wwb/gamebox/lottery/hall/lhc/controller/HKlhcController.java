@@ -25,12 +25,10 @@ public class HKlhcController extends BaseLhcController {
     /*小彩种－香港六合彩*/
     private static final String CODE = LotteryEnum.HKLHC.getCode();
 
-    private static final String PATH = "hklhc";
-
     @RequestMapping("/index")
     public String index(Model model) {
         index(model, TYPE, CODE);
-        return String.format(INDEX_URL, PATH);
+        return String.format(INDEX_URL, CODE);
     }
 
     // 特码
@@ -46,7 +44,7 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("specialHalfPlay", LotteryPlayEnum.SPECIAL_HALF.getCode());
         model.addAttribute("mantissaBigSmallPlay", LotteryPlayEnum.SPECIAL_MANTISSA_BIG_SMALL.getCode());
         model.addAttribute("zodiacNum", this.getZodiacNumMap());
-        return String.format(SPECIAL_CODE_URL, PATH);
+        return String.format(SPECIAL_CODE_URL, CODE);
     }
 
     // 正码
@@ -61,7 +59,7 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("sumSingleDoublePlay", LotteryPlayEnum.SEVEN_SUM_SINGLE_DOUBLE.getCode());
         model.addAttribute("sumBigSmallPlay", LotteryPlayEnum.SEVEN_SUM_BIG_SMALL.getCode());
         model.addAttribute("zodiacNum", this.getZodiacNumMap());
-        return String.format(NORMAL_CODE_URL, PATH);
+        return String.format(NORMAL_CODE_URL, CODE);
     }
 
     // 正特码
@@ -73,7 +71,7 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("colourPlay", LotteryPlayEnum.POSITIVE_COLOUR.getCode());
         model.addAttribute("sumBigSmallPlay", LotteryPlayEnum.POSITIVE_SUM_BIG_SMALL.getCode());
         model.addAttribute("sumSingleDoublePlay", LotteryPlayEnum.POSITIVE_SUM_SINGLE_DOUBLE.getCode());
-        return String.format(NORMAL_SPECIAL_CODE_URL, PATH);
+        return String.format(NORMAL_SPECIAL_CODE_URL, CODE);
     }
 
     @RequestMapping("/getLhcBet")
@@ -104,13 +102,7 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("sumBigSmallPlay", LotteryPlayEnum.POSITIVE_SUM_BIG_SMALL.getCode());
         model.addAttribute("sumSingleDoublePlay", LotteryPlayEnum.POSITIVE_SUM_SINGLE_DOUBLE.getCode());
         model.addAttribute("mantissaBigSmall", LotteryPlayEnum.POSITIVE_MANTISSA_BIG_SMALL.getCode());
-        return String.format(NORMAL_1_TO_6_URL, PATH);
-    }
-
-    // 连码
-    @RequestMapping("/successiveCode")
-    public String successiveCode(Model model) {
-        return String.format(SUCCESSIVE_CODE_URL, PATH);
+        return String.format(NORMAL_1_TO_6_URL, CODE);
     }
 
     // 半波
@@ -122,7 +114,7 @@ public class HKlhcController extends BaseLhcController {
         //玩法
         model.addAttribute("lhcHalfColourBigSmall", LotteryPlayEnum.LHC_HALF_COLOUR_BIG_SMALL.getCode());
         model.addAttribute("lhcHalfColourSingleDouble", LotteryPlayEnum.LHC_HALF_COLOUR_SINGLE_DOUBLE.getCode());
-        return String.format(HALF_WAVE_URL, PATH);
+        return String.format(HALF_WAVE_URL, CODE);
     }
 
     // 一肖
@@ -136,7 +128,7 @@ public class HKlhcController extends BaseLhcController {
 
         //生肖对应号码列表
         model.addAttribute("zodiacNum", this.getZodiacNumMap());
-        return String.format(ONE_ZODIAC_URL, PATH);
+        return String.format(ONE_ZODIAC_URL, CODE);
     }
 
     // 特肖
@@ -150,31 +142,42 @@ public class HKlhcController extends BaseLhcController {
 
         //生肖对应号码列表
         model.addAttribute("zodiacNum", this.getZodiacNumMap());
-        return String.format(SPECIAL_ZODIAC_URL, PATH);
+        return String.format(SPECIAL_ZODIAC_URL, CODE);
+    }
+
+    // 连码
+    @RequestMapping("/linkCode")
+    public String linkCode(Model model) {
+        model.addAttribute("lhcLinkCode", LotteryPlayEnum.LHC_LINK_CODE.getCode());
+        return String.format(LINK_CODE_URL, CODE);
     }
 
     // 合肖
-    @RequestMapping("/shutZodiac")
-    public String shutZodiac(Model model) {
-        return String.format(SHUT_ZODIAC_URL, PATH);
+    @RequestMapping("/lhcSumZodiac")
+    public String lhcSumZodiac(Model model) {
+        model.addAttribute("lhcSumZodiac", LotteryPlayEnum.LHC_SUM_ZODIAC.getCode());
+        return String.format(SUM_ZODIAC_URL, CODE);
     }
 
     // 连肖
     @RequestMapping("/successiveZodiac")
     public String successiveZodiac(Model model) {
-        return String.format(SUCCESSIVE_ZODIAC_URL, PATH);
+        model.addAttribute("lhcLinkCode", LotteryPlayEnum.LHC_LINK_CODE.getCode());
+        return String.format(SUCCESSIVE_ZODIAC_URL, CODE);
     }
 
     // 尾数连
-    @RequestMapping("/mantissaSuccessive")
-    public String mantissaSuccessive(Model model) {
-        return String.format(MANTISSA_SUCCESSIVE_URL, PATH);
+    @RequestMapping("/lhcLinkMantissa")
+    public String lhcLinkMantissa(Model model) {
+        model.addAttribute("lhcLinkMantissa", LotteryPlayEnum.LHC_LINK_MANTISSA.getCode());
+        return String.format(LINK_MANTISSA_URL, CODE);
     }
 
     // 全不中
-    @RequestMapping("/allNotIn")
-    public String allNotIn(Model model) {
-        return String.format(ALL_NOT_IN_URL, PATH);
+    @RequestMapping("/allNoIn")
+    public String allNoIn(Model model) {
+        model.addAttribute("allNoIn", LotteryPlayEnum.LHC_ALL_NO_IN.getCode());
+        return String.format(ALL_NO_IN_URL, CODE);
     }
 
     /**
