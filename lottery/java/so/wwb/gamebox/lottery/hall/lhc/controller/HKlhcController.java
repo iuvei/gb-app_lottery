@@ -160,10 +160,10 @@ public class HKlhcController extends BaseLhcController {
     }
 
     // 连肖
-    @RequestMapping("/successiveZodiac")
-    public String successiveZodiac(Model model) {
-        model.addAttribute("lhcLinkCode", LotteryPlayEnum.LHC_LINK_CODE.getCode());
-        return String.format(SUCCESSIVE_ZODIAC_URL, CODE);
+    @RequestMapping("/linkZodiac")
+    public String linkZodiac(Model model) {
+        model.addAttribute("lhcLinkZodiac", LotteryPlayEnum.LHC_LINK_ZODIAC.getCode());
+        return String.format(LINK_ZODIAC_URL, CODE);
     }
 
     // 尾数连

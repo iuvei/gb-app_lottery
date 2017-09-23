@@ -25,8 +25,6 @@ public class BaseLhcController extends BaseLotteryController {
     static final String NORMAL_CODE_URL = "/hall/lhc/%s/NormalCode";
     /* 正特码 */
     static final String NORMAL_SPECIAL_CODE_URL = "/hall/lhc/%s/NormalSpecialCode";
-    /*正特码子页*/
-    static final String NORMAL_SPECIAL_CODE_PARTIAL_URL = "/hall/lhc/%s/include/NormalSpecialCodePartial";
     /* 正码1-6 */
     static final String NORMAL_1_TO_6_URL = "/hall/lhc/%s/Normal1to6";
     /* 连码 */
@@ -40,7 +38,7 @@ public class BaseLhcController extends BaseLotteryController {
     /* 合肖 */
     static final String SUM_ZODIAC_URL = "/hall/lhc/%s/SumZodiac";
     /* 连肖 */
-    static final String SUCCESSIVE_ZODIAC_URL = "/hall/lhc/%s/SuccessiveZodiac";
+    static final String LINK_ZODIAC_URL = "/hall/lhc/%s/LinkZodiac";
     /* 尾数连 */
     static final String LINK_MANTISSA_URL = "/hall/lhc/%s/LinkMantissa";
     /* 全不中 */
