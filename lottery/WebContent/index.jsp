@@ -53,7 +53,7 @@
         </div>
     </div>
     <script>
-        language = ${language};
+        language = '${language.replace('_','-')}';
         setTimeout(function () {
             window.location.replace('${root}/hall/index.html');
         }, 1000)
