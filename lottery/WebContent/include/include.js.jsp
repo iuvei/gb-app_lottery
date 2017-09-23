@@ -1,5 +1,4 @@
 <%@ include file="include.base.js.common.jsp" %>
-
 <script src="${resRoot}/js/plugin/FancyZoom.js?v=${rcVersion}"></script>
 <script src="${resRoot}/js/plugin/FancyZoomHTML.js?v=${rcVersion}"></script>
 <%--<script src="${resRoot}/themes/default/js/mobile-detect.min.js?v=${rcVersion}"></script>--%>
@@ -21,3 +20,6 @@
 
 <script src="${resRoot}/js/common/main.js?v=${rcVersion}"></script>
 <script src="${resComRoot}/js/curl/curl.js?v=${rcVersion}" data-curl-run=""></script>
+<script>
+    language = ${language}
+</script>

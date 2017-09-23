@@ -53,9 +53,10 @@
         </div>
     </div>
     <script>
+        language = ${language};
         setTimeout(function () {
             window.location.replace('${root}/hall/index.html');
-        }, 2888)
+        }, 1000)
     </script>
 </body>
 </html>
