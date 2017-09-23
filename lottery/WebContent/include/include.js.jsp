@@ -21,5 +21,5 @@
 <script src="${resRoot}/js/common/main.js?v=${rcVersion}"></script>
 <script src="${resComRoot}/js/curl/curl.js?v=${rcVersion}" data-curl-run=""></script>
 <script>
-    language = ${language}
+    language = ${language};
 </script>
