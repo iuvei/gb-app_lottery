@@ -83,15 +83,15 @@
                     </c:forEach>
                 </div>
             </li>
-          <%--  <li>
+            <li>
                 <h2>
-                    <a href="javascript:void(0)" onclick="getZstPage()">
+                    <a href="javascript:void(0)" data-url='/lotteryTrendChart/toLotteryTrendChart.html'>
                         <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico12.png"></var></div></span>
                         <b>走势图表</b>
                         <i></i>
                     </a>
                 </h2>
-            </li>--%>
+            </li>
             <%--<li>
                 <h2>
                     <a href="" target="_blank">
