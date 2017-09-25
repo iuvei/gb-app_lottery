@@ -148,7 +148,12 @@ public class HKlhcController extends BaseLhcController {
     // 连码
     @RequestMapping("/linkCode")
     public String linkCode(Model model) {
-        model.addAttribute("lhcLinkCode", LotteryPlayEnum.LHC_LINK_CODE.getCode());
+        model.addAttribute("lhcFourAllIn", LotteryPlayEnum.LHC_FOUR_ALL_IN.getCode());
+        model.addAttribute("lhcThreeAllIn", LotteryPlayEnum.LHC_THREE_ALL_IN.getCode());
+        model.addAttribute("lhcThreeInTwo", LotteryPlayEnum.LHC_THREE_IN_TWO.getCode());
+        model.addAttribute("lhcTwoAllIn", LotteryPlayEnum.LHC_TWO_ALL_IN.getCode());
+        model.addAttribute("lhcTwoInSpecial", LotteryPlayEnum.LHC_TWO_IN_SPECIAL.getCode());
+        model.addAttribute("lhcSpecialStrand", LotteryPlayEnum.LHC_SPECIAL_STRAND.getCode());
         return String.format(LINK_CODE_URL, CODE);
     }
 
