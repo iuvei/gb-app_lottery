@@ -164,14 +164,13 @@ public class HallController extends BaseLotteryController {
     @ResponseBody
     public Map getAccountAndBalance() {
         VPlayerApi playerApi = getPlayerApi();
-        Map<String,String> map = null;
+        Map<String,String> result = null;
         if (playerApi != null && playerApi.getMoney() != null && StringTool.isNotEmpty(playerApi.getAccount())) {
-            map = new HashMap<>(2,1f);
-            String balance = CurrencyTool.formatCurrency(playerApi.getMoney());
-            map.put("balance",balance);
-            map.put("account",playerApi.getAccount());
+            result = new HashMap<>(2,1f);
+            result.put("account",playerApi.getAccount());
+            result.put("balance",CurrencyTool.formatCurrency(playerApi.getMoney()));
         }
-        return map;
+        return result;
     }
 
 }
