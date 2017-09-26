@@ -59,8 +59,8 @@ public class LotteryResultHistoryController {
             code = listVo.getSearch().getCode();
             type = siteLotteryMap.get(code).getType();
         }
-        listVo.getQuery().addOrder(LotteryResult.PROP_OPEN_TIME, Direction.DESC);
         listVo.getQuery().addOrder(LotteryResult.PROP_EXPECT, Direction.DESC);
+        listVo.getQuery().addOrder(LotteryResult.PROP_OPEN_TIME, Direction.DESC);
         listVo.getSearch().setOpenCodeFlag(true);
         listVo = ServiceTool.lotterResultService().search(listVo);
         listVo.getSearch().setType(type);
@@ -80,8 +80,8 @@ public class LotteryResultHistoryController {
         if (StringTool.isNotBlank(listVo.getSearch().getType())) {
             url = "/hall/result/LotteryResult_" + listVo.getSearch().getType();
         }
-        listVo.getQuery().addOrder(LotteryResult.PROP_OPEN_TIME, Direction.DESC);
         listVo.getQuery().addOrder(LotteryResult.PROP_EXPECT, Direction.DESC);
+        listVo.getQuery().addOrder(LotteryResult.PROP_OPEN_TIME, Direction.DESC);
         listVo.getSearch().setOpenCodeFlag(true);
         listVo = ServiceTool.lotterResultService().search(listVo);
         model.addAttribute("command", listVo);
