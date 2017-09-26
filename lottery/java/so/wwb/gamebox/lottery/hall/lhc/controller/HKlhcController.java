@@ -125,7 +125,6 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("odds", getOdds(LotteryBettingEnum.LHC_ONE_ZODIAC.getCode(), siteLotteryOdds));
         //玩法
         model.addAttribute("lhcOneZodiac", LotteryPlayEnum.LHC_ONE_ZODIAC.getCode());
-
         //生肖对应号码列表
         model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(ONE_ZODIAC_URL, CODE);
@@ -158,7 +157,7 @@ public class HKlhcController extends BaseLhcController {
     }
 
     // 合肖
-    @RequestMapping("/lhcSumZodiac")
+    @RequestMapping("/sumZodiac")
     public String lhcSumZodiac(Model model) {
         model.addAttribute("lhcSumZodiac", LotteryPlayEnum.LHC_SUM_ZODIAC.getCode());
         model.addAttribute("zodiacNum", this.getZodiacNumMap());
@@ -177,7 +176,7 @@ public class HKlhcController extends BaseLhcController {
     }
 
     // 尾数连
-    @RequestMapping("/lhcLinkMantissa")
+    @RequestMapping("/linkMantissa")
     public String lhcLinkMantissa(Model model) {
         model.addAttribute("lhcTwoMantissaLink", LotteryPlayEnum.LHC_TWO_MANTISSA_LINK.getCode());
         model.addAttribute("lhcThreeMantissaLink", LotteryPlayEnum.LHC_THREE_MANTISSA_LINK.getCode());
