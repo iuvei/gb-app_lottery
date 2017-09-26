@@ -273,13 +273,9 @@
                                 </div>
                             </div>
 
-                            <div class="cl-40 clean cl-41">
-                                <p>遗漏统计</p>
-                            </div>
                             <div class="cl-40 clean">
                                 <div class="cl-30">
-                                    <div class="left cl-31">期号</div>
-                                    <div class="left cl-32" style="width:150px">奖号</div>
+                                    <div class="left cl-32" style="width:250px">遗漏统计</div>
                                     <div class="left cl-33">
                                         <div class="cl-35">
                                             <div class="left cl-34">小区</div>

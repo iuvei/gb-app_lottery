@@ -285,15 +285,9 @@
                                 </div>
                             </div>
 
-                            <div class="cl-40 clean cl-41">
-                                <p>遗漏统计</p>
-                            </div>
                             <div class="cl-40 clean">
                                 <div class="cl-30">
-                                    <div class="left cl-31" style="border-right-style: none;"></div>
-                                    <div class="left cl-31" style="border-right-style: none;border-left-style: none;"></div>
-                                    <div class="left cl-32" style="border-right-style: none;border-left-style: none;"></div>
-                                    <div class="left cl-32"   style="width:50px;"></div>
+                                    <div class="left cl-32"   style="width:350px;">遗漏统计</div>
                                     <div class="left cl-33">
                                         <div class="cl-35">
                                             <div class="left cl-34">百位</div>
@@ -410,7 +404,7 @@
                                     </p>
                                 </h3>
                             </div>
-                            <div class="zhushi">每天销售82期&nbsp&nbsp每10分钟1期</div>
+                            <div class="zhushi">每天销售78期&nbsp&nbsp每10分钟1期</div>
                             <div class="tongzhi">
                             </div>
                         </div>

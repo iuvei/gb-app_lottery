@@ -266,13 +266,9 @@
                                 </div>
                             </div>
 
-                            <div class="cl-40 clean cl-41">
-                                <p>遗漏统计</p>
-                            </div>
                             <div class="cl-40 clean">
                                 <div class="cl-30">
-                                    <div class="left cl-31" style="width: 100px!important;">开奖日期</div>
-                                    <div class="left cl-31">期号</div>
+                                    <div class="left cl-31" style="width: 200px">遗漏统计</div>
                                     <div class="left cl-33" style="width: 210px!important;">
                                         <div class="cl-35">
                                             <div class="left cl-34" style="width: 100%!important;">号码位</div>
