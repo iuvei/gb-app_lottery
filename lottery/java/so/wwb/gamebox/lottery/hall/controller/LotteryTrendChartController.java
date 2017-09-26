@@ -62,7 +62,7 @@ static final String INDEX_URL = "hall/trendchart/%s/Index";
             model.addAttribute("lhcmap", JsonTool.toJson(lhcZodiacNum));
         }
         if (StringTool.isBlank(dataId)) {
-            dataId = "1";
+            dataId = "shuju1";
         }
         model.addAttribute("dataId",dataId);
         model.addAttribute("code",code);

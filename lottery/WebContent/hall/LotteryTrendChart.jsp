@@ -20,7 +20,7 @@
                             <h3>${dicts.lottery.lottery[h.code]}</h3>
                             <a href="javascript:void(0)" onclick="goZst('${h.code}.html?dataId=shuju1')">基本走势</a>
                             <a href="javascript:void(0)" onclick="goZst('${h.code}.html?dataId=shuju2')">K线图</a>
-                            <a href="javascript:void(0)" onclick="goZst('${h.code}.html?dataId=shuju1')">直方图</a>
+                            <a href="javascript:void(0)" onclick="goZst('${h.code}.html?dataId=shuju3')">直方图</a>
                             <a href="javascript:void(0)" onclick="goZst('${h.code}.html?dataId=shuju1')">统计遗漏</a>
                             <a href="javascript:void(0)" onclick="goZst('${h.code}.html?dataId=shuju5')">历史开奖数据</a>
                         </div>
@@ -39,7 +39,7 @@
                     <h3>${dicts.lottery.lottery[l.code]}</h3>
                     <a href="javascript:void(0)" onclick="goZst('${l.code}.html?dataId=shuju1')">基本走势</a>
                     <a href="javascript:void(0)" onclick="goZst('${l.code}.html?dataId=shuju2')">K线图</a>
-                    <a href="javascript:void(0)" onclick="goZst('${l.code}.html?dataId=shuju1')">直方图</a>
+                    <a href="javascript:void(0)" onclick="goZst('${l.code}.html?dataId=shuju3')">直方图</a>
                     <a href="javascript:void(0)" onclick="goZst('${l.code}.html?dataId=shuju1')">统计遗漏</a>
                     <a href="javascript:void(0)" onclick="goZst('${l.code}.html?dataId=shuju5')">历史开奖数据</a>
                 </div>
