@@ -161,27 +161,42 @@ public class HKlhcController extends BaseLhcController {
     @RequestMapping("/lhcSumZodiac")
     public String lhcSumZodiac(Model model) {
         model.addAttribute("lhcSumZodiac", LotteryPlayEnum.LHC_SUM_ZODIAC.getCode());
+        model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(SUM_ZODIAC_URL, CODE);
     }
 
     // 连肖
     @RequestMapping("/linkZodiac")
     public String linkZodiac(Model model) {
-        model.addAttribute("lhcLinkZodiac", LotteryPlayEnum.LHC_LINK_ZODIAC.getCode());
+        model.addAttribute("lhcTwoZodiacLink", LotteryPlayEnum.LHC_TWO_ZODIAC_LINK.getCode());
+        model.addAttribute("lhcThreeZodiacLink", LotteryPlayEnum.LHC_THREE_ZODIAC_LINK.getCode());
+        model.addAttribute("lhcFourZodiacLink", LotteryPlayEnum.LHC_FOUR_ZODIAC_LINK.getCode());
+        model.addAttribute("lhcFiveZodiacLink", LotteryPlayEnum.LHC_FIVE_ZODIAC_LINK.getCode());
+        model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(LINK_ZODIAC_URL, CODE);
     }
 
     // 尾数连
     @RequestMapping("/lhcLinkMantissa")
     public String lhcLinkMantissa(Model model) {
-        model.addAttribute("lhcLinkMantissa", LotteryPlayEnum.LHC_LINK_MANTISSA.getCode());
+        model.addAttribute("lhcTwoMantissaLink", LotteryPlayEnum.LHC_TWO_MANTISSA_LINK.getCode());
+        model.addAttribute("lhcThreeMantissaLink", LotteryPlayEnum.LHC_THREE_MANTISSA_LINK.getCode());
+        model.addAttribute("lhcFourMantissaLink", LotteryPlayEnum.LHC_FOUR_MANTISSA_LINK.getCode());
+        model.addAttribute("lhcFiveMantissaLink", LotteryPlayEnum.LHC_FIVE_MANTISSA_LINK.getCode());
         return String.format(LINK_MANTISSA_URL, CODE);
     }
 
     // 全不中
     @RequestMapping("/allNoIn")
     public String allNoIn(Model model) {
-        model.addAttribute("allNoIn", LotteryPlayEnum.LHC_ALL_NO_IN.getCode());
+        model.addAttribute("lhcFiveNoIn", LotteryPlayEnum.LHC_FIVE_NO_IN.getCode());
+        model.addAttribute("lhcSixNoIn", LotteryPlayEnum.LHC_SIX_NO_IN.getCode());
+        model.addAttribute("lhcSevenNoIn", LotteryPlayEnum.LHC_SEVEN_NO_IN.getCode());
+        model.addAttribute("lhcEightNoIn", LotteryPlayEnum.LHC_EIGHT_NO_IN.getCode());
+        model.addAttribute("lhcNineNoIn", LotteryPlayEnum.LHC_NINE_NO_IN.getCode());
+        model.addAttribute("lhcTenNoIn", LotteryPlayEnum.LHC_TEN_NO_IN.getCode());
+        model.addAttribute("lhcElevenNoIn", LotteryPlayEnum.LHC_ELEVEN_NO_IN.getCode());
+        model.addAttribute("lhcTwelveNoIn", LotteryPlayEnum.LHC_TWELVE_NO_IN.getCode());
         return String.format(ALL_NO_IN_URL, CODE);
     }
 
