@@ -16,7 +16,13 @@
                         <a href="javascript:void(0)" subCode="lhc_special_strand">特串</a>
                         <a href="javascript:void(0)" subCode="lhc_four_all_in">四全中</a>
                 </div>
-                <input id="playCode" type="hidden" value="${lhcThreeAllIn}">
+                <input id="playCode2" type="hidden" value="${lhcTwoAllIn}">
+                <input id="playCode3" type="hidden" value="${lhcThreeAllIn}">
+                <input id="playCode4" type="hidden" value="${lhcFourAllIn}">
+                <input id="playCode5" type="hidden" value="${lhcThreeInTwo}">
+                <input id="playCode6" type="hidden" value="${lhcTwoInSpecial}">
+                <input id="playCode7" type="hidden" value="${lhcSpecialStrand}">
+
                 <input id="current_lhc" type="hidden" >
             </div>
         </div>
@@ -25,7 +31,7 @@
             <table width="100%" border="1">
                 <thead>
                     <tr>
-                        <th colspan="10"><strong>三全中@<font color="red" id="oddValue"></font></font><span id="pl" class="pl red"></span></strong> (请选择3个及以上号码)</th>
+                        <th colspan="10"><strong><font id="lhc_title">三全中</font>@<font color="red" id="oddValue"></font> <label class="nextOddValue" hidden>@</label> <font class="nextOddValue" hidden color="red" id="nextOddValue"></font>   <span id="pl" class="pl red"></span></strong> (请选择<font id="minNum">3</font>个及以上号码)</th>
                     </tr>
                     <tr>
                         <th>号码</th>
@@ -43,15 +49,15 @@
 
                 <tbody>
                 <tr>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="1"><strong class="pl">1</strong><input type="checkbox" data-name="1"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="2"><strong class="pl">2</strong><input type="checkbox" data-name="2"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="3"><strong class="pl">3</strong><input type="checkbox" data-name="3"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="4"><strong class="pl">4</strong><input type="checkbox" data-name="4"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="5"><strong class="pl">5</strong><input type="checkbox" data-name="5"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="6"><strong class="pl">6</strong><input type="checkbox" data-name="6"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="7"><strong class="pl">7</strong><input type="checkbox" data-name="7"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="8"><strong class="pl">8</strong><input type="checkbox" data-name="8"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="9"><strong class="pl">9</strong><input type="checkbox" data-name="9"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="1"><strong class="pl">1</strong><input type="checkbox" data-name="01"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="2"><strong class="pl">2</strong><input type="checkbox" data-name="02"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="3"><strong class="pl">3</strong><input type="checkbox" data-name="03"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="4"><strong class="pl">4</strong><input type="checkbox" data-name="04"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="5"><strong class="pl">5</strong><input type="checkbox" data-name="05"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="6"><strong class="pl">6</strong><input type="checkbox" data-name="06"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="7"><strong class="pl">7</strong><input type="checkbox" data-name="07"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="8"><strong class="pl">8</strong><input type="checkbox" data-name="08"></td>
+                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="9"><strong class="pl">9</strong><input type="checkbox" data-name="09"></td>
                     <td style="cursor: pointer;" class="new-ball-st lhc-num" num="10"><strong class="pl">10</strong><input type="checkbox" data-name="10"></td>
                 </tr>
                 <tr>
