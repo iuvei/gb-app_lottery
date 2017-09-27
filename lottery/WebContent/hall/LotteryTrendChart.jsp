@@ -11,7 +11,7 @@
 
 <body>
     <div class="zs_list">
-        <h2>高频彩</h2>
+        <h2 style="color: #d2d2d2">高频彩</h2>
         <ul>
                 <c:forEach items="${high}" var="h" varStatus="status">
                     <li>
@@ -30,7 +30,7 @@
     </div>
     <div class="clear"></div>
     <div class="zs_list" style="margin-top:0px;">
-        <h2>低频彩</h2>
+        <h2 style="color: #d2d2d2">低频彩</h2>
         <ul>
             <c:forEach items="${low}" var="l" varStatus="status">
             <li>
