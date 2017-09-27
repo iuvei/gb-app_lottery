@@ -404,7 +404,18 @@
                                     </p>
                                 </h3>
                             </div>
-                            <div class="zhushi">每天销售78期&nbsp&nbsp每10分钟1期</div>
+                            <c:choose>
+                                <c:when test="${code eq 'jsk3'}">
+                                    <div class="zhushi">每天销售82期&nbsp&nbsp每10分钟一期</div>
+                                </c:when>
+                                <c:when test="${code eq 'ahk3'}">
+                                    <div class="zhushi">每天销售80期&nbsp&nbsp每10分钟一期</div>
+                                </c:when>
+                                <c:otherwise>
+                                    <div class="zhushi">每天销售78期&nbsp&nbsp每10分钟一期</div>
+
+                                </c:otherwise>
+                            </c:choose>
                             <div class="tongzhi">
                             </div>
                         </div>

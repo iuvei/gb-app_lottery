@@ -319,7 +319,7 @@
                                     </p>
                                 </h3>
                             </div>
-                            <div class="zhushi">每天销售178期&nbsp&nbsp每5分钟一期</div>
+                            <div class="zhushi">每天销售179期&nbsp&nbsp每5分钟一期</div>
                             <div class="tongzhi">
                             </div>
                         </div>

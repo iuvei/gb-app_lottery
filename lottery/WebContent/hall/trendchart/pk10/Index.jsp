@@ -260,7 +260,7 @@
 
                                 <p><b>出现总次数：</b> 统计期数内实际出现的次数。</p>
 
-                                <p><b>平均遗漏值：</b> 统计期数内遗漏的平均值。计算公式：平均遗漏=每次遗漏期数之和/出现次数。</p>
+                                <p><b>平均遗漏值：</b> 统计期数内遗漏的平均值。计算公式：平均遗漏=遗漏期数之和/遗漏次数(取整)。</p>
 
                                 <p><b>最大遗漏值：</b> 统计期数内遗漏的最大值。</p>
 
@@ -283,6 +283,9 @@
                             <c:choose>
                                 <c:when test="${code eq 'jspk10'}">
                                     <div class="zhushi">每天销售1440期&nbsp&nbsp每1分钟一期</div>
+                                </c:when>
+                                <c:when test="${code eq 'bjpk10'}">
+                                    <div class="zhushi">每天销售179期&nbsp&nbsp每5分钟一期</div>
                                 </c:when>
                                 <c:otherwise>
                                     <div class="zhushi">每天销售180期&nbsp&nbsp每5分钟一期</div>
