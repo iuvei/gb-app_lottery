@@ -7,12 +7,6 @@
     <title>购彩大厅 | 所有彩票</title>
     <%@ include file="/include/include.head.jsp" %>
     <script src="${root}/message_<%=SessionManagerCommon.getLocale().toString()%>.js?v=${rcVersion}"></script>
-    <style>
-        body {overflow: hidden;}
-        .list_ject ul li .Result p a {
-            width: 50%;
-        }
-    </style>
     <%@ include file="/include/include.js.jsp" %>
 </head>
 <body style="overflow: auto">
@@ -85,7 +79,7 @@
                 <div class="Result">
                     <p>
                         <a href="javascript:void(0)" data-page="/lotteryResultHistory/toLotteryResultHistory.html?search.code=${handicap.code}">历史开奖</a>
-                        <%--<a href="javascript:void(0)" data-page="/lotteryTrendChart/queryLotteryTrend/${handicap.code}.html">开奖走势</a>--%>
+                        <a href="javascript:void(0)" data-page="/lotteryTrendChart/queryLotteryTrend/${handicap.code}.html">开奖走势</a>
                         <a href="javascript:void(0)" class="acti" data-page="/${handicap.type}/${handicap.code}/index.html">立即投注</a>
                     </p>
                 </div>
