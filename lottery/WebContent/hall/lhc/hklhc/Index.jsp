@@ -79,6 +79,12 @@
                             <span><a href="javascript:void(0)" data-url="hklhc-halfWave">半波</a></span>
                             <span><a href="javascript:void(0)" data-url="hklhc-oneZodiac">一肖</a></span>
                             <span><a href="javascript:void(0)" data-url="hklhc-specialZodiac">特肖</a></span>
+
+                            <span><a href="javascript:void(0)" data-url="hklhc-linkCode">连码</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-specialZodiac">合肖</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-specialZodiac">连肖</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-specialZodiac">尾数连</a></span>
+                            <span><a href="javascript:void(0)" data-url="hklhc-specialZodiac">全不中</a></span>
                         </p>
                     </li>
                 </ul>
