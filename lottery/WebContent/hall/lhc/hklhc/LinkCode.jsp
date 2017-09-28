@@ -55,69 +55,24 @@
                 </thead>
 
                 <tbody>
-                <tr>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="1"><strong class="pl">1</strong><input type="checkbox" data-name="01"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="2"><strong class="pl">2</strong><input type="checkbox" data-name="02"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="3"><strong class="pl">3</strong><input type="checkbox" data-name="03"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="4"><strong class="pl">4</strong><input type="checkbox" data-name="04"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="5"><strong class="pl">5</strong><input type="checkbox" data-name="05"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="6"><strong class="pl">6</strong><input type="checkbox" data-name="06"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="7"><strong class="pl">7</strong><input type="checkbox" data-name="07"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="8"><strong class="pl">8</strong><input type="checkbox" data-name="08"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="9"><strong class="pl">9</strong><input type="checkbox" data-name="09"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="10"><strong class="pl">10</strong><input type="checkbox" data-name="10"></td>
-                </tr>
-                <tr>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="11"><strong class="pl">11</strong><input type="checkbox" data-name="11"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="12"><strong class="pl">12</strong><input type="checkbox" data-name="12"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="13"><strong class="pl">13</strong><input type="checkbox" data-name="13"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="14"><strong class="pl">14</strong><input type="checkbox" data-name="14"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="15"><strong class="pl">15</strong><input type="checkbox" data-name="15"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="16"><strong class="pl">16</strong><input type="checkbox" data-name="16"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="17"><strong class="pl">17</strong><input type="checkbox" data-name="17"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="18"><strong class="pl">18</strong><input type="checkbox" data-name="18"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="19"><strong class="pl">19</strong><input type="checkbox" data-name="19"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="20"><strong class="pl">20</strong><input type="checkbox" data-name="20"></td>
-                </tr>
-                <tr>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="21"><strong class="pl">21</strong><input type="checkbox" data-name="21"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="22"><strong class="pl">22</strong><input type="checkbox" data-name="22"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="23"><strong class="pl">23</strong><input type="checkbox" data-name="23"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="24"><strong class="pl">24</strong><input type="checkbox" data-name="24"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="25"><strong class="pl">25</strong><input type="checkbox" data-name="25"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="26"><strong class="pl">26</strong><input type="checkbox" data-name="26"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="27"><strong class="pl">27</strong><input type="checkbox" data-name="27"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="28"><strong class="pl">28</strong><input type="checkbox" data-name="28"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="29"><strong class="pl">29</strong><input type="checkbox" data-name="29"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="30"><strong class="pl">30</strong><input type="checkbox" data-name="30"></td>
-                </tr>
-                <tr>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="31"><strong class="pl">31</strong><input type="checkbox" data-name="31"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="32"><strong class="pl">32</strong><input type="checkbox" data-name="32"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="33"><strong class="pl">33</strong><input type="checkbox" data-name="33"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="34"><strong class="pl">34</strong><input type="checkbox" data-name="34"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="35"><strong class="pl">35</strong><input type="checkbox" data-name="35"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="36"><strong class="pl">36</strong><input type="checkbox" data-name="36"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="37"><strong class="pl">37</strong><input type="checkbox" data-name="37"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="38"><strong class="pl">38</strong><input type="checkbox" data-name="38"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="39"><strong class="pl">39</strong><input type="checkbox" data-name="39"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="40"><strong class="pl">40</strong><input type="checkbox" data-name="40"></td>
-                </tr>
-                <tr>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="41"><strong class="pl">41</strong><input type="checkbox" data-name="41"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="42"><strong class="pl">42</strong><input type="checkbox" data-name="42"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="43"><strong class="pl">43</strong><input type="checkbox" data-name="43"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="44"><strong class="pl">44</strong><input type="checkbox" data-name="44"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="45"><strong class="pl">45</strong><input type="checkbox" data-name="45"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="46"><strong class="pl">46</strong><input type="checkbox" data-name="46"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="47"><strong class="pl">47</strong><input type="checkbox" data-name="47"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="48"><strong class="pl">48</strong><input type="checkbox" data-name="48"></td>
-                    <td style="cursor: pointer;" class="new-ball-st lhc-num" num="49"><strong class="pl">49</strong><input type="checkbox" data-name="49"></td>
-                    <td class="new-ball-st"></td>
-                </tr>
-
+                <c:forEach var="i" begin="0" end="4">
+                    <tr>
+                        <c:forEach var="j" begin="1" end="10">
+                            <c:set var="num" value="${i*10+j}"/>
+                            <c:if test="${num < 50}">
+                                <c:set var="dataName" value="${num}"/>
+                                <c:if test="${num < 10}">
+                                    <c:set var="dataName" value="0${num}"/>
+                                </c:if>
+                                <td style="cursor: pointer;" class="new-ball-st lhc-num" num="${dataName}" data-name="${dataName}"><strong class="pl">${num}</strong></td>
+                            </c:if>
+                            <c:if test="${num eq 50}">
+                                <td class="new-ball-st"></td>
+                            </c:if>
+                        </c:forEach>
+                    </tr>
+                </c:forEach>
                 </tbody>
-
             </table>
 
         </div>
