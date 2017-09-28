@@ -23,7 +23,6 @@
                 <input id="playCode6" type="hidden" value="${lhcTwoInSpecial}">
                 <input id="playCode7" type="hidden" value="${lhcSpecialStrand}">
 
-                <input id="current_lhc" type="hidden" >
             </div>
         </div>
         <div class="table-common lhc-ztm">
