@@ -31,7 +31,15 @@
             <table width="100%" border="1">
                 <thead>
                     <tr>
-                        <th colspan="10"><strong><font id="lhc_title">三全中</font>@<font color="red" id="oddValue"></font> <label class="nextOddValue" hidden>@</label> <font class="nextOddValue" hidden color="red" id="nextOddValue"></font>   <span id="pl" class="pl red"></span></strong> (请选择<font id="minNum">3</font>个及以上号码)</th>
+                        <th colspan="10">
+                            <strong>
+                                <font id="lhc_title">三全中</font>@<font color="red" id="oddValue"></font>
+                                <label class="nextOddValue" hidden>@</label>
+                                <font class="nextOddValue" hidden color="red" id="nextOddValue"></font>
+                                <span id="pl" class="pl red"></span>
+                            </strong>
+                            (请选择<font id="minNum">3</font>个及以上号码)
+                        </th>
                     </tr>
                     <tr>
                         <th>号码</th>
