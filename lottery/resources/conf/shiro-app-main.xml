@@ -104,6 +104,7 @@
 				/sfc/*/ranking/*.html = anon
 				/sfc/get*Odds.html = anon
 				/commonLottery/*.html = anon
+				/lotteryTrendChart/*.html = anon
 				/*/getRecent30Records.html = anon
 				/*/getRecent100Records.html = anon
 				/** = subsys,kickout,authc,access,autho
