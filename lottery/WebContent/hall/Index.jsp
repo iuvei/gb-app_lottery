@@ -139,6 +139,7 @@
 <script>
     //用于定义js版本号
     window.top.rcVersion = rcVersion;
+    window.top.language = '${language.replace('_','-')}';
 </script>
 <script type="text/javascript">
     curl(['site/hall/Index'], function(Index) {
