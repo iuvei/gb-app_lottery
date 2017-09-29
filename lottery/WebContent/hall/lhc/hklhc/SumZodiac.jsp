@@ -6,7 +6,7 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd rehd clearfix">
-            <%@ include file="../../common/ShortMoney.jsp" %>
+
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
 
@@ -151,6 +151,7 @@
             </table>
 
         </div>
+        <%@ include file="../../common/ShortMoney.jsp" %>
         <div class="btns">
             <button type="submit" class="btn btn-1">提交</button>
             <button class="btn btn-2">重设</button>
