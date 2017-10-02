@@ -125,7 +125,9 @@
             </table>
 
         </div>
-        <%@ include file="../../common/ShortMoney.jsp" %>
+        <div class="clearfix">
+            <%@ include file="../../common/ShortMoney.jsp" %>
+        </div>
         <div class="btns">
             <button type="submit" class="btn btn-1">提交</button>
             <button class="btn btn-2">重设</button>

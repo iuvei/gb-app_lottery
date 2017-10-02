@@ -122,7 +122,7 @@
                     </td>
 
                     <td style="cursor: pointer;" class="hx-list">
-                        <strong>鸡</strong>
+                        <strong style="margin-left:30px">鸡</strong>
                         <input type="checkbox" data-name="鸡">
                         <c:forEach var="item" items="${zodiacNum['鸡']}">
                             <span class="ball-icon ball-${item}"></span>
@@ -151,7 +151,9 @@
             </table>
 
         </div>
-        <%@ include file="../../common/ShortMoney.jsp" %>
+        <div class="clearfix">
+            <%@ include file="../../common/ShortMoney.jsp" %>
+        </div>
         <div class="btns">
             <button type="submit" class="btn btn-1">提交</button>
             <button class="btn btn-2">重设</button>

@@ -43,7 +43,7 @@
                 <tbody>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
-                        <strong>0</strong>
+                        <strong style="margin-left:-30px">0</strong>
                         <input type="checkbox" data-name="0" data-plid="6798"></input>
                         <span class="ball-icon ball-10"></span>
                         <span class="ball-icon ball-20"></span>

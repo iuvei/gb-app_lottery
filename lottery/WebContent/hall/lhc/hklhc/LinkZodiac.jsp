@@ -119,7 +119,7 @@
                     </td>
 
                     <td style="cursor: pointer;" class="hx-list">
-                        <strong>鸡</strong>
+                        <strong style="margin-left:30px">鸡</strong>
                         <input type="checkbox" data-name="鸡">
                         <c:forEach var="item" items="${zodiacNum['鸡']}">
                             <span class="ball-icon ball-${item}"></span>
