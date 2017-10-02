@@ -70,6 +70,26 @@ public class BaseSscController extends BaseLotteryController {
      * 组选六
      */
     static final String GROUPSIX_URL = "/hall/ssc/include/GroupSix";
+    /**
+     * 五星
+     */
+    static final String FIVESTAR_URL = "/hall/ssc/include/FiveStar";
+    /**
+     * 四星
+     */
+    static final String FOURSTAR_URL = "/hall/ssc/include/FourStar";
+    /**
+     * 后三
+     */
+    static final String AFTERTHREE_URL = "/hall/ssc/include/AfterThree";
+    /**
+     * 前三
+     */
+    static final String FIRSTTHREE_URL = "/hall/ssc/include/FirstThree";
+    /**
+     * 前二
+     */
+    static final String FIVETWO_URL = "/hall/ssc/include/FirstTwo";
 
     // 双面玩法
     public String twoSide(Model model, String code) {
@@ -145,7 +165,26 @@ public class BaseSscController extends BaseLotteryController {
         initGroupSix(model, code);
         return GROUPSIX_URL;
     }
+    public  String fiveStarInit(Model model, String code) {
 
+        return  FIVESTAR_URL;
+    }
+    public  String fourStarInit(Model model, String code) {
+
+        return  FOURSTAR_URL;
+    }
+    public  String afterThreeInit(Model model, String code) {
+
+        return  AFTERTHREE_URL;
+    }
+    public  String firstThreeInit(Model model, String code) {
+
+        return  FIRSTTHREE_URL;
+    }
+    public  String firstTwoInit(Model model, String code) {
+
+        return  FIVETWO_URL;
+    }
     /**
      * 时时彩最近20条开彩记录
      *
@@ -361,7 +400,81 @@ public class BaseSscController extends BaseLotteryController {
         oddList.add(getOdds(LotteryBettingEnum.FIVE_SUM.getCode(), siteLotteryOdds));
         return oddList;
     }
+    /**
+     * 获取时时彩官方玩法的奖金,返点数据
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getGfwfAllOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WUXING_ZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_WUXING_ZXDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SIXING_ZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SIXING_ZXDS.getCode(), siteLotteryOdds));
 
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZXDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZXZH.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZXHZ.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZXKD.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZ3FS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZ3DS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZ6FS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZ6DS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSHHZX.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZUXHZ.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSZXBD.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSHZWS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_QSTS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZXDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZXZH.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZXHZ.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZXKD.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZ3FS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZ3DS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZ6FS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZ6DS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSHHZX.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZUXHZ.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSZXBD.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSHZWS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_SANXING_HSTS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.SSC_ERXING_QEZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_ERXING_QEZXDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_ERXING_QEZXHZ.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.SSC_ERXING_QEZUXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_ERXING_QEZUXDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_ERXING_QEZUXHZ.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_ERXING_QEZUXBD.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.SSC_YIXING_DWD.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_WXSM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_WXEM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_Q4EM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_Q4YM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_H4EM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_H4YM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_Q3EM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_Q3YM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_H4EM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_H3EM.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_BUDINGWEI_H3YM.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.SSC_DAXIAODANSHUANG_Q3.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_DAXIAODANSHUANG_H3.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_DAXIAODANSHUANG_Q2.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.SSC_DAXIAODANSHUANG_H2.getCode(), siteLotteryOdds));
+        return oddList;
+    }
     public String getBetInfo(String code, String betCode) {
         return JsonTool.toJson(getOdds(code, betCode));
     }

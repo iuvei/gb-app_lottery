@@ -94,7 +94,31 @@ public class ChongqinSscController extends BaseSscController {
     public String groupSix(Model model) {
         return groupSixInit(model, CODE);
     }
-
+    //五星
+    @RequestMapping("/fiveStar")
+    public String fiveStar(Model model) {
+        return fiveStarInit(model, CODE);
+    }
+    //四星
+    @RequestMapping("/fourStar")
+    public String fourStar(Model model) {
+        return fourStarInit(model, CODE);
+    }
+    //后三
+    @RequestMapping("/afterThree")
+    public String afterThree(Model model) {
+        return afterThreeInit(model, CODE);
+    }
+    //前三
+    @RequestMapping("/firstThree")
+    public String firstThree(Model model) {
+        return firstThreeInit(model, CODE);
+    }
+    //前二
+    @RequestMapping("/firstTwo")
+    public String firstTwo(Model model) {
+        return firstTwoInit(model, CODE);
+    }
     /**
      * 下注
      *
