@@ -9,19 +9,13 @@
                 <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
-                        <a href="javascript:void(0)" subCode="lhc_three_all_in" class="active">三全中</a>
-                        <a href="javascript:void(0)" subCode="lhc_three_in_two">三中二</a>
-                        <a href="javascript:void(0)" subCode="lhc_two_all_in">二全中</a>
-                        <a href="javascript:void(0)" subCode="lhc_two_in_special">二中特</a>
-                        <a href="javascript:void(0)" subCode="lhc_special_strand">特串</a>
-                        <a href="javascript:void(0)" subCode="lhc_four_all_in">四全中</a>
+                        <a href="javascript:void(0)" min-num="3" subCode="lhc_three_all_in" class="active">三全中</a>
+                        <a href="javascript:void(0)" min-num="3" subCode="lhc_three_in_two">三中二</a>
+                        <a href="javascript:void(0)" min-num="2" subCode="lhc_two_all_in">二全中</a>
+                        <a href="javascript:void(0)" min-num="2" subCode="lhc_two_in_special">二中特</a>
+                        <a href="javascript:void(0)" min-num="2" subCode="lhc_special_strand">特串</a>
+                        <a href="javascript:void(0)" min-num="4" subCode="lhc_four_all_in">四全中</a>
                 </div>
-                <input id="playCode2" type="hidden" value="${lhcTwoAllIn}">
-                <input id="playCode3" type="hidden" value="${lhcThreeAllIn}">
-                <input id="playCode4" type="hidden" value="${lhcFourAllIn}">
-                <input id="playCode5" type="hidden" value="${lhcThreeInTwo}">
-                <input id="playCode6" type="hidden" value="${lhcTwoInSpecial}">
-                <input id="playCode7" type="hidden" value="${lhcSpecialStrand}">
 
             </div>
         </div>
