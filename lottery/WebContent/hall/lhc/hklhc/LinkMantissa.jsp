@@ -36,7 +36,10 @@
                     </th>
                 </tr>
                 <tr>
-                    <th>号码</th> <th>号码</th>
+                    <th>号码</th>
+                    <th>赔率</th>
+                    <th>号码</th>
+                    <th>赔率</th>
                 </tr>
                 </thead>
 
@@ -50,6 +53,7 @@
                         <span class="ball-icon ball-30"></span>
                         <span class="ball-icon ball-40"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>1</strong>
@@ -60,6 +64,7 @@
                         <span class="ball-icon ball-31"></span>
                         <span class="ball-icon ball-41"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -71,6 +76,7 @@
                         <span class="ball-icon ball-32"></span>
                         <span class="ball-icon ball-42"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>3</strong>
@@ -81,6 +87,7 @@
                         <span class="ball-icon ball-33"></span>
                         <span class="ball-icon ball-43"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -92,6 +99,7 @@
                         <span class="ball-icon ball-34"></span>
                         <span class="ball-icon ball-44"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>5</strong>
@@ -102,6 +110,7 @@
                         <span class="ball-icon ball-35"></span>
                         <span class="ball-icon ball-45"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -113,7 +122,7 @@
                         <span class="ball-icon ball-36"></span>
                         <span class="ball-icon ball-46"></span>
                     </td>
-
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>7</strong>
@@ -124,6 +133,7 @@
                         <span class="ball-icon ball-37"></span>
                         <span class="ball-icon ball-47"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -135,6 +145,7 @@
                         <span class="ball-icon ball-38"></span>
                         <span class="ball-icon ball-48"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>9</strong>
@@ -145,6 +156,7 @@
                         <span class="ball-icon ball-39"></span>
                         <span class="ball-icon ball-49"></span>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
 
                 </tbody>
@@ -160,7 +172,7 @@
 </div>
 <script type="text/javascript">
 
-    curl(['site/hall/lhc/hklhc/LinkZodiac'], function(PlayWay) {
+    curl(['site/hall/lhc/hklhc/LinkMantissa'], function(PlayWay) {
         page.playWay = new PlayWay();
     });
 

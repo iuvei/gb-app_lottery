@@ -36,7 +36,10 @@
                     </th>
                 </tr>
                 <tr>
-                    <th>号码</th> <th>号码</th>
+                    <th>号码</th>
+                    <th>赔率</th>
+                    <th>号码</th>
+                    <th>赔率</th>
                 </tr>
                 </thead>
 
@@ -50,6 +53,8 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
+
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>牛</strong>
                         <input type="checkbox" data-name="牛">
@@ -57,6 +62,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -66,6 +72,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>兔</strong>
@@ -74,6 +81,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -83,6 +91,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>蛇</strong>
@@ -91,6 +100,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -100,6 +110,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>羊</strong>
@@ -108,6 +119,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -117,6 +129,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong style="margin-left:30px">鸡</strong>
@@ -125,6 +138,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list">
@@ -134,6 +148,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list">
                         <strong>猪</strong>
@@ -142,6 +157,7 @@
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
+                    <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
                 </tr>
                 </tbody>
 
