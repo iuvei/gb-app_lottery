@@ -32,7 +32,7 @@
                             <font id="lhc_title">三全中</font>
                             <span id="pl" class="pl red"></span>
                         </strong>
-                        (请选择<font id="minNum">3</font>个及以上号码)
+                        (请选择<font id="minNum" color="red">3</font>个及以上号码)
                     </th>
                 </tr>
                 <tr>
