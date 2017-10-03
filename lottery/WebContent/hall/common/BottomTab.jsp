@@ -42,7 +42,7 @@
                 <span>{{value.betCodeMemo}}-{{value.playCodeMemo}}</span>
                 <span>{{value.betNum}}</span>
                 <span>{{value.betAmount}}</span>
-                <span>{{value.payout}}</span>
+                <span>{{value.odd}}</span>
                 {{if value.status == 1}}
                     <span>待结算</span>
                 {{else if value.status == 2}}
