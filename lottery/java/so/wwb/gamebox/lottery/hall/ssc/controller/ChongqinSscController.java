@@ -119,6 +119,36 @@ public class ChongqinSscController extends BaseSscController {
     public String firstTwo(Model model) {
         return firstTwoInit(model, CODE);
     }
+    //定位胆
+    @RequestMapping("/dingWeiDan")
+    public String dingWeiDan(Model model) {
+        return dingWeiDanInit(model, CODE);
+    }
+    //不定位
+    @RequestMapping("/buDingWei")
+    public String buDingWei(Model model) {
+        return buDingWeiInit(model, CODE);
+    }
+    //大小单双
+    @RequestMapping("/bigSmall")
+    public String bigSmall(Model model) {
+        return bigSmallInit(model, CODE);
+    }
+    //任选二
+    @RequestMapping("/optionalTwo")
+    public String optionalTwo(Model model) {
+        return optionalTwoInit(model, CODE);
+    }
+    //任选三
+    @RequestMapping("/optionalThree")
+    public String optionalThree(Model model) {
+        return optionalThreeInit(model, CODE);
+    }
+    //任选四
+    @RequestMapping("/optionalFour")
+    public String optionalFour(Model model) {
+        return optionalFourInit(model, CODE);
+    }
     /**
      * 下注
      *

@@ -17,7 +17,7 @@
                 <span class="playPlIdBtn" data-pljs="100"  data-play_Code="ssc_erxing_zuxuan"data-play_id="ssc_erxing_zuxuan_qefs" data-play_pl_id="复式" data-name="q2zuxfs" data-fun_suiji="suiji_q2zuxfs" data-fun_zhushu="zhushu_q2zuxfs" data-fun_content="content_q2zuxfs"><a href="javascript:void(0)">组选复式</a></span>
                 <span class="playPlIdBtn" data-pljs="100"  data-play_Code="ssc_erxing_zuxuan" data-play_id="ssc_erxing_zuxuan_qeds" data-play_pl_id="单式" data-name="q2zuxds" data-fun_suiji="suiji_q2zuxds" data-fun_zhushu="zhushu_q2zuxds" data-fun_content="content_q2zuxds"><a href="javascript:void(0)">组选单式</a></span>
                 <span class="playPlIdBtn" data-pljs="100"  data-play_Code="ssc_erxing_zuxuan" data-play_id="ssc_erxing_zuxuan_qehz" data-play_pl_id="和值" data-name="q2zuxhz" data-fun_suiji="suiji_q2zuxhz" data-fun_zhushu="zhushu_q2zuxhz" data-fun_content="content_q2zuxhz"><a href="javascript:void(0)">组选和值</a></span>
-                <span class="playPlIdBtn" data-pljs="100"  data-play_Code="ssc_erxing_zuxuan"data-play_id="ssc_erxing_zuxuan_qebd" data-play_pl_id="包胆" data-name="q2zuxbd" data-fun_suiji="suiji_q2zuxbd" data-fun_zhushu="zhushu_q2zuxbd" data-fun_content="content_q2zuxbd"><a href="javascript:void(0)">组选包胆</a></span>
+                <span class="playPlIdBtn" data-pljs="100"  data-play_Code="ssc_erxing_zuxuan"data-play_id="ssc_erxing_zuxuan_qebd" data-play_pl_id="1" data-name="q2zuxbd" data-fun_suiji="suiji_q2zuxbd" data-fun_zhushu="zhushu_q2zuxbd" data-fun_content="content_q2zuxbd"><a href="javascript:void(0)">组选包胆</a></span>
             </p>
         </li>
     </ul>
