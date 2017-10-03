@@ -60,12 +60,12 @@
                             <span><a href="javascript:void(0)" data-url="cqssc-afterThree">后三</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-firstThree">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-firstTwo">前二</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-dwd">定位胆</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-budw">不定位</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-dxds">大小单双</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-rx2">任选二</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-rx3">任选三</a></span>
-                            <span><a href="javascript:void(0)" data-url="gfwf-cqssc-rx4">任选四</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-dingWeiDan">定位胆</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-buDingWei">不定位</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-bigSmall">大小单双</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-optionalTwo">任选二</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-optionalThree">任选三</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-optionalFour">任选四</a></span>
                         </p>
                     </li>
                     <li>
