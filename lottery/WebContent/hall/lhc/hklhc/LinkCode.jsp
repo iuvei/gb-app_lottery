@@ -16,6 +16,12 @@
                         <a href="javascript:void(0)" min-num="2" subCode="lhc_special_strand">特串</a>
                         <a href="javascript:void(0)" min-num="4" subCode="lhc_four_all_in">四全中</a>
                 </div>
+                <input id="lhc_two_all_in" type="hidden" value="${lhcTwoAllIn}">
+                <input id="lhc_three_all_in" type="hidden" value="${lhcThreeAllIn}">
+                <input id="lhc_four_all_in" type="hidden" value="${lhcFourAllIn}">
+                <input id="lhc_three_in_two" type="hidden" value="${lhcThreeInTwo}">
+                <input id="lhc_two_in_special" type="hidden" value="${lhcTwoInSpecial}">
+                <input id="lhc_special_strand" type="hidden" value="${lhcSpecialStrand}">
 
             </div>
         </div>
