@@ -6,7 +6,7 @@
     <c:set var="allPayout" value="${0}"></c:set>
     <c:if test="${not empty command.result}">
         <c:forEach items="${command.result}" var="p" varStatus="status">
-            <c:set var="allBetAmount" value="${allBetAmount+p.betAmount}"></c:set>
+            <c:set var="allBetAmount" value="${allBetAmount+p.realBetAmount}"></c:set>
             <c:set var="allPayout" value="${allPayout+p.payout}"></c:set>
         </c:forEach>
     </c:if>
