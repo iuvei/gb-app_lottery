@@ -16,7 +16,7 @@
                 <ul>
                     <li><a class="suiji1" href="javascript:void(0)" onclick="page.PlayWay.getSuiji(1)">随机一注</a></li>
                     <li><a class="suiji5" href="javascript:void(0)" onclick="page.PlayWay.getSuiji(5)">随机五注</a></li>
-                    <li class="clearLiZhudanbtn" sp="0"><a id="zhbtn" class="wdzhli" href="javascript:void(0)" onclick="page.PlayWay.renderZhuihao(null, this)"><span class="imgZh"></span>我要追号</a></li>
+                    <%--<li class="clearLiZhudanbtn" sp="0"><a id="zhbtn" class="wdzhli" href="javascript:void(0)" onclick="page.PlayWay.renderZhuihao(null, this)"><span class="imgZh"></span>我要追号</a></li>--%>
                     <li><a href="javascript:void(0)" onclick="page.PlayWay.clearZhudan()"><img src="${resRoot}/themes/default/img/ico52.png" alt="">清空注单</a></li>
                 </ul>
                 <p id="zongtouInfo">总投 <span>0</span> 注，<span>0</span> 倍，共 <span>0</span> 元。</p>
