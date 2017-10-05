@@ -33,7 +33,7 @@
                         <td><font color="green">-${p.money}</font></td>
                     </c:when>
                     <c:when test="${p.transactionType==4}">
-                        <td><font color="green">${p.money}</font></td>
+                        <td><font color="green">-${p.money}</font></td>
                     </c:when>
                     <c:otherwise>
                         <td><font color="red">${p.money}</font></td>
