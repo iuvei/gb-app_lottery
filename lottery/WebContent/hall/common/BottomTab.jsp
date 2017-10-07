@@ -28,7 +28,7 @@
             <span>玩法</span>
             <span>投注号码</span>
             <span>投注额</span>
-            <span>奖金</span>
+            <span>赔率|奖金</span>
             <span>状态</span>
         </li>
         {{each list as value index}}
