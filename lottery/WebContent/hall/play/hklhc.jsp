@@ -137,9 +137,20 @@
                     所投注的每二个号码为一组合，其中一个是正码，一个是特别号码，视为中奖，其馀情形视为 不中奖（含二个号码都是正码之情形） 。
                 </td>
             </tr>
+
+            <tr>
+                <td valign="top" bgcolor="#FFE3CA" align="center">
+                    6·
+                </td>
+                <td bgcolor="#FFF7F0">
+                    <span class="style2">四全中：</span>
+                    所投注的每四个号码为一组合，若四个号码都是开奖号码之正码，视为中奖，其余情形视 为不中奖。如06、07、08、09四个都是开奖号码之正码，视为中奖，如三个正码加上一个特别号码视为 不中奖。
+                </td>
+            </tr>
+
             <tr>
                 <td valign="top" bgcolor="#FCF7CB" align="center">
-                    6.
+                    7.
                 </td>
                 <td bgcolor="#FFF7F0">
                     依照二全中·二中特·特串 此3种玩法规则,来进行‘生肖对碰’或‘尾数对碰’<br>
