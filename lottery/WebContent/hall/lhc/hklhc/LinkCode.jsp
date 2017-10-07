@@ -32,7 +32,8 @@
                     <tr>
                         <th colspan="10">
                             <strong>
-                                <font id="lhc_title">三全中</font>@<font color="red" id="oddValue"></font>
+                                <font id="lhc_title">三全中</font>@<font color="red" id="oddValue"></font>&nbsp;&nbsp;&nbsp;
+                                <font id="nextOddTitle" class="nextOddValue"></font>
                                 <label class="nextOddValue" hidden>@</label>
                                 <font class="nextOddValue" hidden color="red" id="nextOddValue"></font>
                                 <span id="pl" class="pl red"></span>

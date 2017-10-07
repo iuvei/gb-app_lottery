@@ -92,17 +92,10 @@
         <h5><strong>【连码】</strong></h5>
         <p>
         <table>
-            <tbody><tr>
-                <td width="4%" valign="top" bgcolor="#FFE3CA" align="center">
-                    1·
-                </td>
-                <td width="96%" bgcolor="#FFF7F0">
-                    <span class="style2">四中一： </span>所投注的每四个号码为一组合，若四个号码中有一个号码是开奖号码之正码，视为中奖，其余情形视为不中奖。如06、07、08、09四个有一个号码是开奖号码之正码，视为中奖。
-                </td>
-            </tr>
+            <tbody>
             <tr>
                 <td width="4%" valign="top" bgcolor="#FFE3CA" align="center">
-                    2·
+                    1·
                 </td>
                 <td width="96%" bgcolor="#FFF7F0">
                     <span class="style2">三中二： </span>所投注的每三个号码为一组合，若其中2个是开奖号码中的正码，即为三中二，视为中奖；   若3个都是开奖号码中的正码，即为三中二之中三，其馀情形视为不中奖，如06、07、08   为一组合，开奖号码中有06、07两个正码，没有08，即为三中二，按三中二赔付；如开奖   号码中有06、07、08三个正码，即为三中二之中三，按中三赔付；如出现1个或没有，视 为不中奖 。
@@ -110,7 +103,7 @@
             </tr>
             <tr>
                 <td valign="top" bgcolor="#FCF7CB" align="center">
-                    3·
+                    2·
                 </td>
                 <td bgcolor="#FDFBE3">
                     <span class="style2">三全中：</span>
@@ -119,7 +112,7 @@
             </tr>
             <tr>
                 <td valign="top" bgcolor="#FFE3CA" align="center">
-                    4·
+                    3·
                 </td>
                 <td bgcolor="#FFF7F0">
                     <span class="style2">二全中：</span>
@@ -128,7 +121,7 @@
             </tr>
             <tr>
                 <td valign="top" bgcolor="#FCF7CB" align="center">
-                    5·
+                    4·
                 </td>
                 <td bgcolor="#FDFBE3">
                     <span class="style2">二中特：</span>
@@ -137,13 +130,24 @@
             </tr>
             <tr>
                 <td valign="top" bgcolor="#FFE3CA" align="center">
-                    6·
+                    5·
                 </td>
                 <td bgcolor="#FFF7F0">
                     <span class="style2">特串：</span>
                     所投注的每二个号码为一组合，其中一个是正码，一个是特别号码，视为中奖，其馀情形视为 不中奖（含二个号码都是正码之情形） 。
                 </td>
             </tr>
+
+            <tr>
+                <td valign="top" bgcolor="#FFE3CA" align="center">
+                    6·
+                </td>
+                <td bgcolor="#FFF7F0">
+                    <span class="style2">四全中：</span>
+                    所投注的每四个号码为一组合，若四个号码都是开奖号码之正码，视为中奖，其余情形视 为不中奖。如06、07、08、09四个都是开奖号码之正码，视为中奖，如三个正码加上一个特别号码视为 不中奖。
+                </td>
+            </tr>
+
             <tr>
                 <td valign="top" bgcolor="#FCF7CB" align="center">
                     7.
