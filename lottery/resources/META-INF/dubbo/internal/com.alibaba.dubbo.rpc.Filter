@@ -1,1 +1,1 @@
-specifyDSConsumerFilter=so.wwb.gamebox.web.filter.SpecifyDatasourceConsumerFilter
+specifyDatasourceConsumerFilter=so.wwb.gamebox.web.filter.SpecifyDatasourceConsumerFilter
