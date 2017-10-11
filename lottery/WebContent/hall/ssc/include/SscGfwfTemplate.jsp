@@ -25,11 +25,11 @@
             {{showContent}}
         </td>
         <td class="span_2">
-            {{if betMode == 0}}
+            {{if betMode == 1}}
             元
-            {{else if betMode == 1}}
+            {{else if betMode == 10}}
             角
-            {{else if betMode == 2}}
+            {{else if betMode == 100}}
             分
             {{/if}}
         </td>
@@ -57,15 +57,15 @@
                 <span>号码：{{showContent}}</span>
             </div>
             <div class="line">
-                <span>模式：{{if showMode == 1}}元{{else if showMode == 2}}角{{else if showMode == 3}}分{{/if}}模式, 奖金&nbsp;{{showPlayPl}}, 返点&nbsp;{{showFandian}}%</span>
+                <span>模{{showMode}}式：{{if showMode == 1}}元{{else if showMode == 10}}角{{else if showMode == 100}}分{{/if}}模式, 奖金&nbsp;{{showPlayPl}}, 返点&nbsp;{{showFandian}}%</span>
             </div>
             <div class="line">
                 <span>包含&nbsp;{{betZhushu}}&nbsp;注，每注金额&nbsp;{{betPerMoney}}&nbsp;
-                {{if showMode == 0}}
+                {{if showMode == 1}}
                 元
-                {{else if showMode == 1}}
+                {{else if showMode == 10}}
                 角
-                {{else if showMode == 2}}
+                {{else if showMode == 100}}
                 分
                 {{/if}}
                 ，{{bet_beishu}}倍
@@ -104,17 +104,17 @@
                     <a class="fr">+</a>
                     <span>倍</span>
                 </div>
-                <div class="down">
+                <div class="down" style="width: 25px;">
                     <input type="text" value="2" id="inputMoney" data-money="2" disabled="disabled">
-                    <span></span>
+                    <%--<span></span>--%>
                     <div class="down_menu">
                         <i>2</i>
                     </div>
                 </div>
                 <div class="yjf-wrap">
-                    <span class="mode_select selected" data-value="0">元</span>
-                    <span class="mode_select" data-value="1">角</span>
-                    <span class="mode_select" data-value="2">分</span>
+                    <span class="mode_select selected" data-value="1">元</span>
+                    <span class="mode_select" data-value="10">角</span>
+                    <span class="mode_select" data-value="100">分</span>
                 </div>
                 <%--<div class="down redown-gfwf selectMode_gfwf" style="">--%>
                     <%--<input type="text" value="元" id="inputMoneyStr" disabled="disabled">--%>
