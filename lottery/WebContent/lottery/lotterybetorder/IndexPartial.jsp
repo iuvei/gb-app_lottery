@@ -6,14 +6,17 @@
     <c:set var="allPayout" value="${0}"></c:set>
     <c:if test="${not empty command.result}">
         <c:forEach items="${command.result}" var="p" varStatus="status">
-            <c:set var="allBetAmount" value="${allBetAmount+p.realBetAmount}"></c:set>
+            <c:set var="allBetAmount" value="${allBetAmount+p.betAmount}"></c:set>
             <c:set var="allPayout" value="${allPayout+p.payout}"></c:set>
+            <c:set var="allRebateAmount" value="${allRebateAmount+p.rebateAmount}"></c:set>
         </c:forEach>
     </c:if>
     当前投注额<span id="pageMoney">${soulFn:formatCurrency(allBetAmount)}</span>元，
     总投注额<span id="totalMoney">0</span>元，
     当前派彩<span id="pageWinOrLoseMoney">${soulFn:formatCurrency(allPayout)}</span>元，
     总派彩<span id="totalWinOrLoseMoney">0</span>元,
+    当前返还金额<span id="pageRebateAmount">${soulFn:formatCurrency(allRebateAmount)}</span>元，
+    总返还金额<span id="totalRebateAmount">0</span>元，
     投注单量<span id="betCount">${command.paging.totalCount}</span>笔
 </div>
 <table class="eveb_box eveb_table" id="dataTable">
@@ -26,6 +29,7 @@
         <th>投注玩法</th>
         <th>投注内容</th>
         <th>投注金额</th>
+        <th>返还金额</th>
         <th>赔率|奖金</th>
         <th>派彩</th>
         <th>投注时间</th>
@@ -52,6 +56,7 @@
             <td>${dicts.lottery.lottery_betting[p.betCode]}-${dicts.lottery.lottery_play[p.playCode]}</td>
             <td>${p.betNum}</td>
             <td>${p.betAmount}</td>
+            <td>${p.rebateAmount}</td>
             <td>
                 <c:choose>
                     <c:when test="${p.playCode eq 'keno_selection_five'}">
