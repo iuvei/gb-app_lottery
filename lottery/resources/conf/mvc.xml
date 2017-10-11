@@ -11,7 +11,7 @@
 
     <context:property-placeholder location="classpath*:conf/*-conf.properties" ignore-unresolvable="true"/>
 
-    <context:component-scan base-package="org.soul.**.controller,so.wwb.gamebox.**.controller" />
+    <context:component-scan base-package="org.soul.**.controller,so.wwb.gamebox.lottery.**.controller" />
 
     <import resource="classpath*:conf/mvc-ctx.xml" />
     <mvc:resources location="/common/"  mapping="/common/**" />
