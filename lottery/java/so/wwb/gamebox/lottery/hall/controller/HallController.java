@@ -49,7 +49,7 @@ public class HallController extends BaseLotteryController {
     private static final String HALL_PLAY_URL = "/hall/play/";
 
     @RequestMapping("/index")
-    public String index(Model model) {
+    public String hallIndex(Model model,String type, String code) {
         List<SiteLottery> normalLotteries = Cache.getNormalSiteLottery(TerminalEnum.PC.getCode(), SessionManager.getSiteId());
         if(CollectionTool.isNotEmpty(normalLotteries)){
             Map<String, SiteLottery> siteLotteryMap = CollectionTool.toEntityMap(normalLotteries, SiteLottery.PROP_CODE, String.class);
@@ -66,6 +66,10 @@ public class HallController extends BaseLotteryController {
 
             model.addAttribute("hot", normalLotteries);
             model.addAttribute("lotteryCodes",siteLotteryMap.keySet());
+            if(StringTool.isNotEmpty(type) && StringTool.isNotEmpty(code)){
+                model.addAttribute("type", type);
+                model.addAttribute("code", code);
+            }
         }
         return HALL_INDEX_URL;
     }

@@ -143,6 +143,12 @@
 </script>
 <script type="text/javascript">
     curl(['site/hall/Index'], function(Index) {
+        var type = '${type}';
+        var code = '${code}';
+        if(type != '' && code != ''){
+            sessionStorage.lottery_type = type;
+            sessionStorage.lottery_code = code;
+        }
         index = new Index();
     });
 </script>

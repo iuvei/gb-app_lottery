@@ -54,8 +54,14 @@
     </div>
     <script>
         language = '${language.replace('_','-')}';
+        var url = '${root}/hall/index.html';
+        var type = '${type}';
+        var code = '${code}';
+        if(type != '' && code != ''){
+            url += '?type='+type+'&code='+code;
+        }
         setTimeout(function () {
-            window.location.replace('${root}/hall/index.html');
+            window.location.replace(url);
         }, 1000)
     </script>
 </body>

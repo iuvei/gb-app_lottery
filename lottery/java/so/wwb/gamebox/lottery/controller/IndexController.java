@@ -3,6 +3,7 @@ package so.wwb.gamebox.lottery.controller;
 import org.json.JSONObject;
 import org.soul.commons.init.context.CommonContext;
 import org.soul.commons.lang.string.I18nTool;
+import org.soul.commons.lang.string.StringTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,11 @@ public class IndexController  extends LotteryDemoController {
     private static final String INDEX_URI = "index";
 
     @RequestMapping(value = "index")
-    protected String index() {
+    protected String index(Model model, String type, String code) {
+        if(StringTool.isNotEmpty(type) && StringTool.isNotEmpty(code)){
+            model.addAttribute("type", type);
+            model.addAttribute("code", code);
+        }
         return INDEX_URI;
     }
 
