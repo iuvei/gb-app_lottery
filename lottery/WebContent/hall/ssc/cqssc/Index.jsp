@@ -52,6 +52,7 @@
         <div class="layout at">
             <div class="Playmethod">
                 <ul>
+                    <c:if test="${lotteryGenra == 1 || lotteryGenra==2}">
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
@@ -68,6 +69,8 @@
                             <span><a href="javascript:void(0)" data-url="cqssc-optionalFour">任选四</a></span>
                         </p>
                     </li>
+                    </c:if>
+                    <c:if test="${lotteryGenra == 1 || lotteryGenra==3}">
                     <li>
                         <b>快钱玩法</b>
                         <p class="kuaiqian">
@@ -88,6 +91,7 @@
                             <span><a href="javascript:void(0)" data-url="cqssc-dragonTiger">龙虎</a></span>
                         </p>
                     </li>
+                    </c:if>
                 </ul>
             </div>
             <div id="subContent"></div>

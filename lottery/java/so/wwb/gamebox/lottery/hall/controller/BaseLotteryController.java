@@ -66,6 +66,8 @@ public abstract class BaseLotteryController extends so.wwb.gamebox.web.lottery.c
         model.addAttribute("type", type);
         // 小彩种
         model.addAttribute("code", code);
+        //前端官方，双面玩法的显示控制
+        model.addAttribute("lotteryGenra",getLotteryGenra(code));
     }
 
 
