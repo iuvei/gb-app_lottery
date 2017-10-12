@@ -39,6 +39,9 @@
                     <span><i>双</i></span>
                 </var>
                 <div class="clear re-5x-i">
+                    <i onclick=" page.PlayWay.selectFun_1(this)">全</i>
+                </div>
+                <div class="clear re-5x-i">
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
                 </div>
             </li>
@@ -50,6 +53,9 @@
                     <span><i>单</i></span>
                     <span><i>双</i></span>
                 </var>
+                <div class="clear re-5x-i">
+                    <i onclick=" page.PlayWay.selectFun_1(this)">全</i>
+                </div>
                 <div class="clear re-5x-i">
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
                 </div>
