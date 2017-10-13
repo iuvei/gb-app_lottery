@@ -43,7 +43,7 @@
         <span class="fr fl cl-1001">
             从百位、十位、个位各选一个号码组成一注。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：345 开奖号码后三位：1345，即中后三位直选。</var>
+                <var>投注方案：345 开奖号码后三位：345，即中后三位直选。</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
