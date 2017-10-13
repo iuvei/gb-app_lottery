@@ -110,7 +110,6 @@
             <textarea  id="textarea1" class="content_tex" autofocus></textarea>
             <div class="right con_j_end">
                 <ul>
-                    <li onclick="page.PlayWay.delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                     <li onclick="page.PlayWay.daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                     <li onclick="page.PlayWay.clearTextarea()"><a href="javascript:void(0)">清空</a></li>
                 </ul>
@@ -269,7 +268,6 @@
             <textarea class="content_tex" autofocus></textarea>
             <div class="right con_j_end">
                 <ul>
-                    <li onclick="page.PlayWay.delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                     <li onclick="page.PlayWay.daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                     <li onclick="page.PlayWay.clearTextarea()"><a href="javascript:void(0)">清空</a></li>
                 </ul>

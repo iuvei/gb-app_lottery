@@ -144,7 +144,6 @@
             <textarea  id="textarea1" class="content_tex" autofocus></textarea>
             <div class="right con_j_end">
                 <ul>
-                    <li onclick="page.PlayWay.delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                     <li onclick="page.PlayWay.daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                     <li onclick="page.PlayWay.clearTextarea()"><a href="javascript:void(0)">清空</a></li>
                 </ul>
@@ -402,7 +401,6 @@
             <textarea class="content_tex" autofocus></textarea>
             <div class="right con_j_end">
                 <ul>
-                    <li onclick="page.PlayWay.delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                     <li onclick="page.PlayWay.daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                     <li onclick="page.PlayWay.clearTextarea()"><a href="javascript:void(0)">清空</a></li>
                 </ul>
@@ -474,7 +472,6 @@
             <textarea class="content_tex" autofocus></textarea>
             <div class="right con_j_end">
                 <ul>
-                    <li onclick="page.PlayWay.delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                     <li onclick="page.PlayWay.daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                     <li onclick="page.PlayWay.clearTextarea()"><a href="javascript:void(0)">清空</a></li>
                 </ul>
@@ -504,7 +501,6 @@
             <textarea class="content_tex" autofocus></textarea>
             <div class="right con_j_end">
                 <ul>
-                    <li onclick="page.PlayWay.delRrepet(this)"><a href="javascript:void(0)">删除重复号</a></li>
                     <li onclick="page.PlayWay.daoRu()"><a href="javascript:void(0)">导入文件</a></li>
                     <li onclick="page.PlayWay.clearTextarea()"><a href="javascript:void(0)">清空</a></li>
                 </ul>
@@ -639,7 +635,7 @@
     <div class="Pick cl-1002 cl-1015-tsh">
         <p class="p1">
         <span class="fr fl cl-1001">
-            选择1个或一个以上号码。
+            选择1个或一个以上特殊号码。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
                 <var>投注方案：豹子顺子对子 开奖号码：后三位888，即中豹子；后三位678，即中顺子；后三位558，即中对子。</var>
             </a>

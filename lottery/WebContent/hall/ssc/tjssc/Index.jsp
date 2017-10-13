@@ -64,10 +64,6 @@
                             <span><a href="javascript:void(0)" data-url="cqssc-firstTwo">前二</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-dingWeiDan">定位胆</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-buDingWei">不定位</a></span>
-                            <span><a href="javascript:void(0)" data-url="cqssc-bigSmall">大小单双</a></span>
-                            <span><a href="javascript:void(0)" data-url="cqssc-optionalTwo">任选二</a></span>
-                            <span><a href="javascript:void(0)" data-url="cqssc-optionalThree">任选三</a></span>
-                            <span><a href="javascript:void(0)" data-url="cqssc-optionalFour">任选四</a></span>
                         </p>
                     </li>
                     </c:if>
