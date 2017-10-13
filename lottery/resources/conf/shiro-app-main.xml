@@ -45,6 +45,7 @@
 		<property name="filterChainDefinitions">
 			<value>
 				/message_*.js = anon
+				/index.html = anon
 				/index/language.html = anon
 				/index/language/change.html = anon
 				/images/favicon.ico = anon <!--for chrome-->
