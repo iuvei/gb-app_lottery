@@ -22,25 +22,26 @@
 <table class="eveb_box eveb_table" id="dataTable">
     <thead>
     <tr role="row" class="bg-gray">
-        <th style="width: 80px">序号</th>
-        <th>所属彩种</th>
-        <th>注单号</th>
-        <th>彩票期号</th>
-        <th>投注玩法</th>
-        <th>投注内容</th>
-        <th>倍数</th>
-        <th>投注金额</th>
-        <th>返还金额</th>
-        <th>赔率|奖金</th>
-        <th>派彩</th>
-        <th>投注时间</th>
-        <th>投注帐号</th>
-        <th>状态</th>
+        <th style="width: 3%">序号</th>
+        <th style="width: 7%">所属彩种</th>
+        <th style="width: 5%">注单号</th>
+        <th style="width: 7%">彩票期号</th>
+        <th style="width: 12%">投注玩法</th>
+        <th style="width: 20%">投注内容</th>
+        <th style="width: 4%">倍数</th>
+        <th style="width: 4%">奖金模式</th>
+        <th style="width: 5%">投注金额</th>
+        <th style="width: 5%">返还金额</th>
+        <th style="width: 5%">赔率|奖金</th>
+        <th style="width: 4%">派彩</th>
+        <th style="width: 10%">投注时间</th>
+        <th style="width: 5%">投注帐号</th>
+        <th style="width: 5%">状态</th>
     </tr>
     </thead>
     <tbody>
     <c:if test="${empty command.result}">
-        <td colspan="12" class="no-content_wrap" style="height: 200px;">
+        <td colspan="15" class="no-content_wrap" style="height: 200px;">
             <div>
                 <i class="fa fa-exclamation-circle"></i> 暂无内容!
             </div>
@@ -54,43 +55,46 @@
             <td>${dicts.lottery.lottery[p.code]}</td>
             <td>${p.id}</td>
             <td>${p.expect}</td>
-            <td>${dicts.lottery.lottery_betting[p.betCode]}-${dicts.lottery.lottery_play[p.playCode]}</td>
-            <td>${p.betNum}</td>
+            <td title="${dicts.lottery.lottery_betting[p.betCode]}-${dicts.lottery.lottery_play[p.playCode]}">${dicts.lottery.lottery_betting[p.betCode]}-${dicts.lottery.lottery_play[p.playCode]}</td>
+            <td title="${p.betNum}">${p.betNum}</td>
             <td><c:if test="${empty p.multiple}">1</c:if>
                 <c:if test="${not empty p.multiple}">${p.multiple}</c:if>
             </td>
+            <td><c:if test="${empty p.bonusModel || p.bonusModel eq 1}">元</c:if>
+                <c:if test="${p.bonusModel eq 10}">角</c:if>
+                <c:if test="${p.bonusModel eq 100}">分</c:if>
+            </td>
             <td>${p.betAmount}</td>
             <td>${p.rebateAmount}</td>
-            <td>
-                <c:choose>
-                    <c:when test="${p.playCode eq 'keno_selection_five'}">
-                        中5@${p.odd} 中4@${p.odd2} 中3@${p.odd3}
-                    </c:when>
-                    <c:when test="${p.playCode eq 'keno_selection_four'}">
-                        中4@${p.odd} 中3@${p.odd2} 中2@${p.odd3}
-                    </c:when>
-                    <c:when test="${p.playCode eq 'keno_selection_three'}">
-                        中3@${p.odd} 中2@${p.odd2}
-                    </c:when>
-                    <c:when test="${p.playCode eq 'lhc_three_in_two'}">
-                        中二@${p.odd} 中三@${p.odd2}
-                    </c:when>
-                    <c:when test="${p.playCode eq 'lhc_two_in_special'}">
-                        中特@${p.odd} 中二@${p.odd2}
-                    </c:when>
-                    <c:when test="${p.betCode eq 'ssc_sanxing_zhixuan_qszh' || p.betCode eq 'ssc_sanxing_zhixuan_hszh'}">
-                        三星@${p.odd} 二星@${p.odd2} 一星@${p.odd3}
-                    </c:when>
-                    <c:when test="${p.betCode eq 'ssc_sanxing_zuxuan_qshhzx' || p.betCode eq 'ssc_sanxing_zuxuan_hshhzx'
+            <c:choose>
+                <c:when test="${p.playCode eq 'keno_selection_five'}">
+                    <c:set var="pOdd" value="中5@${p.odd} 中4@${p.odd2} 中3@${p.odd3}"/>
+                </c:when>
+                <c:when test="${p.playCode eq 'keno_selection_four'}">
+                    <c:set var="pOdd" value="中4@${p.odd} 中3@${p.odd2} 中2@${p.odd3}"/>
+                </c:when>
+                <c:when test="${p.playCode eq 'keno_selection_three'}">
+                    <c:set var="pOdd" value="中3@${p.odd} 中2@${p.odd2}"/>
+                </c:when>
+                <c:when test="${p.playCode eq 'lhc_three_in_two'}">
+                    <c:set var="pOdd" value="中二@${p.odd} 中三@${p.odd2}"/>
+                </c:when>
+                <c:when test="${p.playCode eq 'lhc_two_in_special'}">
+                    <c:set var="pOdd" value="中特@${p.odd} 中二@${p.odd2}"/>
+                </c:when>
+                <c:when test="${p.betCode eq 'ssc_sanxing_zhixuan_qszh' || p.betCode eq 'ssc_sanxing_zhixuan_hszh'}">
+                    <c:set var="pOdd" value="三星@${p.odd} 二星@${p.odd2} 一星@${p.odd3}"/>
+                </c:when>
+                <c:when test="${p.betCode eq 'ssc_sanxing_zuxuan_qshhzx' || p.betCode eq 'ssc_sanxing_zuxuan_hshhzx'
                     || p.betCode eq 'ssc_sanxing_zuxuan_qszxhz' || p.betCode eq 'ssc_sanxing_zuxuan_hszxhz'
                     || p.betCode eq 'ssc_sanxing_zuxuan_qszxbd' || p.betCode eq 'ssc_sanxing_zuxuan_hszxbd'}">
-                        组三@${p.odd} 组六@${p.odd2}
-                    </c:when>
-                    <c:otherwise>
-                        ${p.odd}
-                    </c:otherwise>
-                </c:choose>
-            </td>
+                    <c:set var="pOdd" value="组三@${p.odd} 组六@${p.odd2}"/>
+                </c:when>
+                <c:otherwise>
+                    <c:set var="pOdd" value="${p.odd}"/>
+                </c:otherwise>
+            </c:choose>
+            <td title="${pOdd}">${pOdd}</td>
             <td>
                 <c:choose>
                     <c:when test="${p.payout>0}">
