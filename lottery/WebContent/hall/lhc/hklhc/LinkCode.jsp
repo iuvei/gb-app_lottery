@@ -32,10 +32,10 @@
                     <tr>
                         <th colspan="10">
                             <strong>
-                                <font id="lhc_title">三全中</font>@<font color="red" id="oddValue"></font>&nbsp;&nbsp;&nbsp;
+                                <font id="lhc_title">三全中</font>@<font color="red" id="oddValue"></font>&nbsp;
                                 <font id="nextOddTitle" class="nextOddValue"></font>
-                                <label class="nextOddValue" hidden>@</label>
-                                <font class="nextOddValue" hidden color="red" id="nextOddValue"></font>
+                                <label class="nextOddValue" style="margin-left: -4px;" hidden>@</label>
+                                <font id="nextOddValue" class="nextOddValue" style="margin-left: -4px;" color="red" hidden></font>
                                 <span id="pl" class="pl red"></span>
                             </strong>
                             (请选择<font id="minNum" color="red">3</font>个及以上号码)
