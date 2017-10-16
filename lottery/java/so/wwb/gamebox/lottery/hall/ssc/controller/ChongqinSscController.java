@@ -94,7 +94,61 @@ public class ChongqinSscController extends BaseSscController {
     public String groupSix(Model model) {
         return groupSixInit(model, CODE);
     }
-
+    //五星
+    @RequestMapping("/fiveStar")
+    public String fiveStar(Model model) {
+        return fiveStarInit(model, CODE);
+    }
+    //四星
+    @RequestMapping("/fourStar")
+    public String fourStar(Model model) {
+        return fourStarInit(model, CODE);
+    }
+    //后三
+    @RequestMapping("/afterThree")
+    public String afterThree(Model model) {
+        return afterThreeInit(model, CODE);
+    }
+    //前三
+    @RequestMapping("/firstThree")
+    public String firstThree(Model model) {
+        return firstThreeInit(model, CODE);
+    }
+    //前二
+    @RequestMapping("/firstTwo")
+    public String firstTwo(Model model) {
+        return firstTwoInit(model, CODE);
+    }
+    //定位胆
+    @RequestMapping("/dingWeiDan")
+    public String dingWeiDan(Model model) {
+        return dingWeiDanInit(model, CODE);
+    }
+    //不定位
+    @RequestMapping("/buDingWei")
+    public String buDingWei(Model model) {
+        return buDingWeiInit(model, CODE);
+    }
+    //大小单双
+    @RequestMapping("/bigSmall")
+    public String bigSmall(Model model) {
+        return bigSmallInit(model, CODE);
+    }
+    //任选二
+    @RequestMapping("/optionalTwo")
+    public String optionalTwo(Model model) {
+        return optionalTwoInit(model, CODE);
+    }
+    //任选三
+    @RequestMapping("/optionalThree")
+    public String optionalThree(Model model) {
+        return optionalThreeInit(model, CODE);
+    }
+    //任选四
+    @RequestMapping("/optionalFour")
+    public String optionalFour(Model model) {
+        return optionalFourInit(model, CODE);
+    }
     /**
      * 下注
      *

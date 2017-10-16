@@ -34,11 +34,13 @@
                     <i class="show"></i>
                 </h2>
                 <div class="down" style="display: block;">
-                       <c:forEach items="${hot}" var="hot" varStatus="status">
-                           <c:if test="${hot.status=='normal'}">
-                             <a href="javascript:void(0)" data-url='/${hot.type}/${hot.code}/index.html'><img src="${resRoot}/themes/default/img/${hot.code}.png"><var>${dicts.lottery.lottery[hot.code]}</var></a>
-                           </c:if>
-                       </c:forEach>
+                    <c:if test="${not empty hot}">
+                        <c:forEach items="${hot}" var="hot" varStatus="status">
+                            <c:if test="${hot.status=='normal'}">
+                                <a href="javascript:void(0)" data-url='/${hot.type}/${hot.code}/index.html'><img src="${resRoot}/themes/default/img/${hot.code}.png"><var>${dicts.lottery.lottery[hot.code]}</var></a>
+                            </c:if>
+                        </c:forEach>
+                    </c:if>
                 </div>
             </li>
             <li class="show">
@@ -48,9 +50,11 @@
                     <i></i>
                 </h2>
                 <div class="down">
-                    <c:forEach items="${high}" var="h" varStatus="status">
-                        <a href="javascript:void(0)" data-url='/${h.type}/${h.code}/index.html'><img src="${resRoot}/themes/default/img/${h.code}.png"><var>${dicts.lottery.lottery[h.code]}</var></a>
-                    </c:forEach>
+                    <c:if test="${not empty high}">
+                        <c:forEach items="${high}" var="h" varStatus="status">
+                            <a href="javascript:void(0)" data-url='/${h.type}/${h.code}/index.html'><img src="${resRoot}/themes/default/img/${h.code}.png"><var>${dicts.lottery.lottery[h.code]}</var></a>
+                        </c:forEach>
+                    </c:if>
                 </div>
             </li>
             <li class="show">
@@ -58,9 +62,11 @@
                     <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico9.png"></var></div></span><b>低频彩</b><i></i>
                 </h2>
                 <div class="down">
-                    <c:forEach items="${low}" var="l" varStatus="status">
-                        <a href="javascript:void(0)" data-url='/${l.type}/${l.code}/index.html'><img src="${resRoot}/themes/default/img/${l.code}.png"><var>${dicts.lottery.lottery[l.code]}</var></a>
-                    </c:forEach>
+                    <c:if test="${not empty low}">
+                        <c:forEach items="${low}" var="l" varStatus="status">
+                            <a href="javascript:void(0)" data-url='/${l.type}/${l.code}/index.html'><img src="${resRoot}/themes/default/img/${l.code}.png"><var>${dicts.lottery.lottery[l.code]}</var></a>
+                        </c:forEach>
+                    </c:if>
                 </div>
             </li>
             <li>
@@ -78,9 +84,11 @@
                     <span><div class="pict"><var><img src="${resRoot}/themes/default/img/ico13.png"></var></div></span><b>玩法介绍</b><i></i>
                 </h2>
                 <div class="down playWay">
-                    <c:forEach items="${lotteryCodes}" var="lotteryCode" varStatus="status">
-                        <a href="javascript:void(0)" data-playway="${lotteryCode}"><img src="${resRoot}/themes/default/img/${lotteryCode}.png"><var>${dicts.lottery.lottery[lotteryCode]}</var></a>
-                    </c:forEach>
+                    <c:if test="${not empty lotteryCodes}">
+                        <c:forEach items="${lotteryCodes}" var="lotteryCode" varStatus="status">
+                            <a href="javascript:void(0)" data-playway="${lotteryCode}"><img src="${resRoot}/themes/default/img/${lotteryCode}.png"><var>${dicts.lottery.lottery[lotteryCode]}</var></a>
+                        </c:forEach>
+                    </c:if>
                 </div>
             </li>
             <li>
