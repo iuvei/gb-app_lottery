@@ -22,9 +22,26 @@ public class BeijingPk10Controller extends BasePk10Controller {
     private static final String CODE = LotteryEnum.BJPK10.getCode();
 
     @RequestMapping("/index")
-    public String index(Model model) {
+    public String index(HttpServletRequest request,Model model, String betCode,Integer isGfwf,String playCode) {
         index(model, TYPE, CODE);
-        return String.format(INDEX_URL, CODE);
+        //初始化玩法
+        initData(model,betCode);
+        //前端官方，双面玩法的显示控制
+        Integer lotteryGenra = getLotteryGenra(CODE);
+        model.addAttribute("lotteryGenra",lotteryGenra);
+        model.addAttribute("betCode", betCode);
+        model.addAttribute("playCode", playCode);
+        if (lotteryGenra ==1){  //全部开启
+            if(isGfwf ==null || isGfwf ==0){
+                return String.format(INDEX_URL, CODE);
+            }else{
+                return String.format(GFWFINDEX_URL, CODE);
+            }
+        }else if (lotteryGenra ==2){ //只开官方玩法
+            return String.format(GFWFINDEX_URL, CODE);
+        }else {//只开双面玩法
+            return String.format(INDEX_URL, CODE);
+        }
     }
 
     // 双面玩法

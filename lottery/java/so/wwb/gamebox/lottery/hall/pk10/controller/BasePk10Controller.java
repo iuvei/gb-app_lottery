@@ -27,6 +27,8 @@ public class BasePk10Controller extends BaseLotteryController {
     static final String TYPE = LotteryTypeEnum.PK10.getCode();
 
     static final String INDEX_URL = "/hall/pk10/%s/Index";
+
+    static final String GFWFINDEX_URL = "/hall/pk10/%s-gfwf/Index";
     /**
      * 双面
      */
