@@ -57,7 +57,7 @@
                 <span>号码：{{showContent}}</span>
             </div>
             <div class="line">
-                <span>模式：{{if showMode == 1}}元{{else if showMode == 10}}角{{else if showMode == 100}}分{{/if}}模式, 奖金&nbsp;{{showPlayPl}}, 返点&nbsp;{{showFandian}}%</span>
+                <span>模式:{{if showMode == 1}}元{{else if showMode == 10}}角{{else if showMode == 100}}分{{/if}}模式, 奖金&nbsp;{{showPlayPl}}, 返点&nbsp;{{showFandian}}%</span>
             </div>
             <div class="line">
                 <span>包含&nbsp;{{betZhushu}}&nbsp;注，每注金额&nbsp;{{betPerMoney}}&nbsp;
