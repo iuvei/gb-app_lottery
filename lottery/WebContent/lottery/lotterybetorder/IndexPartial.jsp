@@ -17,8 +17,8 @@
     总投注额<span id="totalMoney">0</span>元，
     当前派彩<span id="pageWinOrLoseMoney">${soulFn:formatCurrency(allPayout)}</span>元，
     总派彩<span id="totalWinOrLoseMoney">0</span>元,
-    当前返还金额<span id="pageRebateAmount">${soulFn:formatCurrency(allRebateAmount)}</span>元，
-    总返还金额<span id="totalRebateAmount">0</span>元，
+    当前返点金额<span id="pageRebateAmount">${soulFn:formatCurrency(allRebateAmount)}</span>元，
+    返点总金额<span id="totalRebateAmount">0</span>元，
     投注单量<span id="betCount">${command.paging.totalCount}</span>笔
 </div>
 <table class="eveb_box eveb_table" id="dataTable">
@@ -33,7 +33,7 @@
         <th style="width: 4%">倍数</th>
         <th style="width: 4%">奖金模式</th>
         <th style="width: 5%">投注金额</th>
-        <th style="width: 5%">返还金额</th>
+        <th style="width: 5%">返点金额</th>
         <th style="width: 5%">赔率|奖金</th>
         <th style="width: 4%">派彩</th>
         <th style="width: 10%">投注时间</th>
