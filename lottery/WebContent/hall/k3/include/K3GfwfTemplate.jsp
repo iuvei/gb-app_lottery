@@ -116,15 +116,6 @@
                     <span class="mode_select" data-value="10">角</span>
                     <span class="mode_select" data-value="100">分</span>
                 </div>
-                <%--<div class="down redown-gfwf selectMode_gfwf" style="">--%>
-                    <%--<input type="text" value="元" id="inputMoneyStr" disabled="disabled">--%>
-                    <%--<span></span>--%>
-                    <%--<div class="down_menu down_menu_str">--%>
-                        <%--<i>元</i>--%>
-                        <%--<i>角</i>--%>
-                        <%--<i>分</i>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
             </div>
             <p class="p1">
                 您选择了 <i class="i0">0</i> 注，<i class="i1 i_beishu">1</i> 倍，返还 <i class="i1 i_fanD">0</i> 元，共投注 <i class="i1 i_money">0</i>&nbsp;元。

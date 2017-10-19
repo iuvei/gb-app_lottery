@@ -56,6 +56,21 @@
         <div class="layout at">
             <div class="Playmethod">
                 <ul>
+                    <c:if test="${lotteryGenra == 1 || lotteryGenra==2}">
+                        <li class="gf-li">
+                            <b class="acti">官方玩法</b>
+                            <p class="guanfang respan k3 gf-cgwf" data-name="gfwf">
+                                <span class="acti"><a href="javascript:void(0)" data-url="ahk3-sthtx">三同号通选</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-sthdx">三同号单选</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-ethfx">二同号复选</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-ethdx">二同号单选</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-sbth">三不同号</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-ebth">二不同号</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-slhtx">三连号通选</a></span>
+                            </p>
+                        </li>
+                    </c:if>
+                    <c:if test="${lotteryGenra == 1 || lotteryGenra==3}">
                     <li>
                         <b>快钱玩法</b>
                         <p>
@@ -66,14 +81,17 @@
                             <span><a href="javascript:void(0)" data-url="ahk3-shortCard">短牌</a></span>
                         </p>
                     </li>
+                    </c:if>
                 </ul>
             </div>
 
             <div id="subContent"></div>
         </div>
     </div><!--Single-->
+    <%@ include file="../include/gfwftzqd.jsp" %>
     <%@ include file="/hall/common/BottomTab.jsp" %>
     <%@ include file="/hall/common/HistoryColor.jsp" %>
+    <%@ include file="../include/K3GfwfTemplate.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
