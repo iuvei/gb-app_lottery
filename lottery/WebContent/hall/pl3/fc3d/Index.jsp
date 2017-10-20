@@ -60,9 +60,9 @@
                             </style>
                             <span><a href="javascript:void(0)" data-url="${code}-3star">三星</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-First2">前二</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-later2">后二</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-positionBile">定位胆</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-noPosition">不定位</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-After2">后二</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-DingWeiDan">定位胆</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-BuDingWei">不定位</a></span>
                         </p>
                     </li>
                     <li>
