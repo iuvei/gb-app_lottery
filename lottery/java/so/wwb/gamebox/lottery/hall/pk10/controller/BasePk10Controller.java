@@ -9,11 +9,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
 import so.wwb.gamebox.lottery.session.SessionManager;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
+import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 import so.wwb.gamebox.web.cache.Cache;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -45,6 +49,24 @@ public class BasePk10Controller extends BaseLotteryController {
      * 冠亚和
      */
     static final String SUM_URL = "/hall/pk10/%s/Sum";
+    //***********官方玩法***********
+    /**
+     * 前一
+     */
+    static final String FIRST_ONE_URL = "/hall/pk10/include/FirstOne";
+    /**
+     * 前二
+     */
+    static final String FIRST_TWO_URL = "/hall/pk10/include/FirstTwo";
+    /**
+     * 前三
+     */
+    static final String FIRST_THREE_URL = "/hall/pk10/include/FirstThree";
+    /**
+     * 定位胆
+     */
+    static final String DINGWEI_DAN_URL = "/hall/pk10/include/DingWeiDan";
+
 
     /**
      * pk10最近20条开彩记录
@@ -93,6 +115,11 @@ public class BasePk10Controller extends BaseLotteryController {
         model.addAttribute("championUpHalf", LotteryPlayEnum.CHAMPION_UP_HALF.getCode());
     }
 
+    @Override
+    protected String saveBetOrder(HttpServletRequest request, String code, String betForm) {
+        return super.saveBetOrder(request, code, betForm);
+    }
+
     private void initOdd(Model model, String code) {
         Map<String, SiteLotteryOdd> oddMap = Cache.getSiteLotteryOdds(SessionManager.getSiteId(), code);
         if (MapTool.isEmpty(oddMap)) {
@@ -111,6 +138,25 @@ public class BasePk10Controller extends BaseLotteryController {
     public void initData(Model model, String code) {
         initPlayCode(model);
         initOdd(model, code);
+    }
+    /**
+     * 获取pk10官方玩法的奖金,返点数据
+     * @param code
+     * @return
+     */
+    @RequestMapping("/getGfwfAllOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.PK10_ZHIXUAN_QYFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PK10_ZHIXUAN_QEFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PK10_ZHIXUAN_QEDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PK10_ZHIXUAN_QSFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PK10_ZHIXUAN_QSDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PK10_YIXING_DWD.getCode(), siteLotteryOdds));
+
+        return oddList;
     }
 
 }

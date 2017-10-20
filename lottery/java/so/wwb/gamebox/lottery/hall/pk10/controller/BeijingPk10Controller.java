@@ -22,26 +22,9 @@ public class BeijingPk10Controller extends BasePk10Controller {
     private static final String CODE = LotteryEnum.BJPK10.getCode();
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request,Model model, String betCode,Integer isGfwf,String playCode) {
+    public String index(Model model) {
         index(model, TYPE, CODE);
-        //初始化玩法
-        initData(model,betCode);
-        //前端官方，双面玩法的显示控制
-        Integer lotteryGenra = getLotteryGenra(CODE);
-        model.addAttribute("lotteryGenra",lotteryGenra);
-        model.addAttribute("betCode", betCode);
-        model.addAttribute("playCode", playCode);
-        if (lotteryGenra ==1){  //全部开启
-            if(isGfwf ==null || isGfwf ==0){
-                return String.format(INDEX_URL, CODE);
-            }else{
-                return String.format(GFWFINDEX_URL, CODE);
-            }
-        }else if (lotteryGenra ==2){ //只开官方玩法
-            return String.format(GFWFINDEX_URL, CODE);
-        }else {//只开双面玩法
-            return String.format(INDEX_URL, CODE);
-        }
+        return String.format(INDEX_URL, CODE);
     }
 
     // 双面玩法
@@ -73,6 +56,31 @@ public class BeijingPk10Controller extends BasePk10Controller {
         initData(model, CODE);
 
         return String.format(SUM_URL, CODE);
+    }
+    //*************官方玩法****************
+    // 前一
+    @RequestMapping("/firstOne")
+    public String firstOne(Model model) {
+
+        return String.format(FIRST_ONE_URL, CODE);
+    }
+    // 前二
+    @RequestMapping("/firstTwo")
+    public String firstTwo(Model model) {
+
+        return String.format(FIRST_TWO_URL, CODE);
+    }
+    // 前三
+    @RequestMapping("/firstThree")
+    public String firstThree(Model model) {
+
+        return String.format(FIRST_THREE_URL, CODE);
+    }
+    // 定位胆
+    @RequestMapping("/dingWeiDan")
+    public String dingWeiDan(Model model) {
+
+        return String.format(DINGWEI_DAN_URL, CODE);
     }
 
     /**
