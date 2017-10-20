@@ -5,18 +5,18 @@
         <li>
             <b style="width: 83px">直选</b>
             <p class="btn_h3_zx">
-                <span class="playPlIdBtn acti" data-pljs="" data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_ds" data-play_pl_id="单式" data-name="pl3zxds" data-fun_zhushu="zhushu_pl3zxds" data-fun_content="content_pl3zxds" data-fun_suiji="suiji_pl3zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn"  data-pljs=""  data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_fs" data-play_pl_id="复式" data-name="pl3zxfs" data-fun_zhushu="zhushu_pl3zxfs" data-fun_content="content_pl3zxfs" data-fun_suiji="suiji_pl3zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn acti"  data-pljs=""  data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_fs" data-play_pl_id="复式" data-name="pl3zxfs" data-fun_zhushu="zhushu_pl3zxfs" data-fun_content="content_pl3zxfs" data-fun_suiji="suiji_pl3zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn " data-pljs="" data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_ds" data-play_pl_id="单式" data-name="pl3zxds" data-fun_zhushu="zhushu_pl3zxds" data-fun_content="content_pl3zxds" data-fun_suiji="suiji_pl3zxds"><a href="javascript:void(0)">直选单式</a></span>
                 <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_hz" data-play_pl_id="和值"  data-name="pl3zxhz" data-fun_zhushu="zhushu_pl3zxhz" data-fun_content="content_pl3zxhz" data-fun_suiji="suiji_pl3zxhz"><a href="javascript:void(0)">直选和值</a></span>
             </p>
         </li>
         <li>
             <b style="width: 83px">组选</b>
             <p class="btn_h3_zux">
-                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z3ds" data-play_pl_id="单式" data-name="pl3z3ds" data-fun_zhushu="zhushu_pl3z3ds" data-fun_content="content_pl3z3ds" data-fun_suiji="suiji_pl3z3ds"><a href="javascript:void(0)">组三单式</a></span>
                 <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z3fs" data-play_pl_id="复式" data-name="pl3z3fs" data-fun_zhushu="zhushu_pl3z3fs" data-fun_content="content_pl3z3fs" data-fun_suiji="suiji_pl3z3fs"><a href="javascript:void(0)">组三复式</a></span>
-                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z6ds" data-play_pl_id="单式" data-name="pl3z6ds" data-fun_zhushu="zhushu_pl3z6ds" data-fun_content="content_pl3z6ds" data-fun_suiji="suiji_pl3z6ds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z3ds" data-play_pl_id="单式" data-name="pl3z3ds" data-fun_zhushu="zhushu_pl3z3ds" data-fun_content="content_pl3z3ds" data-fun_suiji="suiji_pl3z3ds"><a href="javascript:void(0)">组三单式</a></span>
                 <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z6fs" data-play_pl_id="复式" data-name="pl3z6fs" data-fun_zhushu="zhushu_pl3z6fs" data-fun_content="content_pl3z6fs" data-fun_suiji="suiji_pl3z6fs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z6ds" data-play_pl_id="单式" data-name="pl3z6ds" data-fun_zhushu="zhushu_pl3z6ds" data-fun_content="content_pl3z6ds" data-fun_suiji="suiji_pl3z6ds"><a href="javascript:void(0)">组六单式</a></span>
                 <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_hhzx" data-play_pl_id="组三|组六" data-name="pl3hhzx" data-fun_zhushu="zhushu_pl3hhzx" data-fun_content="content_pl3hhzx" data-fun_suiji="suiji_pl3hhzx"><a href="javascript:void(0)">混合组选</a></span>
                 <span class="playPlIdBtn"  data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_zxhz" data-play_pl_id="组三|组六" data-name="pl3zuxhz" data-fun_zhushu="zhushu_pl3zuxhz" data-fun_content="content_pl3zuxhz" data-fun_suiji="suiji_pl3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
             </p>

@@ -5,15 +5,15 @@
         <li>
             <b style="width: 83px">前二直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_qeds" data-play_pl_id="单式" data-name="q2zxds" data-fun_zhushu="zhushu_q2zxds" data-fun_content="content_q2zxds" data-fun_suiji="suiji_q2zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_qefs" data-play_pl_id="复式" data-name="q2zxfs" data-fun_zhushu="zhushu_q2zxfs" data-fun_content="content_q2zxfs" data-fun_suiji="suiji_q2zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn acti" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_qefs" data-play_pl_id="复式" data-name="q2zxfs" data-fun_zhushu="zhushu_q2zxfs" data-fun_content="content_q2zxfs" data-fun_suiji="suiji_q2zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_qeds" data-play_pl_id="单式" data-name="q2zxds" data-fun_zhushu="zhushu_q2zxds" data-fun_content="content_q2zxds" data-fun_suiji="suiji_q2zxds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
         <li>
             <b style="width: 83px">前二组选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zuxuan" data-play_id="pl3_erxing_zuxuan_qeds" data-play_pl_id="单式" data-name="q2zuxds" data-fun_suiji="suiji_q2zuxds" data-fun_zhushu="zhushu_q2zuxds" data-fun_content="content_q2zuxds"><a href="javascript:void(0)">组选单式</a></span>
                 <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zuxuan"data-play_id="pl3_erxing_zuxuan_qefs" data-play_pl_id="复式" data-name="q2zuxfs" data-fun_suiji="suiji_q2zuxfs" data-fun_zhushu="zhushu_q2zuxfs" data-fun_content="content_q2zuxfs"><a href="javascript:void(0)">组选复式</a></span>
+                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zuxuan" data-play_id="pl3_erxing_zuxuan_qeds" data-play_pl_id="单式" data-name="q2zuxds" data-fun_suiji="suiji_q2zuxds" data-fun_zhushu="zhushu_q2zuxds" data-fun_content="content_q2zuxds"><a href="javascript:void(0)">组选单式</a></span>
             </p>
         </li>
     </ul>
