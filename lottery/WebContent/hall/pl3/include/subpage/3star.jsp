@@ -5,20 +5,20 @@
         <li>
             <b style="width: 83px">直选</b>
             <p class="btn_h3_zx">
-                <span class="playPlIdBtn acti" data-pljs="2000" data-play_Code="ssc_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_ds" data-play_pl_id="单式" data-name="h3zxds" data-fun_zhushu="zhushu_h3zxds" data-fun_content="content_h3zxds" data-fun_suiji="suiji_h3zxds"><a href="javascript:void(0)">直选单式</a></span>
-                <span class="playPlIdBtn"  data-pljs="2000"  data-play_Code="ssc_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_fs" data-play_pl_id="复式" data-name="h3zxfs" data-fun_zhushu="zhushu_h3zxfs" data-fun_content="content_h3zxfs" data-fun_suiji="suiji_h3zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-pljs="2000" data-play_Code="ssc_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_hz" data-play_pl_id="和值"  data-name="h3zxhz" data-fun_zhushu="zhushu_h3zxhz" data-fun_content="content_h3zxhz" data-fun_suiji="suiji_h3zxhz"><a href="javascript:void(0)">直选和值</a></span>
+                <span class="playPlIdBtn acti" data-pljs="" data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_ds" data-play_pl_id="单式" data-name="pl3zxds" data-fun_zhushu="zhushu_pl3zxds" data-fun_content="content_pl3zxds" data-fun_suiji="suiji_pl3zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn"  data-pljs=""  data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_fs" data-play_pl_id="复式" data-name="pl3zxfs" data-fun_zhushu="zhushu_pl3zxfs" data-fun_content="content_pl3zxfs" data-fun_suiji="suiji_pl3zxfs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zhixuan" data-play_id="pl3_sanxing_zhixuan_hz" data-play_pl_id="和值"  data-name="pl3zxhz" data-fun_zhushu="zhushu_pl3zxhz" data-fun_content="content_pl3zxhz" data-fun_suiji="suiji_pl3zxhz"><a href="javascript:void(0)">直选和值</a></span>
             </p>
         </li>
         <li>
             <b style="width: 83px">组选</b>
             <p class="btn_h3_zux">
-                <span class="playPlIdBtn" data-pljs="666.67" data-play_Code="ssc_sanxing_zuxuan" data-play_id="ssc_sanxing_zuxuan_hsz3ds" data-play_pl_id="单式" data-name="h3z3ds" data-fun_zhushu="zhushu_h3z3ds" data-fun_content="content_h3z3ds" data-fun_suiji="suiji_h3z3ds"><a href="javascript:void(0)">组三单式</a></span>
-                <span class="playPlIdBtn" data-pljs="666.67" data-play_Code="ssc_sanxing_zuxuan" data-play_id="ssc_sanxing_zuxuan_hsz3fs" data-play_pl_id="复式" data-name="h3z3fs" data-fun_zhushu="zhushu_h3z3fs" data-fun_content="content_h3z3fs" data-fun_suiji="suiji_h3z3fs"><a href="javascript:void(0)">组三复式</a></span>
-                <span class="playPlIdBtn" data-pljs="333.33" data-play_Code="ssc_sanxing_zuxuan" data-play_id="ssc_sanxing_zuxuan_hsz6ds" data-play_pl_id="单式" data-name="h3z6ds" data-fun_zhushu="zhushu_h3z6ds" data-fun_content="content_h3z6ds" data-fun_suiji="suiji_h3z6ds"><a href="javascript:void(0)">组六单式</a></span>
-                <span class="playPlIdBtn" data-pljs="333.33" data-play_Code="ssc_sanxing_zuxuan" data-play_id="ssc_sanxing_zuxuan_hsz6fs" data-play_pl_id="复式" data-name="h3z6fs" data-fun_zhushu="zhushu_h3z6fs" data-fun_content="content_h3z6fs" data-fun_suiji="suiji_h3z6fs"><a href="javascript:void(0)">组六复式</a></span>
-                <span class="playPlIdBtn" data-pljs="666.67|333.33" data-play_Code="ssc_sanxing_zuxuan" data-play_id="ssc_sanxing_zuxuan_hshhzx" data-play_pl_id="组三|组六" data-name="h3hhzx" data-fun_zhushu="zhushu_h3hhzx" data-fun_content="content_h3hhzx" data-fun_suiji="suiji_h3hhzx"><a href="javascript:void(0)">混合组选</a></span>
-                <span class="playPlIdBtn"  data-pljs="666.67|333.33" data-play_Code="ssc_sanxing_zuxuan" data-play_id="ssc_sanxing_zuxuan_hszxhz" data-play_pl_id="组三|组六" data-name="h3zuxhz" data-fun_zhushu="zhushu_h3zuxhz" data-fun_content="content_h3zuxhz" data-fun_suiji="suiji_h3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z3ds" data-play_pl_id="单式" data-name="pl3z3ds" data-fun_zhushu="zhushu_pl3z3ds" data-fun_content="content_pl3z3ds" data-fun_suiji="suiji_pl3z3ds"><a href="javascript:void(0)">组三单式</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z3fs" data-play_pl_id="复式" data-name="pl3z3fs" data-fun_zhushu="zhushu_pl3z3fs" data-fun_content="content_pl3z3fs" data-fun_suiji="suiji_pl3z3fs"><a href="javascript:void(0)">组三复式</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z6ds" data-play_pl_id="单式" data-name="pl3z6ds" data-fun_zhushu="zhushu_pl3z6ds" data-fun_content="content_pl3z6ds" data-fun_suiji="suiji_pl3z6ds"><a href="javascript:void(0)">组六单式</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_z6fs" data-play_pl_id="复式" data-name="pl3z6fs" data-fun_zhushu="zhushu_pl3z6fs" data-fun_content="content_pl3z6fs" data-fun_suiji="suiji_pl3z6fs"><a href="javascript:void(0)">组六复式</a></span>
+                <span class="playPlIdBtn" data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_hhzx" data-play_pl_id="组三|组六" data-name="pl3hhzx" data-fun_zhushu="zhushu_pl3hhzx" data-fun_content="content_pl3hhzx" data-fun_suiji="suiji_pl3hhzx"><a href="javascript:void(0)">混合组选</a></span>
+                <span class="playPlIdBtn"  data-pljs="" data-play_Code="pl3_sanxing_zuxuan" data-play_id="pl3_sanxing_zuxuan_zxhz" data-play_pl_id="组三|组六" data-name="pl3zuxhz" data-fun_zhushu="zhushu_pl3zuxhz" data-fun_content="content_pl3zuxhz" data-fun_suiji="suiji_pl3zuxhz"><a href="javascript:void(0)">组选和值</a></span>
             </p>
         </li>
     </ul>
@@ -26,7 +26,7 @@
 <div id="subPage"></div>
 <div id="subJRange"></div><script>
 </script>
-<script type="text/html" id="template_h3zxfs">
+<script type="text/html" id="template_pl3zxfs">
     <div class="Pick cl-1002 recl-1002" data-flag="zxfs_zx">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -114,7 +114,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3zxds">
+<script type="text/html" id="template_pl3zxds">
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -143,7 +143,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3zh">
+<script type="text/html" id="template_pl3zh">
     <div class="Pick cl-1002 cl-1004-hszh">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -232,7 +232,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3zxhz">
+<script type="text/html" id="template_pl3zxhz">
     <div class="Pick cl-1005-zxhz">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -286,7 +286,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3zxkd">
+<script type="text/html" id="template_pl3zxkd">
     <div class="Pick cl-1002 cl-1006-zxkd">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -328,7 +328,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3z3fs">
+<script type="text/html" id="template_pl3z3fs">
     <div class="Pick cl-1002 cl-1007-zsfs">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -371,7 +371,7 @@
 </script>
 
 
-<script type="text/html" id="template_h3z3ds">
+<script type="text/html" id="template_pl3z3ds">
     <div class="Pick cl-1008-zsds">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -400,7 +400,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3z6fs">
+<script type="text/html" id="template_pl3z6fs">
     <div class="Pick cl-1002 cl-1009-zlfs">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -442,7 +442,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3z6ds">
+<script type="text/html" id="template_pl3z6ds">
     <div class="Pick cl-1010-zlds">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -471,7 +471,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3hhzx">
+<script type="text/html" id="template_pl3hhzx">
     <div class="Pick cl-1011-hhzx">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -500,7 +500,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3zuxhz">
+<script type="text/html" id="template_pl3zuxhz">
     <div class="Pick cl-1012-zxhz">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -552,7 +552,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3zxbd">
+<script type="text/html" id="template_pl3zxbd">
     <div class="Pick cl-1002 cl-1013-zxbd">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -586,7 +586,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3hzws">
+<script type="text/html" id="template_pl3hzws">
     <div class="Pick cl-1002 cl-1014-hzws">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -620,7 +620,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_h3tsh">
+<script type="text/html" id="template_pl3tsh">
     <div class="Pick cl-1002 cl-1015-tsh">
         <p class="p1">
         <span class="fr fl cl-1001">

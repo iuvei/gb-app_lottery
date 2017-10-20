@@ -32,6 +32,10 @@ public class BasePl3Controller extends BaseLotteryController {
      */
     static final String FIX_URL = "/hall/pl3/include/Fix";
 
+
+    static final String SUB_PAGE = "/hall/pl3/include/subpage/%s";
+
+
     /**
      * 一字定位列表
      */
