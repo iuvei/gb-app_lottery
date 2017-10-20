@@ -59,7 +59,7 @@
                                 .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
                             </style>
                             <span><a href="javascript:void(0)" data-url="${code}-3star">三星</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-first2">前二</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-First2">前二</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-later2">后二</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-positionBile">定位胆</a></span>
                             <span><a href="javascript:void(0)" data-url="${code}-noPosition">不定位</a></span>

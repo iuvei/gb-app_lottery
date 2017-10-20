@@ -51,6 +51,12 @@ public class Fc3DPl3Controller extends BasePl3Controller {
         oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_HHZX.getCode(), siteLotteryOdds));
         oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZUXHZ.getCode(), siteLotteryOdds));
 
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZXDS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZUXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZUXDS.getCode(), siteLotteryOdds));
+
         return oddList;
     }
 
