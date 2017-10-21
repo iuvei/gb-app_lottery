@@ -28,45 +28,10 @@ public class Fc3DPl3Controller extends BasePl3Controller {
         return String.format(INDEX_URL, CODE);
     }
 
-    /**
-     * 获取时时彩官方玩法的奖金,返点数据
-     * @param code
-     * @return
-     */
     @RequestMapping("/getGfwfAllOdd")
     @ResponseBody
     public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
-
-        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
-        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
-
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZXDS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZXFS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZXHZ.getCode(), siteLotteryOdds));
-
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z3FS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z3DS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z6FS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z6DS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_HHZX.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZUXHZ.getCode(), siteLotteryOdds));
-
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZXFS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZXDS.getCode(), siteLotteryOdds));
-
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZUXFS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZUXDS.getCode(), siteLotteryOdds));
-
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZXFS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZXDS.getCode(), siteLotteryOdds));
-
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZUXFS.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZUXDS.getCode(), siteLotteryOdds));
-
-        oddList.add(getOdds(LotteryBettingEnum.PL3_YIXING_DWD.getCode(), siteLotteryOdds));
-        oddList.add(getOdds(LotteryBettingEnum.PL3_BUDINGWEI_SXYM.getCode(), siteLotteryOdds));
-
-        return oddList;
+        return super.getGfwfOdd(code);
     }
 
     @RequestMapping("/getSubPage")
