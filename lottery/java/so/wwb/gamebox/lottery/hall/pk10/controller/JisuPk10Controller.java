@@ -21,7 +21,7 @@ public class JisuPk10Controller extends BasePk10Controller {
     public static final String TYPE = LotteryTypeEnum.PK10.getCode();
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request,Model model, String betCode,Integer isGfwf,String playCode) {
+    public String index(Model model) {
         index(model, TYPE, CODE);
         return String.format(INDEX_URL, CODE);
     }
