@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>北京PK10</title>
+    <title>PK10 | 北京PK10</title>
     <%@ include file="/include/include.head.jsp" %>
     <script>
         var CONFIG = {
             BASEURL: '${root}/pk10/',
-            RESURL: '${resRoot}/themes/default/'
+            RESURL: '${resRoot}/themes/${curTheme}/'
         };
     </script>
 </head>
@@ -56,6 +56,18 @@
         <div class="layout at">
             <div class="Playmethod">
                 <ul>
+                    <c:if test="${lotteryGenra == 1 || lotteryGenra==2}">
+                    <li class="gf-li">
+                        <b class="acti">官方玩法</b>
+                        <p class="guanfang respan gf-cgwf" data-name="gfwf">
+                            <span class="acti"><a href="javascript:void(0)" data-url="bjpk10-firstOne">前一</a></span>
+                            <span><a href="javascript:void(0)" data-url="bjpk10-firstTwo">前二</a></span>
+                            <span><a href="javascript:void(0)" data-url="bjpk10-firstThree">前三</a></span>
+                            <span><a href="javascript:void(0)" data-url="bjpk10-dingWeiDan">定位胆</a></span>
+                        </p>
+                    </li>
+                    </c:if>
+                    <c:if test="${lotteryGenra == 1 || lotteryGenra==3}">
                     <li>
                         <b>快钱玩法</b>
                         <p class="kuaiqian">
@@ -77,13 +89,19 @@
                             <span><a href="javascript:void(0)" data-url="bjpk10-sum">冠亚和</a></span>
                         </p>
                     </li>
+                    </c:if>
                 </ul>
             </div>
             <div id="subContent"></div>
+            <i class="it0 left_it0"><img src="${resRoot}/themes/default/img/ico46.png" alt=""></i>
+            <i class="it1 right_it1"><img src="${resRoot}/themes/default/img/ico46.png" alt=""></i>
         </div>
     </div><!--Single-->
+    <%@ include file="../include/include.gfwftzqd.jsp" %>
     <%@ include file="/hall/common/BottomTab.jsp" %>
-    <%@ include file="/hall/pk10/include/HistoryPk10Color.jsp" %>
+    <%@ include file="/hall/common/History.jsp" %>
+   <%-- <%@ include file="/hall/pk10/include/HistoryPk10Color.jsp" %>--%>
+    <%@ include file="../include/Pk10GfwfTemplate.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 

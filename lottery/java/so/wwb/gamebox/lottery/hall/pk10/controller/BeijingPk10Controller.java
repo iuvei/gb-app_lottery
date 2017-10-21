@@ -57,6 +57,31 @@ public class BeijingPk10Controller extends BasePk10Controller {
 
         return String.format(SUM_URL, CODE);
     }
+    //*************官方玩法****************
+    // 前一
+    @RequestMapping("/firstOne")
+    public String firstOne(Model model) {
+
+        return String.format(FIRST_ONE_URL, CODE);
+    }
+    // 前二
+    @RequestMapping("/firstTwo")
+    public String firstTwo(Model model) {
+
+        return String.format(FIRST_TWO_URL, CODE);
+    }
+    // 前三
+    @RequestMapping("/firstThree")
+    public String firstThree(Model model) {
+
+        return String.format(FIRST_THREE_URL, CODE);
+    }
+    // 定位胆
+    @RequestMapping("/dingWeiDan")
+    public String dingWeiDan(Model model) {
+
+        return String.format(DINGWEI_DAN_URL, CODE);
+    }
 
     /**
      * 下注

@@ -53,6 +53,19 @@
             <div class="Playmethod">
                 <ul>
                     <li>
+                        <b>官方玩法</b>
+                        <p data-name="gfwf">
+                            <style type="text/css">
+                                .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
+                            </style>
+                            <span><a href="javascript:void(0)" data-url="${code}-3star">三星</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-First2">前二</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-After2">后二</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-DingWeiDan">定位胆</a></span>
+                            <span><a href="javascript:void(0)" data-url="${code}-BuDingWei">不定位</a></span>
+                        </p>
+                    </li>
+                    <li>
                         <b>快钱玩法</b>
                         <p class="kuaiqian">
                             <style type="text/css">
@@ -69,10 +82,14 @@
                 </ul>
             </div>
             <div id="subContent"></div>
+            <i class="it0 left_it0"><img src="${resRoot}/themes/default/img/ico46.png" alt=""></i>
+            <i class="it1 right_it1"><img src="${resRoot}/themes/default/img/ico46.png" alt=""></i>
         </div>
     </div><!--Single-->
+    <%@ include file="/hall/pl3/include/subpage/include.gfwftzqd.jsp" %>
     <%@ include file="/hall/common/BottomTab.jsp" %>
     <%@ include file="/hall/common/History.jsp" %>
+    <%@ include file="/hall/pl3/include/subpage/Pl3GfwfTemplate.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
