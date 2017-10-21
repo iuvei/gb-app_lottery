@@ -12,6 +12,8 @@ import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -117,6 +119,44 @@ public class BasePl3Controller extends BaseLotteryController {
      */
     static final String THREE_WORD_SUM = "/hall/pl3/include/sum/ThreeWordSum";
 
+    /**
+     * 获取时时彩官方玩法的奖金,返点数据
+     * @param code
+     * @return
+     */
+    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
+
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZXDS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZXHZ.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z3FS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z3DS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z6FS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_Z6DS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_HHZX.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_SANXING_ZUXHZ.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZXDS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZUXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_QEZUXDS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZXDS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZUXFS.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_ERXING_HEZUXDS.getCode(), siteLotteryOdds));
+
+        oddList.add(getOdds(LotteryBettingEnum.PL3_YIXING_DWD.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.PL3_BUDINGWEI_SXYM.getCode(), siteLotteryOdds));
+
+        return oddList;
+    }
     // 定位
     public String fix(Model model, String code) {
         initPage(model, code);
