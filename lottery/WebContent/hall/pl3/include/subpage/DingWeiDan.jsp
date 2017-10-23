@@ -19,52 +19,6 @@
         </span>
         </p>
         <ul>
-            <li data-name="万">
-                <b><i>万位</i></b>
-                <var class="numLine">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-                <div class="clear re-5x-i">
-                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
-                    <i onclick="page.PlayWay.selectFun_2(this)">大</i>
-                    <i onclick="page.PlayWay.selectFun_3(this)">小</i>
-                    <i onclick="page.PlayWay.selectFun_4(this)">奇</i>
-                    <i onclick="page.PlayWay.selectFun_5(this)">偶</i>
-                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
-                </div>
-            </li>
-            <li data-name="千">
-                <b><i>千位</i></b>
-                <var class="numLine">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-                <div class="clear re-5x-i">
-                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
-                    <i onclick="page.PlayWay.selectFun_2(this)">大</i>
-                    <i onclick="page.PlayWay.selectFun_3(this)">小</i>
-                    <i onclick="page.PlayWay.selectFun_4(this)">奇</i>
-                    <i onclick="page.PlayWay.selectFun_5(this)">偶</i>
-                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
-                </div>
-            </li>
             <li data-name="百">
                 <b><i>百位</i></b>
                 <var class="numLine">
