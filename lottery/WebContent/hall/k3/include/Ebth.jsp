@@ -30,7 +30,7 @@
         </p>
         <ul class="dxds k3">
             <li data-name="二不同">
-                <b><i>三不同</i></b>
+                <b><i>二不同</i></b>
                 <var class="numLine">
                     <span><i>1</i></span>
                     <span><i>2</i></span>
