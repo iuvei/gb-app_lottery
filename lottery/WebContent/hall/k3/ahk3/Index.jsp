@@ -71,16 +71,16 @@
                         </li>
                     </c:if>
                     <c:if test="${lotteryGenra == 1 || lotteryGenra==3}">
-                    <li>
-                        <b>快钱玩法</b>
-                        <p>
-                            <span class="acti"><a href="javascript:void(0)" data-url="ahk3-points">点数</a></span>
-                            <span><a href="javascript:void(0)" data-url="ahk3-armedForces">三军</a></span>
-                            <span><a href="javascript:void(0)" data-url="ahk3-dice">围骰/全骰</a></span>
-                            <span><a href="javascript:void(0)" data-url="ahk3-longCard">长牌</a></span>
-                            <span><a href="javascript:void(0)" data-url="ahk3-shortCard">短牌</a></span>
-                        </p>
-                    </li>
+                        <li>
+                            <b>快钱玩法</b>
+                            <p>
+                                <span class="acti"><a href="javascript:void(0)" data-url="ahk3-points">点数</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-armedForces">三军</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-dice">围骰/全骰</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-longCard">长牌</a></span>
+                                <span><a href="javascript:void(0)" data-url="ahk3-shortCard">短牌</a></span>
+                            </p>
+                        </li>
                     </c:if>
                 </ul>
             </div>

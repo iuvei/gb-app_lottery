@@ -77,6 +77,49 @@ public class GuangxiK3Controller extends BaseK3Controller {
         return super.shortCard(CODE, model);
     }
 
+
+    //三同号通选
+    @RequestMapping("/sthtx")
+    public String sthtx(Model model) {
+        return sthtxInit(model, CODE);
+    }
+
+    //三同号单选
+    @RequestMapping("/sthdx")
+    public String sthdx(Model model) {
+        return sthdxInit(model, CODE);
+    }
+
+    //二同号复选
+    @RequestMapping("/ethfx")
+    public String ethfx(Model model) {
+        return ethfxInit(model, CODE);
+    }
+
+    //二同号单选
+    @RequestMapping("/ethdx")
+    public String ethdx(Model model) {
+        return ethdxInit(model, CODE);
+    }
+
+    //三不同号
+    @RequestMapping("/sbth")
+    public String sbth(Model model) {
+        return sbthInit(model, CODE);
+    }
+
+    //二不同号
+    @RequestMapping("/ebth")
+    public String ebth(Model model) {
+        return ebthInit(model, CODE);
+    }
+
+    //三连号通选
+    @RequestMapping("/slhtx")
+    public String slhtx(Model model) {
+        return slhtxInit(model, CODE);
+    }
+
     /**
      * 下注
      *
