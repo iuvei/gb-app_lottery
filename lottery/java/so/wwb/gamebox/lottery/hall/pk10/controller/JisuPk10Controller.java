@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
+import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 public class JisuPk10Controller extends BasePk10Controller {
 
     private static final String CODE = LotteryEnum.JSPK10.getCode();
+    public static final String TYPE = LotteryTypeEnum.PK10.getCode();
 
     @RequestMapping("/index")
     public String index(Model model) {
