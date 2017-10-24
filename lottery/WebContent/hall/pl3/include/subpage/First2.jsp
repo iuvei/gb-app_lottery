@@ -25,19 +25,19 @@
     <div class="Pick cl-1002 recl-1002" data-name="zxfs" data-flag="zxfs-q2">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从万位、千位中至少各选1个号码组成一注。
+            从十位、个位中至少各选1个号码组成一注。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
                 <var>投注方案：58 开奖号码前两位：58，即中前二直选。</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从万、千位中至少各选择1个号码组成一注，所选号码与开奖号码的前2位相同，且顺序一致，即为中奖。</var>
+                <var>从十、个位中至少各选择1个号码组成一注，所选号码与开奖号码的前2位相同，且顺序一致，即为中奖。</var>
             </a>
         </span>
         </p>
         <ul>
-            <li data-name="万">
-                <b><i>万位</i></b>
+            <li data-name="十">
+                <b><i>十位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
                     <span><i>1</i></span>
@@ -59,8 +59,8 @@
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
                 </div>
             </li>
-            <li data-name="千">
-                <b><i>千位</i></b>
+            <li data-name="个">
+                <b><i>个位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
                     <span><i>1</i></span>
