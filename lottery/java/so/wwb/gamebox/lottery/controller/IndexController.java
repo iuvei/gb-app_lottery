@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
 import so.wwb.gamebox.web.cache.Cache;
-import so.wwb.gamebox.web.lottery.controller.LotteryDemoController;
+import so.wwb.gamebox.web.lottery.controller.BaseDemoController;
 
 import java.util.Map;
 
@@ -20,7 +20,7 @@ import java.util.Map;
  * Created by tony on 15-4-29.
  */
 @Controller
-public class IndexController  extends LotteryDemoController {
+public class IndexController  extends BaseDemoController {
     private static final String INDEX_URI = "index";
 
     @RequestMapping(value = "index")
