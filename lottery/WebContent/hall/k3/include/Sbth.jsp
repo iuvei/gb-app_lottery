@@ -24,7 +24,7 @@
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>中奖号码由三个不同的号码，且全部在所购买的号码中，即为中奖。</var>
+                <var>中奖号码为三个不同的号码，且全部在所购买的号码中，即为中奖。</var>
             </a>
         </span>
         </p>
