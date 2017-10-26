@@ -25,9 +25,9 @@
     <div class="Pick cl-1002 recl-1002" data-name="zxfs" data-flag="zxfs-q2">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从十、个位各选一个号码组成一注。
+            从百、十位各选一个号码组成一注。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：从十、个位各选一个号码组成一注</var>
+                <var>投注方案：从百、十位各选一个号码组成一注</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
@@ -36,8 +36,8 @@
         </span>
         </p>
         <ul>
-            <li data-name="十">
-                <b><i>十位</i></b>
+            <li data-name="百">
+                <b><i>百位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
                     <span><i>1</i></span>
@@ -59,8 +59,8 @@
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
                 </div>
             </li>
-            <li data-name="个">
-                <b><i>个位</i></b>
+            <li data-name="十">
+                <b><i>十位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
                     <span><i>1</i></span>

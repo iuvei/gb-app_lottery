@@ -5,15 +5,15 @@
         <li>
             <b style="width: 83px">前二直选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn acti" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_hefs" data-play_pl_id="复式" data-name="q2zxfs" data-fun_zhushu="zhushu_q2zxfs" data-fun_content="content_q2zxfs" data-fun_suiji="suiji_q2zxfs"><a href="javascript:void(0)">直选复式</a></span>
-                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_heds" data-play_pl_id="单式" data-name="q2zxds" data-fun_zhushu="zhushu_q2zxds" data-fun_content="content_q2zxds" data-fun_suiji="suiji_q2zxds"><a href="javascript:void(0)">直选单式</a></span>
+                <span class="playPlIdBtn acti" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_hefs" data-play_pl_id="复式" data-name="h2zxfs" data-fun_zhushu="zhushu_pl3_erxing_zhixuan_hefs" data-fun_content="content_pl3_erxing_zhixuan_hefs" data-fun_suiji="suiji_pl3_erxing_zhixuan_hefs"><a href="javascript:void(0)">直选复式</a></span>
+                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zhixuan" data-play_id="pl3_erxing_zhixuan_heds" data-play_pl_id="单式" data-name="h2zxds" data-fun_zhushu="zhushu_pl3_erxing_zhixuan_heds" data-fun_content="content_pl3_erxing_zhixuan_heds" data-fun_suiji="suiji_pl3_erxing_zhixuan_heds"><a href="javascript:void(0)">直选单式</a></span>
             </p>
         </li>
         <li>
             <b style="width: 83px">前二组选</b>
             <p class="btn_fu_zhi">
-                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zuxuan"data-play_id="pl3_erxing_zuxuan_hefs" data-play_pl_id="复式" data-name="q2zuxfs" data-fun_suiji="suiji_q2zuxfs" data-fun_zhushu="zhushu_q2zuxfs" data-fun_content="content_q2zuxfs"><a href="javascript:void(0)">组选复式</a></span>
-                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zuxuan" data-play_id="pl3_erxing_zuxuan_heds" data-play_pl_id="单式" data-name="q2zuxds" data-fun_suiji="suiji_q2zuxds" data-fun_zhushu="zhushu_q2zuxds" data-fun_content="content_q2zuxds"><a href="javascript:void(0)">组选单式</a></span>
+                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zuxuan"data-play_id="pl3_erxing_zuxuan_hefs" data-play_pl_id="复式" data-name="h2zuxfs" data-fun_suiji="suiji_pl3_erxing_zuxuan_hefs" data-fun_zhushu="zhushu_pl3_erxing_zuxuan_hefs" data-fun_content="content_pl3_erxing_zuxuan_hefs"><a href="javascript:void(0)">组选复式</a></span>
+                <span class="playPlIdBtn" data-pljs=""  data-play_Code="pl3_erxing_zuxuan" data-play_id="pl3_erxing_zuxuan_heds" data-play_pl_id="单式" data-name="h2zuxds" data-fun_suiji="suiji_pl3_erxing_zuxuan_heds" data-fun_zhushu="zhushu_pl3_erxing_zuxuan_heds" data-fun_content="content_pl3_erxing_zuxuan_heds"><a href="javascript:void(0)">组选单式</a></span>
             </p>
         </li>
     </ul>
@@ -21,7 +21,7 @@
 
 <div id="subPage"></div>
 <div id="subJRange"></div>
-<script type="text/html" id="template_q2zxfs">
+<script type="text/html" id="template_h2zxfs">
     <div class="Pick cl-1002 recl-1002" data-name="zxfs" data-flag="zxfs-q2">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -87,7 +87,7 @@
 </script>
 
 
-<script type="text/html" id="template_q2zxds">
+<script type="text/html" id="template_h2zxds">
     <div class="Pick cl-1003 recl-1003" data-name="zxds">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -116,7 +116,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_q2zxhz">
+<script type="text/html" id="template_h2zxhz">
     <div class="Pick cl-1002 recl-1004-zxhz" data-name="zxhz">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -161,7 +161,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_q2zxkd">
+<script type="text/html" id="template_h2zxkd">
     <div class="Pick cl-1002 recl-1005-zxkd" data-name="zxkd">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -203,7 +203,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_q2zuxfs">
+<script type="text/html" id="template_h2zuxfs">
     <div class="Pick cl-1002 recl-1006-zuxfs" data-name="zuxfs">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -245,7 +245,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_q2zuxds">
+<script type="text/html" id="template_h2zuxds">
     <div class="Pick cl-1003 recl-1007-zuxds" data-name="zuxds">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -274,7 +274,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_q2zuxhz">
+<script type="text/html" id="template_h2zuxhz">
     <div class="Pick cl-1002 recl-1008-zuxhz" data-name="zuxhz">
         <p class="p1">
         <span class="fr fl cl-1001">
@@ -317,7 +317,7 @@
     </div>
 </script>
 
-<script type="text/html" id="template_q2zuxbd">
+<script type="text/html" id="template_h2zuxbd">
     <div class="Pick cl-1002 recl-1009-zuxbd" data-name="zuxbd">
         <p class="p1">
         <span class="fr fl cl-1001">
