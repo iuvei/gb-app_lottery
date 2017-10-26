@@ -17,7 +17,7 @@
     <div class="Pick cl-1002 recl-1002" data-flag="fu">
         <p class="p1">
         <span class="fr fl cl-1001">
-            选择对子(11*,22*,33*,44*,55*,66*)投注，开奖号码中包含选择的对子即中奖。
+            选择对子(11,22,33,44,55,66)投注，开奖号码中包含选择的对子即中奖。
             <a>
                 <img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
                 <var>从11～66中任选1个或多个号码。</var>
