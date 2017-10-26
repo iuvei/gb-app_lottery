@@ -13,6 +13,7 @@
         <h5>北京PK10</h5>
         <ul>
             <li class="sli">常规玩法</li>
+            <li>官方玩法</li>
             <li>游戏说明</li>
         </ul>
     </div>
@@ -55,6 +56,9 @@
 
 
 
+    </div>
+    <div class="help_col">
+        <%@ include file="Pk10Gfwf.jsp" %>
     </div>
     <div class="help_col">
         <h5><strong>开奖说明</strong></h5>
