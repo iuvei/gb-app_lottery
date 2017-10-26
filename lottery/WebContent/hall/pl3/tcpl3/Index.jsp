@@ -52,33 +52,37 @@
         <div class="layout at">
             <div class="Playmethod">
                 <ul>
-                    <li>
-                        <b>官方玩法</b>
-                        <p data-name="gfwf">
-                            <style type="text/css">
-                                .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
-                            </style>
-                            <span><a href="javascript:void(0)" data-url="${code}-3star">三星</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-First2">前二</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-After2">后二</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-DingWeiDan">定位胆</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-BuDingWei">不定位</a></span>
-                        </p>
-                    </li>
-                    <li>
-                        <b>快钱玩法</b>
-                        <p class="kuaiqian">
-                            <style type="text/css">
-                                .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
-                            </style>
-                            <span><a href="javascript:void(0)" data-url="${code}-fix">定位</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-comb">组合</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-sum">和数</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-group3">组三</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-group6">组六</a></span>
-                            <span><a href="javascript:void(0)" data-url="${code}-span">跨度</a></span>
-                        </p>
-                    </li>
+                    <c:if test="${lotteryGenra==1 || lotteryGenra==2}">
+                        <li>
+                            <b>官方玩法</b>
+                            <p data-name="gfwf">
+                                <style type="text/css">
+                                    .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
+                                </style>
+                                <span><a href="javascript:void(0)" data-url="${code}-3star">三星</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-First2">前二</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-After2">后二</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-DingWeiDan">定位胆</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-BuDingWei">不定位</a></span>
+                            </p>
+                        </li>
+                    </c:if>
+                    <c:if test="${lotteryGenra==1 || lotteryGenra==3}">
+                        <li>
+                            <b>快钱玩法</b>
+                            <p class="kuaiqian">
+                                <style type="text/css">
+                                    .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
+                                </style>
+                                <span><a href="javascript:void(0)" data-url="${code}-fix">定位</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-comb">组合</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-sum">和数</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-group3">组三</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-group6">组六</a></span>
+                                <span><a href="javascript:void(0)" data-url="${code}-span">跨度</a></span>
+                            </p>
+                        </li>
+                    </c:if>
                 </ul>
             </div>
             <div id="subContent"></div>
