@@ -23,6 +23,11 @@ public class Tcpl3Pl3Controller extends BasePl3Controller {
         return String.format(INDEX_URL, CODE);
     }
 
+    @RequestMapping("/getSubPage")
+    public String getSubPage(String pageName) {
+        return String.format(SUB_PAGE, pageName);
+    }
+
     // 定位
     @RequestMapping("/fix")
     public String fix(Model model) {

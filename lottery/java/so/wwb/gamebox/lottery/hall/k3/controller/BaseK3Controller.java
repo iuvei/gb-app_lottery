@@ -3,12 +3,16 @@ package so.wwb.gamebox.lottery.hall.k3.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
+import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -41,6 +45,34 @@ public class BaseK3Controller extends BaseLotteryController {
      * 短牌
      */
     static final String SHORT_CARD_URL = "/hall/k3/include/ShortCard";
+    /**
+     * 三同号通选
+     */
+    static final String STHTX_URL = "/hall/k3/include/Sthtx";
+    /**
+     * 三同号单选
+     */
+    static final String STHDX_URL = "/hall/k3/include/Sthdx";
+    /**
+     * 二同号复选
+     */
+    static final String ETHFX_URL = "/hall/k3/include/Ethfx";
+    /**
+     * 二同号单选
+     */
+    static final String ETHDX_URL = "/hall/k3/include/Ethdx";
+    /**
+     * 三不同号
+     */
+    static final String SBTH_URL = "/hall/k3/include/Sbth";
+    /**
+     * 二不同号
+     */
+    static final String EBTH_URL = "/hall/k3/include/Ebth";
+    /**
+     * 三连号通选
+     */
+    static final String SLHTX_URL = "/hall/k3/include/Slhtx";
 
     /**
      * 点数
@@ -130,5 +162,69 @@ public class BaseK3Controller extends BaseLotteryController {
         model.addAttribute("shortCard", LotteryPlayEnum.SHORT_CARD.getCode());
         return SHORT_CARD_URL;
     }
+
+    //三同号通选
+    public  String sthtxInit(Model model, String code) {
+
+        return  STHTX_URL;
+    }
+
+    //三同号单选
+    public  String sthdxInit(Model model, String code) {
+
+        return  STHDX_URL;
+    }
+
+    //二同号复选
+    public  String ethfxInit(Model model, String code) {
+
+        return  ETHFX_URL;
+    }
+
+
+    //二同号单选
+    public  String ethdxInit(Model model, String code) {
+
+        return  ETHDX_URL;
+    }
+
+
+    //三不同号
+    public  String sbthInit(Model model, String code) {
+
+        return  SBTH_URL;
+    }
+
+    //二不同号
+    public  String ebthInit(Model model, String code) {
+
+        return  EBTH_URL;
+    }
+
+    //三连号通选
+    public  String slhtxInit(Model model, String code) {
+
+        return  SLHTX_URL;
+    }
+
+
+
+    @RequestMapping("/getGfwfAllOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
+        Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);
+        List<Map<String, SiteLotteryOdd>> oddList = new ArrayList<>();
+        oddList.add(getOdds(LotteryBettingEnum.K3_DANXUAN_ERTONG.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.K3_FUXUAN_ERTONG.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.K3_DANXUAN_SANTONG.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.K3_FUXUAN_SANTONG.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.K3_TONGXUAN_SANLIAN.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.K3_ERBUTONG.getCode(), siteLotteryOdds));
+        oddList.add(getOdds(LotteryBettingEnum.K3_SANBUTONG.getCode(), siteLotteryOdds));
+
+        return oddList;
+    }
+
+
 
 }

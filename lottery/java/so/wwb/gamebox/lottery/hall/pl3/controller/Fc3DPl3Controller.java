@@ -4,9 +4,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
+import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 福彩3D
@@ -21,6 +26,17 @@ public class Fc3DPl3Controller extends BasePl3Controller {
     public String index(Model model) {
         index(model, TYPE, CODE);
         return String.format(INDEX_URL, CODE);
+    }
+
+    @RequestMapping("/getGfwfAllOdd")
+    @ResponseBody
+    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
+        return super.getGfwfOdd(code);
+    }
+
+    @RequestMapping("/getSubPage")
+    public String getSubPage(String pageName) {
+        return String.format(SUB_PAGE, pageName);
     }
 
     // 定位
@@ -68,6 +84,20 @@ public class Fc3DPl3Controller extends BasePl3Controller {
     public String getOdds(Model model,String betCode) {
         return super.getOddsByBetCode(model,CODE,betCode);
     }
+
+    /**
+     * 获取相关赔率信息
+     *
+     * @param betCode
+     * @return
+     */
+    @RequestMapping("/getBetOdds")
+    @ResponseBody
+    public Map<String, SiteLotteryOdd> getBetOdds(String betCode) {
+        //赔率
+        return getOdds(CODE, betCode);
+    }
+
 
     /**
      * 下注

@@ -13,6 +13,7 @@
         <h5>湖北快3</h5>
         <ul>
             <li class="sli">常规玩法</li>
+            <li>官方玩法</li>
             <li>游戏说明</li>
         </ul>
     </div>
@@ -39,6 +40,10 @@
         <h5><strong>【短牌】</strong></h5>
         <p>开奖号码任两字同号、且与所选择的短牌组合相符时，即为中奖。<br>
         举例：如开奖号码为1、1、3、则投注短牌1、1，即为中奖。</p>
+
+    </div>
+    <div class="help_col">
+        <%@ include file="K3Gfwf.jsp" %>
     </div>
     <div class="help_col">
         <h5><strong>总则</strong></h5>
