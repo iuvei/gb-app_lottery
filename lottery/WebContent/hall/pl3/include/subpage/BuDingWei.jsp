@@ -17,13 +17,13 @@
     <div class="Pick cl-1002 recl-1002" data-flag="qsym-budw">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从0-9中任意选择1个以上号码。
+            从0-9中任意选择1个以上号码
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：1 开奖号码：前三位，至少出现1个1，即中前三一码不定位。</var>
+                <var>投注方案：从0-9中任意选择1个以上号码</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从0-9中任意选择1个以上号码，每组由一个号码组成，只要开奖号码万、千、百位中包含所选号码，即为中奖。（同个号码出现多次只计一次中奖）</var>
+                <var>从0-9中选择1个号码，每注由1个号码组成，只要开奖号码的百位、十位、个位中包含所选号码，即为中奖。</var>
             </a>
         </span>
         </p>

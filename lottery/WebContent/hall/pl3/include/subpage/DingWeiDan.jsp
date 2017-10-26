@@ -8,13 +8,13 @@
     <div class="Pick cl-1002 recl-1002" data-flag="dwd" style="border-top:none;">
         <p class="p1">
         <span class="fr fl cl-1001">
-            在万位、千位、百位、十位、个位任意位置上任意选择1个或1个以上号码。
+            在百位，十位，个位任意位置上任意选择1个或1个以上号码
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：万位1 开奖号码：万位1，即中定位胆万位。</var>
+                <var>投注方案：在百位，十位，个位任意位置上任意选择1个或1个以上号码</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从万、千、百、十、个位中至少选择1个号码组成一注，每注由一个号码组成，所选号码与相同位置上的开奖号码一致，即为中奖。</var>
+                <var>从百位、十位、个位任意位置上至少选择1个以上号码，所选号码与相同位置上的开奖号码一致，即为中奖。</var>
             </a>
         </span>
         </p>
