@@ -99,8 +99,8 @@
     </div><!--Single-->
     <%@ include file="../include/include.gfwftzqd.jsp" %>
     <%@ include file="/hall/common/BottomTab.jsp" %>
-    <%@ include file="/hall/common/History.jsp" %>
-   <%-- <%@ include file="/hall/pk10/include/HistoryPk10Color.jsp" %>--%>
+  <%--  <%@ include file="/hall/common/History.jsp" %>--%>
+    <%@ include file="/hall/pk10/include/HistoryPk10Color.jsp" %>
     <%@ include file="../include/Pk10GfwfTemplate.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
