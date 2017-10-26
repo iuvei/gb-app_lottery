@@ -36,7 +36,7 @@
         </span>
         </p>
         <ul>
-            <li data-name="十">
+            <li data-name="百">
                 <b><i>百位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
@@ -59,7 +59,7 @@
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
                 </div>
             </li>
-            <li data-name="个">
+            <li data-name="十">
                 <b><i>十位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
