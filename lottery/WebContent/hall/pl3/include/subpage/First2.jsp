@@ -25,13 +25,13 @@
     <div class="Pick cl-1002 recl-1002" data-name="zxfs" data-flag="zxfs-q2">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从十位、个位中至少各选1个号码组成一注。
+            从十、个位各选一个号码组成一注。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：58 开奖号码前两位：58，即中前二直选。</var>
+                <var>投注方案：从十、个位各选一个号码组成一注</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从十、个位中至少各选择1个号码组成一注，所选号码与开奖号码的前2位相同，且顺序一致，即为中奖。</var>
+                <var>所选号码与开奖号码的百位、十位相同，且顺序一致，即为中奖。</var>
             </a>
         </span>
         </p>
@@ -91,13 +91,13 @@
     <div class="Pick cl-1003 recl-1003" data-name="zxds">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个二位数号码组成一注。
+            手动输入号码，至少输入1个两位数号码。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：58 开奖号码前两位：58，即中前二直选。</var>
+                <var>投注方案：手动输入号码，至少输入1个两位数号码</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>手动输入2个号码组成一注，输入号码的万、千位与开奖号码相同，且顺序一致，即为中奖。</var>
+                <var>手动输入一个2位数号码组成一注，所选号码的百位、十位与开奖号码相同，且顺序一致，即为中奖。</var>
             </a>
 
         </span>
@@ -209,11 +209,11 @@
         <span class="fr fl cl-1001">
            从0-9中任意选择2个或2个以上号码。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：58 开奖号码：前两位 58 或 85(顺序不限，不含对子号)，即为中奖。</var>
+                <var>投注方案：从0-9中任意选择2个或2个以上号码。</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从0-9号码中选取两个号码组成一注，所选号码与开奖号码的万、千位相同，顺序不限，即为中奖。</var>
+                <var>从0-9中选2个号码组成一注，所选号码与开奖号码的百位、十位相同，顺序不限（不含对子号），即为中奖。</var>
             </a>
         </span>
         </p>
@@ -249,13 +249,13 @@
     <div class="Pick cl-1003 recl-1007-zuxds" data-name="zuxds">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少输入1个二位数号码组成一注。
+            手动输入号码，至少输入1个两位数号码组成一注。两位数字应不同。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：58 开奖号码：前二位 58 或者 85(顺序不限，不含对子号)，即中前二组选。</var>
+                <var>投注方案：手动输入号码，至少输入1个两位数号码组成一注。两位数字应不同。</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>手动输入2个号码组成一注，输入号码的万、千位与开奖号码相同，且顺序不限，即为中奖。</var>
+                <var>手动输入2个号码组成一注，所输入的号码与当期中奖号码的前2个号码相同，顺序不限，即为中奖。</var>
             </a>
 
         </span>
