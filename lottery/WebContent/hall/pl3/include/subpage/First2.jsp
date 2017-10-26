@@ -25,9 +25,9 @@
     <div class="Pick cl-1002 recl-1002" data-name="zxfs" data-flag="zxfs-q2">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从十、个位各选一个号码组成一注。
+            从百、十位各选一个号码组成一注。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：从十、个位各选一个号码组成一注</var>
+                <var>投注方案：从百、十位各选一个号码组成一注</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
@@ -37,7 +37,7 @@
         </p>
         <ul>
             <li data-name="十">
-                <b><i>十位</i></b>
+                <b><i>百位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
                     <span><i>1</i></span>
@@ -60,7 +60,7 @@
                 </div>
             </li>
             <li data-name="个">
-                <b><i>个位</i></b>
+                <b><i>十位</i></b>
                 <var class="numLine">
                     <span><i>0</i></span>
                     <span><i>1</i></span>
@@ -113,93 +113,6 @@
         </div>
 
         <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
-    </div>
-</script>
-
-<script type="text/html" id="template_q2zxhz">
-    <div class="Pick cl-1002 recl-1004-zxhz" data-name="zxhz">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-            从0-18中任意选择1个或1个以上的和值号码。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：和值1 开奖号码前两位：01或10，即中前二和值。</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>开奖号码的万、千位中两个数字相加之和等于所选和值，即为中奖。</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li data-name="和值" class="hz-q2 rehz-q2">
-                <b class="hz-dir"><i>和值</i></b>
-                <var class="numLine renumHeigth">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-                <var class="numLine renumHeigth">
-                    <span><i>10</i></span>
-                    <span><i>11</i></span>
-                    <span><i>12</i></span>
-                    <span><i>13</i></span>
-                    <span><i>14</i></span>
-                    <span><i>15</i></span>
-                    <span><i>16</i></span>
-                    <span><i>17</i></span>
-                    <span><i>18</i></span>
-                </var>
-            </li>
-        </ul>
-    </div>
-</script>
-
-<script type="text/html" id="template_q2zxkd">
-    <div class="Pick cl-1002 recl-1005-zxkd" data-name="zxkd">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-            从0-9中任意选择1个号码组成一注。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：跨度9 开奖号码：90***，最大值9与最小值0相减之差即为跨度值，当所选号与跨度号码相同，即为中奖。</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>所选数值等于前二位最大数与最小数相减之差，即为中奖。</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li data-name="跨度">
-                <b><i>跨度</i></b>
-                <var class="numLine">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-                <div class="clear re-5x-i">
-                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
-                    <i onclick="page.PlayWay.selectFun_2(this)">大</i>
-                    <i onclick="page.PlayWay.selectFun_3(this)">小</i>
-                    <i onclick="page.PlayWay.selectFun_4(this)">奇</i>
-                    <i onclick="page.PlayWay.selectFun_5(this)">偶</i>
-                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
-                </div>
-            </li>
-        </ul>
     </div>
 </script>
 
@@ -271,83 +184,6 @@
         </div>
 
         <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
-    </div>
-</script>
-
-<script type="text/html" id="template_q2zuxhz">
-    <div class="Pick cl-1002 recl-1008-zuxhz" data-name="zuxhz">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-            从1-17中任意选择1个或者1个以上号码。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：和值1 开奖号码前两位：01或10(顺序不限，不含对子号)，即中前二组选。</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>开奖号码的万、千位中两个数字相加之和等于所选号(不含对子号)，即为中奖。</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li data-name="和值" class="hz-q2 rehz-q2">
-                <b class="hz-dir"><i>和值</i></b>
-                <var class="numLine renumHeigth">
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                    <span><i>10</i></span>
-                </var>
-                <var class="numLine renumHeigth">
-                    <span><i>11</i></span>
-                    <span><i>12</i></span>
-                    <span><i>13</i></span>
-                    <span><i>14</i></span>
-                    <span><i>15</i></span>
-                    <span><i>16</i></span>
-                    <span><i>17</i></span>
-                </var>
-            </li>
-        </ul>
-    </div>
-</script>
-
-<script type="text/html" id="template_q2zuxbd">
-    <div class="Pick cl-1002 recl-1009-zuxbd" data-name="zuxbd">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-           从0-9中任意选择1个包胆号码。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：包胆8 开奖号码：前二位 8×，且×不等于8，即中前二组选。</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从0-9号码中任意选取一个胆码，开奖号码前二位各不相同(不含对子号)，投注号码与开奖号码前二位中任意一位相同，即为中奖。</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li data-name="胆码">
-                <b><i>胆码</i></b>
-                <var class="numLine" data-flag="bdDanXuan">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-            </li>
-        </ul>
     </div>
 </script>
 <script type="text/javascript">
