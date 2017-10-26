@@ -89,7 +89,8 @@
                 </c:when>
                 <c:when test="${p.betCode eq 'ssc_sanxing_zuxuan_qshhzx' || p.betCode eq 'ssc_sanxing_zuxuan_hshhzx'
                     || p.betCode eq 'ssc_sanxing_zuxuan_qszxhz' || p.betCode eq 'ssc_sanxing_zuxuan_hszxhz'
-                    || p.betCode eq 'ssc_sanxing_zuxuan_qszxbd' || p.betCode eq 'ssc_sanxing_zuxuan_hszxbd'}">
+                    || p.betCode eq 'ssc_sanxing_zuxuan_qszxbd' || p.betCode eq 'ssc_sanxing_zuxuan_hszxbd'
+                    || p.betCode eq 'pl3_sanxing_zuxuan_hhzx' || p.betCode eq 'pl3_sanxing_zuxuan_zxhz'}">
                     <c:set var="pOdd" value="组三@${p.odd} 组六@${p.odd2}"/>
                 </c:when>
                 <c:otherwise>
