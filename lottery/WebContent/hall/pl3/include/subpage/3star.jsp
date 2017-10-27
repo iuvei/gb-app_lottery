@@ -246,9 +246,9 @@
             </a>
         </span>
         </p>
-        <ul>
-            <li class="li1005_hezhi" data-name="和值">
-                <b><i>和值</i></b>
+        <ul class="dxds k3">
+            <li class="li1012_hezhi" data-name="和值">
+                <b style="height:110px"><i>和值</i></b>
                 <var class="numLine renumHeigth">
                     <span><i>0</i></span>
                     <span><i>1</i></span>
@@ -260,18 +260,24 @@
                     <span><i>7</i></span>
                     <span><i>8</i></span>
                     <span><i>9</i></span>
+                </var>
+                <div class="clear re-5x-i qc-btn-w" style="margin-right:60px">
+                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
+                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
+                </div>
+                <var class="numLine renumHeigth">
                     <span><i>10</i></span>
                     <span><i>11</i></span>
                     <span><i>12</i></span>
                     <span><i>13</i></span>
-                </var>
-                <var class="numLine renumHeigth">
                     <span><i>14</i></span>
                     <span><i>15</i></span>
                     <span><i>16</i></span>
                     <span><i>17</i></span>
                     <span><i>18</i></span>
                     <span><i>19</i></span>
+                </var>
+                <var class="numLine renumHeigth">
                     <span><i>20</i></span>
                     <span><i>21</i></span>
                     <span><i>22</i></span>
@@ -468,9 +474,9 @@
             </a>
         </span>
         </p>
-        <ul>
-            <li class="li1012_hezhi" data-name="和值">
-                <b><i>和值</i></b>
+        <ul class="dxds k3">
+            <li class="li1005_hezhi" data-name="和值">
+                <b style="height:110px"><i>和值</i></b>
                 <var class="numLine renumHeigth">
                     <span><i>1</i></span>
                     <span><i>2</i></span>
@@ -481,17 +487,23 @@
                     <span><i>7</i></span>
                     <span><i>8</i></span>
                     <span><i>9</i></span>
+                </var>
+                <div class="clear re-5x-i qc-btn-w" style="margin-right:60px">
+                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
+                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
+                </div>
+                <var class="numLine renumHeigth">
                     <span><i>10</i></span>
                     <span><i>11</i></span>
                     <span><i>12</i></span>
                     <span><i>13</i></span>
-                </var>
-                <var class="numLine renumHeigth">
                     <span><i>14</i></span>
                     <span><i>15</i></span>
                     <span><i>16</i></span>
                     <span><i>17</i></span>
                     <span><i>18</i></span>
+                </var>
+                <var class="numLine renumHeigth">
                     <span><i>19</i></span>
                     <span><i>20</i></span>
                     <span><i>21</i></span>
@@ -501,6 +513,7 @@
                     <span><i>25</i></span>
                     <span><i>26</i></span>
                 </var>
+
             </li>
         </ul>
     </div>

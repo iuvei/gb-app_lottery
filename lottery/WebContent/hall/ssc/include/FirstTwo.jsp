@@ -134,8 +134,8 @@
             </a>
         </span>
         </p>
-        <ul>
-            <li data-name="和值" class="hz-q2 rehz-q2">
+        <ul class="dxds k3">
+            <li data-name="和值" class="li1012_hezhi">
                 <b class="hz-dir"><i>和值</i></b>
                 <var class="numLine renumHeigth">
                     <span><i>0</i></span>
@@ -149,6 +149,10 @@
                     <span><i>8</i></span>
                     <span><i>9</i></span>
                 </var>
+                <div class="clear re-5x-i qc-btn-w" style="margin-right:10px">
+                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
+                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
+                </div>
                 <var class="numLine renumHeigth">
                     <span><i>10</i></span>
                     <span><i>11</i></span>
@@ -292,8 +296,8 @@
             </a>
         </span>
         </p>
-        <ul>
-            <li data-name="和值" class="hz-q2 rehz-q2">
+        <ul class="dxds k3">
+            <li data-name="和值" class="li1012_hezhi">
                 <b class="hz-dir"><i>和值</i></b>
                 <var class="numLine renumHeigth">
                     <span><i>1</i></span>
@@ -305,9 +309,13 @@
                     <span><i>7</i></span>
                     <span><i>8</i></span>
                     <span><i>9</i></span>
-                    <span><i>10</i></span>
                 </var>
+                <div class="clear re-5x-i qc-btn-w" style="margin-right:10px">
+                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
+                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
+                </div>
                 <var class="numLine renumHeigth">
+                    <span><i>10</i></span>
                     <span><i>11</i></span>
                     <span><i>12</i></span>
                     <span><i>13</i></span>

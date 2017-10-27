@@ -536,7 +536,6 @@
             <li class="li1012_hezhi" data-name="和值">
                 <b style="height:110px"><i>和值</i></b>
                 <var class="numLine renumHeigth">
-                    <span><i>0</i></span>
                     <span><i>1</i></span>
                     <span><i>2</i></span>
                     <span><i>3</i></span>
@@ -561,9 +560,9 @@
                     <span><i>16</i></span>
                     <span><i>17</i></span>
                     <span><i>18</i></span>
-                    <span><i>19</i></span>
                 </var>
                 <var class="numLine renumHeigth">
+                    <span><i>19</i></span>
                     <span><i>20</i></span>
                     <span><i>21</i></span>
                     <span><i>22</i></span>
@@ -571,7 +570,6 @@
                     <span><i>24</i></span>
                     <span><i>25</i></span>
                     <span><i>26</i></span>
-                    <span><i>27</i></span>
                 </var>
             </li>
         </ul>
