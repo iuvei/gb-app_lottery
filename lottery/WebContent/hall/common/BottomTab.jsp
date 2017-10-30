@@ -99,10 +99,10 @@
 <script type="text/html" id="template_todayOpenTemplate">
     <ul>
         <li class="not">
-            <span>游戏种类</span>
-            <span>期号</span>
-            <span>奖号</span>
-            <span>开奖时间</span>
+            <span style="max-width: 200px!important;">游戏种类</span>
+            <span style="max-width: 200px!important;">期号</span>
+            <span style="max-width: 200px!important;">奖号</span>
+            <span style="max-width: 200px!important;">开奖时间</span>
         </li>
         {{each list as value index}}
         {{if index % 2 == 0}}
@@ -110,10 +110,10 @@
             {{else}}
         <li>
             {{/if}}
-            <span>{{value.codeMemo}}</span>
-            <span>{{value.expect}}</span>
-            <span style="color:red;">{{value.openCode}}</span>
-            <span>
+            <span style="max-width: 200px!important;">{{value.codeMemo}}</span>
+            <span style="max-width: 200px!important;">{{value.expect}}</span>
+            <span style="max-width: 200px!important;color:red;" title="{{value.openCode}}">{{value.openCode}}</span>
+            <span style="max-width: 200px!important;">
                 {{value.fmOpenTime}}
             </span>
             <span class="pid" style="visibility: hidden">{{value.code}}</span>
