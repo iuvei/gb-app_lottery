@@ -13,6 +13,7 @@
         <h5>体彩排列3</h5>
         <ul>
             <li class="sli">常规玩法</li>
+            <li>官方玩法</li>
             <li>开奖规则</li>
         </ul>
     </div>
@@ -222,6 +223,9 @@
             </tr>
             </tbody>
         </table>
+    </div>
+    <div class="help_col">
+        <%@ include file="Fc3dGfwf.jsp" %>
     </div>
     <div class="help_col">
         <h5><strong>总则</strong></h5>

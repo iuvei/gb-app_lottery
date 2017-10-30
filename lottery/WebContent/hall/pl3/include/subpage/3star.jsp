@@ -32,11 +32,11 @@
         <span class="fr fl cl-1001">
             从百位、十位、个位各选一个号码组成一注。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：从个、十、百位各选一个号码组成一注</var>
+                <var>投注方案：从百、十、个位各选一个号码组成一注</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从百位、十位、个位中选择一个3位数号码组成一注，所选号码与开奖号码3位相同，且顺序一致，即为中奖。</var>
+                <var>从百位、十位、个位中至少各选择1个号码组成一注，所选号码与开奖号码全部相同，且顺序一致，即为中奖。</var>
             </a>
         </span>
         </p>
@@ -246,9 +246,9 @@
             </a>
         </span>
         </p>
-        <ul>
-            <li class="li1005_hezhi" data-name="和值">
-                <b><i>和值</i></b>
+        <ul class="dxds k3">
+            <li class="li1012_hezhi" data-name="和值">
+                <b style="height:110px"><i>和值</i></b>
                 <var class="numLine renumHeigth">
                     <span><i>0</i></span>
                     <span><i>1</i></span>
@@ -260,18 +260,24 @@
                     <span><i>7</i></span>
                     <span><i>8</i></span>
                     <span><i>9</i></span>
+                </var>
+                <div class="clear re-5x-i qc-btn-w" style="margin-right:60px">
+                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
+                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
+                </div>
+                <var class="numLine renumHeigth">
                     <span><i>10</i></span>
                     <span><i>11</i></span>
                     <span><i>12</i></span>
                     <span><i>13</i></span>
-                </var>
-                <var class="numLine renumHeigth">
                     <span><i>14</i></span>
                     <span><i>15</i></span>
                     <span><i>16</i></span>
                     <span><i>17</i></span>
                     <span><i>18</i></span>
                     <span><i>19</i></span>
+                </var>
+                <var class="numLine renumHeigth">
                     <span><i>20</i></span>
                     <span><i>21</i></span>
                     <span><i>22</i></span>
@@ -281,48 +287,6 @@
                     <span><i>26</i></span>
                     <span><i>27</i></span>
                 </var>
-            </li>
-        </ul>
-    </div>
-</script>
-
-<script type="text/html" id="template_pl3zxkd">
-    <div class="Pick cl-1002 cl-1006-zxkd">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-            从0-9中选择1个以上号码。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：跨度：8，开奖号码：**129，最大号码9与最小号码1相减值等于8，所选号与跨度号码相同即中奖。</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>所选数值与开奖号码后三位最大和最小数字相减之差，即为中奖。</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li data-name="跨度">
-                <b><i>跨度</i></b>
-                <var class="numLine">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-                <div class="clear re-5x-i">
-                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
-                    <i onclick="page.PlayWay.selectFun_2(this)">大</i>
-                    <i onclick="page.PlayWay.selectFun_3(this)">小</i>
-                    <i onclick="page.PlayWay.selectFun_4(this)">奇</i>
-                    <i onclick="page.PlayWay.selectFun_5(this)">偶</i>
-                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
-                </div>
             </li>
         </ul>
     </div>
@@ -338,7 +302,7 @@
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从0-9中选择2个数字组成两注，所选号码与开奖号码的百位、十位、个位相同，且顺序不限，即为中奖。</var>
+                <var>从0-9中选择2个数字组成两注，且所选号码与开奖号码(三个数字当中有二个数字相同)的百位、十位、个位相同，顺序不限，即为中奖。</var>
             </a>
         </span>
         </p>
@@ -381,7 +345,7 @@
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>手动输入组三号码，3个数字为一注，所选号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖</var>
+                <var>手动输入组三号码，3个数字为一注，所选号码与开奖号码(三个数字当中有二个数字相同)的百位、十位、个位相同，顺序不限，即为中奖</var>
             </a>
 
         </span>
@@ -410,7 +374,7 @@
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从0-9中任意选择3个号码组成一注，所选号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖。</var>
+                <var>从0-9中任意选择3个号码组成一注，所选号码与开奖号码(三个数字全不相同)的百位、十位、个位相同，顺序不限，即为中奖。</var>
             </a>
         </span>
         </p>
@@ -452,9 +416,8 @@
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>手动输入组六号码，3个数字为一注，所选号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖</var>
+                <var>手动输入组六号码，3个数字为一注，所选号码与开奖号码(三个数字全不相同)的百位、十位、个位相同，顺序不限，即为中奖</var>
             </a>
-
         </span>
         </p>
         <div class="content_jiang">
@@ -466,7 +429,6 @@
                 </ul>
             </div>
         </div>
-
         <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
     </div>
 </script>
@@ -483,7 +445,6 @@
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
                 <var>手动输入组三或组六号码，3个数字为一注，所选号码与开奖号码的百位、十位、个位相同，顺序不限，即为中奖。</var>
             </a>
-
         </span>
         </p>
         <div class="content_jiang">
@@ -495,7 +456,6 @@
                 </ul>
             </div>
         </div>
-
         <p class="rep1_zhushi">每一注号码之间请用一个 空格[ ]、逗号[,] 或者 分号[;] 隔开</p>
     </div>
 </script>
@@ -504,19 +464,19 @@
     <div class="Pick cl-1012-zxhz">
         <p class="p1">
         <span class="fr fl cl-1001">
-            从1-26中选择1个号码。
+            从1-26中至少选择1个号码。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：从1-26中选择1个号码</var>
+                <var>投注方案：从1-26中至少选择1个号码</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>所选数值等于开奖号码百位、十位、个位三个数字相加之和(不含豹子号)，即为中奖。</var>
+                <var>开奖号码为组三或组六形态，所选数值等于开奖号码的百位、十位、个位三个数字相加之和，即为中奖。</var>
             </a>
         </span>
         </p>
-        <ul>
-            <li class="li1012_hezhi" data-name="和值">
-                <b><i>和值</i></b>
+        <ul class="dxds k3">
+            <li class="li1005_hezhi" data-name="和值">
+                <b style="height:110px"><i>和值</i></b>
                 <var class="numLine renumHeigth">
                     <span><i>1</i></span>
                     <span><i>2</i></span>
@@ -527,17 +487,23 @@
                     <span><i>7</i></span>
                     <span><i>8</i></span>
                     <span><i>9</i></span>
+                </var>
+                <div class="clear re-5x-i qc-btn-w" style="margin-right:60px">
+                    <i onclick="page.PlayWay.selectFun_1(this)">全</i>
+                    <i onclick="page.PlayWay.selectFun_6(this)">清</i>
+                </div>
+                <var class="numLine renumHeigth">
                     <span><i>10</i></span>
                     <span><i>11</i></span>
                     <span><i>12</i></span>
                     <span><i>13</i></span>
-                </var>
-                <var class="numLine renumHeigth">
                     <span><i>14</i></span>
                     <span><i>15</i></span>
                     <span><i>16</i></span>
                     <span><i>17</i></span>
                     <span><i>18</i></span>
+                </var>
+                <var class="numLine renumHeigth">
                     <span><i>19</i></span>
                     <span><i>20</i></span>
                     <span><i>21</i></span>
@@ -547,99 +513,7 @@
                     <span><i>25</i></span>
                     <span><i>26</i></span>
                 </var>
-            </li>
-        </ul>
-    </div>
-</script>
 
-<script type="text/html" id="template_pl3zxbd">
-    <div class="Pick cl-1002 cl-1013-zxbd">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-            从0-9中选择1个号码。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：包胆3：开奖号码：后三位3XX或者33X，即中后三组选三，后三位3XY，即中后三组选六</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>从0-9号码中任意选择一个胆码，开奖号码后三位为组选三或组选六形态(不含豹子号，投注号码与开奖后三位中任意一位相同，即为中奖。</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li data-name="包胆">
-                <b><i>包胆</i></b>
-                <var class="numLine" data-flag="bdDanXuan">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-            </li>
-        </ul>
-    </div>
-</script>
-
-<script type="text/html" id="template_pl3hzws">
-    <div class="Pick cl-1002 cl-1014-hzws">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-            从0-9中选择1个号码。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：和值尾数8 开奖号码：后三位936，和值尾数为8，即中和值尾数。</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>所选号码等于开奖号码的百、十、个位数字相加之和的尾数，即为中奖。</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li class="hzws_li" data-name="和值尾数">
-                <b><i>和值尾数</i></b>
-                <var class="numLine">
-                    <span><i>0</i></span>
-                    <span><i>1</i></span>
-                    <span><i>2</i></span>
-                    <span><i>3</i></span>
-                    <span><i>4</i></span>
-                    <span><i>5</i></span>
-                    <span><i>6</i></span>
-                    <span><i>7</i></span>
-                    <span><i>8</i></span>
-                    <span><i>9</i></span>
-                </var>
-            </li>
-        </ul>
-    </div>
-</script>
-
-<script type="text/html" id="template_pl3tsh">
-    <div class="Pick cl-1002 cl-1015-tsh">
-        <p class="p1">
-        <span class="fr fl cl-1001">
-            选择1个或一个以上特殊号码。
-            <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：豹子顺子对子 开奖号码：后三位888，即中豹子；后三位678，即中顺子；后三位558，即中对子。</var>
-            </a>
-            <a>
-                <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
-                <var>所选号码特殊属性与开奖号码后三位号码属性一致，即为中奖。其中：1.顺子号的百、十、个位不分顺序(特别号码：019、089也是顺子号)；2.对子号指的是开奖号码的后三位当中，任意两位数字相同的三位数号码</var>
-            </a>
-        </span>
-        </p>
-        <ul>
-            <li class="hzws_li tsh_li" data-name="特殊号">
-                <b class="tsh-b"><i>特殊号</i></b>
-                <span>豹子</span>
-                <span>顺子</span>
-                <span>对子</span>
             </li>
         </ul>
     </div>
