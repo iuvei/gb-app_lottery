@@ -104,7 +104,7 @@
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/ssc/Ssc'], function(Page) {
+    curl(['site/hall/ssc/Common'], function(Page) {
         page = new Page();
     });
 </script>
