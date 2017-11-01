@@ -27,8 +27,8 @@
                     </c:if>
                 </span>
                 <span class="sp5">${numSum}</span>
-                <span class="sp5"><c:if test="${numSum%2 == 0}">双</c:if><c:if test="${numSum%2 != 0}">单</c:if></span>
-                <span class="sp5"><c:if test="${numSum>=12}">大</c:if><c:if test="${numSum <= 11}">小</c:if></span>
+                <span class="sp5"><c:if test="${numSum == 11}">和</c:if><c:if test="${numSum != 11}"><c:if test="${numSum%2 == 0}">双</c:if><c:if test="${numSum%2 != 0}">单</c:if></c:if></span>
+                <span class="sp5"><c:if test="${numSum == 11}">和</c:if><c:if test="${numSum>11}">大</c:if><c:if test="${numSum < 11}">小</c:if></span>
                 <%--<span class="sp8"><a href="javascript:void(0)"><img src="http://www.600wan0.net:80/static/theme/default/img/ico73.png" alt="" onclick="openGcdt('zst/cqssc')"></a></span>--%>
                 <span class="sp9"><a href="javascript:void(0)" class="a1" data-page="/${type}/${code}/index.html">立即购彩</a></span>
             </li>
