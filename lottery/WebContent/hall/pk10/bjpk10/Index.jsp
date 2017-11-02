@@ -107,7 +107,7 @@
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/pk10/Pk10'], function(Page) {
+    curl(['site/hall/pk10/Common'], function(Page) {
         page = new Page();
     });
 </script>
