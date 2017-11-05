@@ -60,10 +60,11 @@
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
-                            <span class="acti"><a href="javascript:void(0)" data-url="bjpk10-firstOne">前一</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="bjpk10-dingWeiDan">定位胆</a></span>
+                            <span><a href="javascript:void(0)" data-url="bjpk10-firstOne">前一</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-firstTwo">前二</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-firstThree">前三</a></span>
-                            <span><a href="javascript:void(0)" data-url="bjpk10-dingWeiDan">定位胆</a></span>
+
                         </p>
                     </li>
                     </c:if>
@@ -74,8 +75,8 @@
                             <style type="text/css">
                                 .Single .layout .Playmethod ul li p.kuaiqian span {width: 55px;}
                             </style>
-                            <span><a href="javascript:void(0)" data-url="bjpk10-twoSide">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-digit">数字盘</a></span>
+                            <span><a href="javascript:void(0)" data-url="bjpk10-twoSide">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-champion">冠军</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-runner_up">亚军</a></span>
                             <span><a href="javascript:void(0)" data-url="bjpk10-ranking-third_runner">季军</a></span>

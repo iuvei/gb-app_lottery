@@ -58,8 +58,8 @@
                             <style type="text/css">
                                 .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
                             </style>
-                            <span class="acti"><a href="javascript:void(0)" data-url="ffssc-twoSide">双面</a></span>
-                            <span><a href="javascript:void(0)" data-url="ffssc-digit">数字盘</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="ffssc-digit">数字盘</a></span>
+                            <span><a href="javascript:void(0)" data-url="ffssc-twoSide">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="ffssc-oneWordFix">一字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="ffssc-twoWordFix">二字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="ffssc-threeWordFix">三字定位</a></span>
@@ -82,7 +82,7 @@
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/ssc/Ssc'], function(Page) {
+    curl(['site/hall/ssc/Common'], function(Page) {
         page = new Page();
     });
 </script>
