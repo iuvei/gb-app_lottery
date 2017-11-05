@@ -35,7 +35,7 @@
 </div>
 
 <div id="subPage"></div>
-<div id="subJRange"></div><
+<div id="subJRange"></div>
 <script type="text/html" id="template_q3zxfs">
     <div class="Pick cl-1002 recl-1002" data-flag="zxfs_zx">
         <p class="p1">
