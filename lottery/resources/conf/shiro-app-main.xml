@@ -99,7 +99,12 @@
 				/pl3/*/sum.html = anon
 				/pl3/*/getOdds.html = anon
 				/pl3/*/getGfwfAllOdd.html = anon
-				/pl3/*/getSubPage.html = anon
+				/pl3/*/threeStar.html = anon
+				/pl3/*/afterTwo.html = anon
+				/pl3/*/buDingWei.html = anon
+				/pl3/*/dingWeiDan.html = anon
+				/pl3/*/firstTwo.html = anon
+				<!--/pl3/*/getSubPage.html = anon-->
 				/pl3/*/getBetOdds.html = anon
 				/k3/*/index.html = anon
 				/k3/*/points.html = anon

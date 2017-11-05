@@ -35,9 +35,6 @@ public class BasePl3Controller extends BaseLotteryController {
     static final String FIX_URL = "/hall/pl3/include/Fix";
 
 
-    static final String SUB_PAGE = "/hall/pl3/include/subpage/%s";
-
-
     /**
      * 一字定位列表
      */
@@ -120,10 +117,70 @@ public class BasePl3Controller extends BaseLotteryController {
     static final String THREE_WORD_SUM = "/hall/pl3/include/sum/ThreeWordSum";
 
     /**
+     * 三星
+     */
+    static final String THREE_STAR = "/hall/pl3/include/ThreeStar";
+
+    /**
+     * 后二
+     */
+    static final String AFTER_TWO = "/hall/pl3/include/AfterTwo";
+
+    /**
+     * 不定位
+     */
+    static final String BU_DING_WEI = "/hall/pl3/include/BuDingWei";
+
+    /**
+     * 定位胆
+     */
+    static final String DING_WEI_DAN = "/hall/pl3/include/DingWeiDan";
+
+    /**
+     * 前二
+     */
+    static final String FIRST_TWO = "/hall/pl3/include/FirstTwo";
+
+
+    // 三星
+    public String threeStar(Model model, String code) {
+        initPage(model, code);
+        return THREE_STAR;
+    }
+
+    // 后二
+    public String afterTwo(Model model, String code) {
+        initPage(model, code);
+        return AFTER_TWO;
+    }
+
+    // 不定位
+    public String buDingWei(Model model, String code) {
+        initPage(model, code);
+        return BU_DING_WEI;
+    }
+
+    // 定位胆
+    public String dingWeiDan(Model model, String code) {
+        initPage(model, code);
+        return DING_WEI_DAN;
+    }
+
+    // 前二
+    public String firstTwo(Model model, String code) {
+        initPage(model, code);
+        return FIRST_TWO;
+    }
+
+
+
+    /**
      * 获取时时彩官方玩法的奖金,返点数据
      * @param code
      * @return
      */
+    @RequestMapping("/getGfwfAllOdd")
+    @ResponseBody
     public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
 
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(code);

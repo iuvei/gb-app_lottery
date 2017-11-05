@@ -3,18 +3,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>PL3 | 体彩排列3</title>
     <%@ include file="/include/include.head.jsp" %>
+    <link rel="stylesheet" type="text/css" href="${resComRoot}/themes/public-mod.css?v=${rcVersion}" />
     <script>
         var CONFIG = {
-            BASEURL: '${root}/ssc/',
+            BASEURL: '${root}/pl3/',
             RESURL: '${resRoot}/themes/default/'
         };
     </script>
 </head>
-
 <body>
 <div id="gameContent">
+    <input type="hidden" name="type" value="${type}" />
+    <input type="hidden" name="code" value="${code}" />
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
@@ -29,8 +31,6 @@
                         </c:forEach>
                     </select>
                 </div>
-                <input type="hidden" name="type" value="${type}" />
-                <input type="hidden" name="code" value="${code}" />
             </div>
 
             <div class="box2_stage rebox2_stage">
@@ -41,7 +41,7 @@
                 <div class="number pt10" id="lastOpenCode" style="display: block;">
                 </div>
                 <div class="number" id="lastOpenCodeList">
-                    <ul></ul>
+                    <ul><li></li></ul>
                 </div>
             </div>
             <%@ include file="/hall/common/CountDown.jsp" %>
@@ -53,33 +53,27 @@
             <div class="Playmethod">
                 <ul>
                     <c:if test="${lotteryGenra==1 || lotteryGenra==2}">
-                        <li>
-                            <b>官方玩法</b>
-                            <p data-name="gfwf">
-                                <style type="text/css">
-                                    .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
-                                </style>
-                                <span><a href="javascript:void(0)" data-url="${code}-3star">三星</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-First2">前二</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-After2">后二</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-DingWeiDan">定位胆</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-BuDingWei">不定位</a></span>
+                        <li class="gf-li">
+                            <b class="acti">官方玩法</b>
+                            <p class="guanfang respan pl3 gf-cgwf" data-name="gfwf">
+                                <span class="acti"><a href="javascript:void(0)" data-url="tcpl3-threeStar">三星</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-firstTwo">前二</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-afterTwo">后二</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-dingWeiDan">定位胆</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-buDingWei">不定位</a></span>
                             </p>
                         </li>
                     </c:if>
                     <c:if test="${lotteryGenra==1 || lotteryGenra==3}">
                         <li>
                             <b>快钱玩法</b>
-                            <p class="kuaiqian">
-                                <style type="text/css">
-                                    .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
-                                </style>
-                                <span><a href="javascript:void(0)" data-url="${code}-fix">定位</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-comb">组合</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-sum">和数</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-group3">组三</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-group6">组六</a></span>
-                                <span><a href="javascript:void(0)" data-url="${code}-span">跨度</a></span>
+                            <p>
+                                <span class="acti"><a href="javascript:void(0)" data-url="tcpl3-fix">定位</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-comb">组合</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-sum">和数</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-group3">组三</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-group6">组六</a></span>
+                                <span><a href="javascript:void(0)" data-url="tcpl3-span">跨度</a></span>
                             </p>
                         </li>
                     </c:if>
@@ -88,16 +82,19 @@
             <div id="subContent"></div>
         </div>
     </div><!--Single-->
-    <%@ include file="/hall/pl3/include/subpage/include.gfwftzqd.jsp" %>
+
+
+
+    <%@ include file="/hall/common/Gfwftzqd.jsp" %>
     <%@ include file="/hall/common/BottomTab.jsp" %>
-    <%@ include file="/hall/common/History.jsp" %>
-    <%@ include file="/hall/pl3/include/subpage/Pl3GfwfTemplate.jsp" %>
+    <%@ include file="/hall/common/HistoryColor.jsp" %>
+    <%@ include file="/hall/common/GfwfTemplate.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/pl3/Pl3'], function(Page) {
+    curl(['site/hall/pl3/Common'], function(Page) {
         page = new Page();
     });
 </script>

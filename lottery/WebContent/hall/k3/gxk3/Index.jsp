@@ -88,10 +88,10 @@
             <div id="subContent"></div>
         </div>
     </div><!--Single-->
-    <%@ include file="../include/gfwftzqd.jsp" %>
+    <%@ include file="/hall/common/Gfwftzqd.jsp" %>
     <%@ include file="/hall/common/BottomTab.jsp" %>
     <%@ include file="/hall/common/HistoryColor.jsp" %>
-    <%@ include file="../include/K3GfwfTemplate.jsp" %>
+    <%@ include file="/hall/common/GfwfTemplate.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 

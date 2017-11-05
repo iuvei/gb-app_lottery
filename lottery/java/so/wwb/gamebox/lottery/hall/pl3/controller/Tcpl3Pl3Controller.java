@@ -23,11 +23,6 @@ public class Tcpl3Pl3Controller extends BasePl3Controller {
         return String.format(INDEX_URL, CODE);
     }
 
-    @RequestMapping("/getSubPage")
-    public String getSubPage(String pageName) {
-        return String.format(SUB_PAGE, pageName);
-    }
-
     // 定位
     @RequestMapping("/fix")
     public String fix(Model model) {
@@ -62,6 +57,40 @@ public class Tcpl3Pl3Controller extends BasePl3Controller {
     @RequestMapping("/sum")
     public String sum(Model model) {
         return super.sum(model, CODE);
+    }
+
+
+    // 三星
+    @RequestMapping("/threeStar")
+    public String threeStar(Model model) {
+        return super.threeStar(model, CODE);
+    }
+
+    // 后二
+    @RequestMapping("/afterTwo")
+    public String afterTwo(Model model) {
+        return super.afterTwo(model, CODE);
+    }
+
+
+    // 不定位
+    @RequestMapping("/buDingWei")
+    public String buDingWei(Model model) {
+        return super.buDingWei(model, CODE);
+    }
+
+
+    // 定位胆
+    @RequestMapping("/dingWeiDan")
+    public String dingWeiDan(Model model) {
+        return super.dingWeiDan(model, CODE);
+    }
+
+
+    // 前二
+    @RequestMapping("/firstTwo")
+    public String firstTwo(Model model) {
+        return super.firstTwo(model, CODE);
     }
 
     /**
