@@ -57,10 +57,10 @@
                         <li class="gf-li">
                             <b class="acti">官方玩法</b>
                             <p class="guanfang respan pl3 gf-cgwf" data-name="gfwf">
-                                <span class="acti"><a href="javascript:void(0)" data-url="fc3d-threeStar">三星</a></span>
+                                <span class="acti"><a href="javascript:void(0)" data-url="fc3d-dingWeiDan">定位胆</a></span>
+                                <span><a href="javascript:void(0)" data-url="fc3d-threeStar">三星</a></span>
                                 <span><a href="javascript:void(0)" data-url="fc3d-firstTwo">前二</a></span>
                                 <span><a href="javascript:void(0)" data-url="fc3d-afterTwo">后二</a></span>
-                                <span><a href="javascript:void(0)" data-url="fc3d-dingWeiDan">定位胆</a></span>
                                 <span><a href="javascript:void(0)" data-url="fc3d-buDingWei">不定位</a></span>
                             </p>
                         </li>
