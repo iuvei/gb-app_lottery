@@ -2,7 +2,9 @@
 <%@ include file="/include/include.inc.jsp" %>
 <div class="lot-content clearfix">
     <div class="fl main-left">
-
+        <div class="hd rehd clearfix">
+            <%@ include file="../../common/ShortMoney.jsp" %>
+        </div>
         <div class="table-common">
             <table width="100%" border="1">
                 <thead>
@@ -45,15 +47,6 @@
                     </tr>
                 </c:forEach>
                 </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="18">
-                        <div class="hd clearfix rehd tzgz" id="toptouzhu">
-                                <%@ include file="../../common/ShortMoney.jsp" %>
-                        </div>
-                    </td>
-                </tr>
-                </tfoot>
             </table>
         </div>
 
