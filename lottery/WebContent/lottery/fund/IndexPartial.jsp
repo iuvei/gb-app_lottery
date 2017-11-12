@@ -45,7 +45,7 @@
 
             <td>${p.balance}</td>
             <td>${soulFn:formatDateTz(p.transactionTime,DateFormat.DAY_SECOND, timeZone)}</td>
-            <td>${p.memo}</td>
+            <td>${p.memo}<c:if test="${not empty p.sourceId}">_${p.sourceId}</c:if></td>
         </tr>
     </c:forEach>
     </tbody>
