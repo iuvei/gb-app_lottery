@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.session.SessionManager;
 import so.wwb.gamebox.lottery.tools.ServiceTool;
+import so.wwb.gamebox.model.ParamTool;
 import so.wwb.gamebox.model.TerminalEnum;
 import so.wwb.gamebox.model.company.lottery.po.LotteryFrequency;
 import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
@@ -70,6 +71,8 @@ public class HallController extends BaseLotteryController {
                 model.addAttribute("type", type);
                 model.addAttribute("code", code);
             }
+            //是否是纯彩票站
+            model.addAttribute("isLotterySite", ParamTool.isLotterySite(SessionManager.getSiteId()));
         }
         return HALL_INDEX_URL;
     }
