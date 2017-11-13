@@ -29,7 +29,7 @@
             <td>${(command.paging.pageNumber-1)*command.paging.pageSize+(status.index+1)}</td>
             <td>${dicts.lottery.transaction_type[p.transactionType]}</td>
                 <c:choose>
-                    <c:when test="${p.transactionType==1}">
+                    <c:when test="${p.transactionType==1 || p.transactionType==6}">
                         <td><font color="green">-${p.money}</font></td>
                     </c:when>
                     <c:when test="${p.transactionType==4}">
