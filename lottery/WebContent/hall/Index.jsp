@@ -123,12 +123,12 @@
             <c:when test="${empty player.account}">
                 <p>
                     欢迎，<i>
-                        <c:if test="${isLotterySite}">
-                            <a class="i0" href="/login.html" target="_blank">登录</a>
-                        </c:if>
-                        <c:if test="${!isLotterySite}">
-                            <a class="i0" href="/register.html" target="_blank">登录</a>
-                        </c:if>
+                            <c:if test="${isLotterySite}">
+                                <a class="i0" href="/login.html" target="_blank">登录</a>
+                            </c:if>
+                            <c:if test="${!isLotterySite}">
+                                <a class="i0" href="/register.html" target="_blank">登录</a>
+                            </c:if>
                         </i>
                 </p>
             </c:when>
