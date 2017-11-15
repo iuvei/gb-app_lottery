@@ -9,7 +9,7 @@ import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * 两分时时彩
+ * 二分时时彩
  * Created by devin on 17-8-19.
  */
 @Controller
