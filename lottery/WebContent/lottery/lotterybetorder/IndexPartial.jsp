@@ -140,8 +140,8 @@
     </c:if>
     小计：
     注单量&nbsp;&nbsp;<span id="betCount">${betCount}</span>注，
-    投注&nbsp;&nbsp;<span id="pageMoney">${soulFn:formatCurrency(allBetAmount)}</span>元，
-    返点&nbsp;&nbsp;<span id="pageRebateAmount">${soulFn:formatCurrency(allRebateAmount)}</span>元，
-    派彩&nbsp;&nbsp;<span id="pageWinOrLoseMoney">${soulFn:formatCurrency(allPayout)}</span>元
+    投注&nbsp;&nbsp;<span id="pageMoney">${fn:replace(soulFn:formatCurrency(allBetAmount),",","")}</span>元，
+    返点&nbsp;&nbsp;<span id="pageRebateAmount">${fn:replace(soulFn:formatCurrency(allRebateAmount),",","")}</span>元，
+    派彩&nbsp;&nbsp;<span id="pageWinOrLoseMoney">${fn:replace(soulFn:formatCurrency(allPayout),",","")}</span>元
 </div>
 <%@include file="../../include/include.pagination.jsp"%>
