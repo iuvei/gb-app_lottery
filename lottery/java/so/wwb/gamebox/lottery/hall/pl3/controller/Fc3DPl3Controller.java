@@ -28,16 +28,16 @@ public class Fc3DPl3Controller extends BasePl3Controller {
         return String.format(INDEX_URL, CODE);
     }
 
-    @RequestMapping("/getGfwfAllOdd")
-    @ResponseBody
-    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
-        return super.getGfwfOdd(code);
-    }
+//    @RequestMapping("/getGfwfAllOdd")
+//    @ResponseBody
+//    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
+//        return super.getGfwfOdd(code);
+//    }
 
-    @RequestMapping("/getSubPage")
-    public String getSubPage(String pageName) {
-        return String.format(SUB_PAGE, pageName);
-    }
+//    @RequestMapping("/getSubPage")
+//    public String getSubPage(String pageName) {
+//        return String.format(SUB_PAGE, pageName);
+//    }
 
     // 定位
     @RequestMapping("/fix")
@@ -74,6 +74,42 @@ public class Fc3DPl3Controller extends BasePl3Controller {
     public String sum(Model model) {
         return super.sum(model, CODE);
     }
+
+
+    // 三星
+    @RequestMapping("/threeStar")
+    public String threeStar(Model model) {
+        return super.threeStar(model, CODE);
+    }
+
+    // 后二
+    @RequestMapping("/afterTwo")
+    public String afterTwo(Model model) {
+        return super.afterTwo(model, CODE);
+    }
+
+
+    // 不定位
+    @RequestMapping("/buDingWei")
+    public String buDingWei(Model model) {
+        return super.buDingWei(model, CODE);
+    }
+
+
+    // 定位胆
+    @RequestMapping("/dingWeiDan")
+    public String dingWeiDan(Model model) {
+        return super.dingWeiDan(model, CODE);
+    }
+
+
+    // 前二
+    @RequestMapping("/firstTwo")
+    public String firstTwo(Model model) {
+        return super.firstTwo(model, CODE);
+    }
+
+
 
     /**
      * 获取赔率

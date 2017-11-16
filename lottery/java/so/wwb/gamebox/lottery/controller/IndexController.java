@@ -1,7 +1,6 @@
 package so.wwb.gamebox.lottery.controller;
 
 import org.json.JSONObject;
-import org.soul.commons.currency.CurrencyTool;
 import org.soul.commons.enums.EnumTool;
 import org.soul.commons.init.context.CommonContext;
 import org.soul.commons.lang.string.I18nTool;
@@ -53,16 +52,5 @@ public class IndexController  extends BaseDemoController {
     @Override
     protected String getDemoIndex() {
         return INDEX_URI;
-    }
-
-
-
-
-
-    public static void main(String[] args){
-        Double d1 = 2.015;
-        Double d2 = 2.016;
-        System.out.println(CurrencyTool.formatCurrency(d1));
-        System.out.println(CurrencyTool.formatCurrency(d2));
     }
 }

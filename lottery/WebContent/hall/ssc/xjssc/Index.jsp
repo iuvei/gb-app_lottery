@@ -56,12 +56,12 @@
                     <li class="gf-li">
                         <b class="acti">官方玩法</b>
                         <p class="guanfang respan gf-cgwf" data-name="gfwf">
-                            <span class="acti"><a href="javascript:void(0)" data-url="cqssc-fiveStar">五星</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="cqssc-dingWeiDan">定位胆</a></span>
+                            <span><a href="javascript:void(0)" data-url="cqssc-fiveStar">五星</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-fourStar">四星</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-afterThree">后三</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-firstThree">前三</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-firstTwo">前二</a></span>
-                            <span><a href="javascript:void(0)" data-url="cqssc-dingWeiDan">定位胆</a></span>
                             <span><a href="javascript:void(0)" data-url="cqssc-buDingWei">不定位</a></span>
                         </p>
                     </li>
@@ -73,8 +73,8 @@
                             <style type="text/css">
                                 .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
                             </style>
-                            <span class="acti"><a href="javascript:void(0)" data-url="xjssc-twoSide">双面</a></span>
-                            <span><a href="javascript:void(0)" data-url="xjssc-digit">数字盘</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="xjssc-digit">数字盘</a></span>
+                            <span><a href="javascript:void(0)" data-url="xjssc-twoSide">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="xjssc-oneWordFix">一字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="xjssc-twoWordFix">二字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="xjssc-threeWordFix">三字定位</a></span>
@@ -94,16 +94,16 @@
             <i class="it1 right_it1"><img src="${resRoot}/themes/default/img/ico46.png" alt=""></i>
         </div>
     </div><!--Single-->
-    <%@ include file="../include/include.gfwftzqd.jsp" %>
+    <%@ include file="/hall/common/Gfwftzqd.jsp" %>
     <%@ include file="/hall/common/BottomTab.jsp" %>
     <%@ include file="/hall/common/History.jsp" %>
-    <%@ include file="../include/SscGfwfTemplate.jsp" %>
+    <%@ include file="/hall/common/GfwfTemplate.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/ssc/Ssc'], function(Page) {
+    curl(['site/hall/ssc/Common'], function(Page) {
         page = new Page();
     });
 </script>
