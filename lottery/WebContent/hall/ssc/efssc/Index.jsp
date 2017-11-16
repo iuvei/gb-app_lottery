@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>时时彩 | 两分时时彩</title>
+    <title>时时彩 | 二分时时彩</title>
     <%@ include file="/include/include.head.jsp" %>
     <script>
         var CONFIG = {
@@ -18,7 +18,7 @@
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">
-                <h2>两分时时彩</h2>
+                <h2>二分时时彩</h2>
                 <p>Lottery results</p>
                 <p class="p1">第<i id="expect" class="expect"></i>期</p>
                 <div class="select">
@@ -36,7 +36,7 @@
             <div class="box2_stage rebox2_stage">
                 <p>
                     <span><i class="acti">近一期</i><i>近五期</i></span>
-                    <font id="lastNumber">两分时时彩第<var></var>期</font>
+                    <font id="lastNumber">二分时时彩第<var></var>期</font>
                 </p>
                 <div class="number pt10" id="lastOpenCode" style="display: block;">
                 </div>
@@ -58,8 +58,8 @@
                             <style type="text/css">
                                 .Single .layout .Playmethod ul li p.kuaiqian span {width: 61px;}
                             </style>
-                            <span class="acti"><a href="javascript:void(0)" data-url="ffssc-twoSide">双面</a></span>
-                            <span><a href="javascript:void(0)" data-url="ffssc-digit">数字盘</a></span>
+                            <span class="acti"><a href="javascript:void(0)" data-url="ffssc-digit">数字盘</a></span>
+                            <span><a href="javascript:void(0)" data-url="ffssc-twoSide">双面</a></span>
                             <span><a href="javascript:void(0)" data-url="ffssc-oneWordFix">一字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="ffssc-twoWordFix">二字定位</a></span>
                             <span><a href="javascript:void(0)" data-url="ffssc-threeWordFix">三字定位</a></span>
@@ -82,7 +82,7 @@
 
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/ssc/Ssc'], function(Page) {
+    curl(['site/hall/ssc/Common'], function(Page) {
         page = new Page();
     });
 </script>

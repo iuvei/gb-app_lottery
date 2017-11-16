@@ -6,7 +6,6 @@
 <div class="lot-content clearfix">
     <div class="fl main-left">
         <div class="hd rehd clearfix">
-                <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
                         <a href="javascript:void(0)" min-num="3" subCode="lhc_three_all_in" class="active">三全中</a>
@@ -76,6 +75,9 @@
                 </tbody>
             </table>
 
+        </div>
+        <div class="hd rehd clearfix">
+            <%@ include file="../../common/ShortMoney.jsp" %>
         </div>
         <div class="btns">
             <button type="submit" class="btn btn-1">提交</button>

@@ -117,7 +117,6 @@
                         <span class="ball-icon ball-33"></span>
                         <span class="ball-icon ball-39"></span>
                         <span class="ball-icon ball-43"></span>
-                        <span class="ball-icon ball-49"></span>
                     </td>
                 </tr>
 

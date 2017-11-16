@@ -13,13 +13,10 @@
             </c:if>
         </c:forEach>
     </c:if>
-    当前投注<span id="pageMoney">${soulFn:formatCurrency(allBetAmount)}</span>元，
-    总投注<span id="totalMoney">0</span>元，
-    当前派彩<span id="pageWinOrLoseMoney">${soulFn:formatCurrency(allPayout)}</span>元，
-    总派彩<span id="totalWinOrLoseMoney">0</span>元,
-    当前返点<span id="pageRebateAmount">${soulFn:formatCurrency(allRebateAmount)}</span>元，
-    总返点<span id="totalRebateAmount">0</span>元，
-    注单量<span id="betCount">${command.paging.totalCount}</span>笔
+    总注单量&nbsp;&nbsp;<span id="betCount">${command.paging.totalCount}</span>注，
+    总投注&nbsp;&nbsp;<span id="totalMoney">0</span>元，
+    总返点&nbsp;&nbsp;<span id="totalRebateAmount">0</span>元，
+    总派彩&nbsp;&nbsp;<span id="totalWinOrLoseMoney">0</span>元
 </div>
 <table class="eveb_box eveb_table" id="dataTable">
     <thead>
@@ -127,4 +124,24 @@
     </c:forEach>
     </tbody>
 </table>
+<div class="eveb_amount fl" style="width: 100%">
+    <c:set var="allBetAmount" value="${0}"></c:set>
+    <c:set var="allPayout" value="${0}"></c:set>
+    <c:set var="betCount" value="${0}"></c:set>
+    <c:if test="${not empty command.result}">
+        <c:forEach items="${command.result}" var="p" varStatus="status">
+            <c:if test="${p.status !=3}">
+                <c:set var="allBetAmount" value="${allBetAmount+p.betAmount}"></c:set>
+                <c:set var="allPayout" value="${allPayout+p.payout}"></c:set>
+                <c:set var="allRebateAmount" value="${allRebateAmount+p.rebateAmount}"></c:set>
+            </c:if>
+            <c:set var="betCount" value="${betCount+1}"></c:set>
+        </c:forEach>
+    </c:if>
+    小计：
+    注单量&nbsp;&nbsp;<span id="betCount">${betCount}</span>注，
+    投注&nbsp;&nbsp;<span id="pageMoney">${soulFn:formatCurrency(allBetAmount)}</span>元，
+    返点&nbsp;&nbsp;<span id="pageRebateAmount">${soulFn:formatCurrency(allRebateAmount)}</span>元，
+    派彩&nbsp;&nbsp;<span id="pageWinOrLoseMoney">${soulFn:formatCurrency(allPayout)}</span>元
+</div>
 <%@include file="../../include/include.pagination.jsp"%>

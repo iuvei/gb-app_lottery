@@ -122,7 +122,7 @@
             </p>
         </div>
         <div class="rigth">
-            <a href="javascript:void(0)" onclick="page.PlayWay.tjzd()"><img src="${resRoot}/themes/default/img/ico65.png" alt="">添加注单</a>
+            <a id="tjzd" href="javascript:void(0)" onclick="page.PlayWay.tjzd()"><img src="${resRoot}/themes/default/img/ico65.png" alt="">添加注单</a>
         </div>
     </div>
 </script>
