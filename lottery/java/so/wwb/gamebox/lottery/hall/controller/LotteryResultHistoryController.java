@@ -7,8 +7,8 @@ import org.soul.commons.query.sort.Direction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import so.wwb.gamebox.common.dubbo.ServiceCpTool;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.lottery.tools.ServiceTool;
 import so.wwb.gamebox.model.TerminalEnum;
 import so.wwb.gamebox.model.company.lottery.po.*;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryFrequencyListVo;
@@ -62,12 +62,12 @@ public class LotteryResultHistoryController {
         listVo.getQuery().addOrder(LotteryResult.PROP_EXPECT, Direction.DESC);
         listVo.getQuery().addOrder(LotteryResult.PROP_OPEN_TIME, Direction.DESC);
         listVo.getSearch().setOpenCodeFlag(true);
-        listVo = ServiceTool.lotterResultService().search(listVo);
+        listVo = ServiceCpTool.lotterResultService().search(listVo);
         listVo.getSearch().setType(type);
         model.addAttribute("code", code);
         model.addAttribute("type", type);
         model.addAttribute("command", listVo);
-        Map<Object, LotteryHandicap> expectMaps = ServiceTool.lotteryHandicapService().queryLotteryExpectCount(new LotteryHandicapVo());
+        Map<Object, LotteryHandicap> expectMaps = ServiceCpTool.lotteryHandicapService().queryLotteryExpectCount(new LotteryHandicapVo());
         model.addAttribute("expectMaps", expectMaps);
     }
 
@@ -83,11 +83,11 @@ public class LotteryResultHistoryController {
         listVo.getQuery().addOrder(LotteryResult.PROP_EXPECT, Direction.DESC);
         listVo.getQuery().addOrder(LotteryResult.PROP_OPEN_TIME, Direction.DESC);
         listVo.getSearch().setOpenCodeFlag(true);
-        listVo = ServiceTool.lotterResultService().search(listVo);
+        listVo = ServiceCpTool.lotterResultService().search(listVo);
         model.addAttribute("command", listVo);
         model.addAttribute("code", listVo.getSearch().getCode());
         model.addAttribute("type", listVo.getSearch().getType());
-        Map<Object, LotteryHandicap> expectMaps = ServiceTool.lotteryHandicapService().queryLotteryExpectCount(new LotteryHandicapVo());
+        Map<Object, LotteryHandicap> expectMaps = ServiceCpTool.lotteryHandicapService().queryLotteryExpectCount(new LotteryHandicapVo());
         model.addAttribute("expectMaps", expectMaps);
         return url;
     }
@@ -99,7 +99,7 @@ public class LotteryResultHistoryController {
             LotteryResultListVo resultListVo = new LotteryResultListVo();
             buildResultData(resultListVo, siteLotteryMap, model);
         } else {
-            listVo = ServiceTool.lotteryFrequencyService().search(listVo);
+            listVo = ServiceCpTool.lotteryFrequencyService().search(listVo);
             if (CollectionTool.isNotEmpty(listVo.getResult())) {
                 LotteryResultListVo resultListVo = new LotteryResultListVo();
                 Map<String, SiteLottery> stringLotteryMap = removeNoExistLottery(listVo, siteLotteryMap);

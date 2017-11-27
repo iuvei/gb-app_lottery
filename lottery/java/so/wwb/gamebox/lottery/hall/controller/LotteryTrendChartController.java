@@ -1,32 +1,31 @@
 package so.wwb.gamebox.lottery.hall.controller;
 
-import org.omg.PortableInterceptor.ServerRequestInfo;
 import org.soul.commons.collections.CollectionTool;
-import org.soul.commons.collections.MapTool;
 import org.soul.commons.data.json.JsonTool;
 import org.soul.commons.lang.string.StringTool;
-import org.soul.commons.query.Paging;
 import org.soul.commons.query.sort.Direction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import so.wwb.gamebox.common.dubbo.ServiceCpTool;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.lottery.tools.ServiceTool;
 import so.wwb.gamebox.model.CacheBase;
 import so.wwb.gamebox.model.TerminalEnum;
-import so.wwb.gamebox.model.company.lottery.po.*;
+import so.wwb.gamebox.model.company.lottery.po.LotteryFrequency;
+import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
+import so.wwb.gamebox.model.company.lottery.po.SiteLottery;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryFrequencyListVo;
-import so.wwb.gamebox.model.company.lottery.vo.LotteryHandicapVo;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryResultListVo;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryFrequencyEnum;
 import so.wwb.gamebox.web.cache.Cache;
 
-import javax.swing.text.Style;
-import java.lang.reflect.Type;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -86,7 +85,7 @@ static final String INDEX_URL = "hall/trendchart/%s/Index";
         if (pageSize!=30 && pageSize != 80 && pageSize != 50 && pageSize != 100 && pageSize != 150 && pageSize!=200){ //防止随意输入pageSize,造成数据泄漏
             listVo.getPaging().setPageSize(30);
         }
-        listVo = ServiceTool.lotterResultService().search(listVo);
+        listVo = ServiceCpTool.lotterResultService().search(listVo);
         return JsonTool.toJson(listVo.getResult());
     }
     private  void  getLottery(Model model){
@@ -96,9 +95,9 @@ static final String INDEX_URL = "hall/trendchart/%s/Index";
             //高频彩票
             LotteryFrequencyListVo gfrequencyL = new LotteryFrequencyListVo();
             gfrequencyL.getSearch().setLotteryFrequencyId(1);
-            LotteryFrequencyListVo high = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
+            LotteryFrequencyListVo high = ServiceCpTool.lotteryFrequencyService().search(gfrequencyL);
             gfrequencyL.getSearch().setLotteryFrequencyId(2);
-            LotteryFrequencyListVo low = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
+            LotteryFrequencyListVo low = ServiceCpTool.lotteryFrequencyService().search(gfrequencyL);
 
             indexFrequencyType(model, high.getResult(), LotteryFrequencyEnum.HIGH.getType(), siteLotteryMap);
             indexFrequencyType(model, low.getResult(), LotteryFrequencyEnum.LOW.getType(), siteLotteryMap);

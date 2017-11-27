@@ -12,8 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import so.wwb.gamebox.common.dubbo.ServiceCpTool;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.lottery.tools.ServiceTool;
 import so.wwb.gamebox.model.ParamTool;
 import so.wwb.gamebox.model.TerminalEnum;
 import so.wwb.gamebox.model.company.lottery.po.LotteryFrequency;
@@ -57,9 +57,9 @@ public class HallController extends BaseLotteryController {
             //高频彩票
             LotteryFrequencyListVo gfrequencyL = new LotteryFrequencyListVo();
             gfrequencyL.getSearch().setLotteryFrequencyId(1);
-            LotteryFrequencyListVo high = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
+            LotteryFrequencyListVo high = ServiceCpTool.lotteryFrequencyService().search(gfrequencyL);
             gfrequencyL.getSearch().setLotteryFrequencyId(2);
-            LotteryFrequencyListVo low = ServiceTool.lotteryFrequencyService().search(gfrequencyL);
+            LotteryFrequencyListVo low = ServiceCpTool.lotteryFrequencyService().search(gfrequencyL);
 
             indexFrequencyType(model, high.getResult(), LotteryFrequencyEnum.HIGH.getType(), siteLotteryMap);
             indexFrequencyType(model, low.getResult(), LotteryFrequencyEnum.LOW.getType(), siteLotteryMap);
@@ -132,7 +132,7 @@ public class HallController extends BaseLotteryController {
      * @param model
      */
     private void getHandicap(Model model) {
-        List<LotteryResult> lotteryHandicapList = ServiceTool.lotteryResultService().queryCurHandicap(new LotteryResultVo());
+        List<LotteryResult> lotteryHandicapList = ServiceCpTool.lotteryResultService().queryCurHandicap(new LotteryResultVo());
         model.addAttribute("handicapList", handleHandicap(lotteryHandicapList, Cache.getNormalSiteLotteryMap(TerminalEnum.PC.getCode(), SessionManager.getSiteId())));
     }
 
@@ -162,7 +162,7 @@ public class HallController extends BaseLotteryController {
      * @param model
      */
     private void getLotteryResult(Model model) {
-        List<LotteryResult> results = ServiceTool.lotterResultService().queryRecentResult(new LotteryResultVo());
+        List<LotteryResult> results = ServiceCpTool.lotterResultService().queryRecentResult(new LotteryResultVo());
         model.addAttribute("resultMap", CollectionTool.toEntityMap(results, LotteryResult.PROP_CODE));
     }
 
