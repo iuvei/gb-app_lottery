@@ -128,6 +128,7 @@
     <c:set var="allBetAmount" value="${0}"></c:set>
     <c:set var="allPayout" value="${0}"></c:set>
     <c:set var="betCount" value="${0}"></c:set>
+    <c:set var="allRebateAmount" value="${0}"></c:set>
     <c:if test="${not empty command.result}">
         <c:forEach items="${command.result}" var="p" varStatus="status">
             <c:if test="${p.status !=3}">
