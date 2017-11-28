@@ -11,8 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import so.wwb.gamebox.common.dubbo.ServiceCpTool;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.lottery.tools.ServiceTool;
 import so.wwb.gamebox.model.DictEnum;
 import so.wwb.gamebox.model.Module;
 import so.wwb.gamebox.model.SubSysCodeEnum;
@@ -43,7 +43,7 @@ public class BetOrderController {
         listVo.getPaging().setPageSize(5);
         listVo.getSearch().setUserId(SessionManager.getUserId());
         listVo.getSearch().setStatus(LotteryOrderStatusEnum.PENDING.getCode());
-        List<LotteryBetOrder> betOrders = ServiceTool.lotteryBetOrderService().getBetOrders(listVo);
+        List<LotteryBetOrder> betOrders = ServiceCpTool.lotteryBetOrderService().getBetOrders(listVo);
         return transLotteryBetOrder(betOrders);
     }
 
@@ -58,7 +58,7 @@ public class BetOrderController {
         listVo.getPaging().setPageSize(5);
         listVo.getSearch().setUserId(SessionManager.getUserId());
         listVo.getSearch().setStatus(LotteryOrderStatusEnum.SETTLED.getCode());
-        List<LotteryBetOrder> betOrders = ServiceTool.lotteryBetOrderService().getRewardBetOrders(listVo);
+        List<LotteryBetOrder> betOrders = ServiceCpTool.lotteryBetOrderService().getRewardBetOrders(listVo);
         return transLotteryBetOrder(betOrders);
     }
 
@@ -94,7 +94,7 @@ public class BetOrderController {
         if (SubSysCodeEnum.PCENTER.getCode().equals(SessionManagerCommon.getUser().getSubsysCode())) {
             listVo.getSearch().setUserId(SessionManagerBase.getUserId());
         }
-        List<LotteryBetOrder> betOrders = ServiceTool.lotteryBetOrderService().getBetOrders(listVo);
+        List<LotteryBetOrder> betOrders = ServiceCpTool.lotteryBetOrderService().getBetOrders(listVo);
         model.addAttribute("betOrders", betOrders);
         return INDEX_URL;
     }

@@ -6,8 +6,8 @@ import org.soul.model.security.privilege.po.SysUser;
 import org.soul.model.security.privilege.vo.SysUserVo;
 import org.soul.web.shiro.common.delegate.PassportEvent;
 import org.soul.web.shiro.common.delegate.PassportListenerAdapter;
+import so.wwb.gamebox.common.dubbo.ServiceTool;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.lottery.tools.ServiceTool;
 
 /**
  * Created by longer on 6/18/15.
