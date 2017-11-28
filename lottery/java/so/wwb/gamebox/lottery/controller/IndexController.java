@@ -44,7 +44,7 @@ public class IndexController  extends BaseDemoController {
         Map<String, Map<String, Map<String, String>>> dicts = I18nTool.getDictsMap(languageCurrent);
         jb.put("languageCurrent", languageCurrent);
         jb.put("languageDicts", languageDicts);
-        jb.put("languageI18n", dicts.get("soul-common").get("language"));
+        jb.put("languageI18n", dicts.get("common").get("language"));
 
         return jb.toString();
     }
