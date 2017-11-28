@@ -136,16 +136,26 @@
                     <td data-num="合小"><input type="text" class="table-txt" data-odds="" data-bet-code="" data-play="${sumBigSmallPlay}" data-bet-num="合小" data-name=""/></td>
 
                </tr>
+
                 <tr>
+                    <td data-num="尾大" style="cursor: pointer;">尾大</td>
+                    <td data-num="尾大" style="cursor: pointer;"><strong class="color-red pl"></strong></td>
+                    <td data-num="尾大"><input type="text" class="table-txt" data-odds="" data-bet-code="" data-play="${mantissaBigSmall}" data-bet-num="尾大" data-name=""/></td>
+
+                    <td data-num="尾小" style="cursor: pointer;">尾小</td>
+                    <td data-num="尾小" style="cursor: pointer;"><strong class="color-red pl"></strong></td>
+                    <td data-num="尾小"><input type="text" class="table-txt" data-odds="" data-bet-code="" data-play="${mantissaBigSmall}" data-bet-num="尾小" data-name=""/></td>
+
                     <td data-num="红波" style="cursor: pointer;">红波</td>
                     <td data-num="红波" style="cursor: pointer;"><strong class="color-red pl"></strong></td>
                     <td data-num="红波"><input type="text" class="table-txt" data-odds="" data-bet-code="" data-play="${colourPlay}" data-bet-num="红波" data-name=""/></td>
 
-
                     <td data-num="蓝波" style="cursor: pointer;">蓝波</td>
                     <td data-num="蓝波" style="cursor: pointer;"><strong class="color-red pl"></strong></td>
                     <td data-num="蓝波"><input type="text" class="table-txt" data-odds="" data-bet-code="" data-play="${colourPlay}" data-bet-num="蓝波" data-name=""/></td>
+                </tr>
 
+                <tr>
                     <td data-num="绿波" style="cursor: pointer;">绿波</td>
                     <td data-num="绿波" style="cursor: pointer;"><strong class="color-red pl"></strong></td>
                     <td data-num="绿波"><input type="text" class="table-txt" data-odds="" data-bet-code="" data-play="${colourPlay}" data-bet-num="绿波" data-name=""/></td>

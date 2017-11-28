@@ -71,6 +71,7 @@ public class HKlhcController extends BaseLhcController {
         model.addAttribute("colourPlay", LotteryPlayEnum.POSITIVE_COLOUR.getCode());
         model.addAttribute("sumBigSmallPlay", LotteryPlayEnum.POSITIVE_SUM_BIG_SMALL.getCode());
         model.addAttribute("sumSingleDoublePlay", LotteryPlayEnum.POSITIVE_SUM_SINGLE_DOUBLE.getCode());
+        model.addAttribute("mantissaBigSmall", LotteryPlayEnum.POSITIVE_MANTISSA_BIG_SMALL.getCode());
         return String.format(NORMAL_SPECIAL_CODE_URL, CODE);
     }
 
