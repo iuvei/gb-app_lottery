@@ -51,14 +51,14 @@
                     <span class="gj 09"><i>09</i></span>
                     <span class="gj 10"><i>10</i></span>
                 </var>
-                <div class="clear re-5x-i">
+                <%--<div class="clear re-5x-i">
                     <i onclick="page.PlayWay.selectFun_1(this)">全</i>
                     <i onclick="page.PlayWay.selectFun_2(this)">大</i>
                     <i onclick="page.PlayWay.selectFun_3(this)">小</i>
                     <i onclick="page.PlayWay.selectFun_4(this)">奇</i>
                     <i onclick="page.PlayWay.selectFun_5(this)">偶</i>
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
-                </div>
+                </div>--%>
             </li>
             <li data-name="亚军">
                 <b><i>亚军</i></b>
@@ -74,14 +74,14 @@
                     <span class="yj 09"><i>09</i></span>
                     <span class="yj 10"><i>10</i></span>
                 </var>
-                <div class="clear re-5x-i">
+                <%--<div class="clear re-5x-i">
                     <i onclick="page.PlayWay.selectFun_1(this)">全</i>
                     <i onclick="page.PlayWay.selectFun_2(this)">大</i>
                     <i onclick="page.PlayWay.selectFun_3(this)">小</i>
                     <i onclick="page.PlayWay.selectFun_4(this)">奇</i>
                     <i onclick="page.PlayWay.selectFun_5(this)">偶</i>
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
-                </div>
+                </div>--%>
             </li>
             <li data-name="季军">
                 <b><i>季军</i></b>
@@ -97,14 +97,14 @@
                     <span class="jj 09"><i>09</i></span>
                     <span class="jj 10"><i>10</i></span>
                 </var>
-                <div class="clear re-5x-i">
+                <%--<div class="clear re-5x-i">
                     <i onclick="page.PlayWay.selectFun_1(this)">全</i>
                     <i onclick="page.PlayWay.selectFun_2(this)">大</i>
                     <i onclick="page.PlayWay.selectFun_3(this)">小</i>
                     <i onclick="page.PlayWay.selectFun_4(this)">奇</i>
                     <i onclick="page.PlayWay.selectFun_5(this)">偶</i>
                     <i onclick="page.PlayWay.selectFun_6(this)">清</i>
-                </div>
+                </div>--%>
             </li>
         </ul>
     </div>
