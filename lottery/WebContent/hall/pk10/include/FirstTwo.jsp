@@ -40,16 +40,16 @@
             <li data-name="冠军">
                 <b><i>冠军</i></b>
                 <var class="numLine">
-                    <span><i>01</i></span>
-                    <span><i>02</i></span>
-                    <span><i>03</i></span>
-                    <span><i>04</i></span>
-                    <span><i>05</i></span>
-                    <span><i>06</i></span>
-                    <span><i>07</i></span>
-                    <span><i>08</i></span>
-                    <span><i>09</i></span>
-                    <span><i>10</i></span>
+                    <span class="gj 01"><i>01</i></span>
+                    <span class="gj 02"><i>02</i></span>
+                    <span class="gj 03"><i>03</i></span>
+                    <span class="gj 04"><i>04</i></span>
+                    <span class="gj 05"><i>05</i></span>
+                    <span class="gj 06"><i>06</i></span>
+                    <span class="gj 07"><i>07</i></span>
+                    <span class="gj 08"><i>08</i></span>
+                    <span class="gj 09"><i>09</i></span>
+                    <span class="gj 10"><i>10</i></span>
                 </var>
                 <div class="clear re-5x-i">
                     <i onclick="page.PlayWay.selectFun_1(this)">全</i>
@@ -63,16 +63,16 @@
             <li data-name="亚军">
                 <b><i>亚军</i></b>
                 <var class="numLine">
-                    <span><i>01</i></span>
-                    <span><i>02</i></span>
-                    <span><i>03</i></span>
-                    <span><i>04</i></span>
-                    <span><i>05</i></span>
-                    <span><i>06</i></span>
-                    <span><i>07</i></span>
-                    <span><i>08</i></span>
-                    <span><i>09</i></span>
-                    <span><i>10</i></span>
+                    <span class="yj 01"><i>01</i></span>
+                    <span class="yj 02"><i>02</i></span>
+                    <span class="yj 03"><i>03</i></span>
+                    <span class="yj 04"><i>04</i></span>
+                    <span class="yj 05"><i>05</i></span>
+                    <span class="yj 06"><i>06</i></span>
+                    <span class="yj 07"><i>07</i></span>
+                    <span class="yj 08"><i>08</i></span>
+                    <span class="yj 09"><i>09</i></span>
+                    <span class="yj 10"><i>10</i></span>
                 </var>
                 <div class="clear re-5x-i">
                     <i onclick="page.PlayWay.selectFun_1(this)">全</i>
@@ -91,7 +91,7 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，至少选择1个二位数号码组成一注
+            手动输入号码，由二个号码号码组成一注
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
                 <var>投注方案：冠军01 ，亚军02 开奖号码：01，02，03，04，05，06，07，08，09，10即可中前二直选。</var>
             </a>
