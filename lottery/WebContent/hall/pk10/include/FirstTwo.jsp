@@ -91,7 +91,7 @@
     <div class="Pick cl-1003 recl-1003">
         <p class="p1">
         <span class="fr fl cl-1001">
-            手动输入号码，由二个号码号码组成一注
+            手动输入号码，由二个号码组成一注
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
                 <var>投注方案：冠军01 ，亚军02 开奖号码：01，02，03，04，05，06，07，08，09，10即可中前二直选。</var>
             </a>
