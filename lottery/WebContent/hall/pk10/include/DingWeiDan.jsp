@@ -18,7 +18,7 @@
         <span class="fr fl cl-1001">
             从第一名到第十名任意位置上选择1个或1个以上号码。
             <a><img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>投注方案：冠军01 开奖号码：01，02，03，04，05，06，07，08，09，10即中奖。。</var>
+                <var>投注方案：冠军01 开奖号码：01，02，03，04，05，06，07，08，09，10即中奖。</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
