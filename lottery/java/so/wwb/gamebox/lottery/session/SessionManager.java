@@ -21,8 +21,7 @@ public class SessionManager extends SessionManagerCommon {
     //玩家中心-填写真实姓名的值,以确认真实姓名是否一致
     private static final String S_REAL_NAME = "S_REAL_NAME";
 
-    //玩家中心-消息-追问提交时间
-    private static final String S_ADVISORY_MESSAGE_TIME = "S_ADVISORY_MESSAGE_TIME";
+
 
     //玩家中心-转账-转账提交时间
     private static final String S_TRANSFER_TIME = "S_TRANSFER_TIME";
@@ -120,18 +119,7 @@ public class SessionManager extends SessionManagerCommon {
 
     private static final String SESSION_TOKEN = "SESSION_TOKEN_";
 
-    /**
-     * 玩家中心-消息-追问提交时间
-     *
-     * @param date
-     */
-    public static void setAdvisoryMessageTime(Date date) {
-        setAttribute(S_ADVISORY_MESSAGE_TIME, date);
-    }
 
-    public static Date getAdvisoryMessageTime() {
-        return (Date) getAttribute(S_ADVISORY_MESSAGE_TIME);
-    }
 
     /**
      * 玩家中心-转账-转账提交时间
