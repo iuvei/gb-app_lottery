@@ -86,8 +86,29 @@
         <p>猴 02 , 14 , 26 , 38
         <p>以当期开奖结果之特码判断输赢，当特码奖号落在下注生肖范围内，即为中奖，其余情形视为不中奖。
         <p>
-        <h5><strong>【一肖】</strong></h5>
-         <p>只要当期号码(所有正码与最后开出的特码)，落在下注生肖范围内，则视为中奖。(请注意：49亦算输赢，不为和)。
+        <h5><strong>【一肖/尾】</strong></h5>
+         <p>
+        <table>
+            <tbody>
+            <tr>
+                <td width="4%" valign="top" bgcolor="#FFE3CA" align="center">
+                    1·
+                </td>
+                <td width="96%" bgcolor="#FFF7F0">
+                    <span class="style2">一肖： </span>只要当期号码(所有正码与最后开出的特码)，落在下注生肖范围内，则视为中奖。(请注意：49亦算输赢，不为和)。
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" bgcolor="#FCF7CB" align="center">
+                    2·
+                </td>
+                <td bgcolor="#FDFBE3">
+                    <span class="style2">尾数：</span>
+                    指开奖正码及特码７个号码中含有所下注尾数的一个或多个号码则视为中奖，但派彩只派一次，即不论同生肖号码出现一个或多个号码都只派彩一次。
+                </td>
+            </tr>
+            </tbody>
+        </table>
         <p>
         <h5><strong>【连码】</strong></h5>
         <p>
