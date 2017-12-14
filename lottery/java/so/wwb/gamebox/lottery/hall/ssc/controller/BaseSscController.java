@@ -245,10 +245,7 @@ public class BaseSscController extends BaseLotteryController {
         return  FIVETWO_URL;
     }
     /**
-     * 时时彩最近20条开彩记录
-     *
-     * @param code
-     * @return
+     * 时时彩最近30条开彩记录
      */
     @RequestMapping("/getRecent30Records")
     @ResponseBody
