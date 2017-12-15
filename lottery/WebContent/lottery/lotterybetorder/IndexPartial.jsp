@@ -119,6 +119,9 @@
                 <c:if test="${p.status=='3'}">
                     <span class="label label-danger">${dicts.lottery.order_status[p.status]}</span>
                 </c:if>
+                <c:if test="${p.status=='4'}">
+                    <span class="label label-danger">${dicts.lottery.order_status[p.status]}</span>
+                </c:if>
             </td>
         </tr>
     </c:forEach>
