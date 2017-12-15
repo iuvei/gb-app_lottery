@@ -19,6 +19,7 @@
 <div id="gameContent">
     <input type="hidden" name="type" value="${type}" />
     <input type="hidden" name="code" value="${code}" />
+    <gb:token/>
     <div class="game_name">
         <div class="wid1">
             <div class="box1_name">

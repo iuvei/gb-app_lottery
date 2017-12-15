@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
+import so.wwb.gamebox.web.common.token.Token;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -22,6 +23,7 @@ public class BeijingPk10Controller extends BasePk10Controller {
     private static final String CODE = LotteryEnum.BJPK10.getCode();
 
     @RequestMapping("/index")
+    @Token(generate=true)
     public String index(Model model) {
         index(model, TYPE, CODE);
         return String.format(INDEX_URL, CODE);
@@ -92,6 +94,7 @@ public class BeijingPk10Controller extends BasePk10Controller {
      */
     @RequestMapping("/saveBetOrder")
     @ResponseBody
+    @Token(valid=true)
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
     }

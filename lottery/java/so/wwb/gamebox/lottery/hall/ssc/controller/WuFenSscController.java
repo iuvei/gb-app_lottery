@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
+import so.wwb.gamebox.web.common.token.Token;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,6 +20,7 @@ public class WuFenSscController extends BaseSscController {
     private static final String CODE = LotteryEnum.WFSSC.getCode();
 
     @RequestMapping("/index")
+    @Token(generate=true)
     public String index(Model model) {
         index(model, TYPE, CODE);
         return String.format(INDEX_URL, CODE);
@@ -104,6 +106,7 @@ public class WuFenSscController extends BaseSscController {
      */
     @RequestMapping("/saveBetOrder")
     @ResponseBody
+    @Token(valid=true)
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
     }
