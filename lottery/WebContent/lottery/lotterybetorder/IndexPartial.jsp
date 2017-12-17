@@ -2,17 +2,6 @@
 <%--@elvariable id="command" type="so.wwb.gamebox.model.master.lottery.vo.LotteryBetOrderListVo"--%>
 <%@ include file="/include/include.inc.jsp" %>
 <div class="eveb_amount fl">
-    <c:set var="allBetAmount" value="${0}"></c:set>
-    <c:set var="allPayout" value="${0}"></c:set>
-    <c:if test="${not empty command.result}">
-        <c:forEach items="${command.result}" var="p" varStatus="status">
-            <c:if test="${p.status !=3}">
-                <c:set var="allBetAmount" value="${allBetAmount+p.betAmount}"></c:set>
-                <c:set var="allPayout" value="${allPayout+p.payout}"></c:set>
-                <c:set var="allRebateAmount" value="${allRebateAmount+p.rebateAmount}"></c:set>
-            </c:if>
-        </c:forEach>
-    </c:if>
     总注单量&nbsp;&nbsp;<span id="betCount">${command.paging.totalCount}</span>注，
     总投注&nbsp;&nbsp;<span id="totalMoney">0</span>元，
     总返点&nbsp;&nbsp;<span id="totalRebateAmount">0</span>元，
@@ -134,7 +123,7 @@
     <c:set var="allRebateAmount" value="${0}"></c:set>
     <c:if test="${not empty command.result}">
         <c:forEach items="${command.result}" var="p" varStatus="status">
-            <c:if test="${p.status !=3}">
+            <c:if test="${p.status ==1 || p.status == 2}">
                 <c:set var="allBetAmount" value="${allBetAmount+p.betAmount}"></c:set>
                 <c:set var="allPayout" value="${allPayout+p.payout}"></c:set>
                 <c:set var="allRebateAmount" value="${allRebateAmount+p.rebateAmount}"></c:set>
@@ -143,7 +132,7 @@
         </c:forEach>
     </c:if>
     小计：
-    注单量&nbsp;&nbsp;<span id="betCount">${betCount}</span>注，
+    注单量&nbsp;&nbsp;<span >${betCount}</span>注，
     投注&nbsp;&nbsp;<span id="pageMoney">${fn:replace(soulFn:formatCurrency(allBetAmount),",","")}</span>元，
     返点&nbsp;&nbsp;<span id="pageRebateAmount">${fn:replace(soulFn:formatCurrency(allRebateAmount),",","")}</span>元，
     派彩&nbsp;&nbsp;<span id="pageWinOrLoseMoney">${fn:replace(soulFn:formatCurrency(allPayout),",","")}</span>元
