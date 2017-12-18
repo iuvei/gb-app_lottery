@@ -393,8 +393,11 @@
                             <a href="javascript:void(0)" class="ljtzpage"><img class="btnjiang" src="${resRoot}/themes/default/zst/img/jiang.png" alt=""></a>
                             <div class="jiezhi">
                                 <h3>
-                                    <p><font id="tip"></font></p>
-                                    <p><span id="leftTime"></span></p>
+                                    <p>
+                                        <font id="tip"></font>
+                                        <br>
+                                        <span id="leftTime"></span>
+                                    </p>
                                 </h3>
                             </div>
                             <c:choose>

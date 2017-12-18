@@ -207,6 +207,7 @@
                                 <h3>
                                     <p>
                                         <font id="tip"></font>
+                                        <br>
                                         <span id="leftTime"></span>
                                     </p>
                                 </h3>

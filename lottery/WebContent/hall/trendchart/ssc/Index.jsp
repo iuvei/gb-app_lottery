@@ -218,7 +218,7 @@
                     </div>
                     <div id="shuju2" class="shuju hide">
                         <div class="biao">
-                            <div id="main1" style="width: 1250px;height:600px;background: #fff"></div>
+                            <div id="main1" style="width: 1400px;height:600px;background: #fff"></div>
                         </div>
                     </div>
                     <div id="shuju3" class="shuju hide">
@@ -354,8 +354,11 @@
                             <a href="javascript:void(0)" class="ljtzpage"><img class="btnjiang" src="${resRoot}/themes/default/zst/img/jiang.png" alt=""></a>
                             <div class="jiezhi">
                                 <h3>
-                                    <p><font id="tip"></font>
-                                        <span id="leftTime"></span></p>
+                                    <p>
+                                        <font id="tip"></font>
+                                        <br>
+                                        <span id="leftTime"></span>
+                                    </p>
                                 </h3>
                             </div>
                             <c:choose>

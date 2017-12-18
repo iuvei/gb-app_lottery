@@ -385,8 +385,9 @@
                             <a href="javascript:void(0)" class="ljtzpage"><img class="btnjiang" src="${resRoot}/themes/default/zst/img/jiang.png" alt=""></a>
                             <div class="jiezhi">
                                 <h3>
-                                    <p><font id="tip"></font>
-                                        <span id="leftTime"></span></p>
+                                    <font id="tip"></font>
+                                    <br>
+                                    <span id="leftTime"></span>
                                 </h3>
                             </div>
                             <div class="zhushi">每天销售120期&nbsp&nbsp每5分钟一期</div>
