@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
+import so.wwb.gamebox.web.common.token.Token;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,6 +19,7 @@ public class JiangsuK3Controller extends BaseK3Controller {
     private static final String CODE = LotteryEnum.JSK3.getCode();
 
     @RequestMapping("/index")
+    @Token(generate=true)
     public String index(Model model) {
         index(model, TYPE, CODE);
         return String.format(INDEX_URL, CODE);
@@ -130,6 +132,7 @@ public class JiangsuK3Controller extends BaseK3Controller {
      */
     @RequestMapping("/saveBetOrder")
     @ResponseBody
+    @Token(valid=true)
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
     }

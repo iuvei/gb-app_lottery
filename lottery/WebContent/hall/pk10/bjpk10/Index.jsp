@@ -35,6 +35,7 @@
                 </div>
                 <input type="hidden" name="type" value="${type}" />
                 <input type="hidden" name="code" value="${code}" />
+                <gb:token/>
             </div>
 
             <div class="box2_stage">

@@ -46,6 +46,7 @@
                 </div>
                 <input type="hidden" name="type" value="${type}"/>
                 <input type="hidden" name="code" value="${code}"/>
+                <gb:token/>
             </div>
             <div class="box2_stage">
                 <p><span><i class="acti">近一期</i><i>近五期</i></span>

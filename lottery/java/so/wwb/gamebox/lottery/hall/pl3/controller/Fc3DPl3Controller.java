@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
+import so.wwb.gamebox.web.common.token.Token;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -23,21 +24,11 @@ public class Fc3DPl3Controller extends BasePl3Controller {
     private static final String CODE = LotteryEnum.FC3D.getCode();
 
     @RequestMapping("/index")
+    @Token(generate=true)
     public String index(Model model) {
         index(model, TYPE, CODE);
         return String.format(INDEX_URL, CODE);
     }
-
-//    @RequestMapping("/getGfwfAllOdd")
-//    @ResponseBody
-//    public List<Map<String, SiteLotteryOdd>> getGfwfOdd(String code) {
-//        return super.getGfwfOdd(code);
-//    }
-
-//    @RequestMapping("/getSubPage")
-//    public String getSubPage(String pageName) {
-//        return String.format(SUB_PAGE, pageName);
-//    }
 
     // 定位
     @RequestMapping("/fix")
@@ -144,6 +135,7 @@ public class Fc3DPl3Controller extends BasePl3Controller {
      */
     @RequestMapping("/saveBetOrder")
     @ResponseBody
+    @Token(valid=true)
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
     }

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
+import so.wwb.gamebox.web.common.token.Token;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,6 +19,7 @@ public class Gdkl10SfcController extends BaseSfcController {
     private static final String CODE = LotteryEnum.GDKL10.getCode();
 
     @RequestMapping("/index")
+    @Token(generate=true)
     public String index(Model model) {
         index(model, TYPE, CODE);
         return String.format(INDEX_URL, CODE);
@@ -49,6 +51,7 @@ public class Gdkl10SfcController extends BaseSfcController {
      */
     @RequestMapping("/saveBetOrder")
     @ResponseBody
+    @Token(valid=true)
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
     }
