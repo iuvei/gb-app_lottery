@@ -126,10 +126,8 @@ public class HKlhcController extends BaseLhcController {
         //赔率
         Map<String, SiteLotteryOdd> siteLotteryOdds = getSiteLotteryOdds(CODE);
         model.addAttribute("odds", getOdds(LotteryBettingEnum.LHC_ONE_ZODIAC.getCode(), siteLotteryOdds));
-        model.addAttribute("oddsWei",getOdds(LotteryBettingEnum.MANTISSA.getCode(),siteLotteryOdds));
         //玩法
         model.addAttribute("lhcOneZodiac", LotteryPlayEnum.LHC_ONE_ZODIAC.getCode());
-        model.addAttribute("lhcOneZodiacWei",LotteryPlayEnum.MANTISSA.getCode());
         //生肖对应号码列表
         model.addAttribute("zodiacNum", this.getZodiacNumMap());
         return String.format(ONE_ZODIAC_URL, CODE);
