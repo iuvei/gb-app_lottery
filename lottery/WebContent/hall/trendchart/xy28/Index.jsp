@@ -386,7 +386,6 @@
                             <div class="jiezhi">
                                 <h3>
                                     <font id="tip"></font>
-                                    <br>
                                     <span id="leftTime"></span>
                                 </h3>
                             </div>

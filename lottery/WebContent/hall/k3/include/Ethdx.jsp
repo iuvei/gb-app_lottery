@@ -20,7 +20,7 @@
             选择1个对子和1个不同号码投注，选号与开奖号码一致即中奖。
             <a>
                 <img src="${resRoot}/themes/default/img/ico60.png" alt="">选号规则
-                <var>选择1对相同号码（11,22,33,44,55,66）和1个不同号码(1,2,3,4,5,6)投注。</var>
+                <var>选择1对相同号码（11 , 22 , 33 , 44 , 55 , 66）和1个不同号码(1 , 2 , 3 , 4 , 5 , 6)投注。</var>
             </a>
             <a>
                 <img src="${resRoot}/themes/default/img/ico61.png" alt="">中奖说明
