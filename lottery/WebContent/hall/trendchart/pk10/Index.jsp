@@ -11,7 +11,7 @@
 <div id="box" class="qc">
     <div class="qc" id="Right">
         <div class="main">
-            <div class="main-box" style="width:2402px;">
+            <div class="main-box" style="width:2402px;" id="width">
                 <div class="main-nav">
                     <div class="cplogo" id="lotteryCode" data-code="${code}" data-type="${lotterytype}" data-id="${dataId}"><img src="${resRoot}/themes/default/img/${code}.png" alt="${dicts.lottery.lottery[code]}" /><span>${dicts.lottery.lottery[code]}</span></div>
                     <div class="czqh">
@@ -249,7 +249,7 @@
                         </table>
                     </div>
                     <div class="shuoming qc">
-                        <div class="shuomingleft" style="height: 315px; width: 78%;">
+                        <div class="shuomingleft" style="height: 315px; width: 1000px;">
                             <div class="tou">
                                 <h3>参数说明</h3>
                             </div>
