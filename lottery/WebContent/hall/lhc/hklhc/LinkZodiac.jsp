@@ -46,14 +46,14 @@
                 <tbody>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list" data-name="鼠">
-                        <strong>鼠</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['鼠']) == 5}">style="margin-left:30px"</c:if>>鼠</strong>
                         <c:forEach var="item" items="${zodiacNum['鼠']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
                     </td>
                     <td style="cursor: pointer;"><strong class="color-red pl"></strong></td>
                     <td style="cursor: pointer;" class="hx-list" data-name="牛">
-                        <strong>牛</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['牛']) == 5}">style="margin-left:30px"</c:if>>牛</strong>
                         <c:forEach var="item" items="${zodiacNum['牛']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -62,7 +62,7 @@
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list" data-name="虎">
-                        <strong>虎</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['虎']) == 5}">style="margin-left:30px"</c:if>>虎</strong>
                         <c:forEach var="item" items="${zodiacNum['虎']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -70,7 +70,7 @@
                     <td style="cursor: pointer;"><strong class="color-red pl"></strong></td>
 
                     <td style="cursor: pointer;" class="hx-list" data-name="兔">
-                        <strong>兔</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['兔']) == 5}">style="margin-left:30px"</c:if>>兔</strong>
                         <c:forEach var="item" items="${zodiacNum['兔']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -79,7 +79,7 @@
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list" data-name="龙">
-                        <strong>龙</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['龙']) == 5}">style="margin-left:30px"</c:if>>龙</strong>
                         <c:forEach var="item" items="${zodiacNum['龙']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -87,7 +87,7 @@
                     <td style="cursor: pointer;"><strong class="color-red pl"></strong></td>
 
                     <td style="cursor: pointer;" class="hx-list" data-name="蛇">
-                        <strong>蛇</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['蛇']) == 5}">style="margin-left:30px"</c:if>>蛇</strong>
                         <c:forEach var="item" items="${zodiacNum['蛇']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -96,7 +96,7 @@
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list" data-name="马">
-                        <strong>马</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['马']) == 5}">style="margin-left:30px"</c:if>>马</strong>
                         <c:forEach var="item" items="${zodiacNum['马']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -104,7 +104,7 @@
                     <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list" data-name="羊">
-                        <strong>羊</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['羊']) == 5}">style="margin-left:30px"</c:if>>羊</strong>
                         <input type="checkbox">
                         <c:forEach var="item" items="${zodiacNum['羊']}">
                             <span class="ball-icon ball-${item}"></span>
@@ -114,7 +114,7 @@
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list" data-name="猴">
-                        <strong>猴</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['猴']) == 5}">style="margin-left:30px"</c:if>>猴</strong>
                         <c:forEach var="item" items="${zodiacNum['猴']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -122,7 +122,7 @@
                     <td style="cursor: pointer;"><strong class="color-red pl"></strong></td>
 
                     <td style="cursor: pointer;" class="hx-list" data-name="鸡">
-                        <strong style="margin-left:30px">鸡</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['鸡']) == 5}">style="margin-left:30px"</c:if>>鸡</strong>
                         <c:forEach var="item" items="${zodiacNum['鸡']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -131,7 +131,7 @@
                 </tr>
                 <tr>
                     <td style="cursor: pointer;" class="hx-list" data-name="狗">
-                        <strong>狗</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['狗']) == 5}">style="margin-left:30px"</c:if>>狗</strong>
                         <c:forEach var="item" items="${zodiacNum['狗']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
@@ -139,7 +139,7 @@
                     <td style="cursor: pointer;"><strong class="color-red pl">12</strong></td>
 
                     <td style="cursor: pointer;" class="hx-list" data-name="猪">
-                        <strong>猪</strong>
+                        <strong <c:if test="${fn:length(zodiacNum['猪']) == 5}">style="margin-left:30px"</c:if>>猪</strong>
                         <c:forEach var="item" items="${zodiacNum['猪']}">
                             <span class="ball-icon ball-${item}"></span>
                         </c:forEach>
