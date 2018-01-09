@@ -25,7 +25,7 @@
                     <td data-num="3"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="3"><input class="table-txt"
                                                             data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                                            data-play="${championUp34}"
+                                                            data-play="${championUpAlone34}"
                                                             data-bet-num="${lottery.betNum}"
 
                                                             data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -39,7 +39,7 @@
                     <td data-num="4"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="4"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp34}"
+                                             data-play="${championUpAlone34}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -53,7 +53,7 @@
                     <td data-num="5"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="5"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp56}"
+                                             data-play="${championUpAlone56}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -67,7 +67,7 @@
                     <td data-num="6"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="6"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp56}"
+                                             data-play="${championUpAlone56}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -84,7 +84,7 @@
                     <td data-num="7"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="7"><input class="table-txt"
                                             data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                            data-play="${championUp78}"
+                                            data-play="${championUpAlone78}"
                                             data-bet-num="${lottery.betNum}"
 
                                             data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -98,7 +98,7 @@
                     <td data-num="8"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="8"><input class="table-txt"
                                             data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                            data-play="${championUp78}"
+                                            data-play="${championUpAlone78}"
                                             data-bet-num="${lottery.betNum}"
 
                                             data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -112,7 +112,7 @@
                     <td data-num="9"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="9"><input class="table-txt"
                                             data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                            data-play="${championUp910}"
+                                            data-play="${championUpAlone910}"
                                             data-bet-num="${lottery.betNum}"
 
                                             data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -126,7 +126,7 @@
                     <td data-num="10"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="10"><input class="table-txt"
                                             data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                            data-play="${championUp910}"
+                                            data-play="${championUpAlone910}"
                                             data-bet-num="${lottery.betNum}"
 
                                             data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -157,7 +157,7 @@
                     <td data-num="12"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="12"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp910}"
+                                             data-play="${championUpAlone910}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -171,7 +171,7 @@
                     <td data-num="13"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="13"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp910}"
+                                             data-play="${championUpAlone910}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -185,7 +185,7 @@
                     <td data-num="14"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="14"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp78}"
+                                             data-play="${championUpAlone78}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -200,7 +200,7 @@
                     <td data-num="15"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="15"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp78}"
+                                             data-play="${championUpAlone78}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -214,7 +214,7 @@
                     <td data-num="16"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="16"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp56}"
+                                             data-play="${championUpAlone56}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -228,7 +228,7 @@
                     <td data-num="17"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="17"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp56}"
+                                             data-play="${championUpAlone56}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -242,7 +242,7 @@
                     <td data-num="18"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="18"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp34}"
+                                             data-play="${championUpAlone34}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
@@ -257,7 +257,7 @@
                     <td data-num="19"  class="pointer"><strong class="color-red pl">${odd}</strong></td>
                     <td data-num="19"><input class="table-txt"
                                              data-odds="${odd}" data-bet-code="${lottery.betCode}"
-                                             data-play="${championUp34}"
+                                             data-play="${championUpAlone34}"
                                              data-bet-num="${lottery.betNum}"
 
                                              data-name="冠亚和-${lottery.betNum}" data-plid="10002"
