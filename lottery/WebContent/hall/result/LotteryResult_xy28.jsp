@@ -19,8 +19,15 @@
                 <span class="sp4">
                     <c:if test="${!empty item.openCode}">
                         <c:forEach var="rs" items="${fn:split(item.openCode, ',')}" varStatus="vs">
+                            <c:set value="${numSum+rs}" var="numSum"/>
                             <i class="bg-${rs}">${rs}</i>
-                            <c:set value="${numSum+rs}" var="numSum"></c:set>
+                            <c:if test="${vs.index < 2}">
+                                <i class="plusmin">+</i>
+                            </c:if>
+                            <c:if test="${vs.index >= 2}">
+                                <i class="plusmin">=</i>
+                                <i class="xy28-ball">${numSum}</i>
+                            </c:if>
                         </c:forEach>
                     </c:if>
                 </span>
@@ -33,3 +40,39 @@
         </c:forEach>
     </ul>
 </div>
+<script>
+    $(".Color_type .xy28-ball").each(function () {
+        var val = $(this).text();
+        var map={
+            0:"grayxy28",
+            1:"greenxy28",
+            2:"bluexy28",
+            3:"ball-28xy3",
+            4:"greenxy28",
+            5:"bluexy28",
+            6:"ball-28xy3",
+            7:"greenxy28",
+            8:"bluexy28",
+            9:"ball-28xy3",
+            10:"greenxy28",
+            11:"bluexy28",
+            12:"ball-28xy3",
+            13:"grayxy28",
+            14:"grayxy28",
+            15:"ball-28xy3",
+            16:"greenxy28",
+            17:"bluexy28",
+            18:"ball-28xy3",
+            19:"greenxy28",
+            20:"bluexy28",
+            21:"ball-28xy3",
+            22:"greenxy28",
+            23:"bluexy28",
+            24:"ball-28xy3",
+            25:"greenxy28",
+            26:"bluexy28",
+            27:"grayxy28"
+        };
+        $(this).addClass(map[val]);
+    });
+</script>
