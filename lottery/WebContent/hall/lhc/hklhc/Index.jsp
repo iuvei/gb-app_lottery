@@ -38,7 +38,7 @@
                     <span><i class="acti">近一期</i><i>近五期</i></span>
                     <font id="lastNumber">香港六合彩<var></var>期</font>
                 </p>
-                <div class="number pt10" id="lastOpenCode" style="display: none;">
+                <div class="number pt10 lhc-num-kj" id="lastOpenCode" style="display: none;">
                     <span class="round ball-blue">09</span>
                     <span class="round ball-blue">48</span>
                     <span class="round ball-red">23</span>
@@ -47,7 +47,7 @@
                     <span class="round ball-green">38</span>
                     <span class="round ball-green">16</span>
                 </div>
-                <div class="number" id="lastOpenCodeList" style="display: none;">
+                <div class="number lhc-num-wqkj" id="lastOpenCodeList" style="display: none;">
                     <ul>
                         <li>
                             <p>第2017035期</p>
@@ -95,12 +95,12 @@
         </div>
     </div><!--Single-->
     <%@ include file="/hall/common/BottomTab.jsp" %>
-    <%@ include file="/hall/common/HistoryColor.jsp" %>
+    <%@ include file="LhcHistoryColor.jsp" %>
 </div>
 <div type="text/html" id="soundContainer" style="display:none;"></div>
 <%@ include file="/include/include.js.jsp" %>
 <script type="text/javascript">
-    curl(['site/hall/common/Common'], function(Page) {
+    curl(['site/hall/lhc/hklhc/Common'], function(Page) {
         page = new Page();
     });
 </script>

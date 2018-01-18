@@ -1,10 +1,13 @@
 package so.wwb.gamebox.lottery.hall.lhc.controller;
 
+import org.soul.commons.collections.MapTool;
 import org.soul.commons.data.json.JsonTool;
+import org.soul.commons.lang.string.StringTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import so.wwb.gamebox.model.CacheBase;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryBettingEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryEnum;
@@ -13,6 +16,7 @@ import so.wwb.gamebox.web.common.token.Token;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -214,6 +218,32 @@ public class HKlhcController extends BaseLhcController {
     @Token(valid=true)
     public String saveBetOrder(HttpServletRequest request, String betForm) {
         return super.saveBetOrder(request, CODE, betForm);
+    }
+
+
+    @RequestMapping("/getZodiacNameList")
+    @ResponseBody
+    public String getZodiacNameList(String openCode){
+        try{
+            return JsonTool.toJson(listChangeMap(openCode));
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+    private Map<String,String> listChangeMap(String openCode){
+        Map<String,String> result = null;
+        Map<String, String> zodiacMap = CacheBase.getLotteryLhcZodiacNum();
+        if(MapTool.isNotEmpty(zodiacMap) && StringTool.isNotEmpty(openCode) && openCode.split(",").length != 0){
+            String[] openCodes = openCode.split(",");
+            result = new HashMap<>(openCodes.length,1f);
+            for(String code : openCodes){
+                if(zodiacMap.containsKey(code)){
+                    result.put(code,zodiacMap.get(code));
+                }
+            }
+        }
+        return result;
     }
 
 }
