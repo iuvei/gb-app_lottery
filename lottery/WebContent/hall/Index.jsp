@@ -122,7 +122,7 @@
         <c:choose>
             <c:when test="${empty player.account}">
                 <p>
-                    欢迎，<i>  <a class="i0" href="/">登录</a></i></span>
+                    欢迎，<i>  <a class="i0" href="/" target="_blank">登录</a></i></span>
                 </p>
             </c:when>
             <c:otherwise>
