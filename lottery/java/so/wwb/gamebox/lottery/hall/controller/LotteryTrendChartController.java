@@ -89,7 +89,7 @@ static final String INDEX_URL = "hall/trendchart/%s/Index";
         return JsonTool.toJson(listVo.getResult());
     }
     private  void  getLottery(Model model){
-        List<SiteLottery> normalLotteries = Cache.getNormalSiteLottery(TerminalEnum.PC.getCode(), SessionManager.getSiteId());
+        List<SiteLottery> normalLotteries = Cache.getNormalMaintainSiteLottery(TerminalEnum.PC.getCode(), SessionManager.getSiteId());
         if(CollectionTool.isNotEmpty(normalLotteries)){
             Map<String, SiteLottery> siteLotteryMap = CollectionTool.toEntityMap(normalLotteries, SiteLottery.PROP_CODE, String.class);
             //高频彩票

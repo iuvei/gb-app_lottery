@@ -51,7 +51,7 @@ public class HallController extends BaseLotteryController {
 
     @RequestMapping("/index")
     public String hallIndex(Model model,String type, String code) {
-        List<SiteLottery> normalLotteries = Cache.getNormalSiteLottery(TerminalEnum.PC.getCode(), SessionManager.getSiteId());
+        List<SiteLottery> normalLotteries = Cache.getNormalMaintainSiteLottery(TerminalEnum.PC.getCode(), SessionManager.getSiteId());
         if(CollectionTool.isNotEmpty(normalLotteries)){
             Map<String, SiteLottery> siteLotteryMap = CollectionTool.toEntityMap(normalLotteries, SiteLottery.PROP_CODE, String.class);
             //高频彩票
