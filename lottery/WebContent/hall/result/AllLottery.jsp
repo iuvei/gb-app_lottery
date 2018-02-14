@@ -11,9 +11,11 @@
                 }</style>
                 <c:if test="${not empty lotterys}">
                     <c:forEach var="lot" items="${lotterys}" varStatus="vs">
+                        <c:if test="${lot.value.status=='normal'}">
                         <span class="lottery-code-span ${lot.value.code==code?'acti':''}"  id="lottery_code_${lot.value.code}">
                             <a href="javascript:void(0)" data-type="${lot.value.type}" data-code="${lot.value.code}">${dicts.lottery.lottery[lot.value.code]}</a>
                         </span>
+                        </c:if>
                     </c:forEach>
                 </c:if>
                 <input type="hidden" name="search.code" value="${code}">
