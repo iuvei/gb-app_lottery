@@ -36,9 +36,9 @@
                 <div class="down" style="display: block;">
                     <c:if test="${not empty hot}">
                         <c:forEach items="${hot}" var="hot" varStatus="status">
-                            <%--<c:if test="${hot.status=='normal'}">--%>
+                            <c:if test="${hot.status=='normal'}">
                                 <a href="javascript:void(0)" data-url='/${hot.type}/${hot.code}/index.html'><img src="${resRoot}/themes/default/img/${hot.code}.png"><var>${dicts.lottery.lottery[hot.code]}</var></a>
-                            <%--</c:if>--%>
+                            </c:if>
                         </c:forEach>
                     </c:if>
                 </div>
