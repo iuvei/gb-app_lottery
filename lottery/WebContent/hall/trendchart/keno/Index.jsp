@@ -335,8 +335,8 @@
     </div>
 </div>
 
-<canvas id="canvas" width="1660px" height="570px" style="position:absolute;top:265px;left:243px;z-index: -10"></canvas>
-<canvas id="canvas2" width="1660px" height="570px" style="position:absolute;top:265px;left:243px;z-index: -10"></canvas>
+<canvas id="canvas" width="1960px" height="1260px" style="position: absolute; top: 138px; left: 1px; z-index: -10;"></canvas>
+<canvas id="canvas2" width="1960px" height="1260px" style="position: absolute; top: 138px; left: 1px; z-index: -10;"></canvas>
 
 <%@ include file="/hall/trendchart/zstinclude.js.jsp" %>
 <script>
