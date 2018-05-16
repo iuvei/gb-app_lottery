@@ -39,8 +39,9 @@ public class HKlhcController extends BaseLhcController {
 
     // 特码
     @RequestMapping("/specialCode")
-    public String specialCode(Model model) {
-        model.addAttribute("odds", getOdds(CODE, LotteryBettingEnum.SPECIAL.getCode()));
+    public String specialCode(Model model, String betCode) {
+        betCode = StringTool.isBlank(betCode) ? LotteryBettingEnum.SPECIAL_A.getCode() : betCode;
+        model.addAttribute("odds", getOdds(CODE, betCode));
         model.addAttribute("digitalPlay", LotteryPlayEnum.SPECIAL_DIGITAL.getCode());
         model.addAttribute("bigSmallPlay", LotteryPlayEnum.SPECIAL_BIG_SMALL.getCode());
         model.addAttribute("singleDoublePlay", LotteryPlayEnum.SPECIAL_SINGLE_DOUBLE.getCode());
