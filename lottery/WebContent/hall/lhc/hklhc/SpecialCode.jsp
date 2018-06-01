@@ -10,8 +10,8 @@
             <%@ include file="../../common/ShortMoney.jsp" %>
             <div class="fr">
                 <div class="T-tab clearfix" style="margin-top: 4.4px;">
-                    <a href="javascript:void(0)" subCode="special_a" class="active">特码A</a>
-                    <a href="javascript:void(0)"  subCode="special_b" >特码B</a>
+                    <a href="javascript:void(0)" subCode="special_a" >特码A</a>
+                    <a href="javascript:void(0)"  subCode="special_b" class="active">特码B</a>
                 </div>
             </div>
         </div>
