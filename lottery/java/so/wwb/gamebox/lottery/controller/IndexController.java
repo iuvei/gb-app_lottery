@@ -4,6 +4,7 @@ import org.json.JSONObject;
 import org.soul.commons.enums.EnumTool;
 import org.soul.commons.init.context.CommonContext;
 import org.soul.commons.lang.string.I18nTool;
+import org.soul.commons.lang.string.StringTool;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,10 +25,12 @@ public class IndexController  extends BaseDemoController {
 
     @RequestMapping(value = "index")
     protected String index(Model model, String code) {
-        LotteryEnum lotteryEnum = EnumTool.enumOf(LotteryEnum.class,code);
-        if(lotteryEnum != null){
-            model.addAttribute("type", lotteryEnum.getType());
-            model.addAttribute("code", lotteryEnum.getCode());
+        if(StringTool.isNotBlank(code)){
+            LotteryEnum lotteryEnum = EnumTool.enumOf(LotteryEnum.class,code);
+            if(lotteryEnum != null){
+                model.addAttribute("type", lotteryEnum.getType());
+                model.addAttribute("code", lotteryEnum.getCode());
+            }
         }
         return INDEX_URI;
     }
