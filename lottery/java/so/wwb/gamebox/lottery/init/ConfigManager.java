@@ -1,15 +1,13 @@
 package so.wwb.gamebox.lottery.init;
 
 import org.soul.commons.spring.utils.SpringTool;
-import org.soul.web.init.BaseConfigManager;
-import so.wwb.gamebox.web.init.ExtBaseConfigManager;
 
 /**
  * Created by tony on 15-4-28.
  */
-public class ConfigManager extends ExtBaseConfigManager {
+public class ConfigManager extends so.wwb.gamebox.web.init.ConfigBase {
 
-    public static LotteryConfigration getConfigration() {
+    public static LotteryConfigration get() {
         return SpringTool.getBean(LotteryConfigration.class);
     }
 
