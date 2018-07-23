@@ -14,7 +14,7 @@ import so.wwb.gamebox.model.company.lottery.po.*;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryFrequencyListVo;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryHandicapVo;
 import so.wwb.gamebox.model.company.lottery.vo.LotteryResultListVo;
-import so.wwb.gamebox.web.cache.Cache;
+import so.wwb.gamebox.common.cache.Cache;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

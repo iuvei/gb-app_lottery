@@ -1,6 +1,5 @@
 package so.wwb.gamebox.lottery.init;
 
-import org.soul.web.support.BaseWebConf;
 import org.springframework.stereotype.Component;
 import so.wwb.gamebox.web.init.ExtBaseWebConf;
 
