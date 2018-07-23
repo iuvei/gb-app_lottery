@@ -21,7 +21,7 @@ import so.wwb.gamebox.model.enums.lottery.LotteryOrderStatusEnum;
 import so.wwb.gamebox.model.master.lottery.po.LotteryBetOrder;
 import so.wwb.gamebox.model.master.lottery.vo.LotteryBetOrderListVo;
 import so.wwb.gamebox.web.SessionManagerCommon;
-import so.wwb.gamebox.web.cache.Cache;
+import so.wwb.gamebox.common.cache.Cache;
 
 import java.util.List;
 import java.util.Map;
