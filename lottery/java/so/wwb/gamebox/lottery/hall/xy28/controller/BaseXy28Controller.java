@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import so.wwb.gamebox.lottery.hall.controller.BaseLotteryController;
 import so.wwb.gamebox.lottery.session.SessionManager;
-import so.wwb.gamebox.model.company.lottery.po.LotteryResult;
 import so.wwb.gamebox.model.company.lottery.po.SiteLotteryOdd;
 import so.wwb.gamebox.model.enums.lottery.LotteryPlayEnum;
 import so.wwb.gamebox.model.enums.lottery.LotteryTypeEnum;
-import so.wwb.gamebox.web.cache.Cache;
+import so.wwb.gamebox.common.cache.Cache;
 
 import java.util.HashMap;
 import java.util.Map;
