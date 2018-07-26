@@ -469,7 +469,7 @@ public class BasePl3Controller extends BaseLotteryController {
     @RequestMapping("/getRecent30Records")
     @ResponseBody
     public String getRecent30Records(String code) {
-        return JsonTool.toJson(getOpenHistory(code, 30, true));
+        return JsonTool.toJson(getOpenedHistory(code, 30));
     }
 
 
