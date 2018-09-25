@@ -167,15 +167,15 @@
     </filter-mapping>
     <!--shiro filter end-->
     <!--Ip过滤-->
-    <filter>
-        <filter-name>ltIpFilter</filter-name>
-        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-        <async-supported>true</async-supported>
-    </filter>
-    <filter-mapping>
-        <filter-name>ltIpFilter</filter-name>
-        <url-pattern>*.html</url-pattern>
-    </filter-mapping>
+    <!--<filter>-->
+        <!--<filter-name>ltIpFilter</filter-name>-->
+        <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+        <!--<async-supported>true</async-supported>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>ltIpFilter</filter-name>-->
+        <!--<url-pattern>*.html</url-pattern>-->
+    <!--</filter-mapping>-->
     <!--Ip过滤-->
     <!--域名过滤-->
     <!--<filter>

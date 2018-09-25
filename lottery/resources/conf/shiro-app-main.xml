@@ -40,7 +40,7 @@
 				<entry key="captcha" value-ref="captcha"></entry>
 				<entry key="subsys" value-ref="subsysCodeFilter"></entry>
 				<entry key="access" value-ref="accessFilter"></entry>
-				<entry key="ip" value-ref="ipFilterPlayer"></entry>
+				<entry key="ip" value-ref="ltIpFilter"></entry>
 			</map>
 		</property>
 		<property name="filterChainDefinitions">
