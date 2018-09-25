@@ -81,21 +81,32 @@
         <url-pattern>*.html</url-pattern>
     </filter-mapping>
     <!--编码-->
-    <!--域名过滤-->
+    <!--彩票登录过滤-->
     <filter>
-        <filter-name>domainFilter</filter-name>
+        <filter-name>ltLocalLoginFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
         <async-supported>true</async-supported>
     </filter>
     <filter-mapping>
-        <filter-name>domainFilter</filter-name>
-        <url-pattern>/message_en_US.js</url-pattern>
-        <url-pattern>/message_zh_CN.js</url-pattern>
-        <url-pattern>/message_zh_TW.js</url-pattern>
-        <url-pattern>/message_ja_JP.js</url-pattern>
+        <filter-name>ltLocalLoginFilter</filter-name>
         <url-pattern>*.html</url-pattern>
     </filter-mapping>
-    <!--域名过滤-->
+    <!--彩票登录过滤-->
+    <!--会话过滤-->
+    <filter>
+        <filter-name>sessionFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+    <filter-mapping>
+        <filter-name>sessionFilter</filter-name>
+        <url-pattern>/mobile/message_en_US.js</url-pattern>
+        <url-pattern>/mobile/message_zh_CN.js</url-pattern>
+        <url-pattern>/mobile/message_zh_TW.js</url-pattern>
+        <url-pattern>/mobile/message_ja_JP.js</url-pattern>
+        <url-pattern>*.html</url-pattern>
+    </filter-mapping>
+    <!--会话过滤-->
     <!--彩票站点过滤-->
     <filter>
         <filter-name>lotteryFilter</filter-name>
@@ -156,17 +167,17 @@
     <!--shiro filter end-->
     <!--Ip过滤-->
     <filter>
-        <filter-name>ipFilterCenter</filter-name>
+        <filter-name>ltIpFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
         <async-supported>true</async-supported>
     </filter>
     <filter-mapping>
-        <filter-name>ipFilterCenter</filter-name>
+        <filter-name>ltIpFilter</filter-name>
         <url-pattern>*.html</url-pattern>
     </filter-mapping>
     <!--Ip过滤-->
     <!--域名过滤-->
-    <filter>
+    <!--<filter>
         <filter-name>accessFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
         <async-supported>true</async-supported>
@@ -174,7 +185,7 @@
     <filter-mapping>
         <filter-name>accessFilter</filter-name>
         <url-pattern>*.html</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
     <!--域名过滤-->
     <!--多语言资源过滤-->
     <filter>
