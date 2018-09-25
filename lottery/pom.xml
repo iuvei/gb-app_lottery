@@ -176,7 +176,7 @@
                             <targetPath>/include</targetPath>
                         </resource>
                         <resource>
-                            <directory>${basedir}/../../base/webcommon/WebContent/errors</directory>
+                            <directory>${basedir}/../../base/webcommon/WebContent/errors-lt</directory>
                             <targetPath>/errors</targetPath>
                         </resource>
                         <resource>

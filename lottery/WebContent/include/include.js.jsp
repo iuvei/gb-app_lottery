@@ -1,4 +1,4 @@
-<%@ include file="include.base.js.common.jsp" %>
+<%@ include file="include.base.js.lt.jsp" %>
 <script src="${resRoot}/js/plugin/FancyZoom.js?v=${rcVersion}"></script>
 <script src="${resRoot}/js/plugin/FancyZoomHTML.js?v=${rcVersion}"></script>
 <%--<script src="${resRoot}/themes/default/js/mobile-detect.min.js?v=${rcVersion}"></script>--%>
